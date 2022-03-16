@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Fundamentos de los modelos lineales</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dacarras" />
+    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/ninjutsu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="animate.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+
+
+
+class: title-slide, middle, center
+
+background-image: url(img/background_01.jpeg)
+background-size: 100%
+
+&lt;img src="./img/blank_space.png" width="2%" height="2%" /&gt;
+
+
+.line_space_08[
+
+## Metodología Cuantitativa Avanzada I
+
+### .text_70[
+Fundamentos de los modelos lineales
+]
+
+]
+
+&lt;br&gt;
+&lt;br&gt;
+
+.line_space_03[
+.white[
+
+.text_70[
+
+Carrasco, D., PhD
+
+.text_60[Centro de Medición MIDE UC]
+
+]
+
+&lt;br&gt;
+
+.text_70[PSI4035]
+
+.text_70[Santiago, Marzo 16 de 2022]
+  
+  ]
+]
+
+&lt;br&gt;
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Modelos de regresión
+]
+]
+]
+.line_space_01[
+Ajuste de modelos de regresión bivariada
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_080[
+
+### Taller 1: Fundamentos de los de los modelos lineales
+
+En esta sesión vamos a ilustrar empleando a R diferentes conceptos y operaciones introducidos por Vik (2014) en los capítulos 1 a 3.
+
+Los conceptos que vamos a revisar son:
+
+- variable dependiente o variable de respuesta
+- variable independiente, covariable o variable predictora
+- ecuación de un modelo de regresión
+- suma de errores al cuadrado
+- evaluar supuestos de un modelo de regresión
+  - linealidad
+  - homocedasticidad
+  - normalida de los residuos
+
+
+]
+
+.pull_r_50_t_080[
+
+### Librerías en uso
+
+- Para ejecutar el presente código, estamos empleando las siguientes librerias:
+  - `library(dplyr)` para manipular datos
+  - `library(knitr)` para mostrar las tablas como texto plano en consola
+  - `library(ggplot2)` para construir gráficos con más opciones
+  - `library(texreg)` para reordenar los output de varios de modelos de regresión
+  - `library(broom)` para extraer tablas de los output de los modelos de regresión
+  - `library(lmtest)` para aplicar la prueba de Durbin Watson (correlación de residuales)
+
+Para instalar estas librerías podemos ejecutar los siguientes códigos
+
+
+```r
+#------------------------------------------------------------------------------
+# instalar librerias
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# librerias
+#----------------------------------------------------------
+
+install.packages('tidyverse') # incluye a dplyr y ggplot2
+                              # junto a otras librerias útiles
+
+install.packages('knitr')     # para mostrar tablas como texto plano
+
+install.packages('texreg')    # para reordenar los output de varios 
+                              # de modelos de regresión
+
+install.packages('broom')     # para extraer tablas de los output
+                              # de los modelos de regresión
+
+install.packages('lmtest')    # para evaluar la independencia 
+                              # de las residuales
+```
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_080[
+
+### Modelo de regresión con un predictor (*bivariate regression*)
+
+Vik (2014) plantea, que podemos plantearnos tres preguntas generales acerca de dos variables:
+
+- Q1: estan relacionadas estas dos variables?
+- Q2: cuál es la dirección de la relación?
+- Q3: que tan grande es la relación ente estas variables?
+
+Para abordar estas preguntas empleando R, primero vamos a cargar los datos de la tabla 3.2.
+Luego de haber cargado estados datos, vamos a visualizar los datos mediante un dispersiograma o *scatter plot*.
+Finalmente, vamos ajustar dos modelos de regressión: el modelo sin predictores (modelo nulo, o modelo compacto), y el modelo con predictores (modelo aumentado).
+
+
+
+
+]
+
+.pull_r_50_t_080[
+
+### Cargar datos Tabla 3.2
+
+
+```r
+#------------------------------------------------------------------------------
+# datos
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# tabla 3.2
+#----------------------------------------------------------
+
+data_table_3_2 &lt;- read.table(
+text="
+person  y x x_q xy
+1 2 8 64  16
+2 3 9 81  27
+3 3 9 81  27
+4 4 10  100 40
+5 7 6 36  42
+6 5 7 49  35
+7 5 4 16  20
+8 7 5 25  35
+9 8 3 9 24
+10  9 1 1 9
+11  9 2 4 18
+12  10  2 4 20
+
+",
+header=TRUE, stringsAsFactors = FALSE)
+
+#--------------------------------------
+# mostrar tabla
+#--------------------------------------
+
+knitr::kable(data_table_3_2)
+```
+
+```text
+
+
+| person|  y|  x| x_q| xy|
+|------:|--:|--:|---:|--:|
+|      1|  2|  8|  64| 16|
+|      2|  3|  9|  81| 27|
+|      3|  3|  9|  81| 27|
+|      4|  4| 10| 100| 40|
+|      5|  7|  6|  36| 42|
+|      6|  5|  7|  49| 35|
+|      7|  5|  4|  16| 20|
+|      8|  7|  5|  25| 35|
+|      9|  8|  3|   9| 24|
+|     10|  9|  1|   1|  9|
+|     11|  9|  2|   4| 18|
+|     12| 10|  2|   4| 20|
+
+```
+
+]
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Visualización de datos
+]
+]
+]
+.line_space_01[
+Exploración gráfica de los datos
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_080[
+
+### Scatter plot tabla 3.2
+
+
+```r
+#------------------------------------------------------------------------------
+# datos
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# tabla 3.2
+#----------------------------------------------------------
+
+data_table_3_2 &lt;- read.table(
+text="
+person  y x x_q xy
+1 2 8 64  16
+2 3 9 81  27
+3 3 9 81  27
+4 4 10  100 40
+5 7 6 36  42
+6 5 7 49  35
+7 5 4 16  20
+8 7 5 25  35
+9 8 3 9 24
+10  9 1 1 9
+11  9 2 4 18
+12  10  2 4 20
+
+",
+header=TRUE, stringsAsFactors = FALSE)
+
+#------------------------------------------------------------------------------
+# scatter
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# codigo base
+#--------------------------------------
+
+with(data_table_3_2,
+  plot(
+    x=x,
+    y=y,
+    xlab = "X variable", 
+    ylab = "Y variable",        
+    main = 'Scatter',
+    pch = 19,
+    frame = TRUE
+    )
+  )
+```
+
+]
+
+.pull_r_50_t_080[
+
+### Scatter con código base
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_080[
+
+### Scatter plot tabla 3.2
+
+
+```r
+#------------------------------------------------------------------------------
+# datos
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# tabla 3.2
+#----------------------------------------------------------
+
+data_table_3_2 &lt;- read.table(
+text="
+person  y x x_q xy
+1 2 8 64  16
+2 3 9 81  27
+3 3 9 81  27
+4 4 10  100 40
+5 7 6 36  42
+6 5 7 49  35
+7 5 4 16  20
+8 7 5 25  35
+9 8 3 9 24
+10  9 1 1 9
+11  9 2 4 18
+12  10  2 4 20
+
+",
+header=TRUE, stringsAsFactors = FALSE)
+
+#------------------------------------------------------------------------------
+# scatter
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# codigo ggplot
+#--------------------------------------
+
+library(dplyr)
+library(ggplot2)
+
+data_table_3_2 %&gt;%
+ggplot(., aes(y = y, x = x)) + 
+geom_point(alpha = 1, col = 'black') + 
+xlab('x variable') +
+ylab('y variable') + 
+ggtitle('Scatter plot') +
+theme_linedraw()
+```
+
+]
+
+.pull_r_50_t_080[
+
+### Scatter con *ggplot2*
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Ajuste de modelos
+]
+]
+]
+.line_space_01[
+Especificación de modelos de regresión
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_070[
+
+### Ajustar modelo de regresión
+
+
+Los modelos de regressión que vamos a ajustar son los siguientes:
+
+Modelo Compacto o Modelo Nulo
+
+`$$y_{i} = \beta_{0} + \epsilon_{i}$$`
+
+Modelo Aumentado, de un solo predictor
+
+`$$y_{i} = \beta_{0} + \beta_{1}x_{i} + \epsilon_{i}$$`
+
+Modelo Aumentado, con un predictor centrado a la gran media
+
+`$$y_{i} = \beta_{0} + \beta_{1}(x_{i} - \bar{x}_{i}) + \epsilon_{i}$$`
+
+Para ajustar los modelos anteriores, primero vamos a preparar los datos.
+Vamos a centrar a la variable `x`, y vamos a crear la variable `x_cgm`
+
+
+```r
+#------------------------------------------------------------------------------
+# ajustar modelos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# preparar datos codigo base
+#--------------------------------------
+
+data_model &lt;- data_table_3_2[, c('y','x')]
+data_model$x_cgm &lt;- data_table_3_2$x - mean(data_table_3_2$x, na.rm = TRUE)
+
+
+#--------------------------------------
+# preparar datos (dplyr)
+#--------------------------------------
+
+data_model &lt;- data_table_3_2 %&gt;%
+              mutate(x_g = mean(x, na.rm = TRUE)) %&gt;%
+              mutate(x_cgm = x - x_g) %&gt;%
+              dplyr::select(y, x, x_cgm) %&gt;%
+              dplyr::glimpse()
+```
+
+
+]
+
+.pull_r_50_t_070[
+
+### Datos preparados
+
+
+```r
+#--------------------------------------
+# mostrar datos
+#--------------------------------------
+
+knitr::kable(data_model)
+```
+
+```text
+
+|  y|  x| x_cgm|
+|--:|--:|-----:|
+|  2|  8|   2.5|
+|  3|  9|   3.5|
+|  3|  9|   3.5|
+|  4| 10|   4.5|
+|  7|  6|   0.5|
+|  5|  7|   1.5|
+|  5|  4|  -1.5|
+|  7|  5|  -0.5|
+|  8|  3|  -2.5|
+|  9|  1|  -4.5|
+|  9|  2|  -3.5|
+| 10|  2|  -3.5|
+
+```
+### Ajustar modelos
+
+
+```r
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f00 &lt;- as.formula(y ~ + 1)
+f01 &lt;- as.formula(y ~ + 1 + x)
+f02 &lt;- as.formula(y ~ + 1 + x_cgm)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m00 &lt;- lm(f00, data = data_model)
+m01 &lt;- lm(f01, data = data_model)
+m02 &lt;- lm(f02, data = data_model)
+```
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_070[
+
+### Resultados de los modelos ajustados
+
+
+```r
+#------------------------------------------------------------------------------
+# ajustar modelos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f00 &lt;- as.formula(y ~ + 1)
+f01 &lt;- as.formula(y ~ + 1 + x)
+f02 &lt;- as.formula(y ~ + 1 + x_cgm)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m00 &lt;- lm(f00, data = data_model)
+m01 &lt;- lm(f01, data = data_model)
+m02 &lt;- lm(f02, data = data_model)
+
+#--------------------------------------
+# comparar modelos de forma sintética
+#--------------------------------------
+
+texreg::screenreg(
+    list(m00, m01, m02),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+```
+
+```text
+
+============================================
+             Model 1    Model 2    Model 3  
+--------------------------------------------
+(Intercept)   6.00 ***  10.27 ***   6.00 ***
+             (0.78)     (0.76)     (0.36)   
+x                       -0.78 ***           
+                        (0.12)              
+x_cgm                              -0.78 ***
+                                   (0.12)   
+--------------------------------------------
+R^2           0.00       0.80       0.80    
+Adj. R^2      0.00       0.79       0.79    
+Num. obs.    12         12         12       
+============================================
+ *** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05
+ 
+
+
+```
+
+]
+
+.pull_r_50_t_070[
+
+
+### Tamaños de efecto
+
+
+```r
+#--------------------------------------
+# tamaño de efecto de la relación
+#--------------------------------------
+
+# como r de Pearson
+with(data_model, cor(y, x))
+```
+
+```
+[1] -0.8971007299
+```
+
+```r
+# como R2
+summary(m02)$r.squared
+```
+
+```
+[1] 0.8047897196
+```
+
+```r
+# R2 obtenido con library(broom)
+broom::glance(m02)
+```
+
+&lt;PRE class="fansi fansi-output"&gt;&lt;CODE&gt;&lt;span style='color: #555555;'&gt;# A tibble: 1 × 12&lt;/span&gt;
+  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
+      &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt;         &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt; &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt;     &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt;     &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt; &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt;  &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt; &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt; &lt;span style='color: #555555; font-style: italic;'&gt;&amp;lt;dbl&amp;gt;&lt;/span&gt;
+&lt;span style='color: #555555;'&gt;1&lt;/span&gt;     0.805         0.785  1.25      41.2 0.000&lt;span style='text-decoration: underline;'&gt;076&lt;/span&gt;3     1  -&lt;span style='color: #BB0000;'&gt;18.6&lt;/span&gt;  43.2  44.7
+&lt;span style='color: #555555;'&gt;# … with 3 more variables: deviance &amp;lt;dbl&amp;gt;, df.residual &amp;lt;int&amp;gt;, nobs &amp;lt;int&amp;gt;&lt;/span&gt;
+&lt;/CODE&gt;&lt;/PRE&gt;
+
+**Abordando las preguntas básicas de Vik**
+
+- Q1: estan relacionadas estas dos variables?
+  - Sí, la variable `y` esta relacionada de forma lineal a la variable `x`.
+- Q2: cuál es la dirección de la relación?
+  - La forma de la relación es negativa.
+  - A medida que aumentan los valores de `x`, esperamos que los valores `y` disminuyan.
+- Q3: que tan grande es la relación entre estas variables?
+  - La relación es grande. `x` e `y`, presentan una correlación alta ( `\(r\)` = -.89 ).
+  - En términos de varianza explicada, `x` explica hasta un 80% de la varianza de `y` ( `\(R^2\)` = .80 )
+
+]
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Resultados de modelos de regresión
+]
+]
+]
+.line_space_01[
+Inspección básica de los outputs de regresión
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+.pull_l_50_t_070[
+
+#### Resultados del modelo nulo
+
+
+```r
+#------------------------------------------------------------------------------
+# resultados
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# coeficientes
+#--------------------------------------
+
+summary(m00)
+```
+
+```
+
+Call:
+lm(formula = f00, data = data_model)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -4.00  -2.25   0.00   2.25   4.00 
+
+Coefficients:
+             Estimate Std. Error t value     Pr(&gt;|t|)    
+(Intercept) 6.0000000  0.7784989 7.70714 0.0000092956 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.696799 on 11 degrees of freedom
+```
+
+```r
+#--------------------------------------
+# análisis de varianza
+#--------------------------------------
+
+anova(m00)
+```
+
+```
+Analysis of Variance Table
+
+Response: y
+          Df Sum Sq   Mean Sq F value Pr(&gt;F)
+Residuals 11     80 7.2727273               
+```
+
+]
+
+.pull_r_50_t_070[
+
+#### Resultados del modelo con un predictor
+
+
+```r
+#------------------------------------------------------------------------------
+# resultados
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# coeficientes
+#--------------------------------------
+
+summary(m01)
+```
+
+```
+
+Call:
+lm(formula = f01, data = data_model)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-2.1635514 -0.3364486  0.1121495  0.7803738  1.4906542 
+
+Coefficients:
+              Estimate Std. Error  t value       Pr(&gt;|t|)    
+(Intercept) 10.2663551  0.7560713 13.57855 0.000000090657 ***
+x           -0.7757009  0.1208104 -6.42081 0.000076267145 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.249673 on 10 degrees of freedom
+Multiple R-squared:  0.8047897,	Adjusted R-squared:  0.7852687 
+F-statistic: 41.22681 on 1 and 10 DF,  p-value: 0.00007626715
+```
+
+```r
+#--------------------------------------
+# análisis de varianza
+#--------------------------------------
+
+anova(m01)
+```
+
+```
+Analysis of Variance Table
+
+Response: y
+          Df    Sum Sq   Mean Sq  F value      Pr(&gt;F)    
+x          1 64.383178 64.383178 41.22681 0.000076267 ***
+Residuals 10 15.616822  1.561682                         
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+]
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Interpretación de los modelos ajustados]
+]
+]
+.line_space_01[
+Representación geométrica de los modelos ajustados
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+**Interpretación (m00)**
+
+.pull_l_50_t_050[
+
+- Intercepto ( `\(b_{0}\)` )
+- Coeficiente de regresión ( `\(b_{1}\)` )
+
+
+```r
+#------------------------------------------------------------------------------
+# proyección
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# intercepto
+#----------------------------------------------------------
+
+b00_m01 &lt;- lm(y ~ + 1 + x, data = data_model) %&gt;%
+           broom::tidy() %&gt;%
+           dplyr::filter(term == '(Intercept)') %&gt;%
+           dplyr::select(estimate) %&gt;%
+           dplyr::pull()
+
+
+b01_m01 &lt;- lm(y ~ + 1 + x, data = data_model) %&gt;%
+           broom::tidy() %&gt;%
+           dplyr::filter(term == 'x') %&gt;%
+           dplyr::select(estimate) %&gt;%
+           dplyr::pull()
+
+#----------------------------------------------------------
+# agregar valores esperados (y_hat), a una base de datos
+#----------------------------------------------------------
+
+fitted_values &lt;- lm(y ~ + 1 + x, data = data_model) %&gt;%
+                 predict()
+
+data_plot_raw &lt;- data_model %&gt;%
+                 mutate(y_hat = fitted_values)
+
+#----------------------------------------------------------
+# proyección de modelo sobre datos observados
+#----------------------------------------------------------
+
+data_plot_raw %&gt;%
+ggplot(., aes(y = y, x = x)) + 
+geom_point(alpha = .3, col = 'grey20') + 
+  geom_smooth(
+    formula = y ~ x,
+    method = "lm", 
+    se = FALSE, 
+    colour = "grey90",
+    alpha = .005
+    ) +
+# intercepto
+geom_point(aes(y = b00_m01, x = 0), col = 'red', alpha = .5) +
+# itercepto
+geom_abline(
+  intercept = b00_m01, 
+  slope = 0, 
+  color="red", 
+  linetype="dashed", 
+  size= .3
+  ) +
+annotate('text', 
+  x =   0, 
+  y =  b00_m01 + .5, 
+  size = 4,
+  vjust = 0,
+  colour = 'red',
+  label = paste0('b[0]'),
+  parse = TRUE
+  ) +   
+# beta 1
+geom_abline(
+  intercept = b00_m01 + b01_m01, 
+  slope = 0, 
+  color="red", 
+  linetype="dashed", 
+  size= .3
+  ) +
+annotate('text', 
+  x =  1, 
+  y =  b00_m01 + (b01_m01)/2, 
+  size = 4,
+  hjust = 0,
+  colour = 'red',
+  label = paste0('b[01]'),
+  parse = TRUE
+  ) +   
+xlab('x variable') +
+ylab('y variable') + 
+scale_x_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
+scale_y_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
+labs(
+  title = expression(y[i] == b[0] + b[1] * x[i] + epsilon[i]),
+  parse = TRUE
+  ) +
+theme_linedraw()
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+**Interpretación (m01)**
+
+.pull_l_50_t_050[
+
+El centrado de variable es útil para darle una interpretación sustantiva al intercepto del modelo ajustado.
+
+- Intercepto ( `\(b_{0}\)` ), cuando `\(x_{i} - \bar{x}_{i}\)` es el predictor
+- Coeficiente de regresión ( `\(b_{1}\)` )
+
+
+```r
+#------------------------------------------------------------------------------
+# proyección
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# intercepto
+#----------------------------------------------------------
+
+
+b00_m02 &lt;- lm(y ~ + 1 + x_cgm, data = data_model) %&gt;%
+           broom::tidy() %&gt;%
+           dplyr::filter(term == '(Intercept)') %&gt;%
+           dplyr::select(estimate) %&gt;%
+           dplyr::pull()
+
+
+b01_m02 &lt;- lm(y ~ + 1 + x_cgm, data = data_model) %&gt;%
+           broom::tidy() %&gt;%
+           dplyr::filter(term == 'x_cgm') %&gt;%
+           dplyr::select(estimate) %&gt;%
+           dplyr::pull()
+
+#----------------------------------------------------------
+# agregar valores esperados (y_hat), a una base de datos
+#----------------------------------------------------------
+
+fitted_values &lt;- lm(y ~ + 1 + x_cgm, data = data_model) %&gt;%
+                 predict()
+
+data_plot_cen &lt;- data_model %&gt;%
+                 mutate(y_hat = fitted_values)
+
+#----------------------------------------------------------
+# proyección de modelo sobre datos observados
+#----------------------------------------------------------
+
+data_plot_cen %&gt;%
+ggplot(., aes(y = y, x = x_cgm)) + 
+geom_point(alpha = .3, col = 'grey20') + 
+  geom_smooth(
+    formula = y ~ x,
+    method = "lm", 
+    se = FALSE, 
+    colour = "grey90",
+    alpha = .005
+    ) +
+# punto del intercepto
+geom_point(aes(y = b00_m02, x = 0), col = 'red', alpha = .5) +
+# linea del intercepto
+geom_abline(
+  intercept = b00_m02, 
+  slope = 0, 
+  color="red", 
+  linetype="dashed", 
+  size= .3
+  ) +
+annotate('text', 
+  x =   0, 
+  y =  b00_m02 + .5, 
+  size = 4,
+  vjust = 0,
+  colour = 'red',
+  label = paste0('b[0]'),
+  parse = TRUE
+  ) +   
+# beta 1
+geom_abline(
+  intercept = b00_m02 + b01_m02, 
+  slope = 0, 
+  color="red", 
+  linetype="dashed", 
+  size= .3
+  ) +
+annotate('text', 
+  x =  1, 
+  y =  b00_m02 + (b01_m02)/2, 
+  size = 4,
+  hjust = 0,
+  colour = 'red',
+  label = paste0('b[1]'),
+  parse = TRUE
+  ) +   
+xlab(expression((x[i] - bar(x)[i]))) +
+ylab('y variable') + 
+scale_y_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
+scale_x_continuous(breaks=seq(-6,6,1), limits = c(-6, 6)) +
+labs(
+  title = expression(y[i] == b[0] + b[1] * (x[i] - bar(x)[i]) + epsilon[i]),
+  parse = TRUE
+  ) +
+theme_linedraw()
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+**Interpretación (m01)**
+
+.pull_l_50_t_080[
+
+#### Interpretación de resultados
+
+**Intercepto** ( `\(b_{0}\)` )
+
+- `\(b_{0}\)` corresponde a la media de `\(y_{i}\)`, cuando `\(x_{i}\)` es ingresado al modelo con sus valores centrados.
+- Otra forma de interpretar este estimado, es que `\(b_{0}\)` es el valor esperado de `\(y_{i}\)`, cuando `\((x_{i} - \bar{x}_{i}) = 0\)`.
+- En otras palabras, `\(b_{0}\)` es el valor que esperamos de `\(y_{i}\)`, a valores promedio de `\(x_{i}\)`.
+
+**Coeficiente** ( `\(b_{1}\)` )
+
+- `\(b_{1}\)` corresponde al valor que esperamos que tome `\(y_{i}\)`, condicional al cambio de una unidad de `\(x_{i}\)`.
+- Empleando los resultados del modelo ajustado (*m02*), esperamos que los casos donde `\((x_{i} - \bar{x}_{i}) = 1\)`, obtengan `\(b_{0} + b_{1}\)` valores en la escala de `\(y_{i}\)`.
+
+]
+
+.pull_r_50_t_080[
+
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+
+]
+
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Visualización de errores]
+]
+]
+.line_space_01[
+Representación geométrica de los residuales del modelo
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+#### Lollipop plot de Residuales
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# residuales
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# crear valores esperados
+#----------------------------------------------------------
+
+fitted_values &lt;- lm(y ~ + 1 + x, data = data_model) %&gt;%
+                 predict()
+
+#----------------------------------------------------------
+# agregar valores esperados (y_hat), a una base de datos
+#----------------------------------------------------------
+
+data_fitted &lt;- data_model %&gt;%
+               mutate(y_hat = fitted_values)
+
+#----------------------------------------------------------
+# lollipop plot
+#----------------------------------------------------------
+
+data_fitted %&gt;%
+ggplot(., aes(y = y, x = x)) + 
+geom_point(alpha = .3, col = 'grey20') + 
+  geom_smooth(
+    formula = y ~ x,
+    method = "lm", 
+    se = FALSE, 
+    colour = "grey90",
+    alpha = .005
+    ) +
+geom_segment(aes(xend = x, yend = y_hat), alpha = .4, col = 'red') + 
+geom_point(aes(y = y_hat), col = 'grey25', alpha = .5) + 
+xlab('x variable') +
+ylab('y variable') + 
+scale_x_continuous(breaks=seq(0,10,1), limits = c(0, 10)) +
+scale_y_continuous(breaks=seq(0,10,1), limits = c(0, 10)) +
+ggtitle('Residuals') +
+theme_linedraw()
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-21-1.png)&lt;!-- --&gt;
+
+]
+
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Squared errors
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# errores cuadrados
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# crear valores esperados
+#----------------------------------------------------------
+
+fitted_values &lt;- lm(y ~ + 1 + x, data = data_model) %&gt;%
+                 predict()
+
+#----------------------------------------------------------
+# agregar valores esperados (y_hat), a una base de datos
+#----------------------------------------------------------
+
+data_fitted &lt;- data_model %&gt;%
+               mutate(y_hat = fitted_values) %&gt;%
+               mutate(res = y - y_hat) %&gt;%
+               mutate(res_colour = case_when(
+                res == 0 ~ 'grey80',
+                res &gt; 0 ~ '#247BA0', # red
+                res &lt; 0 ~ '#FB3640'  # blue
+                ))
+
+rect_colour &lt;- data_fitted$res_colour
+
+#----------------------------------------------------------
+# squared errors
+#----------------------------------------------------------
+
+data_fitted %&gt;%
+ggplot(., aes(y = y, x = x)) + 
+geom_point(alpha = 1, col = 'grey20') + 
+ylim(0,12) +
+xlim(0,12) +
+  geom_smooth(
+    formula = y ~x,
+    method = "lm", 
+    se = FALSE, 
+    colour = "grey90",
+    alpha = .005
+    ) +
+geom_rect(
+   aes(
+   xmin=x, 
+   xmax=x+res, 
+   ymin=y-res, 
+   ymax=y
+   ), 
+  colour = 'grey20',
+  fill=rect_colour, 
+  alpha=0.5
+  ) +
+xlab('x variable') +
+ylab('y variable') + 
+ggtitle('Squared Errors') +
+theme_linedraw()
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-23-1.png)&lt;!-- --&gt;
+
+]
+
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Error total del modelo]
+]
+]
+.line_space_01[
+Cómo obtener el error de cada modelo ajustado
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+#### Error por modelo
+
+.pull_l_50_t_080[
+
+**Sumas de errores cuadrados**
+
+La suma de errores cuadrados consiste en la suma total de residuales de un modelo. En otras palabras, es la suma 
+de todas las distancias cuadráticas entre los valores observados, y los valores esperados por un modelo.
+
+$$
+\text{SSE} = \sum{(y_{i} - \hat{y}_{i}})^2
+$$
+
+En Vik (2014) se emplea más de una formula para obtener las sumas de cuadrados, diferenciando entre el modelo nulo o modelo compacto, y el modelo aumentado. Por conveniencia, vamos a crear una función que nos permita obtener la suma de errores de cuadrados de cada modelo ajustado.
+
+
+
+```r
+#------------------------------------------------------------------------------
+# errores cuadrados
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# función SSE
+#----------------------------------------------------------
+
+sse_model &lt;- function(model){
+
+y     &lt;- model$model[,1]
+y_hat &lt;- model$fitted.values
+squared_errors &lt;- (y - y_hat)^2
+sse &lt;- sum(squared_errors)
+
+return(sse)
+}
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+
+```r
+#----------------------------------------------------------
+# extraer SSE
+#----------------------------------------------------------
+
+sse_00 &lt;- sse_model(m00)
+sse_01 &lt;- sse_model(m01)
+sse_02 &lt;- sse_model(m02)
+
+#----------------------------------------------------------
+# crear tabla
+#----------------------------------------------------------
+
+sse_table &lt;- data.frame(
+  model = c(
+    'null model', 
+    'augmented model', 
+    'centered x model'
+    ),
+  see = c(sse_00, sse_01, sse_02)
+  )
+  
+#----------------------------------------------------------
+# mostrar tabla
+#----------------------------------------------------------
+
+knitr::kable(sse_table, digits = 2)
+```
+
+.text_100[
+```text
+
+|model            |   see|
+|:----------------|-----:|
+|null model       | 80.00|
+|augmented model  | 15.62|
+|centered x model | 15.62|
+
+```
+]
+
+]
+
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+#### Descomponer Error total 
+
+.pull_l_50_t_080[
+
+El error total del modelo nulo (o modelo compacto), puede ser descompuesto en términos del error reducido (o explicado), y lo que nos queda (el residuo). Esta idea puede ser expresada de la siguiente forma:
+
+`$$\text{SST} = \text{SSR} + \text{SSE}_{\text{m01}}$$`
+
+`\(\text{SST}\)` es el error total, que lo obtenemos del modelo compacto o modelo nulo. El error reducido `\(\text{SSR}\)`, o error explicado lo obtenemos como la resta entre el error total, menos el error residual del modelo aumentado (ver Vik, 2014, p24). Y finalmente, el error residual `\(\text{SSE}_{\text{m01}}\)` son los errores cuadrados del modelo aumentado.
+
+
+
+```r
+#------------------------------------------------------------------------------
+# des composicion de errores
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# obtener medidas de error
+#----------------------------------------------------------
+
+total_error &lt;- sse_00
+residual_error &lt;- sse_01
+explained_error &lt;- total_error - residual_error
+
+
+#----------------------------------------------------------
+# crear tabla
+#----------------------------------------------------------
+
+error_table &lt;- data.frame(
+  error = c(
+    'Total Error', 
+    'Residual Error', 
+    'Explained Error'
+    ),
+  value = c(
+    total_error, 
+    residual_error, 
+    explained_error
+    )
+  )
+```
+
+]
+
+.pull_r_50_t_080[
+
+
+
+```r
+#----------------------------------------------------------
+# mostrar tabla
+#----------------------------------------------------------
+
+knitr::kable(error_table, digits = 2)
+```
+
+```text
+|error           | value|
+|:---------------|-----:|
+|Total Error     | 80.00|
+|Residual Error  | 15.62|
+|Explained Error | 64.38|
+
+```
+
+
+```r
+#----------------------------------------------------------
+# proporcion de varianza explicada
+#----------------------------------------------------------
+
+# proporción de SSE sobre el total
+explained_error/total_error
+```
+
+```
+[1] 0.8047897196
+```
+
+```r
+# R2 del modelo
+summary(m01)$r.squared
+```
+
+```
+[1] 0.8047897196
+```
+
+
+
+]
+
+
+---
+
+
+class: middle, inverse
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.line_space_01[
+Taller
+]
+.line_space_01[
+.text_250[
+.bold_white[
+Evaluación de supuestos de la regresión]
+]
+]
+.line_space_01[
+Linealidad, Homocedasticidad, Normalidad de los residuales e Independencia de los residuales
+]
+
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Linealidad del modelo
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# residual vs fitted
+#--------------------------------------
+
+plot(m02, 1)
+```
+
+- Lo que esperamos, es que la dispersión de nuestros residuos sea homogenea al rededor de los datos ajustados.
+- Esperamos, que nuestra linea central en este gráfico sea horizontal.
+
+]
+
+.pull_r_50_t_080[
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-30-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Linealidad del modelo
+
+.pull_l_50_t_080[
+
+**Linealidad ideal**
+
+&lt;img src="./files/linealidad_ideal.png" width="100%" /&gt;
+
+
+]
+
+.pull_r_50_t_080[
+
+**Supuesto de linealidad no cumplido**
+
+&lt;img src="./files/linealidad_wrong.png" width="100%" /&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Homocesdasticidad
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# homocedasticity
+#--------------------------------------
+
+*plot(m02, 3)
+
+
+#--------------------------------------
+# homocedasticity test
+#--------------------------------------
+
+# Breusch-Pagan test
+lmtest::bptest(m02)
+```
+
+- La homocedasticidad refiere a que observemos varianzas similares de los errores del modelo (los residuales), a diferentes valores predichos
+- Esperamos que, **nuestros residuales tomen posiciones similares a lo largo de largo de los valores ajustados.**
+- La prueba Breusch-Pagan evalua si los residuales presentan varianza similar a todos los valores predichos, o si esta difiere (no hay varianza homogenea).
+  - Los resultados de la aprueba no apoyan la hipotesis de que la varianza de los residuales fuera heterocedastica a los valores esperados por el modelo. 
+
+
+]
+
+.pull_r_50_t_080[
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+#### Homocesdasticidad
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# homocedasticity
+#--------------------------------------
+
+plot(m02, 3)
+
+
+#--------------------------------------
+# homocedasticity test
+#--------------------------------------
+
+# Breusch-Pagan test
+*lmtest::bptest(m02)
+```
+
+- La homocedasticidad refiere a que observemos varianzas similares de los errores del modelo (los residuales), a diferentes valores predichos
+- Esperamos que, nuestros residuales tomen posiciones similares a lo largo de largo de los valores ajustados.
+- **La prueba Breusch-Pagan evalua si los residuales presentan varianza similar a todos los valores predichos, o si esta difiere (no hay varianza homogenea).**
+  - Los resultados de la aprueba no apoyan la hipotesis de que la varianza de los residuales fuera heterocedastica a los valores esperados por el modelo. 
+
+
+]
+
+.pull_r_50_t_100[
+
+
+```
+
+	studentized Breusch-Pagan test
+
+data:  m02
+BP = 0.21984401, df = 1, p-value = 0.6391588
+```
+
+]
+
+---
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+#### Homocedasticidad
+
+.pull_l_50_t_080[
+
+**Homocedasticidad ideal**
+
+&lt;img src="./files/homocedastic_ideal.png" width="100%" /&gt;
+
+
+]
+
+.pull_r_50_t_080[
+
+**Supuesto de Homocedasticidad no cumplido**
+
+&lt;img src="./files/homocedastic_wrong.png" width="100%" /&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Normalidad
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# histograma de residuos
+#--------------------------------------
+
+*hist(m02$residuals)
+
+#--------------------------------------
+# normalidad de los residuos
+#--------------------------------------
+
+plot(m02, 2) 
+
+
+#--------------------------------------
+# Komogorov Smirnoff test
+#--------------------------------------
+
+ks.test(m02$residuals, 
+  "pnorm", 
+  mean=mean(m02$residuals), 
+  sd=sd(m02$residuals)
+  )
+```
+
+- **Uno modelo que ajusta bien a los datos, debiera presentar residuales que presenten una distribución normal.**
+- Los QQ plots, ordenan a los residuos en una diagonal, de tal forma que si estos se "desalinean" podemos sospechar que el supuesto de normalidad de los errores no se cumple.
+- Podemos emplear el test Kolmogorov Smirnoff, y evaluar si la distribucion de errores discrepa de una distribución normal.
+  - En este caso, los resultados de la prueba aplicada indican que nuestros datos no discrepan de la distribución esperada.
+
+]
+
+.pull_r_50_t_080[
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-40-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Normalidad
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# histograma de residuos
+#--------------------------------------
+
+hist(m02$residuals)
+
+#--------------------------------------
+# normalidad de los residuos
+#--------------------------------------
+
+*plot(m02, 2)
+
+
+#--------------------------------------
+# Komogorov Smirnoff test
+#--------------------------------------
+
+ks.test(m02$residuals, 
+  "pnorm", 
+  mean=mean(m02$residuals), 
+  sd=sd(m02$residuals)
+  )
+```
+
+- Uno modelo que ajusta bien a los datos, debiera presentar residuales que presenten una distribución normal.
+- **Los QQ plots, ordenan a los residuos en una diagonal, de tal forma que si estos se "desalinean" podemos sospechar que el supuesto de normalidad de los errores no se cumple.**
+- Podemos emplear el test Kolmogorov Smirnoff, y evaluar si la distribucion de errores discrepa de una distribución normal.
+  - En este caso, los resultados de la prueba aplicada indican que nuestros datos no discrepan de la distribución esperada.
+
+]
+
+.pull_r_50_t_100[
+
+![](psi4035_t01_slides_files/figure-html/unnamed-chunk-42-1.png)&lt;!-- --&gt;
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+
+#### Normalidad
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# histograma de residuos
+#--------------------------------------
+
+hist(m02$residuals)
+
+#--------------------------------------
+# normalidad de los residuos
+#--------------------------------------
+
+plot(m02, 2)
+
+
+#--------------------------------------
+# Komogorov Smirnoff test
+#--------------------------------------
+
+*ks.test(m02$residuals,
+* "pnorm",
+* mean=mean(m02$residuals),
+* sd=sd(m02$residuals)
+* )
+```
+
+- Uno modelo que ajusta bien a los datos, debiera presentar residuales que presenten una distribución normal.
+- Los QQ plots, ordenan a los residuos en una diagonal, de tal forma que si estos se "desalinean" podemos sospechar que el supuesto de normalidad de los errores no se cumple.
+- **Podemos emplear el test Kolmogorov Smirnoff, y evaluar si la distribucion de errores discrepa de una distribución normal.**
+  - En este caso, los resultados de la prueba aplicada indican que nuestros datos no discrepan de la distribución esperada.
+
+]
+
+.pull_r_50_t_100[
+
+
+```
+
+	One-sample Kolmogorov-Smirnov test
+
+data:  m02$residuals
+D = 0.1735801, p-value = 0.8045496
+alternative hypothesis: two-sided
+```
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Independencia de los errores
+
+.pull_l_50_t_080[
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# independencia de los errores
+#--------------------------------------
+
+lmtest::dwtest(m02, alternative = 'two.sided')
+```
+
+- Esperamos que la auto correlación entre los residuos sea casi nula
+- La prueba de Durbin-Watson evalua si hay correlaciones entre pares de residuales adjacentes (Field et al., 2012).
+- Los resultados del Durbin-Watson test, indican que nuestros residuales no presentan autocorrelaciones
+  + Empleamos una prueba de *dos colas*, asumiendo que los residuales incluso podrian presentar *autocorrelaciones* negativas (ver Long &amp; Teetor, 2019, p376).
+  + En caso de que pudiera defenderse, que solo son razonables las correlaciones positivas, el test podria aplicarse con una sola cola.
+
+
+]
+
+.pull_r_50_t_100[
+
+
+```
+
+	Durbin-Watson test
+
+data:  m02
+DW = 1.482083, p-value = 0.1917543
+alternative hypothesis: true autocorrelation is not 0
+```
+
+]
+
+---
+
+background-image: url(img/background_03.jpeg)
+background-size: 100%
+
+#### Independencia de los errores
+
+.pull_l_50_t_080[
+
+**Supuesto de indepencia de los errores sin cumplir**
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# caso de observaciones anidadas
+#--------------------------------------
+
+data_nested &lt;- readRDS('nld_16.rds')
+
+#--------------------------------------
+# Durbin Watson test
+#--------------------------------------
+
+lm(civ ~ ses, data = data_nested) %&gt;%
+lmtest::dwtest(., alternative = 'two.sided')
+```
+
+&gt;Nota: cuando se ignora a las escuelas en el modelo, el factor de anidación, encontramos evidencias de que los residuales no son independientes entre sí.
+
+
+]
+
+.pull_r_50_t_100[
+
+**Supuesto de indepencia de los errores satisfecho**
+
+
+```r
+#------------------------------------------------------------------------------
+# diagnósticos
+#------------------------------------------------------------------------------
+
+#--------------------------------------
+# caso de observaciones anidadas
+#--------------------------------------
+
+data_nested &lt;- readRDS('nld_16.rds')
+
+#--------------------------------------
+# Durbin Watson test
+#--------------------------------------
+
+lm(civ ~ ses + as.factor(id_j), data = data_nested) %&gt;%
+lmtest::dwtest(., alternative = 'two.sided')
+```
+
+&gt;Nota: se cumple el supuesto de independencia, en caso de que se sature la varianza entre escuelas, incluyendo a las escuelas como efectos fijos.
+
+]
+
+---
+
+
+class: inverse split-two
+
+
+background-image: url(img/background_02.jpeg)
+background-size: 100%
+
+
+.column[
+.pull_l_50_1[
+
+.text_180[
+.bold_white[
+&lt;br&gt;
+Muchas gracias!
+    ]
+  ]
+]
+
+.pull_l_50_2[
+.line_space_03[
+.text_60[
+
+*Carrasco, D., PhD*
+
+*Centro de Medición MIDE UC,*
+
+*Pontificia Universidad Católica de Chile*
+
+https://dacarras.github.io/
+    ]
+    ]
+  ]
+]
+
+
+
+
+
+
+
+
+.column[
+
+.text_180[
+.bold_white[
+&lt;br&gt;
+Referencias
+  ]
+]
+
+.text_80[
+.french[
+
+
+Long, J. D., &amp; Teetor, P. (2019). R Cookbook. O’Reilly.
+
+Vik, P. (2014). Regression, ANOVA, and the general linear model: A statistics primer. Sage.
+
+Field, A., Miles, J., &amp; Field, Z. (2012). Discovering Statistics using R. SAGE Publications Ltd.
+
+
+  ] 
+ ]
+]
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"slideNumberFormat": "%current%",
+"countIncrementalSlides": true,
+"ratio": "16:9",
+"navigation": {
+"scroll": true
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
