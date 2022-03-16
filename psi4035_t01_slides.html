@@ -962,8 +962,6 @@ background-size: 100%
 
 .pull_l_50_t_050[
 
-El centrado de variable es útil para darle una interpretación sustantiva al intercepto del modelo ajustado.
-
 - Intercepto ( `\(b_{0}\)` ), cuando `\(x_{i} - \bar{x}_{i}\)` es el predictor
 - Coeficiente de regresión ( `\(b_{1}\)` )
 
@@ -1068,6 +1066,10 @@ theme_linedraw()
 
 
 ![](psi4035_t01_slides_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+.text_80[
+&gt;Nota: El centrado de variable es útil para darle una interpretación sustantiva al intercepto del modelo ajustado.
+]
 
 ]
 
@@ -1317,9 +1319,7 @@ background-size: 100%
 La suma de errores cuadrados consiste en la suma total de residuales de un modelo. En otras palabras, es la suma 
 de todas las distancias cuadráticas entre los valores observados, y los valores esperados por un modelo.
 
-$$
-\text{SSE} = \sum{(y_{i} - \hat{y}_{i}})^2
-$$
+`$$\text{SSE} = \sum{(y_{i} - \hat{y}_{i}})^2$$`
 
 En Vik (2014) se emplea más de una formula para obtener las sumas de cuadrados, diferenciando entre el modelo nulo o modelo compacto, y el modelo aumentado. Por conveniencia, vamos a crear una función que nos permita obtener la suma de errores de cuadrados de cada modelo ajustado.
 
@@ -1937,6 +1937,16 @@ lm(civ ~ ses, data = data_nested) %&gt;%
 lmtest::dwtest(., alternative = 'two.sided')
 ```
 
+```text
+
+  Durbin-Watson test
+
+data:  .
+DW = 1.3248382, p-value &lt; 0.00000000000000022204
+alternative hypothesis: true autocorrelation is not 0
+
+```
+
 &gt;Nota: cuando se ignora a las escuelas en el modelo, el factor de anidación, encontramos evidencias de que los residuales no son independientes entre sí.
 
 
@@ -1964,6 +1974,16 @@ data_nested &lt;- readRDS('nld_16.rds')
 
 lm(civ ~ ses + as.factor(id_j), data = data_nested) %&gt;%
 lmtest::dwtest(., alternative = 'two.sided')
+```
+
+```text
+
+  Durbin-Watson test
+
+data:  .
+DW = 2.1111814, p-value = 0.5275726
+alternative hypothesis: true autocorrelation is not 0
+
 ```
 
 &gt;Nota: se cumple el supuesto de independencia, en caso de que se sature la varianza entre escuelas, incluyendo a las escuelas como efectos fijos.
