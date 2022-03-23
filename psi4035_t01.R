@@ -10,22 +10,22 @@
 #'     toc_float:
 #'       collapsed: false
 #'       smooth_scroll: false
-#'     fig_width: 10 
-#'     fig_height: 10 
+#'     fig_width: 10
+#'     fig_height: 10
 #' ---
-#' 
+#'
 #' <style>
 #'   .main-container {
 #'     max-width: 1600px !important;
 #'   }
-#'   .list-group-item.active, 
-#'   .list-group-item.active:focus, 
+#'   .list-group-item.active,
+#'   .list-group-item.active:focus,
 #'   .list-group-item.active:hover {
 #'     background-color: #373334;
 #'   }
 #' </style>
-#' 
-#' 
+#'
+#'
 ## ----setup, include=FALSE-----------------------------------------------------
 #----------------------------------------------------------
 # setup
@@ -43,15 +43,16 @@ rm(list = ls())
 # fonts
 Sys.setenv(LANG="en_US.UTF-8")
 
+5+1
 
 
-#' 
+#'
 #' # Taller 1: Fundamentos de los de los modelos lineales
-#' 
+#'
 #' En esta sesión vamos a ilustrar empleando a R diferentes conceptos y operaciones introducidos por Vik (2014) en los capítulos 1 a 3.
-#' 
+#'
 #' Los conceptos que vamos a revisar son:
-#' 
+#'
 #' - variable dependiente o variable de respuesta
 #' - variable independiente, covariable o variable predictora
 #' - ecuación de un modelo de regresión
@@ -60,9 +61,9 @@ Sys.setenv(LANG="en_US.UTF-8")
 #'   - linealidad
 #'   - homocedasticidad
 #'   - normalida de los residuos
-#' 
+#'
 #' # Librerías en uso
-#' 
+#'
 #' - Para ejecutar el presente código, estamos empleando las siguientes librerias:
 #'   - `library(dplyr)` para manipular datos
 #'   - `library(knitr)` para mostrar las tablas como texto plano en consola
@@ -70,49 +71,49 @@ Sys.setenv(LANG="en_US.UTF-8")
 #'   - `library(texreg)` para reordenar los output de varios de modelos de regresión
 #'   - `library(broom)` para extraer tablas de los output de los modelos de regresión+
 #'   - `library(lmtest)` para aplicar la prueba de Durbin Watson (correlación de residuales)
-#' 
+#'
 #' Para instalar estas librerias podemos ejecutar los siguientes códigos
-#' 
+#'
 ## ---- echo=TRUE, eval = FALSE-------------------------------------------------
-## 
+##
 ## #------------------------------------------------------------------------------
 ## # instalar librerias
 ## #------------------------------------------------------------------------------
-## 
+##
 ## #----------------------------------------------------------
 ## # librerias
 ## #----------------------------------------------------------
-## 
+##
 ## install.packages('tidyverse') # incluye a dplyr y ggplot2
 ##                               # junto a otras librerias útiles
-## 
+##
 ## install.packages('knitr')     # para mostrar tablas como texto plano
-## 
+##
 ## install.packages('texreg')    # para reordenar los output de varios
 ##                               # de modelos de regresión
-## 
+##
 ## install.packages('broom')     # para extraer tablas de los output
 ##                               # de los modelos de regresión
-## 
+##
 ## install.packages('lmtest')    # para evaluar la independencia
 ##                               # de las residuales
-## 
+##
 
-#' 
+#'
 #' # Modelo de regresión con un predictor (*bivariate regression*)
-#' 
+#'
 #' Vik (2014) plantea, que podemos plantearnos tres preguntas generales acerca de dos variables:
-#' 
+#'
 #' - Q1: estan relacionadas estas dos variables?
 #' - Q2: cuál es la dirección de la relación?
 #' - Q3: que tan grande es la relación entre estas variables?
-#' 
+#'
 #' Para abordar estas preguntas empleando R, primero vamos a cargar los datos de la tabla 3.2.
 #' Luego de haber cargado estados datos, vamos a visualizar los datos mediante un dispersiograma o *scatter plot*.
 #' Finalmente, vamos ajustar dos modelos de regressión: el modelo sin predictores (modelo nulo, o modelo compacto), y el modelo con predictores (modelo aumentado).
-#' 
+#'
 #' ## Cargar datos Tabla 3.2
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -149,10 +150,10 @@ header=TRUE, stringsAsFactors = FALSE)
 knitr::kable(data_table_3_2)
 
 
-#' 
-#' 
+#'
+#'
 #' ## Scatter plot tabla 3.2
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -167,8 +168,8 @@ with(data_table_3_2,
   plot(
     x=x,
     y=y,
-    xlab = "X variable", 
-    ylab = "Y variable",        
+    xlab = "X variable",
+    ylab = "Y variable",
     main = 'Scatter',
     pch = 19,
     frame = TRUE
@@ -183,35 +184,35 @@ library(dplyr)
 library(ggplot2)
 
 data_table_3_2 %>%
-ggplot(., aes(y = y, x = x)) + 
-geom_point(alpha = 1, col = 'black') + 
+ggplot(., aes(y = y, x = x)) +
+geom_point(alpha = 1, col = 'black') +
 xlab('x variable') +
-ylab('y variable') + 
+ylab('y variable') +
 ggtitle('Scatter plot') +
 theme_linedraw()
 
 
-#' 
+#'
 #' ## Ajustar modelo de regresión
-#' 
+#'
 #' - Los modelos de regressión que vamos a ajustar son los siguientes:
-#' 
+#'
 #' - Modelo Compacto o Modelo Nulo
 #' $$
 #' y_{i} = \beta_{0} + \epsilon_{i}
 #' $$
-#' 
+#'
 #' - Modelo Aumentado, de un solo predictor
 #' $$
 #' y_{i} = \beta_{0} + \beta_{1}*x_{i} + \epsilon_{i}
 #' $$
-#' 
+#'
 #' - Modelo Aumentado, con un predictor centrado a la gran media
-#' 
+#'
 #' $$
 #' y_{i} = \beta_{0} + \beta_{1}*(x_{i} - \bar{x}_{i}) + \epsilon_{i}
 #' $$
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -265,10 +266,10 @@ m02 <- lm(f02, data = data_model)
 
 texreg::screenreg(
     list(m00, m01, m02),
-    star.symbol = "*", 
-    center = TRUE, 
+    star.symbol = "*",
+    center = TRUE,
     doctype = FALSE,
-    dcolumn = TRUE, 
+    dcolumn = TRUE,
     booktabs = TRUE,
     single.row = FALSE
     )
@@ -287,9 +288,9 @@ summary(m02)$r.squared
 broom::glance(m02)
 
 
-#' 
+#'
 #' # Abordando las preguntas básicas de Vik
-#' 
+#'
 #' - Q1: estan relacionadas estas dos variables?
 #'   - Sí, la variable `y` esta relacionada de forma lineal a la variable `x`.
 #' - Q2: cuál es la dirección de la relación?
@@ -298,11 +299,11 @@ broom::glance(m02)
 #' - Q3: que tan grande es la relación entre estas variables?
 #'   - La relación es grande. `x` e `y`, presentan una correlación alta ($r$ = -.89).
 #'   - En términos de varianza explicada, `x` explica hasta un 80% de la varianza de `y` ($R^2$ = .80)
-#' 
+#'
 #' # Resultados
-#' 
+#'
 #' ## Resultados del modelo nulo
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -322,9 +323,9 @@ summary(m00)
 anova(m00)
 
 
-#' 
+#'
 #' ## Resultados del modelo con un predictor
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -344,14 +345,14 @@ summary(m01)
 anova(m01)
 
 
-#' 
+#'
 #' # Interpretación (modelo 1)
-#' 
+#'
 #' - Intercepto ($b_{0}$)
 #' - Coeficiente de regresión (($b_{1}$))
-#' 
+#'
 #' ## Intercepto y beta
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -390,12 +391,12 @@ data_plot_raw <- data_model %>%
 #----------------------------------------------------------
 
 data_plot_raw %>%
-ggplot(., aes(y = y, x = x)) + 
-geom_point(alpha = .3, col = 'grey20') + 
+ggplot(., aes(y = y, x = x)) +
+geom_point(alpha = .3, col = 'grey20') +
   geom_smooth(
     formula = y ~ x,
-    method = "lm", 
-    se = FALSE, 
+    method = "lm",
+    se = FALSE,
     colour = "grey90",
     alpha = .005
     ) +
@@ -403,40 +404,40 @@ geom_point(alpha = .3, col = 'grey20') +
 geom_point(aes(y = b00_m01, x = 0), col = 'red', alpha = .5) +
 # itercepto
 geom_abline(
-  intercept = b00_m01, 
-  slope = 0, 
-  color="red", 
-  linetype="dashed", 
+  intercept = b00_m01,
+  slope = 0,
+  color="red",
+  linetype="dashed",
   size= .3
   ) +
-annotate('text', 
-  x =   0, 
-  y =  b00_m01 + .5, 
+annotate('text',
+  x =   0,
+  y =  b00_m01 + .5,
   size = 4,
   vjust = 0,
   colour = 'red',
   label = paste0('b[0]'),
   parse = TRUE
-  ) +   
+  ) +
 # beta 1
 geom_abline(
-  intercept = b00_m01 + b01_m01, 
-  slope = 0, 
-  color="red", 
-  linetype="dashed", 
+  intercept = b00_m01 + b01_m01,
+  slope = 0,
+  color="red",
+  linetype="dashed",
   size= .3
   ) +
-annotate('text', 
-  x =  1, 
-  y =  b00_m01 + (b01_m01)/2, 
+annotate('text',
+  x =  1,
+  y =  b00_m01 + (b01_m01)/2,
   size = 4,
   hjust = 0,
   colour = 'red',
   label = paste0('b[01]'),
   parse = TRUE
-  ) +   
+  ) +
 xlab('x variable') +
-ylab('y variable') + 
+ylab('y variable') +
 scale_x_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
 scale_y_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
 labs(
@@ -446,17 +447,17 @@ labs(
 theme_linedraw()
 
 
-#' 
+#'
 #' # Interpretacion del modelo reparametrizado (modelo 2)
-#' 
+#'
 #' El centrado de variable es útil para darle una interpretación sustantiva al intercepto del modelo ajustado.
-#' 
+#'
 #' - Intercepto ($b_{0}$), cuando $(x_{i} - \bar{x}_{i})$ es el predictor
 #' - Coeficiente de regresión (($b_{1}$))
-#' 
-#' 
+#'
+#'
 #' ## Proyección de intercepto y beta
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -496,12 +497,12 @@ data_plot_cen <- data_model %>%
 #----------------------------------------------------------
 
 data_plot_cen %>%
-ggplot(., aes(y = y, x = x_cgm)) + 
-geom_point(alpha = .3, col = 'grey20') + 
+ggplot(., aes(y = y, x = x_cgm)) +
+geom_point(alpha = .3, col = 'grey20') +
   geom_smooth(
     formula = y ~ x,
-    method = "lm", 
-    se = FALSE, 
+    method = "lm",
+    se = FALSE,
     colour = "grey90",
     alpha = .005
     ) +
@@ -509,40 +510,40 @@ geom_point(alpha = .3, col = 'grey20') +
 geom_point(aes(y = b00_m02, x = 0), col = 'red', alpha = .5) +
 # linea del intercepto
 geom_abline(
-  intercept = b00_m02, 
-  slope = 0, 
-  color="red", 
-  linetype="dashed", 
+  intercept = b00_m02,
+  slope = 0,
+  color="red",
+  linetype="dashed",
   size= .3
   ) +
-annotate('text', 
-  x =   0, 
-  y =  b00_m02 + .5, 
+annotate('text',
+  x =   0,
+  y =  b00_m02 + .5,
   size = 4,
   vjust = 0,
   colour = 'red',
   label = paste0('b[0]'),
   parse = TRUE
-  ) +   
+  ) +
 # beta 1
 geom_abline(
-  intercept = b00_m02 + b01_m02, 
-  slope = 0, 
-  color="red", 
-  linetype="dashed", 
+  intercept = b00_m02 + b01_m02,
+  slope = 0,
+  color="red",
+  linetype="dashed",
   size= .3
   ) +
-annotate('text', 
-  x =  1, 
-  y =  b00_m02 + (b01_m02)/2, 
+annotate('text',
+  x =  1,
+  y =  b00_m02 + (b01_m02)/2,
   size = 4,
   hjust = 0,
   colour = 'red',
   label = paste0('b[1]'),
   parse = TRUE
-  ) +   
+  ) +
 xlab(expression((x[i] - bar(x)[i]))) +
-ylab('y variable') + 
+ylab('y variable') +
 scale_y_continuous(breaks=seq(0,11,1), limits = c(0, 11)) +
 scale_x_continuous(breaks=seq(-6,6,1), limits = c(-6, 6)) +
 labs(
@@ -552,25 +553,25 @@ labs(
 theme_linedraw()
 
 
-#' 
+#'
 #' ## Interpretación de resultados
-#' 
+#'
 #' **Intercepto** ($b_{0}$)
-#' 
+#'
 #' - $b_{0}$ corresponde a la media de $y_{i}$, cuando $x_{i}$ es ingresado al modelo con sus valores centrados.
 #' - Otra forma de interpretar este estimado, es que $b_{0}$ es el valor esperado de $y_{i}$, cuando $(x_{i} - \bar{x}_{i}) = 0$.
 #' - En otras palabras, $b_{0}$ es el valor que esperamos de $y_{i}$, a valores promedio de $x_{i}$.
-#' 
+#'
 #' **Coeficiente** ($b_{1}$)
-#' 
+#'
 #' - $b_{1}$ corresponde al valor que esperamos que tome $y_{i}$, condicional al cambio de una unidad de $x_{i}$.
 #' - Empleando los resultados del modelo ajustado (*m02*), esperamos que los casos donde $(x_{i} - \bar{x}_{i}) = 1$, obtengan $b_{0} + b_{1}$ valores en la escala de $y_{i}$.
-#' 
-#' 
+#'
+#'
 #' # Visualización de errores
-#' 
+#'
 #' ## Lollipop plot de Residuales
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -596,28 +597,28 @@ data_fitted <- data_model %>%
 #----------------------------------------------------------
 
 data_fitted %>%
-ggplot(., aes(y = y, x = x)) + 
-geom_point(alpha = .3, col = 'grey20') + 
+ggplot(., aes(y = y, x = x)) +
+geom_point(alpha = .3, col = 'grey20') +
   geom_smooth(
     formula = y ~ x,
-    method = "lm", 
-    se = FALSE, 
+    method = "lm",
+    se = FALSE,
     colour = "grey90",
     alpha = .005
     ) +
-geom_segment(aes(xend = x, yend = y_hat), alpha = .4, col = 'red') + 
-geom_point(aes(y = y_hat), col = 'grey25', alpha = .5) + 
+geom_segment(aes(xend = x, yend = y_hat), alpha = .4, col = 'red') +
+geom_point(aes(y = y_hat), col = 'grey25', alpha = .5) +
 xlab('x variable') +
-ylab('y variable') + 
+ylab('y variable') +
 scale_x_continuous(breaks=seq(0,10,1), limits = c(0, 10)) +
 scale_y_continuous(breaks=seq(0,10,1), limits = c(0, 10)) +
 ggtitle('Residuals') +
 theme_linedraw()
 
 
-#' 
+#'
 #' ## Squared errors
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -651,50 +652,50 @@ rect_colour <- data_fitted$res_colour
 #----------------------------------------------------------
 
 data_fitted %>%
-ggplot(., aes(y = y, x = x)) + 
-geom_point(alpha = 1, col = 'grey20') + 
+ggplot(., aes(y = y, x = x)) +
+geom_point(alpha = 1, col = 'grey20') +
 ylim(0,12) +
 xlim(0,12) +
   geom_smooth(
     formula = y ~x,
-    method = "lm", 
-    se = FALSE, 
+    method = "lm",
+    se = FALSE,
     colour = "grey90",
     alpha = .005
     ) +
 geom_rect(
    aes(
-   xmin=x, 
-   xmax=x+res, 
-   ymin=y-res, 
+   xmin=x,
+   xmax=x+res,
+   ymin=y-res,
    ymax=y
-   ), 
+   ),
   colour = 'grey20',
-  fill=rect_colour, 
+  fill=rect_colour,
   alpha=0.5
   ) +
 xlab('x variable') +
-ylab('y variable') + 
+ylab('y variable') +
 ggtitle('Squared Errors') +
 theme_linedraw()
 
 
 
-#' 
+#'
 #' # Error por modelo
-#' 
+#'
 #' ## Sumas de errores cuadrados
-#' 
-#' La suma de errores cuadrados consiste en la suma total de residuales de un modelo. En otras palabras, es la suma 
+#'
+#' La suma de errores cuadrados consiste en la suma total de residuales de un modelo. En otras palabras, es la suma
 #' de todas las distancias cuadráticas entre los valores observados, y los valores esperados por un modelo.
-#' 
+#'
 #' $$
 #' \text{SSE} = \sum{(y_{i} - \hat{y}_{i}})^2
 #' $$
-#' 
+#'
 #' En Vik (2014) se emplea más de una formula para obtener las sumas de cuadrados, diferenciando entre el modelo nulo o modelo compacto, y el modelo aumentado. Por conveniencia, vamos a crear una función que nos permita obtener la suma de errores de cuadrados de cada modelo ajustado.
-#' 
-#' 
+#'
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -729,13 +730,13 @@ sse_02 <- sse_model(m02)
 
 sse_table <- data.frame(
   model = c(
-    'null model', 
-    'augmented model', 
+    'null model',
+    'augmented model',
     'centered x model'
     ),
   see = c(sse_00, sse_01, sse_02)
   )
-  
+
 #----------------------------------------------------------
 # mostrar tabla
 #----------------------------------------------------------
@@ -743,16 +744,16 @@ sse_table <- data.frame(
 knitr::kable(sse_table, digits = 2)
 
 
-#' 
-#' ## Descomponer Error total 
-#' 
+#'
+#' ## Descomponer Error total
+#'
 #' El error total del modelo nulo (o modelo compacto), puede ser descompuesto en términos del error reducido (o explicado), y lo que nos queda (el residuo). Esta idea puede ser expresada de la siguiente forma:
-#' 
+#'
 #' $$\text{SST} = \text{SSR} + \text{SSE}_{\text{m01}}$$
-#' 
+#'
 #' $\text{SST}$ es el error total, que lo obtenemos del modelo compacto o modelo nulo. El error reducido $\text{SSR}$, o error explicado lo obtenemos como la resta entre el error total, menos el error residual del modelo aumentado (ver Vik, 2014, p24). Y finalmente, el error residual $\text{SSE}_{\text{m01}}$ son los errores cuadrados del modelo aumentado.
-#' 
-#' 
+#'
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -774,13 +775,13 @@ explained_error <- total_error - residual_error
 
 error_table <- data.frame(
   error = c(
-    'Total Error', 
-    'Residual Error', 
+    'Total Error',
+    'Residual Error',
     'Explained Error'
     ),
   value = c(
-    total_error, 
-    residual_error, 
+    total_error,
+    residual_error,
     explained_error
     )
   )
@@ -802,9 +803,9 @@ explained_error/total_error
 summary(m01)$r.squared
 
 
-#' 
+#'
 #' # Evaluación de suppuestos
-#' 
+#'
 #' - Vamos a re ajustar los modelos vistos
 #'   + El modelo de medias, modelo nulo o modelo compacto (m00)
 #'   + El modelo con una covariable, o modelo aumentado (m01)
@@ -814,7 +815,7 @@ summary(m01)$r.squared
 #'   - Homocedasticidad (varianzas homogenas de los residuales)
 #'   - Normalidad de los residuales
 #'   - Independencia de las observaciones
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -843,19 +844,19 @@ m02 <- lm(f02, data = data_model)
 
 texreg::screenreg(
     list(m00, m01, m02),
-    star.symbol = "*", 
-    center = TRUE, 
+    star.symbol = "*",
+    center = TRUE,
     doctype = FALSE,
-    dcolumn = TRUE, 
+    dcolumn = TRUE,
     booktabs = TRUE,
     single.row = FALSE
     )
 
 
-#' 
-#' 
+#'
+#'
 #' ## Linealidad del modelo
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -869,13 +870,13 @@ texreg::screenreg(
 plot(m02, 1)
 
 
-#' 
+#'
 #' - Lo que esperamos, es que la dispersión de nuestros residuos sea homogenea al rededor de los datos ajustados.
 #' - Esperamos, que nuestra linea central en este gráfico sea horizontal.
-#' 
-#' 
+#'
+#'
 #' ## Homocesdasticidad
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -898,14 +899,14 @@ lmtest::bptest(m02)
 
 
 
-#' 
+#'
 #' - La homocedasticidad refiere a que observemos varianzas similares de los errores del modelo (los residuales), a diferentes valores predichos
 #' - Esperamos que, nuestros residuales tomen posiciones similares a lo largo de largo de los valores ajustados.
 #' - La prueba Breusch-Pagan evalua si los residuales presentan varianza similar a todos los valores predichos, o si esta difiere (no hay varianza homogenea).
-#'   - Los resultados de la aprueba no apoyan la hipotesis de que la varianza de los residuales fuera heterocedastica a los valores esperados por el modelo. 
-#' 
+#'   - Los resultados de la aprueba no apoyan la hipotesis de que la varianza de los residuales fuera heterocedastica a los valores esperados por el modelo.
+#'
 #' ## Normalidad de los residuos
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -929,58 +930,58 @@ plot(m02, 2)
 # Komogorov Smirnoff test
 #--------------------------------------
 
-ks.test(m02$residuals, 
-  "pnorm", 
-  mean=mean(m02$residuals), 
+ks.test(m02$residuals,
+  "pnorm",
+  mean=mean(m02$residuals),
   sd=sd(m02$residuals)
   )
 
 
 
-#' 
+#'
 #' - Uno modelo que ajusta bien a los datos, debiera presentar residuales que presenten una distribución normal.
 #' - Los QQ plots, ordenan a los residuos en una diagonal, de tal forma que si estos se "desalinean" podemos sospechar que el supuesto de normalidad de los errores no se cumple.
 #' - Podemos emplear el test Kolmogorov Smirnoff, y evaluar si la distribucion de errores discrepa de una distribución normal.
 #'   - En este caso, los resultados de la prueba aplicada indican que nuestros datos no discrepan de la distribución esperada.
-#' 
-#' 
+#'
+#'
 #' ## Independencia de los errores
-#' 
+#'
 #' .pull_l_50_t_080[
-#' 
+#'
 ## ---- echo=TRUE, warning=FALSE, eval = FALSE----------------------------------
-## 
+##
 ## #------------------------------------------------------------------------------
 ## # diagnósticos
 ## #------------------------------------------------------------------------------
-## 
+##
 ## #--------------------------------------
 ## # independencia de los errores
 ## #--------------------------------------
-## 
+##
 ## lmtest::dwtest(m02, alternative = 'two.sided')
-## 
+##
 
-#' 
+#'
 #' - Esperamos que la auto correlación entre los residuos sea casi nula
 #' - La prueba de Durbin-Watson evalua si hay correlaciones entre pares de residuales adjacentes (Field et al., 2012).
 #' - Los resultados del Durbin-Watson test, indican que nuestros residuales no presentan autocorrelaciones
 #'   + Empleamos una prueba de *dos colas*, asumiendo que los residuales incluso podrian presentar *autocorrelaciones* negativas (ver Long & Teetor, 2019, p376).
 #'   + En caso de que pudiera defenderse, que solo son razonables las correlaciones positivas, el test podria aplicarse con una sola cola.
-#' 
-#' 
+#'
+#'
 ## ---- echo=TRUE, warning=FALSE, eval = FALSE----------------------------------
-## 
+##
 ## #------------------------------------------------------------------------------
 ## # diagnósticos
 ## #------------------------------------------------------------------------------
-## 
+##
 ## #--------------------------------------
 ## # caso de observaciones anidadas
 ## #--------------------------------------
-## 
+##
 ## data_nested <- readRDS('nld_16.rds')
-## 
+##
 ## # Nota: datos de Holanda de ICCS 2016,
 ## #       estudiantes de 8vo grado,
 ## #       puntajes de conocimiento cívico (civ),
@@ -988,27 +989,27 @@ ks.test(m02$residuals,
 ## #       anidados en escuelas (id_j).
 ## #       Correlación intraclase de civ, es
 ## #       ICC = .55
-## 
+##
 ## #--------------------------------------
 ## # Durbin Watson test no favorable
 ## #--------------------------------------
-## 
+##
 ## lm(civ ~ ses, data = data_nested) %>%
 ## lmtest::dwtest(.)
-## 
+##
 ## # Nota: cuando se ignora a las escuelas en el modelo,
 ## #       el factor de anidación, encontramos evidencias
 ## #       de que los residuales no son independientes entre sí.
-## 
+##
 ## #--------------------------------------
 ## # Durbin Watson test favorable
 ## #--------------------------------------
-## 
+##
 ## lm(civ ~ ses + as.factor(id_j), data = data_nested) %>%
 ## lmtest::dwtest(.)
-## 
+##
 ## # Nota: se cumple el supuesto de independencia,
 ## #       en caso de que se sature la varianza entre
 ## #       escuelas.
-## 
+##
 

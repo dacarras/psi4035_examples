@@ -1,0 +1,254 @@
+---
+title: "Comparación de Modelos y Correlaciones"
+subtitle: "PSI4035 Taller 02"
+author: "dacarras"
+date: "Marzo 16, 2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ['xaringan-themer.css', 'animate.min.css', 'ninjutsu']
+    self_contained: false # if true, fonts will be stored locally
+    seal: false # show a title slide with YAML information
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      slideNumberFormat: '%current%'
+      countIncrementalSlides: true
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: true # disable slide transitions by scrolling
+---
+
+
+
+```{r setup_theme, include = FALSE}
+
+light_color <- 'white'
+text_color <- '#397CDA'
+gray <- "#333333"
+blue <- "#4466B0"
+
+
+library(xaringanthemer)
+style_duo(
+  # colors
+  primary_color = light_color,
+  secondary_color = text_color,
+  header_color = text_color,
+  text_color = text_color,
+  code_inline_color = colorspace::lighten(text_color),
+  text_bold_color = colorspace::lighten(text_color),
+  link_color = text_color,
+  inverse_link_color = light_color,
+  title_slide_text_color = text_color,
+  background_position = 'center',
+  header_font_google = google_font("Lato"),
+  text_font_google   = google_font("Lato", "300", "300i"),
+  code_font_google   = google_font("Hack"),
+  code_highlight_color = 'rgba(58,116,188,0.15)',
+  code_font_size = '50%',
+  padding = "0.4em 2.4em 0.4em 2.4em",
+  extra_fonts = list(google_font("Lato")),
+  extra_css = 
+  list(
+  ".red"    = list(color = "red"),
+  ".white"  = list(color = "white"),
+  ".bold_white" = list(color = "white", "font-weight" = "bold"),
+  ".bold_blue"  = list(color = "#397CDA", "font-weight" = "bold"),
+  ".small" = list("font-size" = "90%"),
+  ".pull_l_70"  = list("float" = "left" , "width" = "69%"),
+  ".pull_r_30"  = list("float" = "right", "width" = "29%"),
+
+  ".pull_l_40"  = list("float" = "left" , "width" = "39%"),
+  ".pull_r_60"  = list("float" = "right", "width" = "59%"),
+
+  ".pull_l_30"  = list("float" = "left" , "width" = "29%"),
+  ".pull_r_70"  = list("float" = "right", "width" = "69%"),
+
+
+  ".pull_l_65"  = list("float" = "left" , "width" = "64%"),  
+  ".pull_r_35"  = list("float" = "right", "width" = "34%"),
+  ".pull_l_60"  = list("float" = "left" , "width" = "59%"),  
+  ".pull_r_40"  = list("float" = "right", "width" = "39%"),
+  ".pull_l_50"  = list("float" = "left" , "width" = "42%"),
+  ".pull_r_50"  = list("float" = "right", "width" = "42%"),
+  ".pull_l_50_t_100"  = list("float" = "left", "width" = "45%", "font-size" = "100%"),
+  ".pull_l_50_t_090"  = list("float" = "left", "width" = "45%", "font-size" = "90%"),
+  ".pull_l_50_t_080"  = list("float" = "left", "width" = "45%", "font-size" = "80%"),
+  ".pull_l_50_t_075"  = list("float" = "left", "width" = "45%", "font-size" = "75%"),  
+  ".pull_l_50_t_070"  = list("float" = "left", "width" = "45%", "font-size" = "70%"),
+  ".pull_l_50_t_060"  = list("float" = "left", "width" = "45%", "font-size" = "60%"),
+  ".pull_l_50_t_050"  = list("float" = "left", "width" = "45%", "font-size" = "50%"),
+  ".pull_r_50_t_100"  = list("float" = "right", "width" = "45%", "font-size" = "100%"),
+  ".pull_r_50_t_090"  = list("float" = "right", "width" = "45%", "font-size" = "90%"),
+  ".pull_r_50_t_080"  = list("float" = "right", "width" = "45%", "font-size" = "80%"),
+  ".pull_r_50_t_075"  = list("float" = "right", "width" = "45%", "font-size" = "75%"),  
+  ".pull_r_50_t_070"  = list("float" = "right", "width" = "45%", "font-size" = "70%"),
+  ".pull_r_50_t_060"  = list("float" = "right", "width" = "45%", "font-size" = "60%"),
+  ".pull_r_50_t_050"  = list("float" = "right", "width" = "45%", "font-size" = "50%"),
+  ".small_left"  = list("float" = "left", "width" = "47%", "height" = "50%", "padding-right" = "2%"),
+  ".small_right" = list("float" = "right","width" = "47%", "height" = "50%", "padding-left"  = "2%"),
+  ".left_code" = list("float" = "left",  "width" = "47%", "height" = "100%", "padding-right" = "2%",
+    "font" = "Hack"),
+  ".code_out"  = list("float" = "right", "width" = "47%", "height" = "100%", "padding-left"  = "2%",
+    "font" = "Hack"),
+  ".pull_l_50_1" = list(
+    display = "flex",
+    width   = "100%",
+    height   = "77%",
+    "flex-flow" = "column wrap",
+    flex    = "1",
+    "padding-left"  = "10%"
+  ),
+  ".pull_l_50_2" = list(
+    display = "flex",
+    width   = "100%",
+    height   = "10%",
+    "flex-flow" = "column wrap",
+    flex    = "2",
+    "padding-left"  = "10%"
+  ),  
+  ".text_250" = list("font-size" = "250%"),
+  ".text_240" = list("font-size" = "240%"),
+  ".text_230" = list("font-size" = "230%"),
+  ".text_220" = list("font-size" = "220%"),
+  ".text_210" = list("font-size" = "210%"),
+  ".text_200" = list("font-size" = "200%"),
+  ".text_190" = list("font-size" = "190%"),
+  ".text_180" = list("font-size" = "180%"),
+  ".text_170" = list("font-size" = "170%"),
+  ".text_160" = list("font-size" = "160%"),    
+  ".text_150" = list("font-size" = "150%"),
+  ".text_140" = list("font-size" = "140%"),  
+  ".text_130" = list("font-size" = "130%"),
+  ".text_120" = list("font-size" = "120%"),
+  ".text_110" = list("font-size" = "110%"),
+  ".text_110" = list("font-size" = "110%"),
+  ".text_100" = list("font-size" = "100%"),
+  ".text_90" = list("font-size" = "90%"),
+  ".text_80" = list("font-size" = "80%"),
+  ".text_70" = list("font-size" = "70%"),
+  ".text_60" = list("font-size" = "60%"),
+  ".text_50" = list("font-size" = "50%"),
+  ".text_40" = list("font-size" = "40%"),
+  ".text_30" = list("font-size" = "30%"),
+  ".text_20" = list("font-size" = "20%"),
+  ".line_space_25" = list("line-height" = "2.5em;"),
+  ".line_space_20" = list("line-height" = "2.0em;"),
+  ".line_space_15" = list("line-height" = "1.5em;"),
+  ".line_space_11" = list("line-height" = "1.1em;"),
+  ".line_space_10" = list("line-height" = "1.0em;"),
+  ".line_space_09" = list("line-height" = "0.9em;"),
+  ".line_space_07" = list("line-height" = "0.7em;"),
+  ".line_space_05" = list("line-height" = "0.5em;"),
+  ".line_space_04" = list("line-height" = "0.4em;"),
+  ".line_space_03" = list("line-height" = "0.3em;"),
+  ".line_space_02" = list("line-height" = "0.2em;"),
+  ".line_space_01" = list("line-height" = "0.1em;"),
+  # it removes slide number in inverse slides
+  ".inverse .remark-slide-number" = list("display" = "none;"),
+    ".french" = list(
+      "text-indent" = "-30px", 
+      "position"= "absolute%",
+      "padding-left"= "40px%"
+      ),
+
+    ".tiny_text" = list(
+      "font-family" = "Lato", 
+      "font-size"= "70%"
+      ),
+    ".large_text" = list(
+      "font-family" = "Lato", 
+      "font-size"= "150%"
+      ),
+    ".slide_blue" = list(
+      "background-color" = "#397CDA",
+      "color" = "white"
+      ),
+  ".center_image" = list(
+    margin  = "0",
+    position = "absolute",
+    top      = "50%",
+    left     = "50%",
+    '-ms-transform' = "translate(-50%, -50%)",
+    transform = "translate(-50%, -50%)"
+    ),
+  ".hljs-github .hljs" = list(
+    background = 'rgba(58,116,188,0.03)'),
+  ".has-continuation" = list("display" = "block !important")
+  )
+)
+
+
+# 'rgba(25,142,255,0.3)',
+
+knitr::opts_chunk$set(comment = NA)
+knitr::opts_chunk$set(dpi=1500)
+
+# preview slides
+# xaringan::inf_mr('psi4035_t02_slides.rmd')
+
+# padding-top: 0.4em;
+# padding-right: 2.4em;
+# padding-bottom: 0.4em;
+# padding-left: 2.4em;
+
+# -------------------------------------------------------------------
+# including here libraries with messages
+# -------------------------------------------------------------------
+
+library(dplyr)
+library(survey)
+
+# -------------------------------------------------------------------
+# define digits in console
+# -------------------------------------------------------------------
+
+options(scipen = 999)
+options(digits = 10)
+
+# -------------------------------------------------------------------
+# display knitr as is
+# -------------------------------------------------------------------
+
+options(crayon.enabled = TRUE)
+old.hooks <- fansi::set_knit_hooks(knitr::knit_hooks)
+
+
+```
+
+
+.pull_l_50[
+
+#### Modelo de interés `m02`
+
+```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 1}
+
+f_m02
+
+```
+
+.text_60[
+Nota: distrubición de estadístico F. Línea roja es nuestro F observado.
+]
+
+]
+
+.pull_r_50[
+
+#### Modelo no predictivo `m03`
+
+```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 1}
+
+f_m03
+
+```
+
+.text_60[
+Nota: distrubición de estadístico F. Línea roja es nuestro F del modelo m03.
+]
+
+]
+
+---
+
