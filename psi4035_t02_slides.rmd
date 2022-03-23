@@ -612,7 +612,7 @@ Vik (2014, p50) emplea la siguiente tabla para evaluar al modelo ajusstado
 
 ### Tabla 4.7
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '100%', retina = 3}
 knitr::include_graphics('./files/table_4.7_summary.jpg')
 ```
 
@@ -894,7 +894,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 ### Tabla 4.7
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '100%', retina = 3}
 knitr::include_graphics('./files/table_4.7_summary.jpg')
 ```
 
@@ -954,7 +954,7 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 ### Tabla 4.7
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '100%', retina = 3}
 knitr::include_graphics('./files/table_4.7_summary.jpg')
 ```
 
@@ -994,14 +994,14 @@ Donde se encuentra cada componente en el output de R
 
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_1.jpeg')
 ```
 
 ---
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_2.jpeg')
 ```
 
@@ -1009,7 +1009,7 @@ knitr::include_graphics('./files/f_global_2.jpeg')
 
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_3.jpeg')
 ```
 
@@ -1017,7 +1017,7 @@ knitr::include_graphics('./files/f_global_3.jpeg')
 
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_4.jpeg')
 ```
 
@@ -1025,7 +1025,7 @@ knitr::include_graphics('./files/f_global_4.jpeg')
 
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_5.jpeg')
 ```
 
@@ -1034,18 +1034,9 @@ knitr::include_graphics('./files/f_global_5.jpeg')
 
 ### Evaluación Global
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_global_6.jpeg')
 ```
-
-
----
-### Comparación de modelos
-
-```{r echo=FALSE, out.width = '100%', retina = 1}
-knitr::include_graphics('./files/f_comp_1.jpeg')
-```
-
 
 ---
 
@@ -1074,10 +1065,21 @@ Donde se encuentra cada componente en el output de R
 <br>
 <br>
 
+
 ---
 ### Comparación de modelos
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
+knitr::include_graphics('./files/f_comp_1.jpeg')
+```
+
+
+---
+
+
+### Comparación de modelos
+
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_comp_2.jpeg')
 ```
 
@@ -1085,7 +1087,7 @@ knitr::include_graphics('./files/f_comp_2.jpeg')
 
 ### Comparación de modelos
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_comp_3.jpeg')
 ```
 
@@ -1093,7 +1095,7 @@ knitr::include_graphics('./files/f_comp_3.jpeg')
 
 ### Comparación de modelos
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_comp_4.jpeg')
 ```
 
@@ -1101,7 +1103,7 @@ knitr::include_graphics('./files/f_comp_4.jpeg')
 
 ### Comparación de modelos
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_comp_5.jpeg')
 ```
 
@@ -1110,8 +1112,17 @@ knitr::include_graphics('./files/f_comp_5.jpeg')
 
 ### Comparación de modelos
 
-```{r echo=FALSE, out.width = '100%', retina = 1}
+```{r echo=FALSE, out.width = '90%', retina = 3}
 knitr::include_graphics('./files/f_comp_6.jpeg')
+```
+
+---
+
+
+### Comparación de modelos
+
+```{r echo=FALSE, out.width = '90%', retina = 3}
+knitr::include_graphics('./files/f_comp_7.jpeg')
 ```
 
 ---
@@ -1225,7 +1236,7 @@ f_m02
 
 .pull_r_60[
 
-```{r , echo=FALSE, eval=TRUE, out.width = '90%', retina = 1}
+```{r , echo=FALSE, eval=TRUE, out.width = '90%', retina = 3}
 
 f_m02
 
@@ -1351,7 +1362,7 @@ f_m03
 
 .pull_r_60[
 
-```{r , echo=FALSE, eval=TRUE, out.width = '90%', retina = 1}
+```{r , echo=FALSE, eval=TRUE, out.width = '90%', retina = 3}
 
 f_m03
 
@@ -1368,7 +1379,7 @@ Nota: distrubición de estadístico F. Línea roja es nuestro F del modelo m03.
 
 #### Modelo de interés `m02`
 
-```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 1}
+```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 3}
 
 f_m02
 
@@ -1384,7 +1395,7 @@ Nota: distrubición de estadístico F. Línea roja es nuestro F observado.
 
 #### Modelo no predictivo `m03`
 
-```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 1}
+```{r , echo=FALSE, eval=TRUE, out.width = '95%', retina = 3}
 
 f_m03
 
@@ -1427,7 +1438,7 @@ Cuáles son las chances de un modelo que no ajusta
 
 #### Correlaciones esperadas
 
-```{r echo=FALSE, out.width = '35%', retina = 1}
+```{r echo=FALSE, out.width = '35%', retina = 3}
 knitr::include_graphics('./files/correlations_navarro_2019.jpg')
 ```
 
@@ -1444,7 +1455,7 @@ Referencias: Navarro (2019)
 
 #### Correlaciones no esperadas
 
-```{r echo=FALSE, out.width = '60%', retina = 1}
+```{r echo=FALSE, out.width = '60%', retina = 3}
 knitr::include_graphics('./files/odd_correlations.jpg')
 ```
 
