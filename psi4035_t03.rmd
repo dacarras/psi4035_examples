@@ -188,7 +188,7 @@ Se aplicó una prueba t de muestras independientes, para comparar las medias de 
 ```{r , echo=TRUE, warning=FALSE}
 
 #----------------------------------------------------------
-# prueba t
+# prueba F
 #----------------------------------------------------------
 
 #--------------------------------------
@@ -264,6 +264,50 @@ knitr::kable(., digits = 2)
 ## Descripción de resultados
 
 Aplicamos una prueba f, para comparar las medias de los puntajes de sintomas depresivos, entre pacientes diagnosticados de depresión, y pacientes sin diagnostico. Los resultados indican que los pacientes diagnosticados presentan medias más altas de sintomas depresivos (M = 19.5, DS = 3.18, n = 12) que los pacientes no diagnosticados (M = 6.5, DS = 2.68, n = 12), F(1, 22) = 117.41, p <.001. La diferencia de medias observadas es de gran tamaño ( $\eta_{p}^2$ = .84 ).
+
+# Relacion entre t y F
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# relacion entre t y F
+#----------------------------------------------------------
+
+#--------------------------------------
+# aplicar prueba t
+#--------------------------------------
+
+t_test <- t.test(score ~ group, var.equal=TRUE, data = table_7_1)
+
+broom::tidy(t_test)
+
+t_value <- broom::tidy(t_test) %>%
+           dplyr::select(statistic) %>%
+           dplyr::pull()
+
+#--------------------------------------
+# ANOVA
+#--------------------------------------
+
+f_test <- aov(score ~ dummy, data = table_7_1)
+
+broom::tidy(f_test)
+
+f_value <- broom::tidy(f_test) %>%
+           dplyr::filter(term == 'dummy') %>%
+           dplyr::select(statistic) %>%
+           dplyr::pull()
+
+#--------------------------------------
+# comparar ambos valores
+#--------------------------------------
+
+t_value^2
+f_value
+
+# Nota: ambos valores son equivalentes.
+
+```
 
 
 # Códigos útiles para la guía
