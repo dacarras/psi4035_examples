@@ -1,4 +1,4 @@
- ---
+---
 title: "Pruebas t y ANOVA, y operaciones para desarollar guía"
 subtitle: "PSI4035 Taller 03"
 author: "dacarras"
