@@ -1,0 +1,2501 @@
+id_i,ctry,sex,age,dem,dem_group,aut,civ,ses,edu,level,level_lab
+8093,Chile,1,13.5,2,complex,42.55,514.89,-0.19,0,2,level 2
+9243,Chile,0,13.83,3,limited,57.94,334.68,-0.56,0,0,level 0
+7484,Chile,0,14.17,3,limited,17.67,527.46,-0.23,0,2,level 2
+7187,Chile,0,14.5,2,complex,17.67,612.81,-0.81,0,3,level 3
+9208,Chile,1,13.42,1,minimalist,38.07,479.65,-0.17,0,2,level 2
+6863,Chile,1,13.33,2,complex,47.94,556.01,1.08,1,2,level 2
+8736,Chile,0,13.92,3,limited,59.24,548.08,-1.03,0,2,level 2
+9067,Chile,1,13.42,2,complex,51.06,391.79,-0.54,0,0,level 0
+9691,Chile,0,14.25,3,limited,27.06,530.32,0.01,0,2,level 2
+7096,Chile,1,14.25,1,minimalist,49.54,481.76,0.5,0,2,level 2
+8552,Chile,0,13.92,1,minimalist,55.3,424.8,-0.11,0,1,level 1
+8273,Chile,1,13.83,1,minimalist,40.44,340.27,-0.46,0,0,level 0
+6745,Chile,0,14.25,1,minimalist,59.24,268.9,-0.8,0,0,level 0
+7433,Chile,0,13.83,2,complex,42.55,517.04,0.66,1,2,level 2
+6210,Chile,1,13.58,3,limited,44.48,467.67,-0.2,0,1,level 1
+8166,Chile,0,14,2,complex,38.07,538.94,0.94,1,2,level 2
+6231,Chile,0,13.83,1,minimalist,17.67,522.42,1.08,1,2,level 2
+7630,Chile,1,14.08,2,complex,35.3,609.69,-0.5,0,3,level 3
+6355,Chile,1,13.42,2,complex,47.94,548.19,-0.74,0,2,level 2
+6181,Chile,1,13.92,2,complex,35.3,608.55,2.49,1,3,level 3
+6766,Chile,0,14,3,limited,17.67,439.43,2.13,1,1,level 1
+8750,Chile,0,14.67,1,minimalist,52.52,463.54,-0.88,0,1,level 1
+10668,Chile,0,13.67,3,limited,42.55,531.62,0.83,1,2,level 2
+10623,Chile,0,15.42,1,minimalist,35.3,396.08,-0.87,0,1,level 1
+9775,Chile,1,14.25,2,complex,35.3,504.49,-0.61,0,2,level 2
+6223,Chile,1,13.33,3,limited,59.24,495.21,0.61,1,2,level 2
+10028,Chile,0,13.5,1,minimalist,70.18,376.07,-1.29,0,0,level 0
+7384,Chile,1,14.25,2,complex,35.3,568.43,0.34,0,3,level 3
+7060,Chile,1,14.08,1,minimalist,49.54,492.53,-0.24,0,2,level 2
+8910,Chile,1,14.75,1,minimalist,44.48,487.01,-1.12,0,2,level 2
+7883,Chile,0,16.58,1,minimalist,52.52,498.39,0.36,0,2,level 2
+7444,Chile,0,13.92,1,minimalist,44.48,559.9,2.03,0,2,level 2
+9305,Chile,1,13.5,2,complex,84.74,521.65,0.78,0,2,level 2
+8812,Chile,1,13.83,1,minimalist,35.3,574.73,1.97,1,3,level 3
+6645,Chile,1,14.08,3,limited,46.26,535.52,0.95,0,2,level 2
+6441,Chile,1,13.75,1,minimalist,53.93,415.39,-0.57,0,1,level 1
+7010,Chile,1,13.67,2,complex,17.67,548.03,1.97,1,2,level 2
+6550,Chile,0,13.83,1,minimalist,40.44,560.16,-0.17,0,2,level 2
+7299,Chile,1,14.08,3,limited,55.3,399.44,-0.37,0,1,level 1
+8958,Chile,1,15.67,3,limited,43.51,494.15,0.88,1,2,level 2
+9921,Chile,1,14.33,1,minimalist,44.48,581.47,-0.64,0,3,level 3
+9414,Chile,1,14,1,minimalist,40.44,651.4,1.99,1,3,level 3
+9028,Chile,1,14.08,1,minimalist,38.07,525.2,-0.4,0,2,level 2
+6919,Chile,1,14.17,1,minimalist,17.67,643.39,2.13,1,3,level 3
+7522,Chile,1,16.83,1,minimalist,44.48,520.63,-1.04,0,2,level 2
+8756,Chile,1,13.42,3,limited,52.52,517.53,-0.42,0,2,level 2
+7217,Chile,0,13.67,3,limited,38.07,416.61,0.72,1,1,level 1
+9457,Chile,0,14.17,3,limited,61.87,367.63,-0.9,0,0,level 0
+7211,Chile,0,14,3,limited,32.73,435.67,-1.76,0,1,level 1
+5972,Chile,1,14.17,2,complex,31.87,507.24,-0.7,0,2,level 2
+10678,Chile,0,14.17,2,complex,31.87,645.72,1.58,1,3,level 3
+9563,Chile,1,13.58,1,minimalist,52.03,462.39,-0.89,0,1,level 1
+8624,Chile,0,16.5,3,limited,85.37,304.15,-1.16,0,0,level 0
+9374,Chile,1,13.83,2,complex,35.3,590.75,-0.07,0,3,level 3
+6757,Chile,0,14.25,1,minimalist,52.52,323.86,-1.36,0,0,level 0
+7160,Chile,1,14,2,complex,31.87,495.03,-1.04,0,2,level 2
+9667,Chile,0,14.67,2,complex,46.26,589.8,-0.27,0,3,level 3
+8840,Chile,1,15.25,1,minimalist,55.3,426.78,-0.67,0,1,level 1
+8662,Chile,0,13.75,2,complex,17.67,513.15,1.09,0,2,level 2
+9174,Chile,0,14.33,3,limited,59.24,357.95,-0.51,0,0,level 0
+7887,Chile,0,15.17,2,complex,42.55,486.99,-1.15,0,2,level 2
+7523,Chile,1,15.25,1,minimalist,38.07,532.98,-0.51,0,2,level 2
+9267,Chile,1,13.67,2,complex,31.87,596.97,1.83,1,3,level 3
+8255,Chile,1,14,2,complex,40.44,487.17,-0.03,0,2,level 2
+10387,Chile,0,14.58,2,complex,31.87,604.37,1.99,1,3,level 3
+10357,Chile,0,13.58,1,minimalist,52.52,523.67,0.45,1,2,level 2
+6260,Chile,0,15.25,1,minimalist,NA,561.47,1.05,1,2,level 2
+8278,Chile,1,14.25,2,complex,42.55,552.98,1.99,1,2,level 2
+10537,Chile,1,14.33,2,complex,46.26,487.7,-1.09,0,2,level 2
+6283,Chile,1,14.25,1,minimalist,47.94,496.1,1.03,0,2,level 2
+10701,Chile,0,15.33,1,minimalist,63.24,340.08,-1.58,0,0,level 0
+9081,Chile,0,13.42,1,minimalist,59.24,390.92,-0.43,0,0,level 0
+6490,Chile,1,14.75,2,complex,38.07,470.95,-1.61,0,1,level 1
+9525,Chile,0,14,1,minimalist,59.22,353.4,0.06,0,0,level 0
+7197,Chile,1,15.92,1,minimalist,NA,427.52,NA,NA,1,level 1
+7285,Chile,1,14,3,limited,47.94,516.72,-0.12,0,2,level 2
+8581,Chile,1,14.25,2,complex,36.02,571.04,1.52,1,3,level 3
+6625,Chile,0,14.42,3,limited,47.94,450.66,0.76,0,1,level 1
+10146,Chile,0,14.25,1,minimalist,17.67,506.91,-0.87,0,2,level 2
+8264,Chile,1,14,1,minimalist,61.87,282.22,-0.13,0,0,level 0
+6996,Chile,1,14.17,2,complex,27.06,507.78,1.52,1,2,level 2
+8996,Chile,1,14,1,minimalist,35.3,450.37,1.47,1,1,level 1
+10196,Chile,1,13.58,2,complex,46.26,416.41,-0.04,0,1,level 1
+6906,Chile,1,13.83,3,limited,47.55,445.89,1.63,1,1,level 1
+7916,Chile,0,14.83,1,minimalist,60.54,313.23,-1.25,0,0,level 0
+7758,Chile,1,14.25,1,minimalist,31.87,451.5,-1.08,0,1,level 1
+9570,Chile,0,13.83,3,limited,46.26,393.35,-0.88,0,0,level 0
+7147,Chile,1,13.83,1,minimalist,51.06,414.6,-0.23,0,1,level 1
+9588,Chile,1,14.17,3,limited,46.35,438.05,-1.75,0,1,level 1
+8866,Chile,1,14.25,1,minimalist,53.93,287.85,0.54,0,0,level 0
+9020,Chile,1,14.92,1,minimalist,61.87,448.38,-0.44,0,1,level 1
+10329,Chile,1,14.75,1,minimalist,51.06,359.03,NA,0,0,level 0
+8836,Chile,1,14.25,1,minimalist,49.54,519.59,-1.5,0,2,level 2
+10517,Chile,0,14.67,1,minimalist,42.55,538.31,1.46,1,2,level 2
+7608,Chile,0,16.92,3,limited,49.54,481.3,-1.18,0,2,level 2
+9000,Chile,1,13.92,2,complex,38.07,571.2,-0.6,0,3,level 3
+8107,Chile,1,14.17,2,complex,42.55,558.05,1.61,1,2,level 2
+8620,Chile,1,14.08,2,complex,40.44,578.56,1.39,1,3,level 3
+10549,Chile,1,14.25,1,minimalist,44.48,465.62,-1.3,0,1,level 1
+7641,Chile,1,14.67,1,minimalist,17.67,378.44,-0.39,0,0,level 0
+8049,Chile,1,14.67,1,minimalist,40.64,404.92,-1.19,0,1,level 1
+7291,Chile,1,14.58,2,complex,45.54,400.07,1.07,1,1,level 1
+7652,Chile,1,13.75,1,minimalist,35.3,447.56,1.01,0,1,level 1
+7286,Chile,0,16.17,3,limited,55.3,360.94,-0.3,0,0,level 0
+9965,Chile,1,14.42,1,minimalist,53.83,540.35,0.39,1,2,level 2
+6558,Chile,0,14.5,3,limited,59.24,413.54,NA,NA,1,level 1
+10430,Chile,0,13.92,3,limited,49.54,477.72,0.69,1,1,level 1
+8395,Chile,0,15.58,3,limited,46.26,316.78,0.07,0,0,level 0
+9725,Chile,1,14.08,3,limited,40.44,554.11,-0.9,0,2,level 2
+9357,Chile,0,14.92,3,limited,56.63,433.53,-0.23,0,1,level 1
+8141,Chile,0,14.08,2,complex,17.67,587.99,1.16,1,3,level 3
+6232,Chile,0,15.33,2,complex,17.67,468.88,1.14,1,1,level 1
+8259,Chile,1,13.5,3,limited,60.54,296.07,-0.24,0,0,level 0
+9467,Chile,0,13.83,1,minimalist,51.06,360.77,-0.95,0,0,level 0
+7860,Chile,1,13.5,1,minimalist,49.54,538.98,-0.94,0,2,level 2
+6533,Chile,0,15.17,1,minimalist,52.52,486.72,-0.38,0,2,level 2
+7729,Chile,1,14.17,2,complex,35.3,634.06,1.83,1,3,level 3
+6171,Chile,1,14.25,2,complex,27.06,533.77,-0.51,0,2,level 2
+10181,Chile,0,14.08,1,minimalist,57.94,243.81,1.25,1,0,level 0
+8751,Chile,0,14.17,3,limited,51.06,466.3,-1.41,0,1,level 1
+7717,Chile,1,14.75,1,minimalist,46.26,403.96,-1.62,0,1,level 1
+9011,Chile,1,13.58,3,limited,61.87,359.38,-0.76,0,0,level 0
+10594,Chile,0,14.08,2,complex,46.26,431.8,0.66,1,1,level 1
+10694,Chile,0,14,1,minimalist,49.54,389.86,-0.55,0,0,level 0
+10630,Chile,1,14,2,complex,47.94,451.55,-0.23,0,1,level 1
+9590,Chile,0,13.67,3,limited,53.93,412.16,-1.8,0,1,level 1
+9110,Chile,1,14,2,complex,40.44,525.03,0.23,0,2,level 2
+9294,Chile,1,16,2,complex,31.87,592.69,-0.56,0,3,level 3
+9131,Chile,1,14.08,1,minimalist,44.48,453.53,1.52,1,1,level 1
+6945,Chile,1,13.58,1,minimalist,49.54,487.64,0.85,1,2,level 2
+10341,Chile,1,14,2,complex,44.48,466.51,-1.36,0,1,level 1
+6076,Chile,0,13.33,3,limited,27.06,262.69,0.48,0,0,level 0
+10128,Chile,0,14.17,2,complex,35.3,523.01,0.14,0,2,level 2
+10407,Chile,0,13.33,3,limited,55.3,361.52,-0.87,0,0,level 0
+9105,Chile,1,13.67,2,complex,49.54,490.75,-0.12,0,2,level 2
+9238,Chile,1,13.58,1,minimalist,46.26,583.71,0.25,0,3,level 3
+10044,Chile,1,13.33,1,minimalist,61.87,373.93,-1.24,0,0,level 0
+9295,Chile,0,14.25,1,minimalist,42.55,585.3,0.14,0,3,level 3
+10242,Chile,1,13.5,1,minimalist,44.48,572.33,-1.36,0,3,level 3
+10325,Chile,0,14.08,3,limited,17.67,428.11,-0.89,0,1,level 1
+9985,Chile,1,13.83,1,minimalist,27.06,647.22,0.72,0,3,level 3
+8364,Chile,0,15.08,3,limited,40.44,510.82,0.2,0,2,level 2
+10343,Chile,0,13.67,3,limited,57.94,377.01,0.49,0,0,level 0
+6527,Chile,0,14.33,3,limited,49.54,584.27,-0.4,0,3,level 3
+8277,Chile,1,14.42,2,complex,NA,531.4,NA,NA,2,level 2
+10878,Chile,0,14,3,limited,59.24,429.07,-1.91,0,1,level 1
+7087,Chile,1,13.75,1,minimalist,52.52,485.39,0.87,0,2,level 2
+7794,Chile,1,14.08,1,minimalist,52.52,508.3,-0.23,0,2,level 2
+9378,Chile,1,14,1,minimalist,50.83,442.63,-0.17,0,1,level 1
+6474,Chile,0,13.58,3,limited,59.24,449.48,-1.15,0,1,level 1
+9551,Chile,0,13.75,3,limited,50.36,360.33,0.85,1,0,level 0
+7719,Chile,1,15,1,minimalist,53.93,499.29,1.18,1,2,level 2
+7362,Chile,1,13.67,1,minimalist,44.48,583.63,0.99,1,3,level 3
+8512,Chile,0,14.25,1,minimalist,27.06,684.53,0.39,0,3,level 3
+9360,Chile,0,13.33,2,complex,17.67,560.15,0.42,0,2,level 2
+7859,Chile,0,15.33,1,minimalist,47.94,396.91,0.11,0,1,level 1
+10688,Chile,0,13.67,1,minimalist,56.63,318.1,-0.2,0,0,level 0
+8669,Chile,1,14.92,1,minimalist,56.63,420.9,-1.45,0,1,level 1
+8461,Chile,1,14.33,1,minimalist,38.07,372.41,-0.87,0,0,level 0
+10534,Chile,0,14.33,2,complex,40.44,608.98,0.2,0,3,level 3
+8770,Chile,1,15.58,1,minimalist,52.52,407.28,-1.3,0,1,level 1
+10868,Chile,0,14.08,3,limited,64.69,269.98,-1.31,0,0,level 0
+8306,Chile,0,13.92,2,complex,31.87,548.52,1.41,1,2,level 2
+10137,Chile,1,13.92,2,complex,31.87,495.44,0.75,1,2,level 2
+9470,Chile,0,14.17,1,minimalist,46.26,536.41,-0.04,0,2,level 2
+7778,Chile,1,13.75,2,complex,35.3,570.12,1.09,0,3,level 3
+8210,Chile,0,14,2,complex,40.44,695.01,2.13,1,3,level 3
+6348,Chile,0,13.58,2,complex,44.48,490.06,0.29,0,2,level 2
+8420,Chile,1,14.42,2,complex,55.3,466.13,0.92,1,1,level 1
+10496,Chile,1,13.58,1,minimalist,42.55,330.44,0.43,0,0,level 0
+6305,Chile,1,13.75,1,minimalist,49.15,450.43,-0.59,0,1,level 1
+9298,Chile,0,15.58,3,limited,60.54,428.82,0.07,0,1,level 1
+9838,Chile,1,13.75,1,minimalist,47.94,484.9,1.61,1,2,level 2
+7330,Chile,1,14.58,1,minimalist,46.26,374.16,-0.24,0,0,level 0
+9469,Chile,0,14,3,limited,46.26,327.29,-1.45,0,0,level 0
+8612,Chile,0,13.42,3,limited,44.48,488.7,0.39,NA,2,level 2
+10269,Chile,1,14,3,limited,47.94,442.83,-1.58,0,1,level 1
+6987,Chile,0,13.92,1,minimalist,53.93,354.09,-2.22,0,0,level 0
+7364,Chile,0,14.42,1,minimalist,49.54,463.54,2.49,1,1,level 1
+7552,Chile,1,14.75,2,complex,40.44,738.34,1.54,1,3,level 3
+6875,Chile,1,13.5,1,minimalist,38.07,581.49,0.34,0,3,level 3
+7118,Chile,1,13.75,3,limited,27.06,418.13,-1.74,0,1,level 1
+9657,Chile,0,14.25,2,complex,44.48,556.92,0.98,0,2,level 2
+7757,Chile,0,14.92,3,limited,44.7,482.8,-1.36,0,2,level 2
+6290,Chile,1,15.42,2,complex,27.06,538.55,-0.32,0,2,level 2
+10312,Chile,0,15.25,3,limited,47.94,331.25,-0.34,0,0,level 0
+8535,Chile,1,14,2,complex,38.07,677.29,1.63,1,3,level 3
+9881,Chile,0,13.75,3,limited,49.54,561.83,1.18,1,2,level 2
+6857,Chile,0,13.67,2,complex,17.67,573.99,-0.85,0,3,level 3
+10939,Chile,1,13.5,1,minimalist,42.55,599.78,0.09,0,3,level 3
+8593,Chile,1,14.17,3,limited,51.06,505.96,-1.29,0,2,level 2
+7325,Chile,1,13.75,2,complex,31.87,584.82,NA,NA,3,level 3
+7340,Chile,0,14.25,1,minimalist,44.48,567.71,-0.17,0,3,level 3
+8636,Chile,1,14.25,3,limited,38.07,440.75,0.13,0,1,level 1
+9282,Chile,0,13.75,1,minimalist,47.94,302.25,NA,NA,0,level 0
+7441,Chile,0,14.33,2,complex,17.67,602.4,1.11,1,3,level 3
+9140,Chile,0,14.17,2,complex,51.06,453.16,1.39,1,1,level 1
+7346,Chile,1,14.33,2,complex,44.48,639.14,1.33,1,3,level 3
+9702,Chile,0,14,3,limited,57.94,435.24,0.02,1,1,level 1
+8171,Chile,0,14.17,2,complex,38.07,571.92,-0.7,0,3,level 3
+6159,Chile,1,13.42,2,complex,46.26,473.45,0.74,0,1,level 1
+10788,Chile,1,14,2,complex,31.87,647,0.34,0,3,level 3
+6846,Chile,1,14.25,1,minimalist,51.06,464.68,-1.24,0,1,level 1
+9014,Chile,1,14.08,2,complex,35.3,587.81,0.36,1,3,level 3
+10398,Chile,0,15.17,3,limited,64.69,283.06,-0.95,0,0,level 0
+8715,Chile,1,14.17,1,minimalist,56.63,455.42,0.41,0,1,level 1
+10595,Chile,1,13.5,3,limited,51.06,375.08,-0.71,0,0,level 0
+8892,Chile,0,13.75,2,complex,28.08,504.23,-0.81,0,2,level 2
+5931,Chile,0,14.08,2,complex,40.44,550.62,0.38,1,2,level 2
+10721,Chile,0,14,1,minimalist,47.94,469.52,-0.37,0,1,level 1
+6792,Chile,1,14.25,1,minimalist,46.26,559.83,-1,0,2,level 2
+10038,Chile,1,14.17,1,minimalist,51.06,463.09,-1.04,0,1,level 1
+9466,Chile,0,13.83,1,minimalist,53.93,378.58,0,0,0,level 0
+6823,Chile,1,14.25,2,complex,18.94,416.17,2.13,1,1,level 1
+10012,Chile,1,14,1,minimalist,55.3,425.6,1,1,1,level 1
+8664,Chile,1,13.75,1,minimalist,55.3,336.9,-0.46,0,0,level 0
+9944,Chile,1,17,1,minimalist,68.06,357.8,-0.63,0,0,level 0
+7813,Chile,0,13.75,1,minimalist,40.44,470.62,-0.89,NA,1,level 1
+6504,Chile,1,13.33,3,limited,49.15,301.01,-1.29,0,0,level 0
+6866,Chile,1,13.92,2,complex,27.06,537.5,0.08,0,2,level 2
+10656,Chile,0,13.83,3,limited,52.52,374.8,-0.12,0,0,level 0
+10546,Chile,0,14.83,3,limited,53.93,358.1,-1.28,0,0,level 0
+10604,Chile,0,14.42,1,minimalist,85.37,286.3,-1.15,0,0,level 0
+7812,Chile,1,14.17,1,minimalist,49.54,517.04,0.16,0,2,level 2
+10767,Chile,0,14.75,2,complex,47.94,516.08,1.11,1,2,level 2
+10610,Chile,0,14,3,limited,17.67,450.48,-1.45,0,1,level 1
+5906,Chile,1,14.17,2,complex,40.44,567.65,2.38,1,3,level 3
+6398,Chile,0,13.67,3,limited,27.06,430.4,-0.32,0,1,level 1
+6725,Chile,1,13.67,3,limited,52.52,254.79,-1.09,0,0,level 0
+10531,Chile,0,13.67,1,minimalist,35.3,562.97,0.02,0,2,level 2
+7344,Chile,1,13.75,2,complex,35.3,538.95,1.46,1,2,level 2
+9500,Chile,1,13.75,1,minimalist,27.06,475.38,1.97,1,1,level 1
+8919,Chile,1,13.5,3,limited,52.52,412.37,0.33,1,1,level 1
+10056,Chile,1,14,3,limited,49.54,306.54,-0.64,0,0,level 0
+8794,Chile,1,14,1,minimalist,44.48,443.39,-1.42,0,1,level 1
+8986,Chile,0,14,2,complex,46.26,536.24,1.53,1,2,level 2
+9271,Chile,1,14.42,2,complex,17.67,665.89,2.08,1,3,level 3
+9385,Chile,1,14.08,2,complex,59.24,441.33,-0.79,0,1,level 1
+6706,Chile,1,13.58,1,minimalist,52.52,519.21,0.02,0,2,level 2
+6211,Chile,1,13.75,1,minimalist,40.44,449.14,0.16,0,1,level 1
+9873,Chile,0,14.08,1,minimalist,40.44,468.69,-0.05,0,1,level 1
+9098,Chile,0,13.42,2,complex,35.3,620.04,1.66,1,3,level 3
+5901,Chile,1,14,2,complex,31.87,575.29,1.63,1,3,level 3
+7855,Chile,1,13.58,2,complex,64.69,446.64,-0.38,0,1,level 1
+6528,Chile,1,14.83,1,minimalist,44.48,332.75,0.59,0,0,level 0
+8804,Chile,1,13.42,2,complex,57.94,507.42,-0.7,0,2,level 2
+9891,Chile,1,14,2,complex,40.44,537.16,1.27,1,2,level 2
+7816,Chile,1,14.17,2,complex,38.07,462.45,-0.54,0,1,level 1
+6010,Chile,0,13.75,2,complex,55.3,468.15,0.34,0,1,level 1
+7880,Chile,0,14.25,2,complex,53.93,521.75,1.12,1,2,level 2
+8980,Chile,0,14.08,1,minimalist,47.94,515.63,1.36,0,2,level 2
+10873,Chile,1,13.58,2,complex,27.06,628.07,1.78,0,3,level 3
+8550,Chile,1,13.92,1,minimalist,53.93,581.21,0.03,0,3,level 3
+6035,Chile,0,14.25,1,minimalist,53.93,567.94,0.07,0,3,level 3
+9222,Chile,0,14.5,2,complex,27.06,493.13,0.81,0,2,level 2
+8462,Chile,1,14.17,1,minimalist,44.48,560.43,0.81,0,2,level 2
+10191,Chile,1,15.17,3,limited,55.3,430.47,-0.27,0,1,level 1
+9296,Chile,1,14.42,3,limited,53.93,456.85,1.3,1,1,level 1
+10256,Chile,0,16.75,1,minimalist,68.06,359.27,-1.91,0,0,level 0
+8923,Chile,1,14.58,1,minimalist,52.52,500.96,-0.78,0,2,level 2
+6188,Chile,1,13.75,1,minimalist,47.94,492.34,2.49,1,2,level 2
+9553,Chile,0,14.08,3,limited,47.94,481.3,-0.2,0,2,level 2
+10120,Chile,0,14.25,2,complex,46.26,490.93,-1.58,0,2,level 2
+9403,Chile,1,13.58,1,minimalist,66.28,349.04,-0.19,0,0,level 0
+10025,Chile,1,13.92,1,minimalist,66.28,333.78,0.08,0,0,level 0
+8835,Chile,0,13.67,2,complex,31.87,489.79,-0.5,0,2,level 2
+9847,Chile,0,14.25,1,minimalist,51.06,382.33,-0.14,0,0,level 0
+7863,Chile,0,13.42,3,limited,64.69,415.94,1.06,0,1,level 1
+6122,Chile,0,14.08,3,limited,47.94,509.38,1.47,1,2,level 2
+8341,Chile,0,15.33,3,limited,55.3,316.47,-0.4,0,0,level 0
+8270,Chile,1,14.33,2,complex,35.3,517.81,-0.7,0,2,level 2
+8745,Chile,1,14,2,complex,47.94,580.34,-0.74,0,3,level 3
+10935,Chile,0,13.83,1,minimalist,51.06,425.21,-0.17,0,1,level 1
+8183,Chile,1,14.5,2,complex,17.67,590.98,1.91,1,3,level 3
+8621,Chile,0,16.08,2,complex,51.06,534.32,0.19,0,2,level 2
+7649,Chile,0,14.42,1,minimalist,46.26,424.63,-0.79,0,1,level 1
+5940,Chile,1,13.5,2,complex,35.3,582.25,0.29,0,3,level 3
+8558,Chile,1,14.25,2,complex,52.52,505.86,-0.42,0,2,level 2
+6001,Chile,1,13.92,3,limited,52.52,436.07,0.19,0,1,level 1
+8397,Chile,0,13.67,2,complex,31.87,641.74,0.42,0,3,level 3
+8965,Chile,1,13.75,1,minimalist,46.26,591.77,0.08,0,3,level 3
+7874,Chile,0,14.25,1,minimalist,59.24,384.09,-0.52,0,0,level 0
+10657,Chile,1,13.83,1,minimalist,47.94,551.31,-0.08,0,2,level 2
+6905,Chile,0,13.75,2,complex,40.44,552.1,-0.5,0,2,level 2
+6037,Chile,0,14.17,2,complex,52.52,508.97,-0.67,0,2,level 2
+10457,Chile,0,14.17,1,minimalist,46.26,471.19,1.69,1,1,level 1
+8896,Chile,0,13.58,3,limited,52.52,480.81,-1.63,0,2,level 2
+9603,Chile,0,13.5,1,minimalist,56.63,416.01,-0.87,0,1,level 1
+10144,Chile,0,13.5,2,complex,60.54,457.82,-0.14,0,1,level 1
+9980,Chile,1,14.42,2,complex,31.87,634.75,-0.03,0,3,level 3
+10647,Chile,1,16.67,1,minimalist,63.24,315.05,2.18,1,0,level 0
+8426,Chile,1,13.5,1,minimalist,56.63,320.22,-0.69,0,0,level 0
+8856,Chile,0,13.83,1,minimalist,63.24,329.89,-0.07,1,0,level 0
+6012,Chile,1,13.75,1,minimalist,61.87,540.29,-0.35,0,2,level 2
+10295,Chile,1,14.25,3,limited,51.06,572.9,2.15,1,3,level 3
+7051,Chile,0,15.17,2,complex,44.7,605.67,1.91,1,3,level 3
+10111,Chile,1,14.17,2,complex,17.67,591.24,0.13,0,3,level 3
+10350,Chile,1,14.67,3,limited,51.06,511.04,1.36,1,2,level 2
+7718,Chile,0,15,1,minimalist,53.93,424.8,1.63,1,1,level 1
+10173,Chile,1,13.42,1,minimalist,52.52,321.25,-0.33,0,0,level 0
+7218,Chile,0,14,2,complex,17.67,487.85,1.06,0,2,level 2
+9754,Chile,1,13.83,2,complex,17.67,565.73,0.77,1,3,level 3
+10617,Chile,0,13.92,3,limited,53.93,380.52,1.83,1,0,level 0
+6612,Chile,0,13.58,2,complex,35.3,566.1,1.33,1,3,level 3
+10570,Chile,0,14,2,complex,42.55,513,0.83,1,2,level 2
+8810,Chile,1,14.92,1,minimalist,53.93,464.47,1.06,0,1,level 1
+9354,Chile,0,14.17,1,minimalist,17.67,464.7,0.54,0,1,level 1
+9159,Chile,0,16.92,1,minimalist,69.39,283.37,-0.76,0,0,level 0
+8152,Chile,1,14.33,2,complex,46.72,639.82,1.8,1,3,level 3
+8542,Chile,0,14.5,2,complex,40.44,574.41,-0.22,0,3,level 3
+8487,Chile,1,13.42,1,minimalist,31.87,647.28,-0.54,0,3,level 3
+8656,Chile,0,14.83,3,limited,47.94,484.5,0.59,0,2,level 2
+6663,Chile,1,13.67,1,minimalist,35.3,396.02,-1.12,0,1,level 1
+6369,Chile,1,14.08,1,minimalist,55.3,471.95,-0.59,0,1,level 1
+6627,Chile,0,14,1,minimalist,49.54,553.97,-0.9,0,2,level 2
+7190,Chile,1,13.92,2,complex,27.06,564.02,0.65,0,3,level 3
+7255,Chile,0,14.92,3,limited,61.87,245.35,0.39,1,0,level 0
+10842,Chile,1,15.33,3,limited,42.55,368.63,-0.36,0,0,level 0
+6814,Chile,0,13.58,2,complex,59.24,457.68,-0.04,0,1,level 1
+7939,Chile,1,13.75,2,complex,38.07,556.86,1.2,0,2,level 2
+8744,Chile,0,13.83,1,minimalist,70.18,380.85,-0.37,0,0,level 0
+6052,Chile,0,13.92,3,limited,49.54,310.53,-1.47,0,0,level 0
+5959,Chile,1,14.42,3,limited,56.63,431.59,-1.36,0,1,level 1
+8500,Chile,0,13.83,1,minimalist,85.37,354.25,0.45,0,0,level 0
+7121,Chile,1,13.83,3,limited,61.87,301.76,-1.91,0,0,level 0
+10680,Chile,0,14,2,complex,35.3,591.59,0.87,0,3,level 3
+8761,Chile,0,14.92,1,minimalist,60.54,447.54,0.47,1,1,level 1
+10169,Chile,0,13.5,3,limited,57.94,382.29,-1.04,0,0,level 0
+6869,Chile,1,14.17,1,minimalist,52.52,495.15,-0.38,0,2,level 2
+6381,Chile,0,14.25,1,minimalist,35.3,481.97,-0.23,0,2,level 2
+10481,Chile,1,13.58,2,complex,17.67,615.95,-1.47,0,3,level 3
+8304,Chile,0,13.67,3,limited,51.06,519.19,0,0,2,level 2
+8775,Chile,0,13.58,3,limited,47.94,399.58,-0.78,0,1,level 1
+8826,Chile,0,13.58,2,complex,27.06,623.28,0.61,1,3,level 3
+9861,Chile,0,15.67,1,minimalist,55.3,457.84,-1.25,0,1,level 1
+8864,Chile,0,14.08,1,minimalist,17.67,308.92,NA,NA,0,level 0
+8570,Chile,0,14.08,1,minimalist,52.52,490.2,1.72,1,2,level 2
+6744,Chile,0,13.92,3,limited,51.06,384.72,-0.19,0,0,level 0
+7792,Chile,1,13.75,1,minimalist,46.26,579.71,1.18,1,3,level 3
+7945,Chile,1,13.92,3,limited,47.94,358.3,0.33,0,0,level 0
+6152,Chile,1,13.33,1,minimalist,38.07,492.57,-1.11,0,2,level 2
+10054,Chile,0,13.75,2,complex,47.94,321.66,NA,NA,0,level 0
+8073,Chile,1,14.42,2,complex,31.87,659.37,2.07,1,3,level 3
+9325,Chile,0,13.75,1,minimalist,40.44,516.37,-0.32,0,2,level 2
+9987,Chile,1,13.58,2,complex,17.67,664.74,0.09,0,3,level 3
+6492,Chile,0,14.33,1,minimalist,47.94,477.92,1.83,1,1,level 1
+7347,Chile,1,13.58,1,minimalist,31.87,483.49,1.47,1,2,level 2
+9097,Chile,0,13.83,2,complex,27.06,661.89,-0.04,0,3,level 3
+9459,Chile,1,14.92,1,minimalist,47.94,396.73,-0.54,0,1,level 1
+8248,Chile,0,14.33,1,minimalist,42.55,469.23,-0.03,0,1,level 1
+10718,Chile,0,15.58,3,limited,63.24,306.03,-1.15,0,0,level 0
+6513,Chile,0,13.75,2,complex,38.07,527.19,0.36,0,2,level 2
+8206,Chile,0,14.33,1,minimalist,17.67,661.96,1.46,1,3,level 3
+9788,Chile,1,14,2,complex,17.67,554.37,0.16,0,2,level 2
+6594,Chile,1,13.42,2,complex,35.3,627.66,1.63,1,3,level 3
+6760,Chile,1,13.92,1,minimalist,59.24,472.12,0.23,0,1,level 1
+6168,Chile,0,15,3,limited,52.03,514.24,0.36,0,2,level 2
+10556,Chile,0,13.5,2,complex,46.26,550.08,-0.4,0,2,level 2
+9446,Chile,0,13.58,1,minimalist,38.07,561.67,0.3,0,2,level 2
+7830,Chile,0,15.5,3,limited,52.52,460.83,-1.7,0,1,level 1
+9306,Chile,0,14.75,3,limited,57.94,390.32,0.24,0,0,level 0
+6318,Chile,0,14.5,3,limited,55.3,402.97,1.22,1,1,level 1
+5996,Chile,0,14.17,1,minimalist,49.54,462.15,0.92,0,1,level 1
+9698,Chile,0,13.42,3,limited,38.07,496.66,-0.2,0,2,level 2
+8510,Chile,1,14.17,1,minimalist,40.44,624.36,2.08,1,3,level 3
+8084,Chile,0,14.25,2,complex,44.48,687.08,1.05,1,3,level 3
+9247,Chile,1,14,2,complex,46.26,579.58,0.58,1,3,level 3
+7532,Chile,1,13.67,2,complex,44.48,631.88,-0.2,0,3,level 3
+7359,Chile,0,13.58,2,complex,35.3,650.82,2.38,1,3,level 3
+9490,Chile,0,14.17,2,complex,44.48,543.08,0.87,0,2,level 2
+7827,Chile,1,13.92,2,complex,44.48,504.07,1.38,1,2,level 2
+7843,Chile,1,14.17,1,minimalist,56.99,377.81,-1.15,0,0,level 0
+7137,Chile,1,14.67,2,complex,44.48,598,1.97,1,3,level 3
+6508,Chile,0,13.58,1,minimalist,60.54,341.63,0.34,0,0,level 0
+10753,Chile,1,14.08,1,minimalist,44.48,535.86,-0.2,0,2,level 2
+6391,Chile,0,14.33,3,limited,60.54,342.5,0.35,0,0,level 0
+6405,Chile,0,13.58,2,complex,27.06,541.65,-0.12,0,2,level 2
+7569,Chile,0,13.75,2,complex,42.55,532.13,1.33,1,2,level 2
+8632,Chile,0,14.08,3,limited,53.93,299.67,-1.16,0,0,level 0
+8153,Chile,1,13.75,2,complex,38.07,562.53,1.3,1,2,level 2
+10613,Chile,1,14.33,3,limited,49.54,480.53,-0.92,NA,2,level 2
+10127,Chile,1,13.67,1,minimalist,49.54,500.19,0.26,0,2,level 2
+8629,Chile,0,14.42,3,limited,60.54,351.06,-0.73,0,0,level 0
+8800,Chile,0,14.17,3,limited,27.06,485.01,0.29,0,2,level 2
+7845,Chile,0,14.67,1,minimalist,49.54,415.39,-0.37,0,1,level 1
+8403,Chile,1,13.42,2,complex,38.07,539.03,-0.37,0,2,level 2
+5948,Chile,0,14.5,1,minimalist,60.54,388.57,-0.74,0,0,level 0
+9638,Chile,0,13.67,3,limited,38.07,394.53,0.87,0,0,level 0
+5907,Chile,1,14.42,2,complex,47.94,679.81,1.44,1,3,level 3
+10333,Chile,0,14.25,2,complex,51.06,534.69,-1,0,2,level 2
+7888,Chile,1,14.33,2,complex,44.48,546.86,0.1,0,2,level 2
+10082,Chile,1,13.42,1,minimalist,35.3,547.17,2.49,1,2,level 2
+10279,Chile,1,13.92,2,complex,17.67,668.35,2.16,1,3,level 3
+6856,Chile,1,13.33,3,limited,47.39,392.6,1.1,1,0,level 0
+9523,Chile,0,13.83,1,minimalist,59.24,438.68,-0.65,0,1,level 1
+8221,Chile,0,13.42,1,minimalist,52.52,391.92,-0.33,0,0,level 0
+9537,Chile,1,14.08,2,complex,47.15,429.96,-0.98,0,1,level 1
+6215,Chile,1,16.33,1,minimalist,35.3,535.07,1.52,1,2,level 2
+10148,Chile,0,14.17,2,complex,53.93,437.57,-0.51,0,1,level 1
+8962,Chile,0,13.42,3,limited,17.67,454.32,1.39,1,1,level 1
+6827,Chile,0,15.33,1,minimalist,NA,319.68,NA,NA,0,level 0
+8931,Chile,0,13.67,1,minimalist,42.55,584.64,-0.79,0,3,level 3
+8035,Chile,1,13.67,2,complex,35.3,535.37,0.75,0,2,level 2
+9161,Chile,0,14,3,limited,52.52,319.07,-0.75,0,0,level 0
+10511,Chile,1,14.08,1,minimalist,44.48,488.04,0.11,0,2,level 2
+10932,Chile,1,13.92,1,minimalist,17.67,573.83,0.11,0,3,level 3
+10073,Chile,1,14,3,limited,46.26,591.08,2.13,1,3,level 3
+9711,Chile,0,14,3,limited,57.94,470.87,-0.95,0,1,level 1
+9580,Chile,0,14.08,1,minimalist,53.93,412.3,-1.45,0,1,level 1
+8833,Chile,0,14.33,2,complex,35.3,517.56,-0.13,0,2,level 2
+7381,Chile,1,14.75,3,limited,57.94,343.61,-1.29,0,0,level 0
+8081,Chile,0,13.58,2,complex,31.87,536.99,0.6,0,2,level 2
+9453,Chile,0,16.17,1,minimalist,70.18,311.01,0.19,1,0,level 0
+6918,Chile,0,13.58,1,minimalist,44.48,538.15,0.07,0,2,level 2
+9805,Chile,1,14.25,1,minimalist,35.3,569.17,1.06,0,3,level 3
+6949,Chile,0,14.17,1,minimalist,49.54,487.97,-0.33,0,2,level 2
+7397,Chile,0,13.75,3,limited,51.06,359.34,-0.7,0,0,level 0
+10479,Chile,1,13.58,2,complex,38.07,508.88,0.07,0,2,level 2
+8938,Chile,0,13.75,2,complex,47.94,476.11,-0.21,0,1,level 1
+8970,Chile,0,14,1,minimalist,47.94,546.26,0.62,0,2,level 2
+8283,Chile,0,12.58,1,minimalist,56.63,369.13,-0.95,0,0,level 0
+7039,Chile,1,14.25,1,minimalist,35.3,440.41,1.33,1,1,level 1
+8229,Chile,1,14,3,limited,46.26,544.62,0.14,0,2,level 2
+7513,Chile,1,13.92,2,complex,17.67,596.01,0.35,0,3,level 3
+7634,Chile,1,14,2,complex,40.44,548.92,0.13,0,2,level 2
+8451,Chile,0,13.83,2,complex,47.94,538.48,0.28,0,2,level 2
+10366,Chile,0,14.08,2,complex,38.07,551,2.49,1,2,level 2
+8639,Chile,1,13.92,1,minimalist,57.94,458.76,-0.51,0,1,level 1
+9138,Chile,1,14,2,complex,31.87,628.05,0.56,0,3,level 3
+6529,Chile,0,14.08,1,minimalist,46.26,417.59,-0.51,0,1,level 1
+6517,Chile,1,15.83,1,minimalist,53.93,418.79,0.71,1,1,level 1
+7220,Chile,1,14.17,1,minimalist,38.07,496.74,0.05,0,2,level 2
+8613,Chile,0,14,1,minimalist,47.94,444.47,-0.79,0,1,level 1
+8734,Chile,0,13.5,3,limited,17.67,464.99,-0.44,0,1,level 1
+9439,Chile,0,14.17,1,minimalist,47.94,344.44,0.07,0,0,level 0
+9499,Chile,0,14.75,2,complex,47.94,608.47,0.19,0,3,level 3
+10186,Chile,0,14.33,2,complex,27.06,530.29,-1.04,0,2,level 2
+7965,Chile,1,14.33,1,minimalist,44.48,544.22,-1.36,0,2,level 2
+7238,Chile,1,13.5,1,minimalist,40.44,554.66,0.47,1,2,level 2
+9858,Chile,0,14.42,3,limited,52.52,249.74,-0.23,0,0,level 0
+10116,Chile,0,13.83,1,minimalist,35.3,489.88,1.18,1,2,level 2
+10130,Chile,0,13.83,2,complex,51.06,575.92,1.72,1,3,level 3
+10174,Chile,0,14.58,1,minimalist,51.06,357.26,-0.37,0,0,level 0
+8343,Chile,0,16.67,1,minimalist,51.06,356.83,-0.99,0,0,level 0
+6773,Chile,0,16,3,limited,64.69,299.45,-0.98,0,0,level 0
+5903,Chile,0,14.5,2,complex,35.3,553.44,2.38,1,2,level 2
+8506,Chile,0,14.5,3,limited,49.54,431.87,0.2,0,1,level 1
+7439,Chile,0,15.08,1,minimalist,56.63,432.63,-1.01,0,1,level 1
+10665,Chile,1,14,2,complex,35.3,549.27,1.8,1,2,level 2
+6313,Chile,0,14.58,3,limited,55.3,471.57,-0.71,0,1,level 1
+8589,Chile,1,14,1,minimalist,38.07,596.79,-0.37,0,3,level 3
+7124,Chile,1,13.83,3,limited,44.48,508.11,0.13,0,2,level 2
+9416,Chile,1,14.17,2,complex,17.67,618.29,0.59,0,3,level 3
+7560,Chile,1,13.5,2,complex,59.24,417.43,0.96,1,1,level 1
+10154,Chile,1,14.75,3,limited,56.63,479.51,-0.93,0,2,level 2
+10276,Chile,1,14.08,3,limited,42.55,453.12,-1.97,0,1,level 1
+9867,Chile,1,13.75,1,minimalist,47.94,505.09,1.86,1,2,level 2
+6039,Chile,1,13.92,3,limited,51.06,545.77,-0.08,0,2,level 2
+7800,Chile,0,13.75,3,limited,52.52,438.62,1.11,1,1,level 1
+10649,Chile,0,14.17,1,minimalist,68.06,333.76,-1.28,0,0,level 0
+7822,Chile,1,14,2,complex,38.07,525.02,-1.22,0,2,level 2
+9023,Chile,1,16.08,1,minimalist,53.93,449.56,-1.75,0,1,level 1
+7076,Chile,0,14,1,minimalist,17.67,434.09,-0.06,1,1,level 1
+7022,Chile,0,13.92,2,complex,17.67,607.22,-1.55,0,3,level 3
+9502,Chile,0,14,2,complex,27.06,595.76,2.13,1,3,level 3
+8481,Chile,1,15.5,2,complex,49.54,498.79,-0.08,0,2,level 2
+8124,Chile,0,14,2,complex,31.87,633.24,0.03,0,3,level 3
+6227,Chile,0,15,3,limited,56.63,377.48,1.63,1,0,level 0
+10224,Chile,1,14.17,2,complex,40.44,511.04,-0.26,0,2,level 2
+8038,Chile,0,15.17,3,limited,63.24,349.27,-0.98,0,0,level 0
+9952,Chile,1,13.75,1,minimalist,53.93,460.01,-0.87,0,1,level 1
+9424,Chile,1,14.17,1,minimalist,44.48,571.73,0.42,0,3,level 3
+9923,Chile,1,14.25,2,complex,40.44,576.04,1.52,1,3,level 3
+10754,Chile,0,14.33,1,minimalist,44.48,443.7,-0.87,0,1,level 1
+6820,Chile,0,14,3,limited,42.55,421.11,-1.14,0,1,level 1
+8739,Chile,0,15.67,1,minimalist,38.07,452.85,1.36,1,1,level 1
+8769,Chile,1,14.92,1,minimalist,51.06,477.91,-0.58,0,1,level 1
+9925,Chile,0,14.17,2,complex,31.87,576.42,-1.11,0,3,level 3
+9748,Chile,0,14.08,2,complex,42.55,545.96,0.87,0,2,level 2
+9862,Chile,1,14,2,complex,17.67,612.3,-1.8,0,3,level 3
+9706,Chile,0,13.83,3,limited,68.06,371.98,0.83,0,0,level 0
+6798,Chile,0,14.17,2,complex,46.26,438.27,0.38,1,1,level 1
+6040,Chile,0,14.08,3,limited,59.24,534.21,1.26,1,2,level 2
+9055,Chile,0,14.08,3,limited,66.28,393.32,0.21,0,0,level 0
+8478,Chile,1,13.67,2,complex,27.06,568.91,-0.25,0,3,level 3
+10723,Chile,0,14.17,2,complex,38.07,596.23,1.32,1,3,level 3
+8271,Chile,0,14.17,2,complex,27.06,549.43,1.05,1,2,level 2
+7934,Chile,1,13.83,2,complex,47.94,501.28,-0.21,0,2,level 2
+6577,Chile,0,13.75,1,minimalist,52.52,502.23,1.3,1,2,level 2
+6547,Chile,0,15,1,minimalist,51.06,514.9,-0.76,0,2,level 2
+9936,Chile,1,14.08,2,complex,49.54,552.31,0.51,1,2,level 2
+10200,Chile,0,13.67,2,complex,42.55,531.66,-0.58,0,2,level 2
+6106,Chile,0,14.17,2,complex,27.06,660.59,1.88,1,3,level 3
+10516,Chile,1,14.08,2,complex,35.3,607.1,-0.7,0,3,level 3
+8936,Chile,1,14.42,1,minimalist,46.26,451.42,-0.57,0,1,level 1
+6014,Chile,0,14.25,2,complex,23.22,353.83,0.65,0,0,level 0
+7611,Chile,0,15.25,3,limited,66.28,366.07,0.42,0,0,level 0
+7454,Chile,0,14.08,2,complex,17.67,651.99,0.11,0,3,level 3
+9933,Chile,0,14.42,1,minimalist,35.3,554.19,1,0,2,level 2
+9226,Chile,1,13.83,3,limited,35.3,525.16,-0.4,0,2,level 2
+14854,Colombia,1,16.5,1,minimalist,66.28,404.13,0.77,1,1,level 1
+13876,Colombia,0,13.67,2,complex,42.55,563.61,1.36,1,3,level 3
+16267,Colombia,1,14.42,1,minimalist,55.3,346.37,-1.05,0,0,level 0
+14164,Colombia,0,14.33,1,minimalist,40.44,481.74,-0.9,0,2,level 2
+13812,Colombia,0,14.25,1,minimalist,49.54,544.52,0.59,0,2,level 2
+13748,Colombia,0,14.42,2,complex,42.55,556.09,0.38,0,2,level 2
+13390,Colombia,1,15,1,minimalist,52.52,430.84,-1.69,0,1,level 1
+14327,Colombia,1,14.92,1,minimalist,55.3,529.03,-0.66,0,2,level 2
+11800,Colombia,0,12.67,1,minimalist,60.54,408.82,0.23,0,1,level 1
+12626,Colombia,0,16.58,1,minimalist,55.82,355.18,-0.42,0,0,level 0
+14896,Colombia,1,15.83,1,minimalist,35.3,508.69,-0.36,0,2,level 2
+12294,Colombia,1,15.58,1,minimalist,35.3,484.57,-0.95,0,2,level 2
+11240,Colombia,0,13.58,1,minimalist,44.48,648.03,1.38,1,3,level 3
+13832,Colombia,1,15.5,1,minimalist,72.02,333.39,-0.33,0,0,level 0
+13251,Colombia,0,14.33,1,minimalist,57.94,367.62,1.27,1,0,level 0
+11282,Colombia,1,14.25,1,minimalist,52.52,448.59,-0.87,0,1,level 1
+14836,Colombia,0,16.92,1,minimalist,38.07,506.58,-1.5,0,2,level 2
+16419,Colombia,0,16.25,3,limited,68.06,357.26,1.01,1,0,level 0
+15654,Colombia,1,13.83,1,minimalist,38.07,468.57,-0.28,0,1,level 1
+14575,Colombia,1,12.67,1,minimalist,52.52,458.52,0.5,1,1,level 1
+11824,Colombia,0,15.33,1,minimalist,40.44,506.1,1.77,1,2,level 2
+12002,Colombia,0,14.33,1,minimalist,53.93,463.96,-0.99,0,1,level 1
+16569,Colombia,0,14.25,1,minimalist,49.54,487.25,0.52,1,2,level 2
+14757,Colombia,0,14.58,1,minimalist,52.52,544.72,1.39,1,2,level 2
+14286,Colombia,0,13.25,1,minimalist,17.67,443.06,1.36,1,1,level 1
+14491,Colombia,1,13.83,1,minimalist,44.48,560.94,0.51,0,2,level 2
+12549,Colombia,0,15.83,1,minimalist,60.66,272.33,-0.28,0,0,level 0
+15934,Colombia,0,14.17,1,minimalist,44.48,507.25,-1.39,0,2,level 2
+15851,Colombia,0,14.42,1,minimalist,51.06,513.98,0.52,1,2,level 2
+14398,Colombia,1,14.5,1,minimalist,47.94,546.64,-1.1,0,2,level 2
+12513,Colombia,0,13.83,1,minimalist,38.07,482.29,-0.41,0,2,level 2
+13665,Colombia,1,14.42,1,minimalist,55.3,404.29,-1.28,0,1,level 1
+15143,Colombia,0,14.58,1,minimalist,59.24,361.8,-0.77,0,0,level 0
+12902,Colombia,0,13.75,1,minimalist,17.67,574.42,1.03,0,3,level 3
+11288,Colombia,0,13.58,3,limited,59.24,434.47,-0.66,0,1,level 1
+11547,Colombia,0,14.08,1,minimalist,35.3,607.65,0.87,0,3,level 3
+14471,Colombia,1,14.92,1,minimalist,51.06,561.03,-0.36,0,2,level 2
+13159,Colombia,1,14.25,2,complex,51.06,412.35,1.37,1,1,level 1
+13047,Colombia,0,16,1,minimalist,63.24,415.3,-0.02,1,1,level 1
+15864,Colombia,0,15.67,1,minimalist,51.06,501.31,-0.18,0,2,level 2
+11046,Colombia,0,15.17,1,minimalist,56.63,472.06,-0.16,0,1,level 1
+15923,Colombia,1,15.17,1,minimalist,49.54,468.18,-0.52,0,1,level 1
+11343,Colombia,1,13.83,1,minimalist,40.44,553.11,-0.18,0,2,level 2
+14068,Colombia,1,14.5,1,minimalist,51.06,523.21,0.23,0,2,level 2
+16130,Colombia,1,13.33,1,minimalist,57.94,406.15,-0.64,0,1,level 1
+14064,Colombia,0,14.17,1,minimalist,47.94,591.49,-0.58,0,3,level 3
+15735,Colombia,0,14.25,1,minimalist,46.26,516.08,-0.58,0,2,level 2
+13974,Colombia,0,15,1,minimalist,53.93,441.04,0.31,0,1,level 1
+14873,Colombia,1,16.42,1,minimalist,46.26,592.39,0.15,0,3,level 3
+13878,Colombia,0,16.58,1,minimalist,52.52,499,-1.61,0,2,level 2
+11149,Colombia,0,15.92,1,minimalist,61.87,383.84,1.43,0,0,level 0
+14280,Colombia,0,14,1,minimalist,51.06,553.89,2.19,1,2,level 2
+12033,Colombia,1,14.33,1,minimalist,63.24,412.75,-0.82,0,1,level 1
+12132,Colombia,1,13.83,1,minimalist,52.52,577.84,-1.17,0,3,level 3
+11217,Colombia,1,14.58,1,minimalist,53.93,484.51,-0.64,0,2,level 2
+11021,Colombia,1,14.17,1,minimalist,63.24,280.66,-0.28,0,0,level 0
+12219,Colombia,1,14.42,1,minimalist,35.3,576.04,-0.27,0,3,level 3
+13682,Colombia,0,14.25,1,minimalist,53.93,472,-0.47,0,1,level 1
+15497,Colombia,0,14.58,1,minimalist,52.52,428.54,-1.26,0,1,level 1
+11088,Colombia,0,15.58,1,minimalist,55.3,298.59,-0.84,0,0,level 0
+14370,Colombia,0,14.67,1,minimalist,61.87,364.91,-0.77,0,0,level 0
+14379,Colombia,1,15.58,1,minimalist,59.24,326.33,-0.59,0,0,level 0
+15949,Colombia,0,14.33,3,limited,35.3,522.8,1.17,1,2,level 2
+11281,Colombia,1,13.67,3,limited,72.09,406.98,0.25,1,1,level 1
+16194,Colombia,0,15.33,3,limited,51.06,575.71,0.5,0,3,level 3
+15991,Colombia,0,14.08,1,minimalist,40.44,590.81,1.6,1,3,level 3
+12792,Colombia,1,15.67,1,minimalist,60.54,300.7,-0.41,0,0,level 0
+13713,Colombia,0,13.92,3,limited,47.94,368.89,0.25,0,0,level 0
+16217,Colombia,1,15.75,1,minimalist,49.54,479.52,-1.34,0,2,level 2
+15714,Colombia,0,14.33,2,complex,49.54,528.84,1.03,0,2,level 2
+12375,Colombia,0,16.33,1,minimalist,46.26,533.54,0.05,0,2,level 2
+12588,Colombia,1,13.08,3,limited,47.94,537.64,2.3,1,2,level 2
+14045,Colombia,0,14.42,1,minimalist,49.54,543.73,0.62,0,2,level 2
+11353,Colombia,0,15,1,minimalist,46.26,446.26,0.71,0,1,level 1
+13040,Colombia,0,14.08,2,complex,42.55,424.12,0.06,0,1,level 1
+13330,Colombia,0,14.83,1,minimalist,57.94,388.27,0.25,1,0,level 0
+13463,Colombia,0,14.42,1,minimalist,42.55,495.06,2.03,1,2,level 2
+13845,Colombia,0,14.33,3,limited,52.52,393.23,-1.28,0,0,level 0
+12275,Colombia,1,13.58,1,minimalist,53.93,458.19,-0.3,0,1,level 1
+11008,Colombia,0,15.67,1,minimalist,52.03,485.61,0.6,1,2,level 2
+11228,Colombia,1,15.5,1,minimalist,49.54,539.54,1.79,1,2,level 2
+14622,Colombia,1,13.67,1,minimalist,27.06,590.69,1.37,0,3,level 3
+11336,Colombia,1,14.42,1,minimalist,51.06,448.11,-1.15,0,1,level 1
+11861,Colombia,0,15.08,3,limited,44.48,507.17,0.66,0,2,level 2
+12521,Colombia,0,14.08,1,minimalist,51.06,485.03,0.23,1,2,level 2
+16384,Colombia,1,14.42,1,minimalist,52.52,500.89,1.01,1,2,level 2
+15360,Colombia,1,14.25,1,minimalist,55.3,532.54,0.56,0,2,level 2
+15423,Colombia,0,15.75,1,minimalist,51.06,468.11,-0.18,0,1,level 1
+12212,Colombia,0,14.42,1,minimalist,72.89,464.34,0.2,1,1,level 1
+12067,Colombia,0,15.33,1,minimalist,42.55,502.95,-0.69,0,2,level 2
+15970,Colombia,1,15.83,2,complex,35.3,562.63,-0.16,0,2,level 2
+14468,Colombia,0,15.58,1,minimalist,64.69,347.14,0.36,1,0,level 0
+15524,Colombia,0,13.92,3,limited,55.3,438.92,1.38,1,1,level 1
+14581,Colombia,0,13.67,1,minimalist,47.94,569.3,1.36,1,3,level 3
+16010,Colombia,0,15.5,1,minimalist,40.44,500.17,-0.18,0,2,level 2
+15499,Colombia,0,15.08,3,limited,59.24,358.17,-0.36,0,0,level 0
+12799,Colombia,0,13.92,3,limited,52.52,406.86,0.77,1,1,level 1
+11742,Colombia,1,13.92,1,minimalist,38.07,488.79,-0.58,0,2,level 2
+15492,Colombia,1,13.17,1,minimalist,44.48,460.59,1.43,0,1,level 1
+14580,Colombia,0,14.17,2,complex,49.54,612.75,-0.38,0,3,level 3
+15562,Colombia,1,16.42,3,limited,40.44,513.37,0.78,0,2,level 2
+15736,Colombia,1,14.17,1,minimalist,61.87,503.05,-0.96,0,2,level 2
+12021,Colombia,1,14.5,1,minimalist,44.48,493.93,0.2,0,2,level 2
+14926,Colombia,1,13.5,1,minimalist,57.94,453.22,-1.53,0,1,level 1
+11255,Colombia,0,14.58,2,complex,47.94,601.11,1.9,1,3,level 3
+11543,Colombia,0,15.33,1,minimalist,31.87,511.24,0.25,0,2,level 2
+13265,Colombia,1,14.58,1,minimalist,44.48,467.9,-1.21,0,1,level 1
+13749,Colombia,0,14.25,2,complex,35.3,632.98,2.22,1,3,level 3
+14262,Colombia,1,16.08,1,minimalist,17.67,547.28,-0.2,0,2,level 2
+14359,Colombia,1,14.42,3,limited,46.26,446.08,-0.99,0,1,level 1
+13700,Colombia,0,15.5,3,limited,44.48,558.63,-0.79,0,2,level 2
+12222,Colombia,1,13.67,1,minimalist,46.26,506.46,0.84,1,2,level 2
+13273,Colombia,0,16.83,3,limited,59.24,454.37,-0.19,0,1,level 1
+11383,Colombia,1,13.17,1,minimalist,49.54,533.49,-1.04,0,2,level 2
+14315,Colombia,1,13.92,1,minimalist,57.94,382.39,1.47,1,0,level 0
+12043,Colombia,0,17.08,1,minimalist,57.94,443.89,0.27,0,1,level 1
+11203,Colombia,1,15.5,1,minimalist,57.94,287.96,-0.6,0,0,level 0
+11581,Colombia,1,14.5,1,minimalist,63.24,405.9,0.04,1,1,level 1
+15026,Colombia,0,15.25,1,minimalist,17.67,627.42,0.64,0,3,level 3
+15720,Colombia,1,14.92,1,minimalist,27.06,594.49,1.81,1,3,level 3
+14777,Colombia,0,14.42,1,minimalist,49.54,475.66,-0.33,0,1,level 1
+16371,Colombia,1,14.17,1,minimalist,52.52,395.59,0.97,1,1,level 1
+13335,Colombia,1,14.25,1,minimalist,61.87,400.06,-0.25,0,1,level 1
+13851,Colombia,1,14.42,1,minimalist,47.94,523.14,-1.69,0,2,level 2
+12180,Colombia,0,14.17,1,minimalist,55.3,468.22,0.73,1,1,level 1
+11767,Colombia,0,13.75,1,minimalist,44.48,404.13,1.52,1,1,level 1
+15042,Colombia,0,13.83,1,minimalist,44.48,664.33,0.22,0,3,level 3
+13631,Colombia,1,14.25,1,minimalist,53.93,478.11,-1.28,0,1,level 1
+12663,Colombia,0,13.67,1,minimalist,52.52,459.65,0.39,1,1,level 1
+13651,Colombia,1,14.08,1,minimalist,63.24,440.03,1.36,1,1,level 1
+16116,Colombia,0,16.42,3,limited,46.35,522.63,-0.18,0,2,level 2
+11180,Colombia,0,15,1,minimalist,38.07,516.54,1.01,0,2,level 2
+12333,Colombia,1,13.33,1,minimalist,49.54,467.72,-0.76,0,1,level 1
+14368,Colombia,0,16.17,1,minimalist,56.63,445.49,0.08,0,1,level 1
+13405,Colombia,0,14.5,3,limited,56.63,300.95,-0.72,0,0,level 0
+14030,Colombia,0,19,1,minimalist,57.94,465.65,0.09,0,1,level 1
+12698,Colombia,0,13.58,1,minimalist,68.06,474.58,-0.3,0,1,level 1
+15663,Colombia,1,14.5,1,minimalist,47.94,474.81,0.54,0,1,level 1
+12801,Colombia,0,14.33,1,minimalist,35.3,508.24,-1.22,0,2,level 2
+12797,Colombia,0,17.75,3,limited,59.24,358.95,-0.95,0,0,level 0
+15375,Colombia,1,13.75,1,minimalist,53.93,415.75,2.35,1,1,level 1
+15156,Colombia,1,14,3,limited,35.3,536.58,-0.41,0,2,level 2
+13006,Colombia,1,16.08,1,minimalist,44.48,376.28,-1.69,0,0,level 0
+13228,Colombia,1,14.08,1,minimalist,53.93,468.32,0.21,0,1,level 1
+13118,Colombia,0,14.17,1,minimalist,55.3,435.38,1,1,1,level 1
+15164,Colombia,0,15.58,1,minimalist,56.63,408.55,0.36,1,1,level 1
+11261,Colombia,1,14,1,minimalist,51.06,582.13,1.01,1,3,level 3
+12785,Colombia,0,12.92,1,minimalist,38.07,568.32,-0.38,0,3,level 3
+15520,Colombia,0,16.75,3,limited,45.54,393.48,0.79,1,0,level 0
+10998,Colombia,1,14.75,1,minimalist,53.93,426.43,-0.96,0,1,level 1
+16249,Colombia,1,13.83,3,limited,55.3,440.58,0.36,1,1,level 1
+11243,Colombia,1,15.08,3,limited,44.48,541.86,2.43,1,2,level 2
+11259,Colombia,1,14.33,1,minimalist,51.06,494.32,-0.87,0,2,level 2
+13979,Colombia,0,13.92,1,minimalist,55.3,459.89,-0.01,0,1,level 1
+15363,Colombia,1,13.83,1,minimalist,17.67,570.14,1.79,1,3,level 3
+15065,Colombia,1,14.33,2,complex,31.87,630.17,1.41,1,3,level 3
+11345,Colombia,1,14.25,1,minimalist,44.48,556.53,1.55,1,2,level 2
+11242,Colombia,0,14.08,2,complex,42.55,615.35,1.41,1,3,level 3
+16273,Colombia,1,14,1,minimalist,52.52,446.97,-0.93,0,1,level 1
+15680,Colombia,1,16.17,1,minimalist,51.06,533.85,1.19,1,2,level 2
+13489,Colombia,1,17.5,1,minimalist,46.26,602.55,-0.3,0,3,level 3
+13404,Colombia,0,14.42,1,minimalist,70.18,341.71,1.14,1,0,level 0
+15253,Colombia,1,14.42,1,minimalist,44.48,596.43,-0.25,0,3,level 3
+12458,Colombia,0,16.17,2,complex,17.67,587.55,-0.21,0,3,level 3
+12365,Colombia,1,14.58,1,minimalist,55.3,510.34,-0.2,0,2,level 2
+12515,Colombia,1,13.75,1,minimalist,59.24,392.88,-1.01,0,0,level 0
+14400,Colombia,1,15.42,1,minimalist,53.93,409.74,1.82,1,1,level 1
+15992,Colombia,0,15.33,2,complex,35.3,614.17,-0.19,0,3,level 3
+15450,Colombia,1,14.17,1,minimalist,35.3,529.75,-0.68,0,2,level 2
+12091,Colombia,1,13.75,1,minimalist,38.07,506.34,1.17,1,2,level 2
+12920,Colombia,0,13.08,2,complex,38.07,609.4,2.19,1,3,level 3
+12188,Colombia,1,14.08,1,minimalist,65.45,429.26,0.79,1,1,level 1
+14375,Colombia,1,17.75,1,minimalist,59.24,289.19,-0.77,0,0,level 0
+11694,Colombia,1,14.08,1,minimalist,38.07,585.58,-0.08,0,3,level 3
+15612,Colombia,1,17.25,1,minimalist,47.94,590.59,-0.14,0,3,level 3
+11369,Colombia,0,14,2,complex,42.55,560.42,-1.22,0,2,level 2
+16407,Colombia,1,13.92,1,minimalist,42.55,491,1.55,1,2,level 2
+11867,Colombia,0,13.42,1,minimalist,40.44,471.22,0.13,0,1,level 1
+11269,Colombia,0,14.5,2,complex,38.07,569.95,-0.3,0,3,level 3
+13675,Colombia,1,13.5,3,limited,51.06,486.23,0.69,1,2,level 2
+11691,Colombia,1,15.42,2,complex,47.94,434.79,-0.03,0,1,level 1
+14820,Colombia,0,14.67,1,minimalist,53.93,381.15,-0.51,0,0,level 0
+11797,Colombia,0,13.92,3,limited,55.3,478.77,-0.69,0,1,level 1
+16314,Colombia,1,14.17,1,minimalist,47.94,530.95,0.09,1,2,level 2
+13311,Colombia,1,14.5,3,limited,53.93,415.05,-1.79,0,1,level 1
+13799,Colombia,0,14.83,1,minimalist,51.06,483.96,0.39,0,2,level 2
+16049,Colombia,1,14,1,minimalist,38.07,551.93,0.76,1,2,level 2
+16492,Colombia,0,14.25,1,minimalist,47.94,479.63,0.22,1,2,level 2
+13340,Colombia,1,17.33,1,minimalist,51.06,511.16,-0.8,0,2,level 2
+15559,Colombia,1,14.17,1,minimalist,49.54,575.95,-0.27,0,3,level 3
+12846,Colombia,1,14.42,1,minimalist,38.07,594.97,1.63,1,3,level 3
+12143,Colombia,0,13.5,2,complex,47.94,566.41,0.1,0,3,level 3
+14813,Colombia,0,14.58,3,limited,59.24,268.75,0.23,1,0,level 0
+12047,Colombia,0,18.25,1,minimalist,53.93,466.93,-1.41,0,1,level 1
+16145,Colombia,0,15.75,1,minimalist,56.63,345.92,0.02,0,0,level 0
+16343,Colombia,1,14.08,1,minimalist,49.54,367.53,0.4,NA,0,level 0
+15731,Colombia,1,15.33,1,minimalist,17.67,469.25,0.25,0,1,level 1
+13884,Colombia,0,15.75,1,minimalist,56.63,412.91,-1.69,0,1,level 1
+14547,Colombia,0,14.25,1,minimalist,53.93,404.57,-1.28,0,1,level 1
+15597,Colombia,1,14.83,1,minimalist,44.48,450.13,-0.16,0,1,level 1
+13991,Colombia,1,16.25,1,minimalist,61.87,397.26,1.08,1,1,level 1
+12299,Colombia,0,13.83,1,minimalist,35.3,545.78,1.01,1,2,level 2
+14361,Colombia,1,15.17,1,minimalist,47.94,540.78,-0.5,0,2,level 2
+16019,Colombia,1,16.08,3,limited,49.54,346.98,-0.71,0,0,level 0
+13681,Colombia,1,13.75,1,minimalist,38.07,489.6,0.68,0,2,level 2
+13022,Colombia,1,16.58,3,limited,52.52,573.01,-0.67,0,3,level 3
+15683,Colombia,0,14.25,1,minimalist,35.3,500.4,0.68,1,2,level 2
+14563,Colombia,0,13.58,3,limited,53.93,433.09,-1.45,0,1,level 1
+13759,Colombia,0,13.17,1,minimalist,49.54,510.26,1.95,1,2,level 2
+13661,Colombia,1,13.42,2,complex,51.06,569.03,0.87,1,3,level 3
+12291,Colombia,0,15,3,limited,46.98,550,1.68,1,2,level 2
+15616,Colombia,1,14.92,1,minimalist,31.87,589.7,0.22,0,3,level 3
+12350,Colombia,0,16.5,1,minimalist,31.87,594.64,0.25,0,3,level 3
+11585,Colombia,1,16.75,1,minimalist,53.93,533.26,-1.01,0,2,level 2
+13689,Colombia,1,14.58,1,minimalist,49.54,476.24,0.71,1,1,level 1
+14272,Colombia,1,14.92,1,minimalist,17.67,603.57,0.57,1,3,level 3
+15260,Colombia,1,14.17,1,minimalist,27.06,645.57,0.99,0,3,level 3
+12157,Colombia,0,14.83,1,minimalist,52.52,501.85,-0.18,0,2,level 2
+16199,Colombia,0,14.42,1,minimalist,55.3,446.52,-0.12,1,1,level 1
+11975,Colombia,0,15.17,1,minimalist,46.26,423.82,-0.87,0,1,level 1
+11083,Colombia,0,14.75,1,minimalist,49.54,457.77,-0.29,1,1,level 1
+16169,Colombia,0,14.17,2,complex,17.67,607.36,2.35,1,3,level 3
+11954,Colombia,1,15.58,1,minimalist,52.52,483.16,-0.75,0,2,level 2
+14527,Colombia,1,13.58,1,minimalist,40.44,528.62,0.73,1,2,level 2
+13973,Colombia,1,14.08,1,minimalist,49.54,509.86,1.22,0,2,level 2
+12193,Colombia,1,14.92,2,complex,47.94,486.37,1,1,2,level 2
+14025,Colombia,1,13.75,1,minimalist,51.06,485.26,-1.13,0,2,level 2
+13671,Colombia,1,13.75,1,minimalist,49.54,439.15,-0.23,1,1,level 1
+13692,Colombia,1,13.33,2,complex,40.44,440.38,-1.07,0,1,level 1
+11296,Colombia,1,12.92,1,minimalist,47.94,512.23,0.64,0,2,level 2
+11412,Colombia,0,14.17,2,complex,44.48,492.67,0.98,1,2,level 2
+12924,Colombia,0,14.33,1,minimalist,46.26,507.57,-0.18,0,2,level 2
+12593,Colombia,1,13.83,1,minimalist,31.87,611.51,1.06,0,3,level 3
+11486,Colombia,1,15.08,1,minimalist,40.44,505.13,1.02,0,2,level 2
+15020,Colombia,1,13.67,1,minimalist,38.07,549.61,0.74,1,2,level 2
+12591,Colombia,0,13.5,3,limited,49.54,377.02,-0.17,0,0,level 0
+13358,Colombia,0,14.58,1,minimalist,63.24,400.61,0.12,1,1,level 1
+14792,Colombia,1,14.08,3,limited,46.26,388.02,-1.69,0,0,level 0
+12504,Colombia,0,15.17,1,minimalist,55.3,411.05,0.58,1,1,level 1
+16552,Colombia,0,16,1,minimalist,49.54,570.63,1.95,1,3,level 3
+12832,Colombia,1,15.58,1,minimalist,46.26,527.41,0.12,0,2,level 2
+13397,Colombia,0,13.92,1,minimalist,47.94,496.41,1.41,1,2,level 2
+15064,Colombia,1,13.75,1,minimalist,17.67,528.78,0.6,1,2,level 2
+12784,Colombia,0,14.42,3,limited,40.44,445.68,-0.99,0,1,level 1
+15264,Colombia,1,14,1,minimalist,49.54,553.39,0.62,0,2,level 2
+14448,Colombia,0,14.83,3,limited,55.3,404.46,-0.69,0,1,level 1
+14218,Colombia,0,15.17,3,limited,68.06,401.97,-1.25,0,1,level 1
+11858,Colombia,0,13.25,1,minimalist,17.67,553.37,1.03,0,2,level 2
+13369,Colombia,1,14.33,1,minimalist,50.83,239.86,0.09,0,0,level 0
+13949,Colombia,0,14.33,1,minimalist,56.63,519.07,2.01,1,2,level 2
+12802,Colombia,0,15.67,3,limited,51.06,490.87,-0.74,0,2,level 2
+11411,Colombia,0,13.75,2,complex,46.26,535.45,1.01,1,2,level 2
+16503,Colombia,1,16.25,1,minimalist,51.06,493.4,-0.6,0,2,level 2
+13331,Colombia,1,13.42,3,limited,68.06,413.49,-1.18,0,1,level 1
+16162,Colombia,0,14.42,1,minimalist,51.06,504.25,1.68,1,2,level 2
+13070,Colombia,0,15.17,1,minimalist,57.94,419.15,1.14,1,1,level 1
+14556,Colombia,1,12.58,2,complex,44.48,544.82,-0.77,0,2,level 2
+15406,Colombia,1,15.75,1,minimalist,55.3,417.9,-0.16,0,1,level 1
+12697,Colombia,1,14.83,1,minimalist,49.54,458.22,0.08,0,1,level 1
+12196,Colombia,1,13.92,2,complex,52.52,481.65,1.01,1,2,level 2
+13225,Colombia,1,13.42,1,minimalist,44.48,538.49,1,1,2,level 2
+16015,Colombia,1,14.75,1,minimalist,52.52,474.08,0.64,0,1,level 1
+13353,Colombia,0,16.92,1,minimalist,59.24,430.19,1.41,1,1,level 1
+11322,Colombia,0,14.5,1,minimalist,44.48,535.15,0.04,0,2,level 2
+15371,Colombia,1,13.42,1,minimalist,46.26,463.57,1.7,0,1,level 1
+13479,Colombia,1,13.33,1,minimalist,54.02,475.14,-0.94,0,1,level 1
+16046,Colombia,1,14.67,1,minimalist,51.06,409.82,-0.18,1,1,level 1
+14417,Colombia,0,14.92,2,complex,53.93,329.27,-1.2,0,0,level 0
+15535,Colombia,1,14.25,1,minimalist,47.94,427.87,1.41,1,1,level 1
+11374,Colombia,0,13.67,2,complex,52.52,567.02,-0.71,0,3,level 3
+12822,Colombia,0,15.33,1,minimalist,42.55,538.17,-0.28,0,2,level 2
+11473,Colombia,0,15.33,3,limited,47.94,454.1,1.77,1,1,level 1
+11544,Colombia,1,14.08,1,minimalist,40.44,601.47,0.26,0,3,level 3
+13223,Colombia,1,13.83,1,minimalist,57.94,443.42,0.54,1,1,level 1
+12706,Colombia,1,14.58,2,complex,40.44,546.28,-0.65,0,2,level 2
+12508,Colombia,0,16.67,1,minimalist,17.67,482.33,-0.81,0,2,level 2
+14810,Colombia,0,16.42,3,limited,61.87,323.35,-0.53,1,0,level 0
+12191,Colombia,1,13.67,2,complex,52.52,614.98,2.7,1,3,level 3
+14208,Colombia,0,14.25,2,complex,42.55,644.44,2.3,1,3,level 3
+13326,Colombia,1,14.25,1,minimalist,52.52,511.36,0,0,2,level 2
+13580,Colombia,0,13.58,2,complex,38.07,609.6,0.09,1,3,level 3
+11777,Colombia,0,17.5,1,minimalist,63.24,355,-0.63,1,0,level 0
+16387,Colombia,1,13.67,1,minimalist,52.52,323.39,-1.12,0,0,level 0
+12938,Colombia,0,12.83,1,minimalist,47.94,405.7,1.09,1,1,level 1
+14960,Colombia,0,16.42,1,minimalist,61.87,465.04,0.52,0,1,level 1
+11488,Colombia,0,13.83,1,minimalist,44.48,546.26,0.56,0,2,level 2
+12296,Colombia,0,15.5,1,minimalist,49.54,530.5,-0.53,0,2,level 2
+15915,Colombia,1,14.33,3,limited,55.3,490.31,0.6,1,2,level 2
+11552,Colombia,0,16.42,3,limited,53.93,354.6,1,1,0,level 0
+11860,Colombia,1,14.42,1,minimalist,35.3,596.08,-0.3,0,3,level 3
+12968,Colombia,0,12.92,3,limited,55.3,517.81,-0.3,0,2,level 2
+11026,Colombia,1,14.92,3,limited,61.87,321.83,0.98,1,0,level 0
+12615,Colombia,0,16.58,1,minimalist,49.54,416.38,-1.69,0,1,level 1
+15521,Colombia,0,13,1,minimalist,46.26,552.36,2.7,1,2,level 2
+12590,Colombia,1,14.08,3,limited,44.48,473.24,0.06,0,1,level 1
+11490,Colombia,0,16.67,2,complex,40.44,655.61,2.35,1,3,level 3
+15573,Colombia,1,15.67,1,minimalist,56.63,321.73,-1.69,0,0,level 0
+15570,Colombia,0,16.42,1,minimalist,56.63,509.63,-1.07,0,2,level 2
+14506,Colombia,0,14.17,3,limited,56.63,386.11,0.41,1,0,level 0
+15868,Colombia,1,13.92,3,limited,53.93,367.77,-0.18,0,0,level 0
+16202,Colombia,1,14.58,1,minimalist,51.06,519.44,1.14,1,2,level 2
+12736,Colombia,0,13.42,1,minimalist,57.94,432.14,-0.49,0,1,level 1
+15151,Colombia,1,13.92,1,minimalist,52.52,454.64,-0.18,0,1,level 1
+11964,Colombia,0,15.17,1,minimalist,54.37,347.74,-1.53,0,0,level 0
+13988,Colombia,0,14.25,1,minimalist,46.26,561.29,0.19,0,2,level 2
+15657,Colombia,0,13.58,2,complex,47.94,566.14,0.65,0,3,level 3
+15094,Colombia,0,15,1,minimalist,40.44,567.1,0.1,0,3,level 3
+12221,Colombia,0,14.58,2,complex,31.87,558.37,0.34,1,2,level 2
+12325,Colombia,0,13.92,1,minimalist,55.3,348.92,-0.16,0,0,level 0
+14504,Colombia,1,13.92,1,minimalist,38.07,520.17,1.27,1,2,level 2
+13140,Colombia,0,14.67,1,minimalist,47.94,513.99,-0.75,0,2,level 2
+13352,Colombia,0,16.17,1,minimalist,49.54,495.96,1,1,2,level 2
+15127,Colombia,0,13.42,3,limited,52.52,501.01,-0.55,0,2,level 2
+14755,Colombia,0,14.75,1,minimalist,47.94,515.59,0.43,0,2,level 2
+11610,Colombia,1,15.17,1,minimalist,55.3,400.82,-0.18,0,1,level 1
+13866,Colombia,1,14.42,1,minimalist,53.93,451.9,-0.15,1,1,level 1
+14809,Colombia,1,16.75,1,minimalist,53.93,482.35,-1.28,0,2,level 2
+13898,Colombia,1,13.58,1,minimalist,38.07,576.82,1.27,1,3,level 3
+12210,Colombia,1,17,3,limited,51.06,472.3,-0.25,0,1,level 1
+11310,Colombia,1,14.58,1,minimalist,55.3,483.52,0.92,1,2,level 2
+15081,Colombia,1,15.42,1,minimalist,55.3,557.6,-1.28,0,2,level 2
+13987,Colombia,1,13.5,2,complex,22.34,193.94,NA,NA,0,level 0
+12824,Colombia,1,15.58,1,minimalist,42.55,521.39,-0.69,0,2,level 2
+11841,Colombia,0,14,1,minimalist,46.98,524.58,0.21,0,2,level 2
+12131,Colombia,1,13.33,1,minimalist,63.24,408.44,0.15,0,1,level 1
+15669,Colombia,0,17,1,minimalist,52.52,480.76,-0.89,0,2,level 2
+14050,Colombia,0,14.33,1,minimalist,52.52,515.59,0.06,1,2,level 2
+16139,Colombia,0,13.42,1,minimalist,70.18,394.53,1.38,1,0,level 0
+11385,Colombia,1,15.33,3,limited,47.94,529.57,-0.75,0,2,level 2
+14453,Colombia,1,14.83,1,minimalist,46.26,422.77,-1.13,0,1,level 1
+15576,Colombia,1,16.25,1,minimalist,55.3,424.51,0.91,0,1,level 1
+15376,Colombia,0,13.5,1,minimalist,47.94,459.2,-0.74,0,1,level 1
+12369,Colombia,0,14.33,1,minimalist,51.06,437.7,0.23,0,1,level 1
+14717,Colombia,1,14.67,1,minimalist,27.06,642.21,2.05,1,3,level 3
+16190,Colombia,1,14.33,1,minimalist,53.93,306.77,-1.69,0,0,level 0
+14271,Colombia,1,14,1,minimalist,55.14,436.76,1.27,1,1,level 1
+14004,Colombia,1,14.42,1,minimalist,46.26,569.43,-1.28,0,3,level 3
+16406,Colombia,1,14.33,1,minimalist,38.07,493.67,-0.93,0,2,level 2
+16361,Colombia,1,13.42,3,limited,51.06,470.54,-1.05,0,1,level 1
+15951,Colombia,0,16.25,2,complex,59.24,415.71,-0.99,0,1,level 1
+16078,Colombia,1,13.92,1,minimalist,46.26,463.09,1.55,1,1,level 1
+14495,Colombia,1,13.83,2,complex,17.67,615.2,1.82,1,3,level 3
+12585,Colombia,1,13.67,1,minimalist,44.48,567.88,2.22,1,3,level 3
+15484,Colombia,0,13.33,2,complex,17.67,663.2,-0.2,0,3,level 3
+12571,Colombia,1,16.33,3,limited,55.3,329.48,-0.08,0,0,level 0
+13703,Colombia,1,14.25,1,minimalist,55.3,515.3,-0.75,0,2,level 2
+14761,Colombia,0,13.67,1,minimalist,51.06,436.54,0.92,1,1,level 1
+15105,Colombia,1,16.17,1,minimalist,56.63,414.78,1.52,0,1,level 1
+13517,Colombia,1,15.67,3,limited,51.06,483.11,-0.02,1,2,level 2
+12013,Colombia,0,13.83,2,complex,40.44,556.94,1.03,0,2,level 2
+11613,Colombia,0,14.08,1,minimalist,52.52,511.85,1.27,1,2,level 2
+15069,Colombia,0,12.83,1,minimalist,35.3,623.8,0.88,1,3,level 3
+13179,Colombia,0,14.58,1,minimalist,54.32,468.35,-0.26,0,1,level 1
+13256,Colombia,1,12.58,1,minimalist,47.94,481.22,1.01,1,2,level 2
+11348,Colombia,0,14.42,1,minimalist,55.3,485.37,0.23,0,2,level 2
+15899,Colombia,1,15.08,1,minimalist,57.94,471.78,-1.18,0,1,level 1
+13510,Colombia,1,15.5,1,minimalist,47.94,363.72,-1.28,0,0,level 0
+14321,Colombia,0,19.67,1,minimalist,53.93,418.21,-0.86,0,1,level 1
+16224,Colombia,0,14.67,3,limited,53.26,419.88,-1.69,0,1,level 1
+13984,Colombia,0,14.5,1,minimalist,56.63,492.39,-1.18,0,2,level 2
+15728,Colombia,0,13.58,1,minimalist,38.07,571.48,1.42,1,3,level 3
+14509,Colombia,1,14.67,1,minimalist,42.55,519.82,0.04,0,2,level 2
+11063,Colombia,1,13.83,1,minimalist,35.3,638.71,1.41,0,3,level 3
+14420,Colombia,1,14,1,minimalist,52.52,551.24,-0.77,0,2,level 2
+12385,Colombia,0,14.58,1,minimalist,56.63,289.65,-1.69,0,0,level 0
+13816,Colombia,0,14.25,2,complex,31.87,612.69,0.68,0,3,level 3
+15668,Colombia,0,15.42,1,minimalist,56.63,494.33,-1.03,0,2,level 2
+13400,Colombia,1,13,1,minimalist,52.52,466.56,0,0,1,level 1
+15427,Colombia,0,14.33,2,complex,46.26,580.69,0.51,0,3,level 3
+13498,Colombia,0,14.42,1,minimalist,44.36,390.5,-0.95,0,0,level 0
+15563,Colombia,1,14.58,1,minimalist,42.55,483.78,-0.85,0,2,level 2
+14845,Colombia,1,15.08,1,minimalist,53.93,330.91,-0.75,0,0,level 0
+12703,Colombia,0,12.67,1,minimalist,40.44,492.86,-0.6,0,2,level 2
+11013,Colombia,0,14.83,1,minimalist,48.6,509.03,-0.66,0,2,level 2
+11545,Colombia,0,15.67,2,complex,42.55,635.75,1.43,0,3,level 3
+14294,Colombia,0,16.08,1,minimalist,46.26,379.27,0.09,0,0,level 0
+11459,Colombia,0,13.08,1,minimalist,51.06,499.36,0.53,1,2,level 2
+12201,Colombia,1,13.33,1,minimalist,35.3,480.29,2.35,1,2,level 2
+11953,Colombia,1,14.33,2,complex,17.67,552.76,0.61,0,2,level 2
+15082,Colombia,0,15.67,1,minimalist,47.94,483.74,-0.33,0,2,level 2
+14196,Colombia,0,14.17,1,minimalist,44.48,527.2,0.36,1,2,level 2
+12292,Colombia,0,14.42,1,minimalist,47.94,483.61,-0.79,0,2,level 2
+11419,Colombia,0,16.42,2,complex,35.3,630.79,0.64,0,3,level 3
+11181,Colombia,1,14,1,minimalist,49.54,480.58,2.19,1,2,level 2
+14950,Colombia,1,15.17,1,minimalist,37.74,492.44,-0.6,0,2,level 2
+16208,Colombia,0,14.83,3,limited,53.93,380.78,-1.55,NA,0,level 0
+13092,Colombia,1,14.42,3,limited,68.06,370.9,0.62,0,0,level 0
+11780,Colombia,0,16.42,1,minimalist,44.48,480.59,0.89,0,2,level 2
+12105,Colombia,1,13.08,1,minimalist,40.44,566.52,-0.56,0,3,level 3
+16157,Colombia,0,14.42,2,complex,47.94,501.69,1.95,1,2,level 2
+15553,Colombia,1,13.58,1,minimalist,52.52,492.92,0.81,0,2,level 2
+15091,Colombia,1,15.33,2,complex,35.3,608.32,0.38,0,3,level 3
+11994,Colombia,1,17.42,1,minimalist,53.93,489.4,-1.45,0,2,level 2
+14529,Colombia,1,14.42,1,minimalist,52.52,522.87,-0.71,0,2,level 2
+15526,Colombia,0,17.08,3,limited,59.24,410.33,0.98,1,1,level 1
+12011,Colombia,1,14.33,1,minimalist,47.94,465.21,-1.79,0,1,level 1
+11278,Colombia,1,14.25,3,limited,49.54,394.13,0.02,0,0,level 0
+13257,Colombia,1,14.25,1,minimalist,52.52,476.26,0.47,1,1,level 1
+12205,Colombia,0,14.42,1,minimalist,70.18,365.72,-1.13,0,0,level 0
+13067,Colombia,1,14,1,minimalist,54.7,560.79,-1.26,0,2,level 2
+16436,Colombia,1,15.75,1,minimalist,61.87,335.19,-0.82,0,0,level 0
+14818,Colombia,0,16.08,3,limited,44.48,487.75,-0.25,0,2,level 2
+16318,Colombia,1,13.08,1,minimalist,46.26,476.78,1.55,1,1,level 1
+11595,Colombia,1,14.58,1,minimalist,51.06,527.41,-0.02,0,2,level 2
+12556,Colombia,0,16.08,1,minimalist,42.55,506.14,-0.15,0,2,level 2
+14445,Colombia,1,13.92,1,minimalist,53.93,462.09,0.23,0,1,level 1
+14212,Colombia,1,13.92,1,minimalist,52.2,430.87,-1.22,0,1,level 1
+15985,Colombia,0,14.08,1,minimalist,17.67,539.51,-0.71,0,2,level 2
+13096,Colombia,1,13.58,1,minimalist,55.3,420.7,0.2,0,1,level 1
+14787,Colombia,1,15.67,2,complex,31.87,339.2,1.81,1,0,level 0
+12118,Colombia,1,13.67,1,minimalist,44.48,449,0.4,0,1,level 1
+16180,Colombia,1,13.92,1,minimalist,57.94,371.04,0.29,1,0,level 0
+13921,Colombia,0,14.33,1,minimalist,51.06,516.88,1.22,1,2,level 2
+13368,Colombia,0,15.92,3,limited,53.93,477.11,1.41,1,1,level 1
+14255,Colombia,0,13.92,1,minimalist,17.67,605.44,-0.18,0,3,level 3
+14595,Colombia,0,13.33,1,minimalist,40.44,528.3,-0.85,0,2,level 2
+16181,Colombia,0,16.5,1,minimalist,55.3,328.74,-0.08,1,0,level 0
+11098,Colombia,1,14.58,1,minimalist,55.3,479.69,-1.28,0,2,level 2
+15373,Colombia,1,14.08,1,minimalist,52.52,530.1,-1.29,0,2,level 2
+11097,Colombia,1,16.33,1,minimalist,49.54,325.4,-1.32,0,0,level 0
+14460,Colombia,1,14.83,1,minimalist,57.94,477.11,-0.55,0,1,level 1
+14236,Colombia,0,15.33,3,limited,51.06,532.38,0.34,NA,2,level 2
+15866,Colombia,0,14,2,complex,38.07,606.48,1.81,1,3,level 3
+15952,Colombia,0,14.42,1,minimalist,35.3,518.7,0.14,0,2,level 2
+12406,Colombia,0,14,1,minimalist,55.3,340.99,-1.45,0,0,level 0
+14483,Colombia,1,14.25,1,minimalist,17.67,586.56,0.04,0,3,level 3
+11378,Colombia,1,14.67,1,minimalist,46.26,513.76,1.81,1,2,level 2
+14542,Colombia,1,14.25,1,minimalist,42.55,671.38,-0.28,0,3,level 3
+13343,Colombia,0,16,3,limited,53.93,289.82,-0.79,0,0,level 0
+16322,Colombia,1,13.5,1,minimalist,61.87,444.84,1.68,1,1,level 1
+14841,Colombia,0,15.75,1,minimalist,59.24,581.63,-0.93,0,3,level 3
+15458,Colombia,0,14.17,1,minimalist,46.26,480.01,-0.19,0,2,level 2
+15104,Colombia,0,17.25,2,complex,51.06,591.24,-1.69,0,3,level 3
+13291,Colombia,1,13.92,2,complex,52.52,489.59,-1.45,0,2,level 2
+12009,Colombia,0,15.25,1,minimalist,47.94,511.24,-1.1,0,2,level 2
+13980,Colombia,0,16.83,3,limited,49.54,508.03,-0.3,0,2,level 2
+12199,Colombia,1,13.42,1,minimalist,44.48,480.62,2.6,1,2,level 2
+11196,Colombia,0,16.33,1,minimalist,60.54,316.66,-1.35,0,0,level 0
+12859,Colombia,0,16.83,1,minimalist,60.54,400.08,-0.27,0,1,level 1
+11557,Colombia,1,14,1,minimalist,47.94,509.48,-0.47,0,2,level 2
+12169,Colombia,0,13.58,1,minimalist,51.06,487.02,-0.14,0,2,level 2
+14314,Colombia,1,14.33,1,minimalist,52.52,373.85,-1.07,0,0,level 0
+12030,Colombia,1,13.5,1,minimalist,53.93,424.4,-0.66,0,1,level 1
+13318,Colombia,1,15.67,3,limited,59.24,429.5,-0.3,0,1,level 1
+15519,Colombia,0,15.83,3,limited,17.67,464.41,1.27,1,1,level 1
+16545,Colombia,0,13.75,1,minimalist,57.94,438.89,-0.48,0,1,level 1
+15394,Colombia,0,14.25,1,minimalist,45.17,478.57,-0.64,0,1,level 1
+12405,Colombia,0,14.17,1,minimalist,52.52,520.63,-0.73,0,2,level 2
+14395,Colombia,0,14,1,minimalist,60.54,387.76,-0.02,1,0,level 0
+15978,Colombia,1,15.33,1,minimalist,56.63,478.49,0.42,1,1,level 1
+13249,Colombia,1,13.5,1,minimalist,44.48,518.41,-0.18,0,2,level 2
+11085,Colombia,1,14.25,2,complex,40.44,489.68,-0.55,0,2,level 2
+14496,Colombia,1,14,2,complex,17.67,751.08,1.7,0,3,level 3
+13039,Colombia,1,14.25,1,minimalist,35.3,594.47,-0.18,0,3,level 3
+13247,Colombia,0,13.33,3,limited,42.55,542.06,0.23,0,2,level 2
+12018,Colombia,1,16.33,1,minimalist,44.48,496.33,-0.55,0,2,level 2
+13690,Colombia,1,15.33,1,minimalist,38.07,508.52,0.04,1,2,level 2
+16188,Colombia,1,15.75,1,minimalist,52.52,336.58,-0.53,1,0,level 0
+15138,Colombia,0,13.83,3,limited,52.52,525.29,-0.25,0,2,level 2
+11090,Colombia,1,14.17,1,minimalist,57.94,468.58,-0.74,0,1,level 1
+12017,Colombia,0,15.5,1,minimalist,53.93,450.28,-0.68,0,1,level 1
+14071,Colombia,0,14.08,3,limited,53.93,558.97,0.36,1,2,level 2
+13336,Colombia,1,14.33,1,minimalist,48.21,494.27,-1.53,0,2,level 2
+15500,Colombia,0,15.08,3,limited,51.06,425.12,-1.7,0,1,level 1
+13356,Colombia,1,13.83,1,minimalist,55.3,335.28,-0.55,0,0,level 0
+15467,Colombia,0,14.08,1,minimalist,49.54,440.04,-0.08,0,1,level 1
+15248,Colombia,1,14.58,1,minimalist,31.87,588.83,0.11,0,3,level 3
+12536,Colombia,0,15.33,1,minimalist,57.94,445.67,-1.47,0,1,level 1
+14543,Colombia,1,13.92,2,complex,27.06,640.91,-0.2,0,3,level 3
+14604,Colombia,1,15.42,1,minimalist,52.52,444.99,-0.31,0,1,level 1
+14882,Colombia,0,15.58,3,limited,51.06,544.35,-1.1,0,2,level 2
+13492,Colombia,1,15.75,1,minimalist,49.54,464.58,0.4,0,1,level 1
+14605,Colombia,1,14,3,limited,56.63,388.05,0.44,1,0,level 0
+13924,Colombia,0,14,1,minimalist,49.54,552.25,-0.05,0,2,level 2
+15989,Colombia,0,14.5,1,minimalist,46.26,591.29,-0.95,0,3,level 3
+15426,Colombia,1,14.33,1,minimalist,42.55,482.83,1.44,1,2,level 2
+12397,Colombia,1,13.75,1,minimalist,60.54,348.52,-1.69,0,0,level 0
+11169,Colombia,1,13.42,1,minimalist,31.87,535.14,-0.6,0,2,level 2
+11558,Colombia,1,14.92,1,minimalist,52.23,331.42,-0.33,0,0,level 0
+15319,Colombia,1,13.75,3,limited,53.93,372.64,-0.39,0,0,level 0
+14005,Colombia,0,13.67,1,minimalist,46.26,621.64,1.77,1,3,level 3
+13355,Colombia,1,15.08,1,minimalist,63.24,361.26,-0.62,NA,0,level 0
+14433,Colombia,1,16.83,1,minimalist,55.3,476.33,-1.34,0,1,level 1
+12779,Colombia,0,14.17,1,minimalist,51.06,500.21,-0.83,0,2,level 2
+11192,Colombia,1,13.25,1,minimalist,40.44,597.25,2.3,1,3,level 3
+11210,Colombia,0,14.58,1,minimalist,56.63,395.23,-1.15,0,1,level 1
+16176,Colombia,0,14.42,2,complex,40.44,527.92,2.17,1,2,level 2
+11837,Colombia,1,14.33,2,complex,40.44,593.26,0.23,0,3,level 3
+12540,Colombia,0,14.58,1,minimalist,55.3,353.44,-0.69,0,0,level 0
+16165,Colombia,0,14.5,1,minimalist,57.94,536.08,1.79,1,2,level 2
+11562,Colombia,1,15.08,1,minimalist,51.06,281.74,-0.93,0,0,level 0
+12322,Colombia,1,13.75,1,minimalist,59.24,363.22,-0.82,0,0,level 0
+13046,Colombia,0,13.33,1,minimalist,57.94,398.06,-0.02,0,1,level 1
+14963,Colombia,0,13.92,1,minimalist,53.93,477.03,0.93,1,1,level 1
+15725,Colombia,1,13.42,1,minimalist,47.94,588.99,0.76,0,3,level 3
+16342,Colombia,1,13.33,1,minimalist,49.54,551.95,0.64,0,2,level 2
+14352,Colombia,0,15.33,1,minimalist,56.63,409.19,-0.6,0,1,level 1
+16411,Colombia,1,16.5,1,minimalist,55.64,308.79,-0.99,0,0,level 0
+13543,Colombia,1,16.58,1,minimalist,51.06,518.9,0.17,1,2,level 2
+15691,Colombia,0,13.5,3,limited,49.54,514.94,0.64,0,2,level 2
+26915,Dominican Republic,1,13.42,1,minimalist,57.32,370.19,-0.51,0,0,level 0
+24964,Dominican Republic,0,14,2,complex,27.06,509.79,1.27,1,2,level 2
+25472,Dominican Republic,0,15.33,1,minimalist,72.89,317.75,-0.93,0,0,level 0
+27697,Dominican Republic,1,13.42,1,minimalist,56.63,307.33,-0.17,0,0,level 0
+26016,Dominican Republic,1,13.75,1,minimalist,49.54,433.36,-0.37,0,1,level 1
+25243,Dominican Republic,0,16.17,3,limited,52.52,419.14,0.64,1,1,level 1
+24302,Dominican Republic,1,12.67,1,minimalist,64.69,411.52,-0.43,0,1,level 1
+26224,Dominican Republic,1,15.17,1,minimalist,40.44,406.19,-0.22,0,1,level 1
+26697,Dominican Republic,1,12.92,1,minimalist,52.52,435.55,0.87,1,1,level 1
+26831,Dominican Republic,1,13.25,1,minimalist,40.44,414.82,-0.22,0,1,level 1
+25537,Dominican Republic,0,13.5,1,minimalist,49.54,398.96,0.57,0,1,level 1
+27973,Dominican Republic,1,12.33,1,minimalist,63.66,339.57,-1.31,0,0,level 0
+26154,Dominican Republic,0,15.42,2,complex,46.26,464.93,0.34,0,1,level 1
+24590,Dominican Republic,0,14.33,1,minimalist,56.63,333.47,-1.41,0,0,level 0
+24488,Dominican Republic,1,13.83,1,minimalist,53.83,394.11,0.98,1,0,level 0
+26668,Dominican Republic,0,14.42,3,limited,64.69,307.78,-0.8,0,0,level 0
+26507,Dominican Republic,0,13.33,1,minimalist,64.72,279.33,-1.14,0,0,level 0
+26788,Dominican Republic,1,13.92,1,minimalist,35.3,502.27,0.02,0,2,level 2
+26554,Dominican Republic,1,14.42,1,minimalist,27.06,336.27,NA,0,0,level 0
+26434,Dominican Republic,0,17.17,1,minimalist,56.63,356.5,1.68,1,0,level 0
+26508,Dominican Republic,1,12.92,3,limited,72.68,271.41,-0.22,0,0,level 0
+27674,Dominican Republic,1,15,1,minimalist,64.69,324.21,-1.07,0,0,level 0
+25122,Dominican Republic,0,13.42,1,minimalist,42.55,400.72,-1.75,0,1,level 1
+26535,Dominican Republic,1,14.08,3,limited,49.54,302.47,-0.22,0,0,level 0
+25292,Dominican Republic,1,13.5,1,minimalist,47.94,449.47,-1.35,0,1,level 1
+25760,Dominican Republic,1,14.58,1,minimalist,70.18,359.6,-1.17,0,0,level 0
+26425,Dominican Republic,0,12.42,1,minimalist,44.48,491.42,-0.35,0,2,level 2
+24541,Dominican Republic,0,16.33,1,minimalist,70.18,287.5,0.5,0,0,level 0
+28170,Dominican Republic,0,16.5,1,minimalist,72.02,289.07,-0.85,0,0,level 0
+27792,Dominican Republic,0,13.17,1,minimalist,52.52,470.25,-0.35,0,1,level 1
+27319,Dominican Republic,0,13.25,1,minimalist,35.3,377.68,-0.53,0,0,level 0
+27036,Dominican Republic,1,12.83,3,limited,38.07,493.96,0.58,1,2,level 2
+24496,Dominican Republic,0,14.17,1,minimalist,53.93,302.82,-0.19,0,0,level 0
+28226,Dominican Republic,1,12.5,1,minimalist,57.94,519.5,2.53,1,2,level 2
+25585,Dominican Republic,0,15.75,1,minimalist,52.52,350.88,-1.75,0,0,level 0
+28206,Dominican Republic,1,14.33,3,limited,61.87,310.87,0.53,0,0,level 0
+27631,Dominican Republic,1,14.67,1,minimalist,63.24,345.65,0.12,0,0,level 0
+25416,Dominican Republic,0,14.17,1,minimalist,60.54,351.18,-0.11,0,0,level 0
+27165,Dominican Republic,0,13.17,1,minimalist,47.94,418.91,0.73,0,1,level 1
+24647,Dominican Republic,0,15.42,1,minimalist,52.52,346.04,-1.41,0,0,level 0
+26409,Dominican Republic,0,13.58,3,limited,63.24,367.83,-1.35,0,0,level 0
+26349,Dominican Republic,1,13.75,3,limited,53.93,366.14,-0.45,0,0,level 0
+27188,Dominican Republic,0,13.67,1,minimalist,57.94,342.02,-1.59,0,0,level 0
+25965,Dominican Republic,1,15.25,1,minimalist,59.24,383.77,-0.93,0,0,level 0
+26100,Dominican Republic,1,14.42,1,minimalist,55.3,415.46,-0.81,0,1,level 1
+25381,Dominican Republic,0,13,1,minimalist,56.63,368.09,0.28,0,0,level 0
+25160,Dominican Republic,1,13.25,1,minimalist,53.93,369.05,0.18,0,0,level 0
+28162,Dominican Republic,0,14.25,1,minimalist,63.24,319.97,-0.61,0,0,level 0
+27790,Dominican Republic,0,14.92,1,minimalist,52.52,439.88,0.57,0,1,level 1
+27779,Dominican Republic,0,13.75,1,minimalist,59.24,323.39,0,0,0,level 0
+26163,Dominican Republic,0,14.67,1,minimalist,52.52,476.89,-0.57,0,1,level 1
+27873,Dominican Republic,1,14.33,1,minimalist,56.63,404.97,-0.29,0,1,level 1
+27737,Dominican Republic,1,13.58,1,minimalist,68.06,398.92,-1.3,0,1,level 1
+26960,Dominican Republic,0,15.92,1,minimalist,52.52,481.93,-1.39,0,2,level 2
+25166,Dominican Republic,0,16.5,1,minimalist,55.3,461.53,2.08,1,1,level 1
+26922,Dominican Republic,0,14.42,1,minimalist,51.06,364.63,0.29,0,0,level 0
+27111,Dominican Republic,1,12.17,1,minimalist,17.67,397.12,-0.12,0,1,level 1
+27770,Dominican Republic,0,17.17,1,minimalist,47.94,367.37,-0.49,0,0,level 0
+25407,Dominican Republic,1,13,1,minimalist,52.52,426.24,0.62,0,1,level 1
+25506,Dominican Republic,1,13.42,3,limited,52.48,415.25,0.95,1,1,level 1
+25520,Dominican Republic,0,13.33,1,minimalist,44.48,420.71,-1.01,0,1,level 1
+27929,Dominican Republic,0,14.92,1,minimalist,61.87,265.21,-1.24,0,0,level 0
+25302,Dominican Republic,0,14.08,1,minimalist,55.3,426.4,1.29,0,1,level 1
+25624,Dominican Republic,0,13.42,3,limited,66.28,352.27,1.29,1,0,level 0
+26543,Dominican Republic,1,13.58,1,minimalist,63.24,391,-0.52,0,0,level 0
+27128,Dominican Republic,1,13.92,1,minimalist,47.94,444.95,-1.35,0,1,level 1
+26467,Dominican Republic,1,12.33,1,minimalist,46.26,438.19,1.05,1,1,level 1
+27881,Dominican Republic,1,13.42,3,limited,52.52,465.58,-0.38,0,1,level 1
+26822,Dominican Republic,1,13.17,1,minimalist,37.12,491.13,-0.11,0,2,level 2
+27928,Dominican Republic,0,13.83,1,minimalist,85.37,125.34,0.95,1,0,level 0
+26760,Dominican Republic,0,13.83,3,limited,63.24,330.43,0.99,0,0,level 0
+25548,Dominican Republic,1,14.33,3,limited,53.93,310.63,-0.24,0,0,level 0
+25615,Dominican Republic,1,12.5,1,minimalist,40.44,414.48,-0.03,0,1,level 1
+25531,Dominican Republic,0,14.25,3,limited,52.03,488.5,-0.93,0,2,level 2
+27267,Dominican Republic,1,13.75,1,minimalist,40.44,527.74,-0.74,0,2,level 2
+26416,Dominican Republic,1,13.92,1,minimalist,56.63,350.05,-1.29,0,0,level 0
+27206,Dominican Republic,1,13.83,1,minimalist,46.26,356.71,1.42,1,0,level 0
+27635,Dominican Republic,0,13.5,1,minimalist,47.94,399.25,-0.27,0,1,level 1
+26430,Dominican Republic,0,13.58,1,minimalist,61.87,294.2,-0.5,0,0,level 0
+27742,Dominican Republic,1,13.17,1,minimalist,57.94,458.76,0.4,0,1,level 1
+26817,Dominican Republic,0,14.42,1,minimalist,56.27,208.91,0.77,1,0,level 0
+26106,Dominican Republic,0,13.17,1,minimalist,49.54,470.59,0.56,1,1,level 1
+25513,Dominican Republic,0,13.5,1,minimalist,61.87,315.99,0.02,0,0,level 0
+26189,Dominican Republic,0,12.58,1,minimalist,55.3,458.4,1.93,1,1,level 1
+26662,Dominican Republic,0,13,1,minimalist,61.87,387.41,0.8,1,0,level 0
+26972,Dominican Republic,0,15.25,1,minimalist,51.06,408.8,-0.85,0,1,level 1
+27877,Dominican Republic,0,13.17,3,limited,62.13,283.87,1.68,0,0,level 0
+27134,Dominican Republic,0,14.17,1,minimalist,49.54,414.03,-0.32,0,1,level 1
+26843,Dominican Republic,1,14.17,1,minimalist,47.55,399.22,-1.29,0,1,level 1
+25460,Dominican Republic,1,15.17,3,limited,49.54,536.31,-1.01,0,2,level 2
+27911,Dominican Republic,0,14.17,1,minimalist,59.24,164.24,-1.38,0,0,level 0
+25797,Dominican Republic,0,13.08,1,minimalist,60.54,269.18,-0.35,0,0,level 0
+25244,Dominican Republic,0,14.25,1,minimalist,51.06,435.33,1.2,1,1,level 1
+25258,Dominican Republic,1,13.42,1,minimalist,66.28,344.58,-1.09,0,0,level 0
+25453,Dominican Republic,0,13.33,1,minimalist,49.54,390.46,0.02,0,0,level 0
+26955,Dominican Republic,0,13.67,1,minimalist,72.89,379.32,-0.52,0,0,level 0
+25123,Dominican Republic,1,13.17,3,limited,63.24,365.29,-1.75,0,0,level 0
+24730,Dominican Republic,0,16.25,1,minimalist,59.24,326.31,-0.96,0,0,level 0
+27508,Dominican Republic,1,14.08,1,minimalist,46.26,385.68,-1.54,0,0,level 0
+25469,Dominican Republic,0,16.42,2,complex,57.94,433.11,-1.29,0,1,level 1
+24778,Dominican Republic,0,14.67,1,minimalist,65.45,324.2,-0.77,0,0,level 0
+24489,Dominican Republic,1,13.25,3,limited,48.21,460.59,-0.38,0,1,level 1
+28012,Dominican Republic,1,15,1,minimalist,59.24,330.62,-1.3,0,0,level 0
+27640,Dominican Republic,1,13.92,1,minimalist,49.54,403.04,-0.51,0,1,level 1
+27899,Dominican Republic,0,12.67,1,minimalist,53.65,408.77,1.56,1,1,level 1
+27570,Dominican Republic,0,15.17,3,limited,57.94,363.55,-0.94,0,0,level 0
+27296,Dominican Republic,1,15.83,1,minimalist,55.5,426.7,-0.51,0,1,level 1
+27328,Dominican Republic,1,13.42,1,minimalist,49.54,424.8,0.59,1,1,level 1
+27350,Dominican Republic,1,13.75,3,limited,52.52,500.48,0.53,1,2,level 2
+24795,Dominican Republic,0,14.08,1,minimalist,59.24,376.45,-0.91,0,0,level 0
+26819,Dominican Republic,0,12.92,1,minimalist,68.06,343.38,1.07,0,0,level 0
+26173,Dominican Republic,1,13.58,1,minimalist,35.3,582.83,-0.04,0,3,level 3
+27680,Dominican Republic,1,16.5,1,minimalist,53.93,288.12,0.36,0,0,level 0
+25823,Dominican Republic,1,13.42,1,minimalist,55.3,513.89,-1.59,0,2,level 2
+26622,Dominican Republic,1,14.75,2,complex,56.63,353.04,-0.67,0,0,level 0
+27253,Dominican Republic,1,14.67,1,minimalist,56.63,352.34,-1.05,0,0,level 0
+26456,Dominican Republic,1,14.17,1,minimalist,67.22,221.88,-0.9,0,0,level 0
+26916,Dominican Republic,1,13.58,1,minimalist,53.93,396.47,0.45,1,1,level 1
+26350,Dominican Republic,0,18.17,1,minimalist,59.87,365.75,-0.5,0,0,level 0
+26428,Dominican Republic,1,15.75,1,minimalist,85.37,435.92,0.58,0,1,level 1
+25685,Dominican Republic,0,15.08,1,minimalist,63.24,370.31,-0.8,0,0,level 0
+27386,Dominican Republic,0,12.58,1,minimalist,64.69,241.73,-0.16,0,0,level 0
+25184,Dominican Republic,1,16.08,1,minimalist,61.87,269.95,0.7,0,0,level 0
+27884,Dominican Republic,0,14.08,2,complex,31.87,586.62,2.27,1,3,level 3
+28066,Dominican Republic,1,13.33,3,limited,51.06,385.32,-0.51,0,0,level 0
+26579,Dominican Republic,1,14.92,1,minimalist,49.54,460.64,2.48,1,1,level 1
+26065,Dominican Republic,0,16.5,3,limited,60.54,329.09,-0.46,0,0,level 0
+24300,Dominican Republic,0,15.08,1,minimalist,53.93,341.99,1.42,1,0,level 0
+28227,Dominican Republic,0,14.33,1,minimalist,61.87,331.21,1.58,1,0,level 0
+27268,Dominican Republic,1,13.5,1,minimalist,53.93,445.96,1.21,1,1,level 1
+25240,Dominican Republic,1,15.5,1,minimalist,59.24,338.6,0.85,1,0,level 0
+26773,Dominican Republic,1,14.5,1,minimalist,47.94,506.62,-0.48,0,2,level 2
+28036,Dominican Republic,1,13.58,1,minimalist,59.24,321,1.23,0,0,level 0
+26149,Dominican Republic,1,14,1,minimalist,49.54,447.88,0.57,0,1,level 1
+25329,Dominican Republic,1,13.33,1,minimalist,46.26,447.67,0.56,1,1,level 1
+25638,Dominican Republic,0,14.5,1,minimalist,55.3,321.15,-0.74,0,0,level 0
+27387,Dominican Republic,0,13.42,1,minimalist,49.54,453.56,1.74,1,1,level 1
+28039,Dominican Republic,1,13.42,1,minimalist,52.52,501.88,0.1,0,2,level 2
+27346,Dominican Republic,0,12.67,1,minimalist,49.54,388.89,-0.38,0,0,level 0
+25805,Dominican Republic,0,13.33,1,minimalist,57.94,362.94,-0.61,0,0,level 0
+25288,Dominican Republic,0,14.5,1,minimalist,52.52,441.54,-0.85,0,1,level 1
+25113,Dominican Republic,0,17.33,1,minimalist,64.69,284.31,0.32,0,0,level 0
+25640,Dominican Republic,0,15.08,1,minimalist,52.52,426.62,-0.74,0,1,level 1
+25181,Dominican Republic,1,15.75,1,minimalist,57.94,377.16,-0.71,0,0,level 0
+26221,Dominican Republic,1,14.83,1,minimalist,49.54,349.04,0.45,1,0,level 0
+28017,Dominican Republic,0,13.33,1,minimalist,59.24,418.25,1.11,1,1,level 1
+25356,Dominican Republic,0,13.5,1,minimalist,56.63,379.91,0.08,0,0,level 0
+24311,Dominican Republic,1,14.5,1,minimalist,85.37,337.38,0.74,NA,0,level 0
+26776,Dominican Republic,1,13.17,1,minimalist,54.56,334.25,-1.22,0,0,level 0
+28024,Dominican Republic,0,17.42,3,limited,17.67,309.48,-0.06,0,0,level 0
+27487,Dominican Republic,0,13.92,1,minimalist,61.87,312.82,0,0,0,level 0
+26675,Dominican Republic,0,14,1,minimalist,52.52,377.05,0.89,0,0,level 0
+27948,Dominican Republic,0,15.58,1,minimalist,42.55,533.12,-0.06,0,2,level 2
+27597,Dominican Republic,0,15.08,2,complex,52.52,458.27,-0.26,0,1,level 1
+27055,Dominican Republic,0,13.92,3,limited,52.52,400.65,-0.16,0,1,level 1
+26264,Dominican Republic,0,13.5,1,minimalist,53.93,299.86,-0.69,0,0,level 0
+26925,Dominican Republic,1,13.5,3,limited,52.52,488.06,NA,0,2,level 2
+27409,Dominican Republic,0,13.75,1,minimalist,57.94,367.5,-0.56,0,0,level 0
+26721,Dominican Republic,0,13.92,1,minimalist,46.26,552.13,0.69,1,2,level 2
+26259,Dominican Republic,1,13.75,1,minimalist,51.06,424.1,0.08,0,1,level 1
+26439,Dominican Republic,0,14.5,1,minimalist,52.78,367.45,0.57,0,0,level 0
+28001,Dominican Republic,0,12.83,3,limited,46.26,429.68,0.53,1,1,level 1
+25586,Dominican Republic,1,15.25,1,minimalist,61.87,295.69,-1.3,0,0,level 0
+27136,Dominican Republic,0,16.83,1,minimalist,64.69,201.21,-1.76,0,0,level 0
+27591,Dominican Republic,0,15.5,1,minimalist,NA,301.32,-0.72,0,0,level 0
+27481,Dominican Republic,0,12.83,3,limited,52.52,435.27,1.42,1,1,level 1
+24335,Dominican Republic,0,15.33,1,minimalist,72.89,314.59,-0.69,0,0,level 0
+28067,Dominican Republic,1,15.42,1,minimalist,66.28,253.09,-0.8,0,0,level 0
+24568,Dominican Republic,1,14.33,1,minimalist,52.52,416.26,0.69,1,1,level 1
+24879,Dominican Republic,0,13.25,1,minimalist,51.06,251.26,-0.26,0,0,level 0
+26152,Dominican Republic,0,13.83,1,minimalist,53.93,416.92,-0.03,0,1,level 1
+27930,Dominican Republic,1,13.33,1,minimalist,61.87,364.37,-0.37,0,0,level 0
+25112,Dominican Republic,0,14,1,minimalist,56.63,321.61,-1.3,0,0,level 0
+28061,Dominican Republic,1,13.42,1,minimalist,63.24,334.49,-0.72,0,0,level 0
+27798,Dominican Republic,1,12.67,1,minimalist,52.52,507.72,-0.35,0,2,level 2
+27611,Dominican Republic,1,13.33,1,minimalist,55.3,251.95,-0.35,0,0,level 0
+25384,Dominican Republic,1,13.42,1,minimalist,52.52,465.44,1.16,1,1,level 1
+26930,Dominican Republic,1,13.5,1,minimalist,70.18,298.89,-0.32,0,0,level 0
+25454,Dominican Republic,0,17.92,1,minimalist,64.69,254.32,-0.73,0,0,level 0
+24887,Dominican Republic,0,13.92,3,limited,55.3,433.83,1.08,1,1,level 1
+27418,Dominican Republic,1,16.5,1,minimalist,51.06,333.72,-1.85,0,0,level 0
+25379,Dominican Republic,1,12.75,1,minimalist,47.94,387.23,-0.38,0,0,level 0
+25827,Dominican Republic,0,11.5,1,minimalist,70.18,276.79,0.23,0,0,level 0
+25836,Dominican Republic,1,13.08,1,minimalist,17.67,500.18,1.74,1,2,level 2
+25385,Dominican Republic,1,15,1,minimalist,44.48,497.71,0.63,0,2,level 2
+25948,Dominican Republic,0,16.25,1,minimalist,49.54,361.56,-0.5,0,0,level 0
+26097,Dominican Republic,1,14.42,1,minimalist,17.67,554.08,1.27,0,2,level 2
+25159,Dominican Republic,0,16.42,1,minimalist,72.89,294.88,0.05,0,0,level 0
+25755,Dominican Republic,1,13.17,1,minimalist,42.55,399.14,1.35,1,1,level 1
+26081,Dominican Republic,1,14.08,1,minimalist,35.3,379.68,-1.25,0,0,level 0
+25033,Dominican Republic,1,13.33,1,minimalist,60.54,384.5,-0.22,0,0,level 0
+25085,Dominican Republic,1,14.92,1,minimalist,56.63,300.72,0.08,0,0,level 0
+24369,Dominican Republic,1,14.33,1,minimalist,47.94,577.31,-1.17,0,3,level 3
+26617,Dominican Republic,1,16.58,1,minimalist,52.52,323.16,0.45,1,0,level 0
+25514,Dominican Republic,0,13.5,1,minimalist,49.54,404.88,1.82,1,1,level 1
+25387,Dominican Republic,0,13.92,1,minimalist,53.93,382.6,-0.59,0,0,level 0
+25742,Dominican Republic,0,14.33,1,minimalist,59.24,365.75,0.22,1,0,level 0
+24956,Dominican Republic,1,14.58,3,limited,64.69,342.5,-0.61,0,0,level 0
+25165,Dominican Republic,0,13.25,1,minimalist,52.52,501.85,0.69,1,2,level 2
+24309,Dominican Republic,1,15.58,1,minimalist,35.3,439.01,-1.35,0,1,level 1
+25834,Dominican Republic,0,12.75,1,minimalist,57.94,489.93,-0.56,0,2,level 2
+24491,Dominican Republic,0,13.33,1,minimalist,NA,415.15,NA,NA,1,level 1
+26388,Dominican Republic,1,12.92,1,minimalist,53.93,397.15,-0.17,0,1,level 1
+26378,Dominican Republic,1,13.33,2,complex,17.67,456.83,1.79,1,1,level 1
+25774,Dominican Republic,0,15.5,1,minimalist,85.37,338.65,-0.32,0,0,level 0
+25987,Dominican Republic,0,13.33,1,minimalist,63.24,358.59,-0.32,0,0,level 0
+27221,Dominican Republic,1,17.42,3,limited,58.05,288.32,NA,NA,0,level 0
+25202,Dominican Republic,1,13.5,3,limited,38.07,424.55,-1.54,0,1,level 1
+26279,Dominican Republic,1,13.92,1,minimalist,61.87,442.22,0.02,0,1,level 1
+26754,Dominican Republic,0,13.58,1,minimalist,NA,324.64,0.12,0,0,level 0
+25111,Dominican Republic,0,16.5,1,minimalist,56.63,380.42,-1.06,0,0,level 0
+26537,Dominican Republic,1,14,1,minimalist,68.06,298.06,0.84,0,0,level 0
+26674,Dominican Republic,0,16.33,3,limited,85.37,344.68,-1.11,0,0,level 0
+28104,Dominican Republic,1,16.33,1,minimalist,40.44,492.67,-0.16,0,2,level 2
+27115,Dominican Republic,1,13.25,1,minimalist,40.44,493.15,1.03,0,2,level 2
+24992,Dominican Republic,0,12.42,1,minimalist,66.28,192.33,0.42,1,0,level 0
+25815,Dominican Republic,1,14.25,1,minimalist,51.49,300.95,-0.32,0,0,level 0
+26245,Dominican Republic,0,15.25,1,minimalist,65.94,362.59,-1.25,0,0,level 0
+27784,Dominican Republic,0,15.83,1,minimalist,70.18,363.28,-0.34,1,0,level 0
+24304,Dominican Republic,0,14.08,1,minimalist,27.06,539.86,0.6,0,2,level 2
+25781,Dominican Republic,0,13.17,1,minimalist,56.63,329.13,-0.38,0,0,level 0
+24295,Dominican Republic,0,13.08,1,minimalist,55.3,323.28,0.05,0,0,level 0
+27604,Dominican Republic,0,16.33,1,minimalist,49.54,427.02,-1.29,0,1,level 1
+27511,Dominican Republic,1,12.33,1,minimalist,57.94,313.96,-0.69,0,0,level 0
+26974,Dominican Republic,1,14.58,1,minimalist,53.93,243.44,-1.54,0,0,level 0
+24528,Dominican Republic,1,13.92,1,minimalist,49.54,562.4,0.97,0,2,level 2
+27093,Dominican Republic,0,14.83,1,minimalist,59.24,348.99,0.72,1,0,level 0
+24314,Dominican Republic,1,13.67,1,minimalist,53.93,356.29,-0.35,0,0,level 0
+25198,Dominican Republic,1,12.67,3,limited,64.69,386.31,2.37,1,0,level 0
+25118,Dominican Republic,0,16.08,3,limited,57.94,307.88,-1.11,0,0,level 0
+25374,Dominican Republic,0,13.92,3,limited,56.63,543.32,1.61,1,2,level 2
+26091,Dominican Republic,0,14.5,1,minimalist,57.94,347.73,-0.8,0,0,level 0
+27818,Dominican Republic,0,14.42,1,minimalist,55.3,295.55,-1.54,0,0,level 0
+24959,Dominican Republic,0,13.33,1,minimalist,52.52,448.78,2.35,1,1,level 1
+25699,Dominican Republic,0,14.5,1,minimalist,56.07,375.06,0.05,0,0,level 0
+27599,Dominican Republic,1,15.5,1,minimalist,56.63,309.85,-0.74,0,0,level 0
+26393,Dominican Republic,0,14.33,3,limited,27.06,292.2,-1.12,0,0,level 0
+25229,Dominican Republic,0,14.58,1,minimalist,31.87,533.16,2,1,2,level 2
+25911,Dominican Republic,0,16.17,1,minimalist,64.69,353.98,0.85,1,0,level 0
+25328,Dominican Republic,1,13.5,1,minimalist,53.93,503.86,-1.22,0,2,level 2
+26302,Dominican Republic,1,13.67,1,minimalist,56.63,365.2,1.93,NA,0,level 0
+24681,Dominican Republic,0,16.25,2,complex,64.69,284.77,-1.75,0,0,level 0
+26379,Dominican Republic,1,13.75,2,complex,46.26,566.12,1.48,1,3,level 3
+27187,Dominican Republic,0,13.17,3,limited,60.54,306.24,-0.84,0,0,level 0
+27812,Dominican Republic,1,14.17,1,minimalist,46.26,501.71,1.59,1,2,level 2
+24805,Dominican Republic,1,15.42,1,minimalist,61.87,336.35,-1.22,0,0,level 0
+28062,Dominican Republic,1,13.92,1,minimalist,70.18,354.76,-0.32,0,0,level 0
+27139,Dominican Republic,1,15.17,3,limited,56.63,348.98,-0.62,0,0,level 0
+24542,Dominican Republic,1,13.75,1,minimalist,52.52,430.79,0.87,0,1,level 1
+24875,Dominican Republic,0,13.83,2,complex,57.94,389.46,-0.67,0,0,level 0
+26431,Dominican Republic,1,13.42,1,minimalist,61.87,367.32,-0.35,0,0,level 0
+27846,Dominican Republic,0,14.42,3,limited,72.89,331.52,-0.85,0,0,level 0
+26212,Dominican Republic,1,12.92,1,minimalist,49.54,506.88,-0.74,0,2,level 2
+26423,Dominican Republic,1,13.08,1,minimalist,44.48,552,0,0,2,level 2
+26741,Dominican Republic,1,13.25,1,minimalist,42.55,555.77,0.96,1,2,level 2
+28151,Dominican Republic,0,14.08,1,minimalist,51.06,299.87,0.05,0,0,level 0
+28093,Dominican Republic,1,14.33,3,limited,63.25,299.15,-0.74,0,0,level 0
+26342,Dominican Republic,1,13.83,1,minimalist,57.94,366.62,-0.85,0,0,level 0
+27095,Dominican Republic,0,13.33,1,minimalist,61.87,462.27,1.85,1,1,level 1
+24893,Dominican Republic,1,13.33,1,minimalist,44.48,425.55,0.82,0,1,level 1
+27480,Dominican Republic,1,15.25,1,minimalist,64.69,384.65,-0.64,1,0,level 0
+25592,Dominican Republic,1,14.5,1,minimalist,53.93,471.09,2.08,1,1,level 1
+24359,Dominican Republic,0,16.33,1,minimalist,49.54,303.27,-1.17,0,0,level 0
+26177,Dominican Republic,1,13.25,1,minimalist,59.24,421.67,0.45,1,1,level 1
+25020,Dominican Republic,0,13.92,1,minimalist,49.54,459.57,-0.22,0,1,level 1
+28089,Dominican Republic,0,14.08,1,minimalist,59.24,331.08,1.35,1,0,level 0
+26291,Dominican Republic,1,13.25,1,minimalist,51.06,338.5,-0.67,0,0,level 0
+27653,Dominican Republic,1,14.33,3,limited,61.17,371.55,-0.61,0,0,level 0
+26490,Dominican Republic,1,15.08,1,minimalist,40.44,468.01,-1.35,0,1,level 1
+27158,Dominican Republic,0,14.08,1,minimalist,49.54,414.97,-0.12,0,1,level 1
+26529,Dominican Republic,0,13.5,3,limited,53.93,280.79,-0.44,0,0,level 0
+24562,Dominican Republic,0,13.5,1,minimalist,57.94,300.39,0.05,0,0,level 0
+26080,Dominican Republic,0,14.25,1,minimalist,53.93,309.61,-1.35,0,0,level 0
+25489,Dominican Republic,1,13.58,1,minimalist,52.52,569.64,1.48,1,3,level 3
+24523,Dominican Republic,1,13.67,2,complex,40.44,593.8,1.48,1,3,level 3
+27900,Dominican Republic,1,13.92,3,limited,49.54,454.82,1.45,1,1,level 1
+25485,Dominican Republic,1,13.67,1,minimalist,44.48,506.67,1.48,1,2,level 2
+26219,Dominican Republic,0,12.42,3,limited,66.28,376.7,0.05,0,0,level 0
+25819,Dominican Republic,0,13.33,1,minimalist,61.87,355.89,0.02,0,0,level 0
+25767,Dominican Republic,0,13,1,minimalist,52.52,396.26,0.56,1,1,level 1
+25060,Dominican Republic,1,13.67,1,minimalist,56.63,373.17,-0.5,0,0,level 0
+26778,Dominican Republic,0,13.83,1,minimalist,70.48,217.92,0.23,0,0,level 0
+24971,Dominican Republic,0,13.5,1,minimalist,46.26,489.04,1.74,1,2,level 2
+24936,Dominican Republic,1,16.75,1,minimalist,NA,234.51,0.93,0,0,level 0
+24904,Dominican Republic,1,12,1,minimalist,38.07,500.22,2.03,0,2,level 2
+27795,Dominican Republic,1,16.58,1,minimalist,57.94,408.14,-1.01,0,1,level 1
+26478,Dominican Republic,0,14.08,1,minimalist,68.06,354.03,NA,0,0,level 0
+25977,Dominican Republic,1,14.92,1,minimalist,38.07,375.46,-0.9,0,0,level 0
+27467,Dominican Republic,0,12.5,1,minimalist,72.89,374.14,1.3,1,0,level 0
+25550,Dominican Republic,1,14.17,1,minimalist,68.06,301.55,0.7,0,0,level 0
+24428,Dominican Republic,0,15.83,1,minimalist,51.06,389.97,-1.29,0,0,level 0
+24770,Dominican Republic,0,12.75,3,limited,57.94,497.48,-0.45,0,2,level 2
+26274,Dominican Republic,0,13.5,1,minimalist,57.94,392.95,1.28,0,0,level 0
+24301,Dominican Republic,0,13,1,minimalist,60.54,414.4,1.93,1,1,level 1
+27079,Dominican Republic,1,14,1,minimalist,55.3,372.75,-0.61,0,0,level 0
+24871,Dominican Republic,1,13.33,3,limited,53.93,357.83,0.03,0,0,level 0
+27263,Dominican Republic,0,15.92,1,minimalist,63.36,315.93,0.03,1,0,level 0
+25157,Dominican Republic,1,13.83,1,minimalist,53.93,426.93,-0.22,0,1,level 1
+25154,Dominican Republic,1,13.33,1,minimalist,65.3,345.84,-1.35,0,0,level 0
+26195,Dominican Republic,0,14.08,1,minimalist,53.93,540.55,2.48,1,2,level 2
+28220,Dominican Republic,0,13.25,1,minimalist,49.54,517.82,1.48,1,2,level 2
+24595,Dominican Republic,0,13.42,2,complex,35.3,445.66,1.61,1,1,level 1
+24674,Dominican Republic,1,15.83,1,minimalist,48.61,433.53,-1.56,0,1,level 1
+26550,Dominican Republic,0,13.75,1,minimalist,63.24,311.78,-0.32,0,0,level 0
+25842,Dominican Republic,1,13.75,1,minimalist,63.24,239.44,0.11,0,0,level 0
+26684,Dominican Republic,0,13.58,2,complex,50.83,445.25,-0.32,0,1,level 1
+25176,Dominican Republic,1,17.25,1,minimalist,58.33,372.85,0.07,0,0,level 0
+25236,Dominican Republic,1,15.08,1,minimalist,56.63,297.98,0.89,0,0,level 0
+28094,Dominican Republic,0,15.33,1,minimalist,70.18,274.92,1.35,1,0,level 0
+27670,Dominican Republic,0,15.92,1,minimalist,64.69,263.44,0.29,0,0,level 0
+25549,Dominican Republic,1,13.42,1,minimalist,60.54,399.29,0.67,0,1,level 1
+24820,Dominican Republic,1,14.67,1,minimalist,51.06,398.28,-0.72,0,1,level 1
+25706,Dominican Republic,0,14.42,3,limited,53.93,262.4,-0.06,0,0,level 0
+24808,Dominican Republic,1,12.5,1,minimalist,51.06,348.44,0.74,1,0,level 0
+27522,Dominican Republic,1,14.58,1,minimalist,23.36,365.8,-0.03,0,0,level 0
+25486,Dominican Republic,1,14.75,1,minimalist,55.3,390.88,-0.49,0,0,level 0
+24686,Dominican Republic,0,14.83,1,minimalist,49.54,443.34,-1.75,0,1,level 1
+24659,Dominican Republic,0,13.5,3,limited,55.3,344.84,-0.63,0,0,level 0
+25426,Dominican Republic,0,13.83,1,minimalist,47.94,425.53,-0.38,0,1,level 1
+26007,Dominican Republic,0,13.58,1,minimalist,55.3,332.69,0.96,1,0,level 0
+24687,Dominican Republic,1,15.08,1,minimalist,63.24,349.51,-0.74,0,0,level 0
+26381,Dominican Republic,0,13.92,1,minimalist,57.94,386.73,-0.45,0,0,level 0
+27173,Dominican Republic,0,16.75,1,minimalist,66.28,327.72,-1.11,0,0,level 0
+25822,Dominican Republic,1,12.92,1,minimalist,56.63,416.65,-1.75,0,1,level 1
+25344,Dominican Republic,1,13.5,1,minimalist,45.18,274.99,-0.32,0,0,level 0
+25345,Dominican Republic,1,13,1,minimalist,55.3,404.73,0.28,0,1,level 1
+25430,Dominican Republic,0,15,3,limited,49.54,431.59,-0.27,0,1,level 1
+26167,Dominican Republic,1,13.67,1,minimalist,49.54,582.87,1.08,1,3,level 3
+27744,Dominican Republic,0,14.17,1,minimalist,60.54,372.28,0.97,0,0,level 0
+27478,Dominican Republic,1,13.67,1,minimalist,41.37,441.79,1.72,1,1,level 1
+26252,Dominican Republic,1,13.5,1,minimalist,49.54,377.92,-1.01,0,0,level 0
+26583,Dominican Republic,0,13,1,minimalist,42.55,442.13,-1.2,0,1,level 1
+27540,Dominican Republic,0,13.25,1,minimalist,44.48,538.98,2.77,1,2,level 2
+24725,Dominican Republic,0,14.33,3,limited,49.54,333.13,0.05,0,0,level 0
+25658,Dominican Republic,1,14.17,1,minimalist,52.37,463.88,0.63,0,1,level 1
+26187,Dominican Republic,0,14.08,2,complex,42.55,534.15,2.09,1,2,level 2
+28077,Dominican Republic,1,14.67,1,minimalist,55.3,449.63,0.57,0,1,level 1
+27246,Dominican Republic,1,16.67,1,minimalist,49.54,384.79,-1.51,0,0,level 0
+24329,Dominican Republic,0,13.17,1,minimalist,70.18,236.9,0.93,1,0,level 0
+28041,Dominican Republic,1,16.25,1,minimalist,57.94,383.18,-0.74,0,0,level 0
+26463,Dominican Republic,0,16.58,1,minimalist,66.73,280.61,0.95,1,0,level 0
+26588,Dominican Republic,1,12.92,1,minimalist,57.94,362.6,0.84,0,0,level 0
+26917,Dominican Republic,0,13.33,1,minimalist,47.94,434.71,-1.15,0,1,level 1
+27848,Dominican Republic,1,12.5,3,limited,59.24,401.07,-0.69,0,1,level 1
+24977,Dominican Republic,0,13.58,1,minimalist,46.26,464.35,1.48,1,1,level 1
+28115,Dominican Republic,1,14,1,minimalist,42.55,411.76,-0.72,0,1,level 1
+26765,Dominican Republic,1,13.75,1,minimalist,66.28,290.85,-0.35,0,0,level 0
+26496,Dominican Republic,0,13.58,1,minimalist,70.18,223.71,-0.45,0,0,level 0
+26468,Dominican Republic,1,13.75,2,complex,51.06,506.37,-0.56,0,2,level 2
+24935,Dominican Republic,1,12.92,1,minimalist,53.93,394.76,-0.9,0,0,level 0
+25411,Dominican Republic,0,14.25,1,minimalist,64.69,310.92,-0.16,0,0,level 0
+27947,Dominican Republic,0,15.42,3,limited,64.69,359.93,-1.31,0,0,level 0
+27369,Dominican Republic,1,13.25,3,limited,52.52,418.36,0.42,0,1,level 1
+26092,Dominican Republic,0,14.58,1,minimalist,68.06,416.58,-0.48,0,1,level 1
+26024,Dominican Republic,1,16,1,minimalist,65.3,299.96,-0.75,0,0,level 0
+24316,Dominican Republic,0,15.92,3,limited,61.87,278.67,-0.64,0,0,level 0
+25254,Dominican Republic,1,12,1,minimalist,52.52,551.9,0.13,0,2,level 2
+26852,Dominican Republic,0,13.42,1,minimalist,52.52,488.78,0.67,0,2,level 2
+26725,Dominican Republic,1,13.92,1,minimalist,53.93,362.35,1.42,0,0,level 0
+26639,Dominican Republic,1,15.67,2,complex,49.35,321.54,-0.57,0,0,level 0
+27228,Dominican Republic,0,14.08,1,minimalist,NA,302.99,1.19,1,0,level 0
+25022,Dominican Republic,1,13.5,3,limited,52.52,382.38,1.64,1,0,level 0
+27293,Dominican Republic,0,14.33,1,minimalist,70.18,341.94,-0.61,0,0,level 0
+25211,Dominican Republic,0,16.92,1,minimalist,52.52,238.19,0.19,0,0,level 0
+26797,Dominican Republic,0,13.17,1,minimalist,56.63,458.12,1.29,NA,1,level 1
+27247,Dominican Republic,0,14.42,1,minimalist,61.87,309.55,-0.17,0,0,level 0
+27663,Dominican Republic,1,13.75,1,minimalist,85.37,329.67,-1.49,0,0,level 0
+27507,Dominican Republic,1,13.67,1,minimalist,44.48,529.06,0.53,0,2,level 2
+27676,Dominican Republic,1,14.33,1,minimalist,57.94,323.41,-1.2,0,0,level 0
+27011,Dominican Republic,0,16.67,1,minimalist,55.3,336.95,-0.8,0,0,level 0
+24408,Dominican Republic,0,15.25,1,minimalist,64.69,306.48,-0.4,0,0,level 0
+27954,Dominican Republic,0,15.92,1,minimalist,53.93,264.03,-1.35,0,0,level 0
+25456,Dominican Republic,0,14.33,1,minimalist,58.05,338.3,-1.75,0,0,level 0
+24980,Dominican Republic,1,14,1,minimalist,44.48,571.64,0.39,0,3,level 3
+27896,Dominican Republic,0,14,1,minimalist,51.06,508.88,1.86,0,2,level 2
+26655,Dominican Republic,1,14.58,1,minimalist,47.94,308.76,-0.71,0,0,level 0
+25543,Dominican Republic,1,13.25,3,limited,60.54,350.81,-1.59,0,0,level 0
+26412,Dominican Republic,0,12.83,1,minimalist,49.54,387.67,-0.8,0,0,level 0
+27636,Dominican Republic,0,15.75,3,limited,52.52,330.41,-0.69,0,0,level 0
+26251,Dominican Republic,0,13.33,3,limited,56.63,317.67,0.95,1,0,level 0
+25058,Dominican Republic,0,13.25,1,minimalist,61.87,415.05,0.13,0,1,level 1
+27747,Dominican Republic,0,16.83,1,minimalist,60.54,328.57,0.46,0,0,level 0
+25546,Dominican Republic,0,15.33,1,minimalist,55.3,309.71,-0.22,0,0,level 0
+28084,Dominican Republic,0,15.5,1,minimalist,40.44,391.98,2.53,1,0,level 0
+26551,Dominican Republic,0,14.67,1,minimalist,47.37,219.18,-0.43,0,0,level 0
+24584,Dominican Republic,1,17.92,1,minimalist,68.06,450.64,-1.17,0,1,level 1
+27127,Dominican Republic,0,16.92,1,minimalist,53.63,198.56,-0.16,0,0,level 0
+25779,Dominican Republic,1,14,1,minimalist,52.52,494.81,-1.11,0,2,level 2
+26293,Dominican Republic,1,12.25,1,minimalist,56.63,411.46,-0.51,0,1,level 1
+25490,Dominican Republic,1,13.42,1,minimalist,35.3,453.76,0.02,0,1,level 1
+26518,Dominican Republic,1,15,1,minimalist,59.93,374.72,0.32,0,0,level 0
+24294,Dominican Republic,1,13.58,1,minimalist,55.3,370.52,0.96,1,0,level 0
+27162,Dominican Republic,1,15.33,3,limited,53.93,286.51,0.85,1,0,level 0
+26114,Dominican Republic,1,13.58,1,minimalist,42.55,523.64,0.35,1,2,level 2
+24515,Dominican Republic,0,12.5,1,minimalist,53.93,495.2,2.14,1,2,level 2
+25167,Dominican Republic,1,14.17,3,limited,38.07,410.08,-0.43,0,1,level 1
+25906,Dominican Republic,1,13.33,3,limited,57.94,306.67,-0.85,0,0,level 0
+26191,Dominican Republic,0,12.58,1,minimalist,44.48,543.65,2.11,1,2,level 2
+24654,Dominican Republic,1,14.17,3,limited,44.48,481.85,0.29,0,2,level 2
+26514,Dominican Republic,1,13.25,1,minimalist,55.68,321.5,-1.41,0,0,level 0
+25843,Dominican Republic,0,15.17,1,minimalist,57.94,355.01,0.93,0,0,level 0
+27308,Dominican Republic,0,13.08,1,minimalist,49.54,471.59,0.83,0,1,level 1
+27931,Dominican Republic,1,13.33,1,minimalist,46.26,463.3,-0.4,0,1,level 1
+25093,Dominican Republic,1,15.17,1,minimalist,59.24,406.89,0.98,1,1,level 1
+28037,Dominican Republic,0,14.08,3,limited,66.28,287.02,-0.43,0,0,level 0
+27087,Dominican Republic,0,14.17,1,minimalist,53.93,352.18,1.51,1,0,level 0
+26025,Dominican Republic,0,15.67,1,minimalist,66.28,231.78,-1.07,0,0,level 0
+25101,Dominican Republic,0,13.08,1,minimalist,57.94,363.25,0.08,0,0,level 0
+26969,Dominican Republic,1,14.25,1,minimalist,46.26,426.59,-0.73,0,1,level 1
+26481,Dominican Republic,1,16.25,1,minimalist,55.3,401.92,-0.38,0,1,level 1
+27773,Dominican Republic,0,15.58,1,minimalist,70.18,297.25,0.59,1,0,level 0
+25607,Dominican Republic,1,14.42,1,minimalist,42.55,439.23,-0.05,1,1,level 1
+27072,Dominican Republic,0,13.58,1,minimalist,56.63,425.1,0.35,1,1,level 1
+27912,Dominican Republic,1,14.17,1,minimalist,51.06,475.76,-0.17,0,1,level 1
+25632,Dominican Republic,1,14.08,1,minimalist,55.3,461.72,-0.69,0,1,level 1
+28013,Dominican Republic,1,14.25,1,minimalist,55.3,328.18,-0.32,0,0,level 0
+27034,Dominican Republic,1,16.08,1,minimalist,60.54,344.56,-0.78,0,0,level 0
+24388,Dominican Republic,0,14.5,1,minimalist,56.63,420.42,0.85,1,1,level 1
+27612,Dominican Republic,0,14.5,1,minimalist,59.24,342.79,-0.35,0,0,level 0
+26421,Dominican Republic,1,13.67,1,minimalist,47.94,551.78,-0.95,0,2,level 2
+27804,Dominican Republic,0,15.17,1,minimalist,39.72,488.6,-0.9,0,2,level 2
+28215,Dominican Republic,0,14.33,1,minimalist,63.24,364.24,-0.9,0,0,level 0
+28158,Dominican Republic,0,13.83,1,minimalist,56.63,363.95,0.5,1,0,level 0
+25120,Dominican Republic,1,13.08,1,minimalist,55.3,313.37,-0.28,0,0,level 0
+24788,Dominican Republic,0,15.25,1,minimalist,68.06,249.89,-0.16,0,0,level 0
+27673,Dominican Republic,1,16.33,1,minimalist,52.52,391.08,-0.37,0,0,level 0
+27810,Dominican Republic,1,13.92,1,minimalist,55.3,287.91,-1.08,0,0,level 0
+24683,Dominican Republic,0,16.67,1,minimalist,17.67,342.69,-0.03,0,0,level 0
+26028,Dominican Republic,0,14.5,1,minimalist,68.06,266.41,0.05,0,0,level 0
+27704,Dominican Republic,0,15.83,1,minimalist,63.24,314.24,-0.29,0,0,level 0
+25932,Dominican Republic,1,13.83,3,limited,47.94,438,0.69,0,1,level 1
+25278,Dominican Republic,1,13.25,1,minimalist,52.52,360.08,-0.9,0,0,level 0
+25705,Dominican Republic,0,16.5,3,limited,51.06,292.56,-0.22,0,0,level 0
+24939,Dominican Republic,1,14.67,3,limited,55.3,342.37,-0.56,0,0,level 0
+26010,Dominican Republic,1,12.58,1,minimalist,59.24,348.55,1.35,1,0,level 0
+25225,Dominican Republic,1,14.25,1,minimalist,47.94,376.93,-1.25,0,0,level 0
+27940,Dominican Republic,1,13.33,1,minimalist,42.55,507.2,-1.35,0,2,level 2
+25059,Dominican Republic,1,14.5,1,minimalist,60.54,363.69,0.34,0,0,level 0
+26605,Dominican Republic,1,14.92,1,minimalist,NA,245.76,-1.11,0,0,level 0
+27968,Dominican Republic,0,15.58,3,limited,57.94,304.22,-1.56,0,0,level 0
+24733,Dominican Republic,1,15.08,1,minimalist,56.63,314.19,0.09,0,0,level 0
+26061,Dominican Republic,0,13.75,1,minimalist,85.37,309.72,-1.24,0,0,level 0
+24957,Dominican Republic,0,14.17,1,minimalist,47.94,453.16,-0.67,0,1,level 1
+26755,Dominican Republic,0,13.5,1,minimalist,53.93,403.09,-0.27,0,1,level 1
+24360,Dominican Republic,0,15.25,1,minimalist,54.04,456.36,0.02,0,1,level 1
+28130,Dominican Republic,1,13,3,limited,49.54,416.79,-0.88,0,1,level 1
+27543,Dominican Republic,0,17.17,1,minimalist,38.07,497.31,-0.17,0,2,level 2
+28166,Dominican Republic,0,16.17,3,limited,55.3,370.45,-1.05,0,0,level 0
+26540,Dominican Republic,0,16.33,1,minimalist,53.93,429.01,-0.64,0,1,level 1
+27962,Dominican Republic,1,13.25,3,limited,53.93,435.37,0.37,0,1,level 1
+24682,Dominican Republic,0,13.5,1,minimalist,51.06,469,0.38,0,1,level 1
+27829,Dominican Republic,0,14,1,minimalist,51.06,365.86,-1.14,0,0,level 0
+26522,Dominican Republic,1,13.75,1,minimalist,84.16,231.28,-0.84,0,0,level 0
+26120,Dominican Republic,0,13.75,1,minimalist,49.54,477.65,1.48,1,1,level 1
+26811,Dominican Republic,0,12.33,1,minimalist,47.94,341.63,2.08,1,0,level 0
+24575,Dominican Republic,1,14.08,1,minimalist,56.63,382.82,-0.27,0,0,level 0
+28087,Dominican Republic,1,14.33,1,minimalist,64.69,285.86,-0.51,0,0,level 0
+27260,Dominican Republic,0,13.58,3,limited,52.52,331.33,-0.38,0,0,level 0
+24797,Dominican Republic,1,14,1,minimalist,53.93,336.97,-0.65,0,0,level 0
+27545,Dominican Republic,1,14.33,1,minimalist,52.52,300.74,0.81,0,0,level 0
+27789,Dominican Republic,0,15.5,1,minimalist,NA,275.17,0.05,0,0,level 0
+25014,Dominican Republic,0,16.92,1,minimalist,53.93,308.8,0.69,1,0,level 0
+25501,Dominican Republic,0,13.42,1,minimalist,53.93,410.81,1.48,1,1,level 1
+25796,Dominican Republic,0,12.25,1,minimalist,59.24,311.15,0.12,0,0,level 0
+25602,Dominican Republic,0,13.25,1,minimalist,60.88,307.18,0.29,0,0,level 0
+28043,Dominican Republic,1,14,1,minimalist,55.3,452.95,-0.09,0,1,level 1
+25390,Dominican Republic,1,13.25,1,minimalist,55.3,422.9,-0.11,0,1,level 1
+26887,Dominican Republic,1,15,1,minimalist,56.63,358.46,-0.35,0,0,level 0
+24921,Dominican Republic,1,13.58,1,minimalist,64.69,412.85,1.74,1,1,level 1
+25790,Dominican Republic,1,13.58,1,minimalist,52.52,440.49,-0.61,0,1,level 1
+28182,Dominican Republic,0,15.58,1,minimalist,47.94,381.2,-0.71,0,0,level 0
+27276,Dominican Republic,1,13.42,1,minimalist,52.73,378.43,1.72,1,0,level 0
+25545,Dominican Republic,1,16.17,1,minimalist,64.69,139.21,-0.32,0,0,level 0
+26749,Dominican Republic,0,13.75,3,limited,43.01,305.84,0.26,1,0,level 0
+28027,Dominican Republic,1,13.5,1,minimalist,53.93,464.65,-0.45,0,1,level 1
+24867,Dominican Republic,0,13.17,1,minimalist,49.54,313.67,-0.27,0,0,level 0
+25161,Dominican Republic,0,14,1,minimalist,47.94,492.08,-0.38,0,2,level 2
+27641,Dominican Republic,1,15.67,3,limited,28.91,88.26,-0.69,0,0,level 0
+24751,Dominican Republic,0,14.83,1,minimalist,70.18,274.86,1.29,1,0,level 0
+24790,Dominican Republic,0,14.25,1,minimalist,53.93,372.1,0.65,0,0,level 0
+27474,Dominican Republic,1,15.67,1,minimalist,57.32,416.9,-0.9,0,1,level 1
+25227,Dominican Republic,1,13.33,1,minimalist,53.93,349.18,0.44,0,0,level 0
+25210,Dominican Republic,0,15.58,1,minimalist,70.18,306.08,-0.83,0,0,level 0
+26146,Dominican Republic,1,12.33,1,minimalist,38.07,530.31,0.95,1,2,level 2
+25782,Dominican Republic,0,14.08,1,minimalist,52.52,361.68,-1.59,0,0,level 0
+25478,Dominican Republic,0,14.17,1,minimalist,NA,407.53,-0.38,0,1,level 1
+27125,Dominican Republic,1,15.17,1,minimalist,53.93,380.54,-1.35,0,0,level 0
+27960,Dominican Republic,1,13.58,1,minimalist,44.48,528.81,-0.35,0,2,level 2
+28058,Dominican Republic,0,18.83,3,limited,64.13,317.62,-0.95,0,0,level 0
+26095,Dominican Republic,0,14.25,3,limited,47.94,321.45,1.17,0,0,level 0
+24623,Dominican Republic,0,13.42,1,minimalist,63.24,460.09,0.74,1,1,level 1
+25027,Dominican Republic,0,15.5,1,minimalist,55.3,307.9,-0.72,0,0,level 0
+26709,Dominican Republic,1,13.5,1,minimalist,40.44,542.6,2.77,1,2,level 2
+25684,Dominican Republic,0,12.83,3,limited,64.69,286,0.04,0,0,level 0
+27868,Dominican Republic,1,13.08,1,minimalist,67.12,279.36,-1.29,0,0,level 0
+24678,Dominican Republic,0,14.08,1,minimalist,55.3,414.17,-0.35,0,1,level 1
+26485,Dominican Republic,0,13.92,1,minimalist,49.54,523.48,1.69,1,2,level 2
+27760,Dominican Republic,1,15.92,1,minimalist,64.69,350.24,-0.31,0,0,level 0
+27159,Dominican Republic,0,14.08,1,minimalist,72.89,196.79,0.4,1,0,level 0
+26491,Dominican Republic,1,13.58,3,limited,60.54,396.43,-1.35,0,1,level 1
+54227,Mexico,1,13.33,1,minimalist,53.93,480.4,0.05,0,2,level 2
+58216,Mexico,1,13.5,1,minimalist,49.54,376.51,-0.25,0,0,level 0
+58873,Mexico,0,16.17,3,limited,56.63,356.47,-1.4,0,0,level 0
+57405,Mexico,0,13.42,1,minimalist,55.3,470.44,-0.17,0,1,level 1
+59074,Mexico,1,13.42,1,minimalist,52.52,514.06,-0.13,0,2,level 2
+58790,Mexico,1,13.83,1,minimalist,47.94,438.89,-1.02,0,1,level 1
+57398,Mexico,1,14.42,1,minimalist,47.94,548.12,0.16,0,2,level 2
+54316,Mexico,0,13.67,1,minimalist,42.55,445.65,0.34,1,1,level 1
+54673,Mexico,1,13.67,1,minimalist,44.48,602.5,2.02,1,3,level 3
+54567,Mexico,0,13.67,1,minimalist,53.93,464.81,-0.14,0,1,level 1
+54607,Mexico,0,14.58,3,limited,NA,353.56,-0.08,1,0,level 0
+59020,Mexico,0,13.67,1,minimalist,53.93,418.64,-1.4,0,1,level 1
+54856,Mexico,0,13.5,3,limited,72.89,342.17,-0.9,0,0,level 0
+58360,Mexico,0,13.5,2,complex,44.48,559.39,1.19,1,2,level 2
+57324,Mexico,1,13.42,1,minimalist,47.94,447.33,-0.44,0,1,level 1
+56524,Mexico,1,13.92,2,complex,27.06,588.77,0.06,0,3,level 3
+57219,Mexico,0,14.83,3,limited,85.37,338.7,1.12,1,0,level 0
+58396,Mexico,0,13.33,3,limited,56.63,428.68,-0.4,0,1,level 1
+58122,Mexico,1,14.67,2,complex,31.87,628,2.27,1,3,level 3
+55971,Mexico,1,14.25,1,minimalist,49.54,537.53,-0.49,0,2,level 2
+54616,Mexico,0,14.33,3,limited,55.3,468.59,-0.69,0,1,level 1
+56500,Mexico,0,14.67,3,limited,47.94,520.22,1.77,1,2,level 2
+57348,Mexico,0,13.67,3,limited,72.89,395.21,-1.13,0,1,level 1
+56722,Mexico,0,13.5,1,minimalist,42.55,548.11,1.58,1,2,level 2
+57329,Mexico,0,13.83,2,complex,27.06,536.82,-0.69,0,2,level 2
+56170,Mexico,1,14.17,1,minimalist,63.24,432.51,1.7,1,1,level 1
+54427,Mexico,0,13.58,3,limited,47.94,390.53,-0.23,0,0,level 0
+56680,Mexico,1,14.92,1,minimalist,38.07,587.97,0.73,0,3,level 3
+54908,Mexico,1,14.25,3,limited,56.63,426.5,-0.86,0,1,level 1
+55821,Mexico,1,13.75,1,minimalist,56.63,471.21,-0.9,0,1,level 1
+53992,Mexico,1,13.58,1,minimalist,51.06,528.27,1.11,1,2,level 2
+56497,Mexico,1,14.08,1,minimalist,46.26,435.89,0.4,0,1,level 1
+58926,Mexico,1,13.5,1,minimalist,55.3,396.4,-0.96,0,1,level 1
+54336,Mexico,1,13.33,1,minimalist,60.54,307.46,0.66,0,0,level 0
+55264,Mexico,1,14,1,minimalist,40.44,506.53,0.77,0,2,level 2
+58598,Mexico,0,13.67,1,minimalist,32.48,574.83,-0.8,0,3,level 3
+57674,Mexico,1,14.25,1,minimalist,55.3,418.12,-0.96,0,1,level 1
+56370,Mexico,0,14.08,2,complex,31.87,594.88,1.16,0,3,level 3
+57620,Mexico,1,13.92,1,minimalist,68.81,351.49,-0.4,0,0,level 0
+54518,Mexico,1,14.75,1,minimalist,56.63,422.54,-1.24,0,1,level 1
+53828,Mexico,0,14,3,limited,57.94,456.19,-0.61,0,1,level 1
+56806,Mexico,0,13.92,1,minimalist,51.06,346.97,0.39,1,0,level 0
+56601,Mexico,0,13.58,1,minimalist,51.06,473.49,0.82,1,1,level 1
+55522,Mexico,1,13.83,3,limited,17.67,524.13,0.32,0,2,level 2
+58149,Mexico,1,13.58,1,minimalist,47.94,518.16,0.72,0,2,level 2
+56626,Mexico,1,14.42,1,minimalist,17.67,524.75,1.11,1,2,level 2
+54600,Mexico,0,14.17,3,limited,67.48,387.93,0.93,0,0,level 0
+55747,Mexico,1,13.75,1,minimalist,57.94,485.33,-0.86,0,2,level 2
+57194,Mexico,0,13.67,1,minimalist,42.55,486.89,0.02,0,2,level 2
+55532,Mexico,0,14.25,1,minimalist,27.06,529.19,-1.4,0,2,level 2
+58086,Mexico,1,14,1,minimalist,17.67,557.87,0.78,1,2,level 2
+54300,Mexico,0,15.33,2,complex,52.52,454.95,-1.57,0,1,level 1
+54937,Mexico,1,13.92,2,complex,55.3,444.78,0.86,1,1,level 1
+57259,Mexico,1,13.33,1,minimalist,27.06,457.97,-0.35,0,1,level 1
+55559,Mexico,0,14.17,3,limited,66.28,384.73,0.93,1,0,level 0
+54991,Mexico,1,14.33,1,minimalist,46.26,513.57,0.32,0,2,level 2
+56453,Mexico,1,14,1,minimalist,45.54,515.99,-0.05,0,2,level 2
+55750,Mexico,1,13.75,3,limited,38.07,387.89,-0.86,0,0,level 0
+56347,Mexico,0,14.17,1,minimalist,47.94,523.49,1.06,1,2,level 2
+56427,Mexico,0,13.5,3,limited,38.07,416.24,0.96,1,1,level 1
+58372,Mexico,1,13.42,1,minimalist,35.3,629.02,1.81,1,3,level 3
+54905,Mexico,1,14.5,1,minimalist,17.67,568.43,0.25,0,3,level 3
+58601,Mexico,1,13.58,1,minimalist,56.88,433.75,-0.41,0,1,level 1
+56898,Mexico,1,14,1,minimalist,49.54,529.15,-0.52,0,2,level 2
+54993,Mexico,0,14.58,1,minimalist,31.87,441.41,1.01,1,1,level 1
+55456,Mexico,1,13.33,2,complex,44.48,553.05,-0.75,0,2,level 2
+55108,Mexico,0,14.25,2,complex,52.52,463.81,0.32,0,1,level 1
+56813,Mexico,1,14.5,2,complex,17.67,544.72,-1.57,0,2,level 2
+58678,Mexico,1,13.92,1,minimalist,68.06,507.26,0.93,0,2,level 2
+58354,Mexico,1,14,1,minimalist,35.3,588.55,-0.85,0,3,level 3
+54699,Mexico,1,13.42,1,minimalist,40.6,541.74,0,0,2,level 2
+55089,Mexico,1,14.17,3,limited,61.87,449.17,-0.91,0,1,level 1
+57994,Mexico,1,14.42,3,limited,35.3,588.28,0.77,0,3,level 3
+55404,Mexico,0,13.33,1,minimalist,56.63,430.72,0.44,0,1,level 1
+55570,Mexico,1,14.42,1,minimalist,49.54,477.85,0.21,0,1,level 1
+58991,Mexico,1,13.75,3,limited,51.06,450.77,-0.35,0,1,level 1
+54026,Mexico,1,13.67,3,limited,57.94,437.99,-1.24,0,1,level 1
+53784,Mexico,1,13.75,1,minimalist,64.69,362.77,-1.07,0,0,level 0
+54094,Mexico,0,15.33,3,limited,17.67,511.5,0.13,0,2,level 2
+57072,Mexico,0,14.08,3,limited,46.26,487.31,-0.61,0,2,level 2
+56749,Mexico,0,14.08,1,minimalist,42.55,430.61,2.63,1,1,level 1
+56897,Mexico,1,13.5,1,minimalist,52.52,432.04,-0.52,0,1,level 1
+58215,Mexico,0,13.42,1,minimalist,38.07,426.13,0.73,1,1,level 1
+54921,Mexico,1,16.67,3,limited,51.06,347.67,-1.07,0,0,level 0
+56580,Mexico,1,13.58,1,minimalist,27.06,587.32,-1,0,3,level 3
+57470,Mexico,0,14.25,1,minimalist,47.94,521.54,2.14,1,2,level 2
+59116,Mexico,1,13.83,1,minimalist,52.52,427.9,2.29,1,1,level 1
+53760,Mexico,1,13.33,1,minimalist,35.3,581.35,0.82,1,3,level 3
+58301,Mexico,1,14.08,1,minimalist,40.44,510.14,-0.9,0,2,level 2
+55385,Mexico,1,13.67,1,minimalist,61.81,403.07,0.26,0,1,level 1
+54077,Mexico,0,14.5,3,limited,68.06,315.69,1.1,0,0,level 0
+59194,Mexico,0,14.08,1,minimalist,66.28,442.18,0.39,0,1,level 1
+56695,Mexico,0,14.83,1,minimalist,58.83,589.42,1.06,1,3,level 3
+55182,Mexico,0,14.08,1,minimalist,46.26,516.73,2.29,1,2,level 2
+57250,Mexico,0,14.33,1,minimalist,51.06,554.66,1.24,1,2,level 2
+57474,Mexico,0,13.5,1,minimalist,35.3,472.41,0.77,1,1,level 1
+53940,Mexico,1,13.92,1,minimalist,46.26,503.57,-0.53,0,2,level 2
+55223,Mexico,1,13.92,1,minimalist,56.63,337.12,0.28,0,0,level 0
+54839,Mexico,1,13.75,3,limited,51.06,585.12,0.64,0,3,level 3
+56159,Mexico,1,13.75,1,minimalist,61.87,471.95,0.21,0,1,level 1
+58406,Mexico,0,13.33,1,minimalist,40.44,391.81,0.43,0,0,level 0
+56389,Mexico,1,14,1,minimalist,46.26,506.79,1.07,1,2,level 2
+56615,Mexico,1,14.08,1,minimalist,44.48,544.47,-0.54,0,2,level 2
+54189,Mexico,1,13.33,1,minimalist,55.3,457.91,-0.73,0,1,level 1
+53951,Mexico,0,13.58,1,minimalist,42.55,590.73,2.11,1,3,level 3
+58059,Mexico,1,13.42,1,minimalist,46.26,526.09,0.43,0,2,level 2
+59088,Mexico,1,13.5,1,minimalist,52.52,461.08,0.81,0,1,level 1
+57937,Mexico,0,14.25,3,limited,61.87,353.99,NA,1,0,level 0
+57195,Mexico,0,14.5,2,complex,35.3,501.29,0.1,0,2,level 2
+54681,Mexico,0,14.33,1,minimalist,53.93,390.87,-0.01,0,0,level 0
+54118,Mexico,0,14,1,minimalist,44.48,365.7,-0.23,0,0,level 0
+54711,Mexico,1,14.75,1,minimalist,60.54,367.45,1.42,1,0,level 0
+57624,Mexico,0,13.92,1,minimalist,70.18,343.26,-0.75,0,0,level 0
+58475,Mexico,1,13.67,2,complex,38.07,582,-1.13,0,3,level 3
+58770,Mexico,0,14.75,3,limited,52.52,459.16,-1.24,0,1,level 1
+55155,Mexico,1,13.75,1,minimalist,45.64,497.41,0.05,0,2,level 2
+57914,Mexico,0,13.67,1,minimalist,61.87,397.27,-1.1,0,1,level 1
+54308,Mexico,1,16.08,2,complex,46.26,559.7,-1.23,0,2,level 2
+55681,Mexico,0,13.33,3,limited,64.69,316.68,-1.21,0,0,level 0
+56802,Mexico,0,13.58,1,minimalist,51.06,484.97,0.25,0,2,level 2
+55464,Mexico,0,14.33,3,limited,49.54,460.8,-0.69,0,1,level 1
+58024,Mexico,1,13.92,3,limited,64.69,337.35,-0.09,0,0,level 0
+58628,Mexico,0,14.33,1,minimalist,55.3,406.03,-1.1,0,1,level 1
+54761,Mexico,1,13.58,1,minimalist,56.63,358.34,-0.97,0,0,level 0
+56532,Mexico,0,14,2,complex,49.54,550.19,-0.41,0,2,level 2
+58165,Mexico,1,14.08,1,minimalist,60.54,400.31,-0.47,0,1,level 1
+55548,Mexico,0,13.92,1,minimalist,27.06,422.45,-0.67,0,1,level 1
+55592,Mexico,1,13.92,1,minimalist,42.55,455.4,-1.07,0,1,level 1
+58369,Mexico,0,13.83,2,complex,38.07,568.82,2.74,1,3,level 3
+57867,Mexico,0,13.92,3,limited,61.87,445.1,-0.66,0,1,level 1
+56352,Mexico,0,14.17,1,minimalist,60.54,354.52,-0.9,0,0,level 0
+57591,Mexico,1,14.25,1,minimalist,44.48,475.71,-0.74,0,1,level 1
+58811,Mexico,0,14.17,1,minimalist,42.55,609.12,1.07,0,3,level 3
+54188,Mexico,1,14.25,1,minimalist,35.3,496.13,-1.24,0,2,level 2
+56868,Mexico,1,14,3,limited,51.06,445.45,-0.17,0,1,level 1
+58595,Mexico,1,13.75,1,minimalist,42.55,482.12,-1.24,0,2,level 2
+56569,Mexico,1,14.25,1,minimalist,31.87,559.18,-0.63,0,2,level 2
+56652,Mexico,1,14,1,minimalist,35.3,512.41,-0.34,0,2,level 2
+57379,Mexico,0,13.75,1,minimalist,59.24,419.21,0.05,0,1,level 1
+54397,Mexico,1,14.42,1,minimalist,47.94,622.18,2.74,1,3,level 3
+55560,Mexico,0,13.42,3,limited,42.55,387.19,0.74,1,0,level 0
+56061,Mexico,1,13.58,2,complex,42.55,480.11,0.37,1,2,level 2
+55739,Mexico,0,15.83,1,minimalist,74.36,398.98,-0.52,0,1,level 1
+55946,Mexico,0,14.25,1,minimalist,68.06,422.43,1.95,1,1,level 1
+57581,Mexico,0,14.42,2,complex,52.52,536.7,1.91,1,2,level 2
+58998,Mexico,1,13.42,1,minimalist,53.93,343.41,-1.07,0,0,level 0
+54570,Mexico,0,13.42,3,limited,49.54,520.77,-0.28,0,2,level 2
+56931,Mexico,0,13.33,1,minimalist,66.28,491.39,0.44,1,2,level 2
+59056,Mexico,1,14.08,2,complex,38.07,531.05,-0.05,0,2,level 2
+54264,Mexico,1,13.33,1,minimalist,38.07,511.68,0.18,0,2,level 2
+56160,Mexico,0,13.5,1,minimalist,35.3,588.35,0.25,0,3,level 3
+55868,Mexico,0,13.58,3,limited,40.44,590.42,-0.91,0,3,level 3
+56956,Mexico,1,13.83,1,minimalist,52.52,465.93,-0.34,0,1,level 1
+58899,Mexico,1,14.08,1,minimalist,57.94,409.95,0.32,0,1,level 1
+54123,Mexico,1,13.67,2,complex,35.3,628.31,2.11,1,3,level 3
+57681,Mexico,0,13.42,1,minimalist,40.44,384.73,0.33,1,0,level 0
+54605,Mexico,0,14.17,1,minimalist,67.12,323.9,1.74,1,0,level 0
+56449,Mexico,0,13.67,1,minimalist,46.26,403.74,-0.6,0,1,level 1
+55020,Mexico,1,15.33,3,limited,56.63,444.02,-1.13,0,1,level 1
+55189,Mexico,0,14.42,1,minimalist,66.28,294.01,-0.94,0,0,level 0
+56662,Mexico,0,14.08,1,minimalist,44.48,528.32,1.24,1,2,level 2
+57888,Mexico,0,13.33,1,minimalist,53.93,458.05,0.43,0,1,level 1
+59136,Mexico,1,13.58,3,limited,46.26,521.55,-0.9,0,2,level 2
+55805,Mexico,1,13.58,1,minimalist,63.24,503.01,0.09,0,2,level 2
+56777,Mexico,1,14.33,3,limited,17.67,464.8,1.88,1,1,level 1
+57177,Mexico,1,13.33,1,minimalist,27.06,587.43,0.39,0,3,level 3
+54016,Mexico,0,13.5,3,limited,49.54,511.43,-0.86,0,2,level 2
+57726,Mexico,0,14.75,1,minimalist,57.94,411.14,-1.4,0,1,level 1
+55250,Mexico,0,14.67,1,minimalist,61.87,272.79,-0.91,0,0,level 0
+54769,Mexico,1,14.08,1,minimalist,40.44,571.04,0.43,0,3,level 3
+56314,Mexico,1,15.25,1,minimalist,61.87,386.78,-1.08,0,0,level 0
+59192,Mexico,0,13.5,1,minimalist,52.52,546.23,2.25,1,2,level 2
+56740,Mexico,1,13.58,1,minimalist,51.06,603.66,-0.01,0,3,level 3
+58819,Mexico,0,13.33,1,minimalist,53.93,508.58,-0.25,0,2,level 2
+57394,Mexico,0,13.83,3,limited,55.3,268.82,-0.8,0,0,level 0
+57357,Mexico,1,14.08,2,complex,38.07,519.34,0.32,0,2,level 2
+55084,Mexico,1,13.67,1,minimalist,38.07,437.54,-0.97,0,1,level 1
+54198,Mexico,0,13.42,1,minimalist,56.63,319.02,-1.07,0,0,level 0
+56820,Mexico,1,13.67,3,limited,52.52,352.76,-1.02,0,0,level 0
+55494,Mexico,1,13.42,1,minimalist,17.67,615.68,1.41,1,3,level 3
+56675,Mexico,0,13.75,1,minimalist,40.44,493.72,0.13,0,2,level 2
+57391,Mexico,0,14,3,limited,59.24,417.45,-1.07,0,1,level 1
+57746,Mexico,1,13.33,1,minimalist,38.07,566.41,0.67,0,3,level 3
+55994,Mexico,0,14.83,3,limited,60.54,357.49,-0.92,0,0,level 0
+58526,Mexico,0,14.08,3,limited,60.54,357.57,-0.72,0,0,level 0
+58793,Mexico,1,14.33,1,minimalist,52.52,398.64,-0.49,0,1,level 1
+58076,Mexico,0,13.5,1,minimalist,42.55,555.53,1.58,1,2,level 2
+56016,Mexico,1,13.33,1,minimalist,47.94,531.84,-0.89,0,2,level 2
+54306,Mexico,1,14.58,1,minimalist,51.06,504.92,-1.07,0,2,level 2
+54512,Mexico,0,13.5,1,minimalist,35.3,464.73,1.43,1,1,level 1
+56936,Mexico,1,13.83,3,limited,46.26,446.68,0.6,0,1,level 1
+55557,Mexico,1,13.83,1,minimalist,17.67,534.45,NA,NA,2,level 2
+56309,Mexico,0,13.67,1,minimalist,55.3,493.65,-0.83,0,2,level 2
+57527,Mexico,1,14,1,minimalist,38.07,488.13,0.82,0,2,level 2
+57523,Mexico,0,14.25,1,minimalist,38.07,610.51,0.47,0,3,level 3
+56562,Mexico,1,14.17,3,limited,49.54,447.97,-0.86,0,1,level 1
+56452,Mexico,1,14.75,3,limited,51.06,450.94,-0.8,0,1,level 1
+55794,Mexico,0,13.5,1,minimalist,53.93,516.31,0.77,0,2,level 2
+58575,Mexico,1,14.5,2,complex,46.26,586.65,0.25,0,3,level 3
+57450,Mexico,0,14.17,1,minimalist,49.54,454.07,-0.52,0,1,level 1
+56914,Mexico,0,13.33,1,minimalist,68.06,412.82,1.1,1,1,level 1
+57252,Mexico,0,14.58,1,minimalist,35.3,545.46,-0.32,0,2,level 2
+56666,Mexico,1,14.08,1,minimalist,44.48,527.1,0.19,0,2,level 2
+54638,Mexico,0,13.67,2,complex,38.07,630.82,1.1,1,3,level 3
+54197,Mexico,0,13.67,1,minimalist,52.52,505.01,-1.24,0,2,level 2
+59220,Mexico,0,13.92,3,limited,60.54,363.12,-0.37,0,0,level 0
+57862,Mexico,0,13.33,1,minimalist,51.06,441.69,-0.39,0,1,level 1
+57356,Mexico,0,13.33,3,limited,59.24,348.78,-0.18,0,0,level 0
+59024,Mexico,0,13.33,1,minimalist,46.26,508.46,-1.3,0,2,level 2
+56346,Mexico,0,13.33,1,minimalist,38.07,501.82,-0.22,0,2,level 2
+56037,Mexico,0,13.58,3,limited,63.24,406.58,-0.82,0,1,level 1
+56448,Mexico,0,14.58,3,limited,49.54,552.8,-1.3,0,2,level 2
+58395,Mexico,1,13.5,1,minimalist,60.54,441.27,-0.4,0,1,level 1
+56436,Mexico,1,14.25,1,minimalist,17.67,594.85,1.33,1,3,level 3
+55247,Mexico,1,13.92,1,minimalist,40.44,487.97,0.45,0,2,level 2
+54483,Mexico,0,14.67,3,limited,60.54,326.94,-0.47,0,0,level 0
+55852,Mexico,1,14.08,3,limited,60.54,392.87,-0.86,0,0,level 0
+54145,Mexico,1,14.42,1,minimalist,44.48,541.04,1.43,1,2,level 2
+53921,Mexico,0,13.5,1,minimalist,38.07,515.92,0,0,2,level 2
+54783,Mexico,0,14.25,2,complex,31.87,544.35,-0.15,0,2,level 2
+58594,Mexico,1,14.33,1,minimalist,49.54,423.78,-0.58,0,1,level 1
+53965,Mexico,0,13.83,1,minimalist,60.54,392.3,-0.29,0,0,level 0
+56313,Mexico,0,13.75,3,limited,70.18,412.91,-0.28,NA,1,level 1
+55032,Mexico,0,14.92,1,minimalist,52.52,411.25,-0.29,0,1,level 1
+56196,Mexico,1,13.75,3,limited,64.69,395.23,-0.57,0,1,level 1
+54573,Mexico,1,13.33,3,limited,53.93,396.04,0.05,0,1,level 1
+54187,Mexico,1,13.67,3,limited,17.67,368.29,-1.4,0,0,level 0
+58768,Mexico,1,13.67,3,limited,40.44,392.63,-0.48,0,0,level 0
+56208,Mexico,1,13.83,1,minimalist,52.52,452.45,0.15,0,1,level 1
+57865,Mexico,1,14.08,1,minimalist,38.07,603.86,2.63,1,3,level 3
+57798,Mexico,0,13.33,1,minimalist,51.06,402.06,1.86,1,1,level 1
+54866,Mexico,0,13.75,1,minimalist,42.55,545.29,1.64,1,2,level 2
+57993,Mexico,0,14,2,complex,47.94,525.92,-0.02,0,2,level 2
+57021,Mexico,1,13.75,1,minimalist,47.94,507.06,0.35,NA,2,level 2
+56766,Mexico,0,13.5,1,minimalist,35.3,523.46,2.33,1,2,level 2
+59009,Mexico,1,14.08,1,minimalist,44.48,422.7,-0.89,0,1,level 1
+55740,Mexico,0,12.75,3,limited,53.93,353.54,1.3,1,0,level 0
+56379,Mexico,1,13.42,1,minimalist,47.94,534.8,-0.08,0,2,level 2
+56954,Mexico,0,14.33,3,limited,57.94,343.58,0.07,0,0,level 0
+53797,Mexico,1,13.33,1,minimalist,38.07,497.12,-0.8,0,2,level 2
+58386,Mexico,1,14.25,1,minimalist,46.26,507.83,-0.23,0,2,level 2
+55003,Mexico,0,14.17,1,minimalist,44.48,543.74,-0.36,0,2,level 2
+58308,Mexico,0,13.83,2,complex,49.54,496.46,-1.08,0,2,level 2
+57098,Mexico,1,14.08,3,limited,60.54,367.33,0.2,1,0,level 0
+54117,Mexico,0,14.33,1,minimalist,43.51,498.81,-0.24,0,2,level 2
+54535,Mexico,0,14.58,1,minimalist,53.93,442.86,1.2,1,1,level 1
+54601,Mexico,1,13.5,1,minimalist,66.28,355.28,0.17,1,0,level 0
+57816,Mexico,1,13.58,1,minimalist,49.54,531.01,1.18,0,2,level 2
+56554,Mexico,0,13.42,1,minimalist,35.3,472.34,-0.77,0,1,level 1
+55554,Mexico,1,13.42,1,minimalist,51.06,514.52,1.06,1,2,level 2
+57342,Mexico,1,14.17,1,minimalist,51.06,449.38,-0.97,0,1,level 1
+55656,Mexico,0,13.5,3,limited,59.24,358.57,1.97,1,0,level 0
+56703,Mexico,0,13.75,1,minimalist,55.3,491.86,1.58,1,2,level 2
+55068,Mexico,1,14.08,1,minimalist,31.87,563.72,-0.15,0,3,level 3
+54812,Mexico,0,14.08,1,minimalist,51.06,470.03,0.89,1,1,level 1
+58761,Mexico,0,14.33,1,minimalist,68.06,378.87,-0.91,0,0,level 0
+58803,Mexico,1,13.58,1,minimalist,59.24,360.67,-1.3,0,0,level 0
+53915,Mexico,1,13.92,1,minimalist,17.67,631.87,-0.47,0,3,level 3
+56891,Mexico,1,13.33,1,minimalist,17.67,583.66,-0.01,0,3,level 3
+58344,Mexico,1,14.25,2,complex,42.55,517.77,1.81,1,2,level 2
+54958,Mexico,0,15.25,1,minimalist,62.15,303.32,-0.29,0,0,level 0
+55479,Mexico,1,14.08,2,complex,47.94,548.5,1.42,0,2,level 2
+55187,Mexico,1,13.33,1,minimalist,31.87,484.22,1.64,1,2,level 2
+58391,Mexico,1,13.42,1,minimalist,49.54,544.46,0.56,1,2,level 2
+58947,Mexico,0,13.33,1,minimalist,57.62,343.71,-0.8,0,0,level 0
+54259,Mexico,0,13.75,1,minimalist,49.54,349.92,-0.57,0,0,level 0
+56886,Mexico,1,14.33,2,complex,42.55,560.14,0.77,0,2,level 2
+58993,Mexico,0,14.83,1,minimalist,51.06,420.76,-1.24,0,1,level 1
+56390,Mexico,1,14.17,1,minimalist,51.06,604.97,-0.8,0,3,level 3
+56757,Mexico,1,14.17,3,limited,57.94,362.9,0.85,1,0,level 0
+57898,Mexico,0,15.42,3,limited,52.52,345.38,-1.21,0,0,level 0
+59138,Mexico,1,14.17,1,minimalist,35.3,522.11,-0.39,0,2,level 2
+54459,Mexico,0,13.58,1,minimalist,46.26,578.07,-1.04,0,3,level 3
+54081,Mexico,1,13.33,1,minimalist,44.48,454,-1.1,0,1,level 1
+53772,Mexico,1,13.92,3,limited,59.24,373.92,-1.04,0,0,level 0
+57173,Mexico,1,14.33,1,minimalist,44.48,491.9,-0.37,0,2,level 2
+56730,Mexico,1,13.33,1,minimalist,46.26,523.42,-0.52,0,2,level 2
+57117,Mexico,1,14.92,1,minimalist,49.54,506.28,-0.94,0,2,level 2
+58996,Mexico,1,13.33,3,limited,52.52,389.29,-1.07,0,0,level 0
+57017,Mexico,1,14,3,limited,51.06,567.31,-1.24,0,3,level 3
+54356,Mexico,0,13.83,3,limited,57.94,367.04,-0.1,0,0,level 0
+55163,Mexico,1,13.92,3,limited,59.24,387.1,0.39,0,0,level 0
+58641,Mexico,0,13.33,3,limited,46.26,375.1,-0.91,0,0,level 0
+54860,Mexico,0,13.75,3,limited,60.54,341.22,-1.4,0,0,level 0
+55185,Mexico,0,13.75,1,minimalist,44.48,452.44,-0.5,0,1,level 1
+54303,Mexico,0,16,1,minimalist,57.94,487.41,-1.4,0,2,level 2
+57393,Mexico,1,13.92,1,minimalist,27.06,553,-0.58,0,2,level 2
+54157,Mexico,1,13.33,1,minimalist,57.94,418.05,-0.71,0,1,level 1
+55812,Mexico,0,14.17,1,minimalist,66.28,480.34,-0.29,0,2,level 2
+56912,Mexico,0,14.25,1,minimalist,40.44,462.06,1.43,1,1,level 1
+58123,Mexico,1,14.58,3,limited,49.54,494.77,1.81,1,2,level 2
+55904,Mexico,1,13.67,1,minimalist,17.67,633.91,0.19,0,3,level 3
+57747,Mexico,0,13.92,1,minimalist,59.22,442.91,-0.5,0,1,level 1
+56610,Mexico,0,14.33,3,limited,47.94,417.74,1.22,1,1,level 1
+57521,Mexico,0,13.42,2,complex,47.94,447.22,-0.28,0,1,level 1
+55056,Mexico,1,14.17,1,minimalist,52.52,520.76,-0.5,0,2,level 2
+55349,Mexico,1,13.33,1,minimalist,49.54,328.46,-0.94,NA,0,level 0
+58033,Mexico,1,13.33,1,minimalist,36.27,455.82,0.39,0,1,level 1
+54180,Mexico,0,14.25,1,minimalist,40.44,492.25,-0.88,0,2,level 2
+55166,Mexico,0,13.67,1,minimalist,40.44,475.09,-0.36,0,1,level 1
+57413,Mexico,0,14.25,1,minimalist,56.63,514.07,-0.85,0,2,level 2
+55596,Mexico,0,15.5,1,minimalist,60.47,425.08,-0.97,0,1,level 1
+54299,Mexico,0,14.17,1,minimalist,59.24,349.64,-1.35,0,0,level 0
+56307,Mexico,0,14.42,1,minimalist,56.63,412.69,-0.6,0,1,level 1
+58878,Mexico,1,13.33,1,minimalist,64.05,353.22,-1.24,0,0,level 0
+57240,Mexico,1,13.75,1,minimalist,44.48,567.27,2.04,1,3,level 3
+54433,Mexico,0,13.75,3,limited,47.94,501.28,-0.03,0,2,level 2
+56705,Mexico,0,15.75,3,limited,57.94,507.62,-0.24,0,2,level 2
+57296,Mexico,1,13.42,3,limited,55.3,436.11,-0.39,0,1,level 1
+57921,Mexico,0,13.5,3,limited,68.06,360.98,0.74,0,0,level 0
+58153,Mexico,1,13.5,2,complex,27.06,550.01,2.29,1,2,level 2
+57362,Mexico,0,14.17,3,limited,47.94,377.98,-0.75,0,0,level 0
+54930,Mexico,1,14.42,3,limited,52.52,363.19,-0.73,0,0,level 0
+57944,Mexico,1,14.25,1,minimalist,17.67,519.41,0.64,0,2,level 2
+58755,Mexico,1,13.33,3,limited,51.06,481.56,-1.5,0,2,level 2
+56087,Mexico,0,13.42,1,minimalist,61.87,563.68,1.02,0,3,level 3
+57873,Mexico,0,13.33,1,minimalist,56.63,475.4,-0.57,0,1,level 1
+58451,Mexico,1,13.42,1,minimalist,40.44,468.64,-0.18,0,1,level 1
+57851,Mexico,1,13.67,2,complex,27.06,524.39,-0.2,0,2,level 2
+56643,Mexico,0,13.5,1,minimalist,38.07,559.8,0.85,1,2,level 2
+53861,Mexico,1,14.08,1,minimalist,40.44,468.65,-0.11,0,1,level 1
+53898,Mexico,1,13.67,1,minimalist,42.55,486.76,-1,0,2,level 2
+57541,Mexico,1,13.42,1,minimalist,42.55,527.6,-0.8,0,2,level 2
+56972,Mexico,1,14.42,1,minimalist,42.55,452.12,0.77,0,1,level 1
+54195,Mexico,1,14.33,1,minimalist,17.67,600.24,-1.38,0,3,level 3
+56608,Mexico,1,13.92,1,minimalist,57.94,523.94,0.74,1,2,level 2
+55256,Mexico,1,14.17,2,complex,44.48,574.63,-0.8,0,3,level 3
+54614,Mexico,0,14.17,1,minimalist,31.87,436.3,0.54,0,1,level 1
+57010,Mexico,0,13.67,3,limited,56.63,343.46,-0.63,0,0,level 0
+55531,Mexico,1,14.25,1,minimalist,51.06,556.27,0.06,0,2,level 2
+57519,Mexico,1,13.33,1,minimalist,56.63,400.66,-1.23,0,1,level 1
+55318,Mexico,1,13.58,3,limited,44.48,526.47,1.24,0,2,level 2
+55164,Mexico,0,13.67,1,minimalist,59.24,467.74,-0.72,0,1,level 1
+56732,Mexico,0,14.08,1,minimalist,42.55,645.01,1.02,1,3,level 3
+54451,Mexico,1,13.67,2,complex,44.48,360.83,0.35,0,0,level 0
+54612,Mexico,1,13.75,2,complex,27.06,586.68,0.47,0,3,level 3
+55885,Mexico,1,14.17,3,limited,60.54,399.89,-1.3,0,1,level 1
+53862,Mexico,0,14.25,1,minimalist,46.26,581.21,0.24,0,3,level 3
+58771,Mexico,1,14,2,complex,52.52,578.7,-0.75,0,3,level 3
+57745,Mexico,1,13.58,1,minimalist,31.87,590.24,0.87,0,3,level 3
+58765,Mexico,0,13.33,3,limited,61.87,296.56,-0.77,0,0,level 0
+55412,Mexico,0,13.5,1,minimalist,56.63,480.75,0.36,0,2,level 2
+59219,Mexico,1,13.58,1,minimalist,64.69,366.29,-0.59,0,0,level 0
+59143,Mexico,0,13.58,1,minimalist,38.07,457.28,-0.43,1,1,level 1
+59035,Mexico,0,13.92,2,complex,46.26,551.76,-0.6,0,2,level 2
+58114,Mexico,0,13.92,1,minimalist,57.94,441.32,-0.31,0,1,level 1
+54677,Mexico,0,14.17,1,minimalist,42.55,481.06,-0.03,0,2,level 2
+54824,Mexico,1,13.83,1,minimalist,47.94,447.34,1.42,1,1,level 1
+56255,Mexico,0,14.5,3,limited,49.54,497.46,-0.01,0,2,level 2
+58194,Mexico,1,13.83,1,minimalist,44.48,566.01,-0.13,0,3,level 3
+55384,Mexico,1,13.33,1,minimalist,63.24,511.85,0.4,0,2,level 2
+57783,Mexico,1,13.58,1,minimalist,38.07,512.01,-0.28,0,2,level 2
+54074,Mexico,1,14.58,1,minimalist,66.28,453.9,-0.63,0,1,level 1
+55154,Mexico,0,13.92,1,minimalist,57.94,461.6,0.81,0,1,level 1
+56262,Mexico,0,13.5,1,minimalist,42.55,594.12,-0.24,0,3,level 3
+55269,Mexico,1,13.5,1,minimalist,52.52,452.57,0.37,0,1,level 1
+55065,Mexico,0,14.58,1,minimalist,70.18,426.95,0.66,0,1,level 1
+57967,Mexico,1,13.42,1,minimalist,46.26,539.25,-0.43,0,2,level 2
+58509,Mexico,0,14.17,1,minimalist,85.37,426.83,-0.6,0,1,level 1
+55313,Mexico,1,13.67,1,minimalist,17.67,530.17,-0.48,0,2,level 2
+55216,Mexico,1,14.58,1,minimalist,31.87,566.39,0.14,0,3,level 3
+54263,Mexico,1,15.08,1,minimalist,55.3,491.24,-1.35,0,2,level 2
+59150,Mexico,0,13.83,1,minimalist,49.54,445.16,0.17,0,1,level 1
+56474,Mexico,0,13.58,1,minimalist,NA,575.39,-0.56,0,3,level 3
+55174,Mexico,1,14.17,3,limited,40.44,423.5,0.84,1,1,level 1
+56707,Mexico,1,13.5,3,limited,49.54,478.02,1.38,1,1,level 1
+55938,Mexico,0,14.25,3,limited,44.48,546.11,-0.47,0,2,level 2
+54668,Mexico,0,13.42,1,minimalist,49.54,464.16,-0.61,0,1,level 1
+56150,Mexico,0,14.5,3,limited,17.67,470.16,0.77,0,1,level 1
+55709,Mexico,0,13.33,1,minimalist,47.94,364.47,-0.14,0,0,level 0
+56589,Mexico,1,15,1,minimalist,17.67,582.66,-0.77,0,3,level 3
+54520,Mexico,0,14.67,1,minimalist,42.55,572.9,-0.91,0,3,level 3
+56627,Mexico,1,14.83,3,limited,52.52,410.22,-0.34,0,1,level 1
+58687,Mexico,1,14.17,1,minimalist,51.06,526.27,0.59,0,2,level 2
+58130,Mexico,0,14.75,2,complex,38.07,618.32,2.22,1,3,level 3
+57589,Mexico,0,14.17,3,limited,47.94,566.62,-0.19,0,3,level 3
+55025,Mexico,0,13.33,1,minimalist,53.93,357.96,-0.73,0,0,level 0
+54322,Mexico,1,13.92,1,minimalist,47.94,526.71,-0.56,NA,2,level 2
+54754,Mexico,1,14.25,1,minimalist,56.63,289.55,0.07,0,0,level 0
+56468,Mexico,1,14.42,1,minimalist,44.48,419.52,0.43,0,1,level 1
+56979,Mexico,1,14.42,1,minimalist,35.3,563.82,-0.34,0,3,level 3
+58689,Mexico,0,14.25,1,minimalist,47.94,522.13,1.52,1,2,level 2
+58378,Mexico,0,13.75,1,minimalist,52.52,423.48,0.8,0,1,level 1
+56563,Mexico,1,14.17,3,limited,47.94,452.11,0.77,1,1,level 1
+57750,Mexico,1,13.83,2,complex,38.07,639.42,0.34,0,3,level 3
+55156,Mexico,0,13.58,1,minimalist,60.54,476.51,0.73,0,1,level 1
+55221,Mexico,0,13.42,3,limited,64.69,320.73,-1.21,0,0,level 0
+56080,Mexico,1,14.5,1,minimalist,35.3,645.94,1.58,1,3,level 3
+56269,Mexico,0,14.58,3,limited,59.22,383.36,-0.52,0,0,level 0
+55719,Mexico,1,14.25,2,complex,35.3,607.68,0.78,1,3,level 3
+58368,Mexico,1,14.33,1,minimalist,17.67,692.15,2.01,NA,3,level 3
+57535,Mexico,0,14.92,1,minimalist,61.87,310.22,-1.35,0,0,level 0
+58307,Mexico,0,13.92,1,minimalist,44.48,538.42,0.06,0,2,level 2
+54917,Mexico,0,13.83,3,limited,60.54,329.51,-0.18,0,0,level 0
+54617,Mexico,0,14,2,complex,56.63,472,0.75,1,1,level 1
+57878,Mexico,0,14.42,1,minimalist,NA,375.74,-0.66,0,0,level 0
+54330,Mexico,1,13.33,1,minimalist,52.52,442.11,-0.61,0,1,level 1
+58966,Mexico,0,13.83,3,limited,17.67,383.67,1.91,1,0,level 0
+56926,Mexico,1,13.33,1,minimalist,56.63,578.74,-0.23,0,3,level 3
+55519,Mexico,1,13.83,2,complex,40.44,546.91,0.36,0,2,level 2
+59003,Mexico,1,14.33,2,complex,40.44,480.42,-0.41,0,2,level 2
+56882,Mexico,1,13.5,1,minimalist,49.54,543.24,1.1,1,2,level 2
+54694,Mexico,1,13.67,1,minimalist,44.48,462.02,0.55,0,1,level 1
+57028,Mexico,1,13.33,1,minimalist,61.87,431.04,-0.8,0,1,level 1
+57850,Mexico,1,14.42,1,minimalist,27.06,529.53,2.11,1,2,level 2
+55139,Mexico,0,13.33,1,minimalist,61.87,505.6,0.15,0,2,level 2
+56401,Mexico,1,13.42,1,minimalist,38.07,527.68,0.91,1,2,level 2
+56591,Mexico,1,13.83,1,minimalist,46.26,456.14,-1,0,1,level 1
+54212,Mexico,0,14.08,2,complex,46.26,549.52,1.97,1,2,level 2
+56960,Mexico,0,14.58,3,limited,61.87,462.26,-0.94,0,1,level 1
+58776,Mexico,0,13.83,1,minimalist,42.55,485.21,-0.96,0,2,level 2
+54372,Mexico,1,14.17,1,minimalist,46.26,512.92,-0.13,0,2,level 2
+59213,Mexico,0,13.67,1,minimalist,70.18,326.49,0.96,1,0,level 0
+56199,Mexico,1,13.42,1,minimalist,52.52,478.57,0.44,0,1,level 1
+59221,Mexico,1,13.42,1,minimalist,52.52,406.47,-0.19,0,1,level 1
+57797,Mexico,0,13.58,1,minimalist,31.87,526.02,-0.46,0,2,level 2
+54182,Mexico,1,14.08,1,minimalist,40.44,525.2,-1.24,0,2,level 2
+55533,Mexico,0,14.25,1,minimalist,35.3,552.73,-0.47,0,2,level 2
+54780,Mexico,0,14,1,minimalist,53.93,498.65,0.6,0,2,level 2
+55837,Mexico,1,13.83,1,minimalist,52.52,478.49,-1.1,0,1,level 1
+54409,Mexico,1,13.33,2,complex,46.26,582.18,0.66,0,3,level 3
+54270,Mexico,1,14.92,1,minimalist,49.54,481.53,-0.32,0,2,level 2
+58976,Mexico,0,14.5,3,limited,57.94,356.25,-0.83,0,0,level 0
+58921,Mexico,0,14.25,3,limited,49.54,415.64,0.78,0,1,level 1
+55123,Mexico,0,13.67,1,minimalist,53.93,452.09,-1.21,0,1,level 1
+58470,Mexico,0,14.08,3,limited,52.52,443.33,0.06,0,1,level 1
+53800,Mexico,1,13.67,1,minimalist,42.55,524.73,-1.24,0,2,level 2
+59107,Mexico,0,15.17,2,complex,52.52,544.99,1.53,1,2,level 2
+55406,Mexico,1,13.92,1,minimalist,31.87,556.92,-0.97,0,2,level 2
+57920,Mexico,1,14.25,1,minimalist,49.54,506.46,0.14,0,2,level 2
+57301,Mexico,0,14.17,2,complex,46.26,559.94,0.58,1,2,level 2
+58202,Mexico,0,14.92,1,minimalist,44.48,560.43,0.02,0,2,level 2
+54786,Mexico,1,13.58,1,minimalist,64.69,413.63,-0.61,0,1,level 1
+55641,Mexico,0,14.5,1,minimalist,68.06,401.5,0.93,0,1,level 1
+54591,Mexico,1,13.92,1,minimalist,68.06,413.66,-0.83,0,1,level 1
+54789,Mexico,1,14.25,1,minimalist,49.54,619.66,-0.59,0,3,level 3
+58617,Mexico,0,13.5,3,limited,56.63,333.61,-0.82,0,0,level 0
+55183,Mexico,1,14.25,1,minimalist,40.44,425.45,-1.03,0,1,level 1
+56951,Mexico,0,13.67,1,minimalist,59.24,374.35,-0.86,0,0,level 0
+56439,Mexico,0,14.42,1,minimalist,42.55,580.02,0.87,0,3,level 3
+54924,Mexico,1,13.75,1,minimalist,55.3,394.16,-0.88,0,0,level 0
+54632,Mexico,0,15.83,1,minimalist,61.87,485.37,-0.37,0,2,level 2
+58545,Mexico,0,13.67,1,minimalist,68.06,499,-1.13,0,2,level 2
+55397,Mexico,1,13.58,1,minimalist,59.24,381.92,0.36,0,0,level 0
+55246,Mexico,0,14.67,1,minimalist,44.48,435.32,-0.03,0,1,level 1
+58634,Mexico,1,16.17,3,limited,56.63,381.66,-0.91,0,0,level 0
+57042,Mexico,1,13.75,2,complex,17.67,556.95,-0.34,0,2,level 2
+58140,Mexico,1,13.75,1,minimalist,35.3,539.07,-0.13,0,2,level 2
+58102,Mexico,0,14.17,1,minimalist,50.99,543.97,0.81,1,2,level 2
+53721,Mexico,1,14.33,1,minimalist,52.52,436,-0.47,0,1,level 1
+57925,Mexico,1,13.83,1,minimalist,42.55,513.4,-0.03,0,2,level 2
+57108,Mexico,1,14.25,1,minimalist,47.94,327.49,1.22,1,0,level 0
+53989,Mexico,0,13.75,1,minimalist,27.06,535.31,-1.4,0,2,level 2
+58818,Mexico,1,14.17,1,minimalist,35.3,565.57,1.53,1,3,level 3
+56592,Mexico,0,13.67,1,minimalist,27.06,609.34,-0.08,0,3,level 3
+58701,Mexico,0,13.42,2,complex,17.67,453.88,1.24,0,1,level 1
+53819,Mexico,0,13.42,1,minimalist,53.93,537.39,-0.44,0,2,level 2
+58214,Mexico,0,14.08,1,minimalist,63.24,501.7,-0.88,0,2,level 2
+57504,Mexico,1,14.08,1,minimalist,38.07,532.45,0.19,0,2,level 2
+54469,Mexico,1,14.42,1,minimalist,57.94,387.78,-0.56,0,0,level 0
+54878,Mexico,1,14.17,1,minimalist,53.93,477.9,0.55,0,1,level 1
+56138,Mexico,1,13.67,1,minimalist,27.06,397.14,1.55,1,1,level 1
+57560,Mexico,1,13.5,2,complex,53.93,529.01,0.91,1,2,level 2
+54857,Mexico,0,13.5,3,limited,56.63,287.21,-1.24,0,0,level 0
+53814,Mexico,0,13.58,3,limited,38.07,526.77,-1.3,0,2,level 2
+57026,Mexico,0,13.42,1,minimalist,44.48,525.14,-0.17,0,2,level 2
+59214,Mexico,0,13.33,1,minimalist,49.54,553.19,-0.57,0,2,level 2
+58989,Mexico,1,13.67,3,limited,49.54,448.03,-1.57,0,1,level 1
+55258,Mexico,1,13.92,1,minimalist,47.94,588.42,-0.81,0,3,level 3
+54510,Mexico,1,13.83,1,minimalist,40.44,534.64,1.66,1,2,level 2
+56377,Mexico,0,14.75,1,minimalist,27.06,500.62,0.96,1,2,level 2
+56200,Mexico,0,13.67,1,minimalist,60.54,418.57,-0.69,0,1,level 1
+57859,Mexico,0,13.92,3,limited,56.63,465.09,-1.07,0,1,level 1
+56231,Mexico,0,15.17,1,minimalist,61.87,525.03,0.38,0,2,level 2
+55019,Mexico,1,14.25,3,limited,57.94,520.44,-0.97,0,2,level 2
+58835,Mexico,1,14.25,1,minimalist,46.26,560.44,-0.97,0,2,level 2
+54292,Mexico,1,13.42,1,minimalist,51.06,469.06,-1.3,0,1,level 1
+58756,Mexico,0,15.25,1,minimalist,56.63,465.94,-1.24,0,1,level 1
+56212,Mexico,0,14.83,1,minimalist,44.48,523.3,-0.52,0,2,level 2
+56687,Mexico,0,15,2,complex,44.48,601.42,1.4,1,3,level 3
+57369,Mexico,1,13.67,1,minimalist,35.3,457.65,-0.59,0,1,level 1
+55827,Mexico,0,14.5,1,minimalist,64.69,365.59,-0.71,0,0,level 0
+56410,Mexico,1,13.67,1,minimalist,35.3,549.84,1.3,1,2,level 2
+55759,Mexico,1,13.67,3,limited,40.44,413.82,-0.02,NA,1,level 1
+54810,Mexico,1,14.08,1,minimalist,17.67,514.2,0.21,0,2,level 2
+57197,Mexico,0,13.42,1,minimalist,49.54,438.07,0.73,1,1,level 1
+58731,Mexico,1,13.67,2,complex,35.3,598.31,2.38,1,3,level 3
+57796,Mexico,0,13.33,1,minimalist,56.63,565.81,1.12,1,3,level 3
+56213,Mexico,0,14.17,3,limited,46.26,482.72,-1.07,0,2,level 2
+55147,Mexico,0,13.33,3,limited,63.25,479.95,-0.88,0,2,level 2
+59034,Mexico,1,15,3,limited,59.24,442.07,-0.96,0,1,level 1
+57639,Mexico,1,13.42,3,limited,52.52,330.89,-1.24,0,0,level 0
+55288,Mexico,1,13.58,3,limited,51.06,489.94,NA,NA,2,level 2
+57075,Mexico,1,14.42,1,minimalist,NA,334.37,-1.03,0,0,level 0
+57349,Mexico,0,16.33,1,minimalist,55.3,402.77,-0.63,0,1,level 1
+57251,Mexico,0,14.25,2,complex,27.06,617.62,1.47,1,3,level 3
+54760,Mexico,1,15.08,1,minimalist,57.94,273.88,0.48,0,0,level 0
+56508,Mexico,0,13.58,3,limited,47.94,471.58,0.31,1,1,level 1
+58587,Mexico,0,13.83,1,minimalist,52.52,616.26,-0.86,0,3,level 3
+56384,Mexico,0,13.83,1,minimalist,31.87,580.88,1.5,1,3,level 3
+72487,Peru,1,13.33,1,minimalist,52.52,501.76,1.38,1,2,level 2
+73866,Peru,0,15.58,1,minimalist,56.63,379.01,-0.42,0,0,level 0
+73656,Peru,1,14.58,2,complex,53.93,450.69,0.89,1,1,level 1
+72627,Peru,0,13.17,1,minimalist,47.94,579.4,0.23,0,3,level 3
+75323,Peru,1,14.75,3,limited,47.94,434.38,0.19,0,1,level 1
+73093,Peru,0,13.67,3,limited,55.3,540.29,1.66,1,2,level 2
+72951,Peru,1,14.17,1,minimalist,55.3,443.54,-0.79,0,1,level 1
+72325,Peru,0,14.67,1,minimalist,68.06,281.83,-0.26,0,0,level 0
+73597,Peru,0,15.75,1,minimalist,51.06,315.54,-1.87,0,0,level 0
+73457,Peru,1,13.25,1,minimalist,44.48,553.95,1.43,1,2,level 2
+77179,Peru,1,14.83,1,minimalist,57.94,385.78,-0.03,0,0,level 0
+76051,Peru,0,15.5,1,minimalist,57.94,304.61,-0.44,0,0,level 0
+76301,Peru,1,14.75,1,minimalist,53.93,442.61,-1.14,0,1,level 1
+75774,Peru,1,14.42,1,minimalist,53.93,429.73,-0.82,0,1,level 1
+76649,Peru,1,13.33,1,minimalist,51.06,361.03,0.89,1,0,level 0
+72341,Peru,1,13.92,3,limited,56.63,294.34,0.69,1,0,level 0
+74194,Peru,1,13.42,1,minimalist,38.07,544.65,1.16,1,2,level 2
+74272,Peru,0,13.42,1,minimalist,57.94,449.12,1.27,1,1,level 1
+74870,Peru,0,14.75,1,minimalist,66.28,319.54,0.85,1,0,level 0
+74923,Peru,0,13.75,1,minimalist,49.54,628.55,0.1,0,3,level 3
+75525,Peru,1,15.08,1,minimalist,49.54,434.06,-0.01,0,1,level 1
+73295,Peru,1,14.17,1,minimalist,59.24,348.03,-1.11,0,0,level 0
+72103,Peru,1,13.5,1,minimalist,57.94,475.77,-0.4,0,1,level 1
+74934,Peru,0,13.67,1,minimalist,46.26,512.37,1.63,1,2,level 2
+75633,Peru,0,13.25,1,minimalist,51.06,536.56,-0.12,0,2,level 2
+74435,Peru,0,13.92,1,minimalist,53.93,472.3,-0.31,0,1,level 1
+74817,Peru,1,13.5,1,minimalist,27.06,556.98,-0.11,1,2,level 2
+73750,Peru,0,13.08,3,limited,57.94,485.11,-0.04,0,2,level 2
+73166,Peru,1,13.5,1,minimalist,42.55,537.21,0,0,2,level 2
+76591,Peru,0,15.33,1,minimalist,53.93,358.14,-0.94,0,0,level 0
+74238,Peru,0,14.08,1,minimalist,42.55,527.21,1.76,1,2,level 2
+72387,Peru,0,13.58,1,minimalist,40.44,490.45,-0.37,0,2,level 2
+75682,Peru,1,13.25,3,limited,68.06,327.77,-0.5,0,0,level 0
+75940,Peru,0,13,1,minimalist,59.24,319.3,-1.87,0,0,level 0
+74854,Peru,1,13.83,2,complex,47.94,573.95,-0.15,0,3,level 3
+73946,Peru,0,16.58,1,minimalist,46.26,314.22,0.78,0,0,level 0
+74055,Peru,1,13.58,1,minimalist,49.54,454.52,-0.14,0,1,level 1
+74652,Peru,0,12.83,1,minimalist,49.54,492.36,-1.5,0,2,level 2
+72508,Peru,0,12.75,1,minimalist,61.87,408.38,-0.47,0,1,level 1
+74998,Peru,1,14.75,1,minimalist,44.48,457.46,-0.9,0,1,level 1
+76497,Peru,0,13.67,1,minimalist,57.94,391.49,-1.87,0,0,level 0
+73396,Peru,0,14.17,1,minimalist,47.94,404.8,-0.19,0,1,level 1
+75933,Peru,0,14.83,1,minimalist,56.63,418.82,-1.29,0,1,level 1
+75706,Peru,1,15.42,1,minimalist,56.63,244.65,0.44,0,0,level 0
+75779,Peru,0,13.33,1,minimalist,61.87,456.87,-0.53,0,1,level 1
+76641,Peru,0,14.92,1,minimalist,70.37,346.49,-0.08,0,0,level 0
+77201,Peru,0,14,3,limited,55.3,330,-1.34,0,0,level 0
+75155,Peru,1,13.5,1,minimalist,51.06,561.16,0.19,0,2,level 2
+75085,Peru,1,13.5,1,minimalist,51.06,554.66,0.43,0,2,level 2
+75648,Peru,0,13.75,1,minimalist,63.24,358.86,0.95,1,0,level 0
+72441,Peru,0,15.25,1,minimalist,61.87,277.24,0.89,1,0,level 0
+74827,Peru,1,14.17,1,minimalist,46.26,593.28,1.27,0,3,level 3
+75298,Peru,0,12.92,1,minimalist,66.28,358.3,-0.42,0,0,level 0
+75266,Peru,0,13.5,1,minimalist,55.3,538.2,-0.56,0,2,level 2
+74547,Peru,0,13.08,1,minimalist,38.07,503.75,0.34,0,2,level 2
+76839,Peru,0,13.83,1,minimalist,51.06,484.43,-0.74,0,2,level 2
+72221,Peru,1,14,2,complex,31.87,514.75,0.74,1,2,level 2
+77057,Peru,0,15.42,2,complex,35.3,454.07,-0.83,0,1,level 1
+75938,Peru,0,13.33,1,minimalist,59.24,442.09,-1.3,0,1,level 1
+76978,Peru,1,13.58,1,minimalist,47.94,312.4,-0.79,0,0,level 0
+72461,Peru,0,13.83,2,complex,40.44,649.67,2.05,1,3,level 3
+74730,Peru,0,13.92,3,limited,46.26,455.44,0.48,0,1,level 1
+72101,Peru,0,13.75,3,limited,56.63,331.49,1.31,1,0,level 0
+75655,Peru,0,13.42,1,minimalist,38.07,484.45,0.06,0,2,level 2
+72155,Peru,1,14.42,3,limited,52.52,436.65,-1.11,0,1,level 1
+72310,Peru,0,13.67,2,complex,49.54,557.02,0.01,0,2,level 2
+75556,Peru,1,13.92,1,minimalist,35.3,301.67,-0.17,0,0,level 0
+75726,Peru,0,13.67,1,minimalist,17.67,572.41,0.84,1,3,level 3
+75387,Peru,0,13.67,1,minimalist,56.63,567.57,1.25,1,3,level 3
+75567,Peru,0,16.17,1,minimalist,53.93,293.8,-1.85,0,0,level 0
+72803,Peru,1,13.25,1,minimalist,52.52,497.19,2.06,1,2,level 2
+75537,Peru,0,14,1,minimalist,47.94,547.34,1.18,1,2,level 2
+76868,Peru,0,13.92,1,minimalist,61.87,364.52,1.43,1,0,level 0
+72121,Peru,1,13.42,1,minimalist,55.3,415.66,0.42,1,1,level 1
+72876,Peru,0,15.33,3,limited,56.63,225.13,-0.6,0,0,level 0
+75487,Peru,0,11.92,1,minimalist,53.93,379.33,-0.69,0,0,level 0
+73390,Peru,0,15.5,1,minimalist,57.94,480.53,-0.96,0,2,level 2
+74445,Peru,1,15.33,2,complex,52.52,461.55,0.8,0,1,level 1
+72950,Peru,1,13.75,2,complex,42.55,384.78,0.24,0,0,level 0
+73795,Peru,1,13.83,2,complex,31.87,568.56,-1.13,0,3,level 3
+72556,Peru,0,14.75,1,minimalist,56.63,373.15,0.52,0,0,level 0
+76130,Peru,0,13.58,3,limited,52.52,452.71,-0.37,0,1,level 1
+72280,Peru,1,13.67,1,minimalist,46.26,441.11,-0.27,0,1,level 1
+76810,Peru,0,13.42,1,minimalist,63.24,458.25,0.17,0,1,level 1
+75301,Peru,0,13.75,1,minimalist,51.06,473.04,1.43,1,1,level 1
+74813,Peru,0,14.83,1,minimalist,40.44,504.54,0.86,0,2,level 2
+72758,Peru,0,14.75,3,limited,56.63,365.5,-0.4,1,0,level 0
+75326,Peru,0,13.92,1,minimalist,40.44,544.03,-0.68,0,2,level 2
+76304,Peru,1,13.67,1,minimalist,35.3,591.96,-0.05,0,3,level 3
+73302,Peru,0,12.92,3,limited,35.3,507.19,0.34,0,2,level 2
+74810,Peru,1,13.25,1,minimalist,57.94,445.12,-0.51,0,1,level 1
+76815,Peru,1,13.67,1,minimalist,46.26,501.26,2.05,1,2,level 2
+73378,Peru,0,14.92,1,minimalist,59.24,435.11,-0.31,0,1,level 1
+74257,Peru,0,12.42,1,minimalist,47.94,257.57,-0.93,0,0,level 0
+75102,Peru,1,13.83,3,limited,49.54,400.76,0.65,1,1,level 1
+74954,Peru,0,14.17,1,minimalist,52.52,348.89,-1.29,0,0,level 0
+72898,Peru,0,13.83,1,minimalist,53.93,478.36,0.68,1,1,level 1
+76612,Peru,1,16,1,minimalist,51.85,315.47,-0.88,0,0,level 0
+77155,Peru,1,13.58,1,minimalist,55.64,344.5,0.19,1,0,level 0
+74955,Peru,0,13.5,3,limited,52.52,433.3,-1.17,0,1,level 1
+74840,Peru,1,13.5,3,limited,51.06,324.07,0.06,0,0,level 0
+72914,Peru,1,13.5,2,complex,47.94,532.14,0.79,0,2,level 2
+73054,Peru,1,14.92,3,limited,53.93,384.8,1.04,1,0,level 0
+77210,Peru,0,12.5,1,minimalist,55.3,410.16,0.06,1,1,level 1
+75909,Peru,0,13.75,3,limited,51.06,433.95,1.07,1,1,level 1
+77093,Peru,0,15.67,1,minimalist,47.94,475.28,-1.34,0,1,level 1
+74727,Peru,0,13.75,1,minimalist,51.06,416.73,-0.47,0,1,level 1
+73403,Peru,1,13.58,3,limited,66.28,411.41,0.48,0,1,level 1
+76731,Peru,0,14.42,1,minimalist,49.54,502.74,0.8,1,2,level 2
+72456,Peru,0,13.5,1,minimalist,52.52,465.18,-0.76,0,1,level 1
+73272,Peru,0,14.92,3,limited,55.3,337.97,-0.6,0,0,level 0
+74719,Peru,0,13.83,1,minimalist,46.26,502.91,-0.18,0,2,level 2
+75866,Peru,1,15.67,1,minimalist,42.55,475.97,-0.19,0,1,level 1
+73180,Peru,0,13.33,1,minimalist,56.63,448.79,-0.56,0,1,level 1
+74706,Peru,1,13.58,1,minimalist,44.36,540.82,1.2,0,2,level 2
+75449,Peru,1,12.33,1,minimalist,44.48,529.03,0.03,0,2,level 2
+72937,Peru,0,15.58,1,minimalist,53.93,399.86,1.89,1,1,level 1
+73929,Peru,1,14.17,1,minimalist,49.54,486.77,-0.56,0,2,level 2
+74658,Peru,0,13.92,2,complex,52.52,398.76,-0.7,0,1,level 1
+74615,Peru,1,14.5,1,minimalist,56.12,153.93,-1.87,0,0,level 0
+75184,Peru,1,13.42,1,minimalist,51.06,528.87,1.18,1,2,level 2
+72334,Peru,0,14.08,1,minimalist,47.94,491.04,0.05,0,2,level 2
+75328,Peru,1,13.25,1,minimalist,63.24,392.51,-0.75,0,0,level 0
+72793,Peru,1,13.75,3,limited,49.54,513.16,0.64,0,2,level 2
+74052,Peru,1,14.58,1,minimalist,27.06,470.91,0.38,0,1,level 1
+77122,Peru,1,14,1,minimalist,55.3,450,-1,0,1,level 1
+76900,Peru,0,14.83,1,minimalist,63.24,419.13,0.34,0,1,level 1
+74787,Peru,0,15.08,3,limited,49.54,337.36,0.48,0,0,level 0
+77001,Peru,1,13.75,1,minimalist,44.48,523.11,-0.31,0,2,level 2
+75620,Peru,1,13.33,3,limited,55.3,314.7,-1.06,0,0,level 0
+73064,Peru,1,14.08,1,minimalist,47.94,443.24,0.8,0,1,level 1
+77023,Peru,0,14.08,1,minimalist,44.48,561.16,-1.14,0,2,level 2
+74140,Peru,0,14.08,1,minimalist,35.3,582.67,1,1,3,level 3
+75189,Peru,0,13.25,3,limited,55.3,498.89,-0.03,0,2,level 2
+76172,Peru,0,16.17,1,minimalist,56.63,372.88,-0.69,0,0,level 0
+72777,Peru,0,13.67,1,minimalist,53.93,544.65,1.38,1,2,level 2
+77098,Peru,0,15,1,minimalist,63.24,453.25,-0.24,0,1,level 1
+73111,Peru,0,13.25,1,minimalist,61.87,407.59,-0.66,0,1,level 1
+72569,Peru,1,14.67,1,minimalist,61.87,213.59,-1.5,0,0,level 0
+75313,Peru,0,15,1,minimalist,49.54,493.27,-0.6,0,2,level 2
+75576,Peru,1,14.5,1,minimalist,53.93,351.74,-0.52,0,0,level 0
+74162,Peru,1,13.75,1,minimalist,55.3,435.18,-0.78,0,1,level 1
+72274,Peru,1,13.83,1,minimalist,52.52,557.58,0.44,1,2,level 2
+72156,Peru,1,13,3,limited,49.54,472.81,-0.19,0,1,level 1
+75555,Peru,0,13.92,1,minimalist,46.26,385.13,-0.06,0,0,level 0
+76070,Peru,1,13.67,1,minimalist,53.93,334.33,-1.34,0,0,level 0
+73741,Peru,1,15.58,1,minimalist,52.52,427.53,0.93,1,1,level 1
+73902,Peru,1,12.83,1,minimalist,56.63,367.86,-0.42,0,0,level 0
+74436,Peru,1,13.33,1,minimalist,56.63,491.47,1.15,1,2,level 2
+75398,Peru,0,13.58,2,complex,46.26,560.24,1.89,1,2,level 2
+76525,Peru,0,15.17,1,minimalist,55.3,410.81,-1.62,0,1,level 1
+73248,Peru,0,14.08,1,minimalist,53.93,407.84,-1.3,0,1,level 1
+74901,Peru,1,14.25,2,complex,47.94,383.69,-0.5,0,0,level 0
+76438,Peru,1,13.08,1,minimalist,57.94,379.58,-0.6,0,0,level 0
+77167,Peru,0,15.17,1,minimalist,46.26,397.23,1.67,1,1,level 1
+76723,Peru,1,13.75,1,minimalist,40.44,586.55,1.23,1,3,level 3
+75983,Peru,1,13.5,1,minimalist,51.06,497.71,-0.37,0,2,level 2
+72993,Peru,1,13.33,1,minimalist,46.26,530.23,-0.66,0,2,level 2
+72594,Peru,0,16.08,1,minimalist,56.63,435.53,-1.04,0,1,level 1
+74812,Peru,1,13.33,1,minimalist,47.94,461.92,1.29,1,1,level 1
+75946,Peru,1,16.08,1,minimalist,61.81,329.96,-0.38,0,0,level 0
+75399,Peru,0,15.08,2,complex,42.55,648.42,1.44,1,3,level 3
+72879,Peru,1,14.58,3,limited,35.3,402.6,-1.39,0,1,level 1
+77207,Peru,1,13.25,1,minimalist,52.03,495.48,-1.34,0,2,level 2
+75433,Peru,0,13.42,1,minimalist,42.55,408.92,-0.67,0,1,level 1
+72867,Peru,0,16,1,minimalist,49.54,384.74,-0.98,0,0,level 0
+75693,Peru,1,17.17,1,minimalist,52.52,273.58,-0.57,0,0,level 0
+72542,Peru,0,14.75,1,minimalist,63.24,395.69,0.44,0,1,level 1
+75179,Peru,0,13.33,1,minimalist,42.55,484.21,1,1,2,level 2
+74847,Peru,1,12.83,1,minimalist,46.26,565.74,1.34,1,3,level 3
+75413,Peru,1,14.58,2,complex,51.06,511.22,-0.38,0,2,level 2
+73982,Peru,1,13.42,1,minimalist,38.07,605.16,2.17,1,3,level 3
+76681,Peru,1,14.67,1,minimalist,47.94,373.65,-0.87,0,0,level 0
+77030,Peru,0,13.75,1,minimalist,44.48,512.2,-0.24,0,2,level 2
+74654,Peru,1,14.83,1,minimalist,55.3,275.49,-1.34,0,0,level 0
+77183,Peru,0,13.83,1,minimalist,49.54,364.53,0.36,1,0,level 0
+76538,Peru,0,14.25,3,limited,55.3,264.15,0.31,1,0,level 0
+74862,Peru,0,13.33,1,minimalist,49.54,565.37,0.12,0,3,level 3
+75757,Peru,1,13.75,3,limited,53.93,332.79,-0.47,0,0,level 0
+73253,Peru,0,17.25,1,minimalist,56.63,381.63,-1.24,0,0,level 0
+77191,Peru,0,13.25,1,minimalist,47.94,422.7,-1.34,0,1,level 1
+76257,Peru,1,14.67,1,minimalist,63.24,279.2,-1.38,0,0,level 0
+75439,Peru,0,14.17,1,minimalist,60.54,387.99,-1.44,0,0,level 0
+72623,Peru,0,15.5,1,minimalist,74.36,327.93,-0.01,0,0,level 0
+72593,Peru,0,13.5,1,minimalist,85.37,321.44,0.24,1,0,level 0
+76909,Peru,0,14,3,limited,52.52,553.51,2.06,1,2,level 2
+75704,Peru,0,13.75,3,limited,49.54,333.07,-0.31,0,0,level 0
+72361,Peru,0,13.42,1,minimalist,46.26,480.81,-0.44,0,2,level 2
+76210,Peru,0,14.67,1,minimalist,42.55,386.78,-1.31,0,0,level 0
+76774,Peru,1,16.58,1,minimalist,49.54,401.36,-1.62,0,1,level 1
+72648,Peru,1,14.17,1,minimalist,44.48,461.11,1.43,1,1,level 1
+76365,Peru,1,13.42,2,complex,47.94,545.58,2.01,1,2,level 2
+76359,Peru,0,13.67,1,minimalist,52.52,583.41,1.59,1,3,level 3
+76134,Peru,0,13.83,3,limited,56.63,383.61,-0.9,0,0,level 0
+75385,Peru,1,14.17,1,minimalist,44.48,578.13,1.45,1,3,level 3
+72935,Peru,1,13.42,1,minimalist,61.87,328.78,-0.14,0,0,level 0
+73196,Peru,1,15.08,1,minimalist,51.06,532.76,-1.13,0,2,level 2
+73498,Peru,0,14.42,1,minimalist,52.52,557.47,0.3,0,2,level 2
+76147,Peru,1,13.42,1,minimalist,49.54,476.19,-0.69,0,1,level 1
+72588,Peru,0,13.25,1,minimalist,38.07,494.08,-0.14,0,2,level 2
+76928,Peru,0,13.75,1,minimalist,47.94,604.99,0.38,0,3,level 3
+72802,Peru,1,13.5,1,minimalist,42.55,429.15,0.3,0,1,level 1
+75913,Peru,0,13.5,1,minimalist,57.94,400.98,-0.24,0,1,level 1
+74839,Peru,0,15.25,1,minimalist,53.93,363.88,-0.89,0,0,level 0
+74941,Peru,0,13.83,1,minimalist,47.94,549.1,1.02,1,2,level 2
+73599,Peru,1,17.92,1,minimalist,85.37,159.85,-0.1,0,0,level 0
+74965,Peru,1,14,2,complex,31.87,495.67,1.27,0,2,level 2
+75488,Peru,0,13.25,1,minimalist,47.94,477.66,0.48,0,1,level 1
+75688,Peru,1,15.5,3,limited,55.51,302.44,1.3,1,0,level 0
+74595,Peru,0,13.92,1,minimalist,51.06,587.52,0.23,0,3,level 3
+74113,Peru,0,14,1,minimalist,55.3,504.44,-0.73,0,2,level 2
+72703,Peru,1,13.5,1,minimalist,47.94,437.33,-1.5,0,1,level 1
+74236,Peru,0,13.83,3,limited,56.63,454.64,2.05,1,1,level 1
+72495,Peru,1,13.67,1,minimalist,51.06,501.31,2.52,1,2,level 2
+72381,Peru,1,13.58,1,minimalist,40.44,478.54,-0.13,0,1,level 1
+73290,Peru,0,13.33,3,limited,56.63,394.29,-1.35,NA,0,level 0
+75208,Peru,1,12.83,3,limited,49.54,534.81,-0.47,1,2,level 2
+76862,Peru,1,13.75,1,minimalist,61.87,277.81,-1.34,0,0,level 0
+77079,Peru,0,13.42,1,minimalist,47.94,496.88,-0.53,0,2,level 2
+75674,Peru,0,13.42,1,minimalist,57.94,335.83,-0.7,0,0,level 0
+72905,Peru,0,13.58,2,complex,55.3,492.35,1.18,1,2,level 2
+72790,Peru,0,14,1,minimalist,51.06,454.17,0.06,0,1,level 1
+74820,Peru,1,13.83,1,minimalist,53.93,368.15,1.31,1,0,level 0
+73189,Peru,1,16.67,3,limited,44.48,371.5,-0.54,0,0,level 0
+75827,Peru,1,18.5,1,minimalist,56.63,308.96,-0.65,0,0,level 0
+74135,Peru,0,13.33,1,minimalist,44.48,516.12,0.43,0,2,level 2
+74703,Peru,1,14,1,minimalist,52.52,521.62,0.33,0,2,level 2
+74589,Peru,1,12.42,2,complex,17.67,695.32,1.56,1,3,level 3
+74846,Peru,0,13.42,2,complex,60.54,537.54,1.56,1,2,level 2
+76148,Peru,1,13.92,1,minimalist,46.26,357.6,0.72,0,0,level 0
+76293,Peru,1,14.67,1,minimalist,47.94,394.97,0.06,0,0,level 0
+73721,Peru,1,13.17,1,minimalist,55.3,450.24,0.98,1,1,level 1
+74454,Peru,1,13.58,1,minimalist,38.07,523.63,0.11,0,2,level 2
+74707,Peru,0,13.5,1,minimalist,56.63,380.37,0.01,0,0,level 0
+75242,Peru,1,13.58,1,minimalist,56.63,358.77,-1.1,0,0,level 0
+75664,Peru,1,17.17,3,limited,52.52,356.83,-1.17,0,0,level 0
+74601,Peru,0,12.5,3,limited,66.28,532.5,1.76,1,2,level 2
+72604,Peru,0,14.42,1,minimalist,52.52,331.21,-0.93,0,0,level 0
+74879,Peru,0,15.33,1,minimalist,56.63,420.89,2.15,1,1,level 1
+74558,Peru,0,13.75,1,minimalist,60.54,399.44,0.06,0,1,level 1
+75199,Peru,1,13.67,1,minimalist,51.06,361.74,-1.67,0,0,level 0
+74463,Peru,1,14,1,minimalist,49.54,460.3,-0.14,0,1,level 1
+75630,Peru,1,14.33,3,limited,42.55,457.38,-0.73,0,1,level 1
+74811,Peru,1,13.42,1,minimalist,52.52,487.44,0.48,0,2,level 2
+73494,Peru,0,15.08,3,limited,57.94,352.25,1.46,1,0,level 0
+73351,Peru,1,13.42,1,minimalist,46.26,602.16,0.18,0,3,level 3
+77133,Peru,1,13.92,1,minimalist,47.94,428.59,-0.46,0,1,level 1
+76728,Peru,0,13.58,1,minimalist,55.3,499.43,0.43,0,2,level 2
+72176,Peru,1,15.58,1,minimalist,59.24,447.17,0.85,1,1,level 1
+73819,Peru,1,15.17,1,minimalist,49.54,470.2,0.13,0,1,level 1
+72503,Peru,0,15.25,1,minimalist,31.87,464.42,0.49,0,1,level 1
+76812,Peru,1,14.17,1,minimalist,51.06,531.17,0.66,0,2,level 2
+75136,Peru,0,13.75,1,minimalist,35.3,601.14,1.3,1,3,level 3
+75425,Peru,0,15,1,minimalist,53.93,374.74,-1.67,0,0,level 0
+76205,Peru,0,13.75,1,minimalist,85.37,295.09,-1.2,0,0,level 0
+75138,Peru,0,13.5,1,minimalist,64.69,434.95,1.07,0,1,level 1
+76182,Peru,1,14.67,1,minimalist,53.93,396.66,-0.87,0,1,level 1
+74832,Peru,0,13.58,1,minimalist,52.52,445.13,-1.32,0,1,level 1
+72172,Peru,0,13.58,1,minimalist,55.3,450.39,0.85,1,1,level 1
+76539,Peru,1,14,1,minimalist,49.54,400.51,-1.17,0,1,level 1
+76480,Peru,0,13.83,1,minimalist,53.93,466.55,-1.24,0,1,level 1
+72791,Peru,0,13,1,minimalist,55.57,390.97,1.69,1,0,level 0
+77008,Peru,0,13.92,1,minimalist,53.93,327.86,-0.73,0,0,level 0
+75902,Peru,0,13.92,1,minimalist,61.87,440.07,0.01,0,1,level 1
+75477,Peru,1,13.58,1,minimalist,38.07,430.08,-0.74,0,1,level 1
+72858,Peru,0,13.42,1,minimalist,35.3,517.95,1.33,1,2,level 2
+75236,Peru,1,14.08,1,minimalist,57.94,401.51,-0.56,0,1,level 1
+73691,Peru,0,13.5,3,limited,44.48,411.06,0.21,0,1,level 1
+75812,Peru,0,14,1,minimalist,40.44,448.88,-0.9,0,1,level 1
+72114,Peru,1,14.92,1,minimalist,55.3,467.15,-0.37,0,1,level 1
+73265,Peru,0,16.25,1,minimalist,64.69,380.95,0.27,0,0,level 0
+72576,Peru,0,13.58,3,limited,52.52,291.71,-1.49,0,0,level 0
+72286,Peru,0,13.5,1,minimalist,47.94,502.57,0.23,0,2,level 2
+75331,Peru,1,14.25,1,minimalist,53.93,435.92,-1.34,0,1,level 1
+74066,Peru,0,13.92,1,minimalist,44.48,421.13,-0.69,0,1,level 1
+75238,Peru,0,13.75,1,minimalist,56.63,466.09,-0.53,0,1,level 1
+75941,Peru,0,14,1,minimalist,56.63,361.07,0.01,1,0,level 0
+73441,Peru,1,13.42,1,minimalist,49.54,529.65,1.06,1,2,level 2
+72277,Peru,0,13.25,1,minimalist,52.52,361.82,0.85,1,0,level 0
+73208,Peru,0,13,1,minimalist,46.26,469.16,1.06,1,1,level 1
+75480,Peru,1,13.67,1,minimalist,47.94,477.87,0.4,0,1,level 1
+75707,Peru,0,14.08,1,minimalist,49.54,313.55,0.86,0,0,level 0
+73438,Peru,0,13.42,1,minimalist,66.28,436.82,0.09,0,1,level 1
+75195,Peru,1,15,3,limited,46.26,200.28,-1.24,0,0,level 0
+74256,Peru,0,14.58,1,minimalist,47.94,357.27,-1.25,0,0,level 0
+74693,Peru,0,14.92,1,minimalist,53.93,250.49,-0.67,0,0,level 0
+72476,Peru,1,13.67,1,minimalist,42.55,463.32,1.69,1,1,level 1
+74362,Peru,1,13.5,1,minimalist,53.93,531.88,-0.42,0,2,level 2
+76190,Peru,0,13.5,1,minimalist,57.94,561.25,-0.14,0,2,level 2
+74808,Peru,0,13.92,2,complex,44.48,510.7,1.66,1,2,level 2
+72193,Peru,0,13.5,1,minimalist,49.54,433.91,1.6,1,1,level 1
+73288,Peru,1,13.58,1,minimalist,44.48,446.66,-0.58,0,1,level 1
+76694,Peru,0,14.25,3,limited,49.54,246.55,-0.93,0,0,level 0
+72386,Peru,0,13.25,3,limited,55.3,457.23,-0.44,0,1,level 1
+73123,Peru,0,14,1,minimalist,66.28,423.78,-0.14,0,1,level 1
+74191,Peru,1,13.5,2,complex,17.67,547.31,0.68,0,2,level 2
+73714,Peru,1,13.25,1,minimalist,55.3,348.3,1.4,0,0,level 0
+76149,Peru,1,14.17,1,minimalist,44.48,560.4,-0.15,0,2,level 2
+73571,Peru,1,13.83,1,minimalist,52.52,455.91,-0.6,0,1,level 1
+77074,Peru,0,13.92,1,minimalist,35.3,489.26,1.82,1,2,level 2
+76970,Peru,1,15.25,1,minimalist,55.3,286.58,-0.5,0,0,level 0
+77086,Peru,1,14.83,3,limited,56.63,460.76,1.58,1,1,level 1
+74482,Peru,0,14,1,minimalist,46.26,506,0.66,0,2,level 2
+75132,Peru,0,14,1,minimalist,27.06,470.96,-0.97,0,1,level 1
+77157,Peru,0,13.75,3,limited,61.87,489.89,-0.19,0,2,level 2
+74137,Peru,0,13.58,1,minimalist,53.83,467.76,0.07,0,1,level 1
+74695,Peru,1,14.42,1,minimalist,72.89,258.01,-0.18,0,0,level 0
+74419,Peru,1,13.75,1,minimalist,51.06,459.86,0.61,0,1,level 1
+76471,Peru,0,15.67,1,minimalist,66.28,317.96,-0.27,0,0,level 0
+77088,Peru,1,13.33,1,minimalist,47.94,460.86,-0.67,0,1,level 1
+75101,Peru,1,13.42,2,complex,44.48,585.32,1.38,1,3,level 3
+74422,Peru,0,13.33,1,minimalist,17.67,492.18,0.25,0,2,level 2
+76656,Peru,0,14.42,2,complex,56.63,334.89,-1.26,0,0,level 0
+74776,Peru,0,15.17,3,limited,53.93,412.13,-0.73,0,1,level 1
+73658,Peru,1,15.5,1,minimalist,51.06,400.36,0.46,1,1,level 1
+74039,Peru,1,13.58,1,minimalist,35.3,550.08,-0.73,0,2,level 2
+72431,Peru,0,14.42,1,minimalist,59.24,336,1.07,1,0,level 0
+74495,Peru,0,14.17,1,minimalist,57.94,428.81,-0.6,0,1,level 1
+77196,Peru,0,13.75,1,minimalist,31.87,371.49,-1.62,0,0,level 0
+72736,Peru,0,13.5,3,limited,44.48,418.91,0.85,1,1,level 1
+73574,Peru,0,13.83,3,limited,51.06,516.21,1.39,1,2,level 2
+75114,Peru,1,13.83,1,minimalist,49.54,354.36,-1.5,0,0,level 0
+72366,Peru,0,13.75,3,limited,53.93,463.17,1.19,0,1,level 1
+76947,Peru,1,13.08,1,minimalist,57.94,290.58,0.89,1,0,level 0
+73186,Peru,0,14.25,1,minimalist,57.94,435.2,-1.29,0,1,level 1
+76106,Peru,1,13.58,1,minimalist,51.06,461.4,-0.55,0,1,level 1
+73240,Peru,0,14.33,1,minimalist,70.18,304.27,NA,1,0,level 0
+75496,Peru,1,13.42,3,limited,52.52,266.04,-1.08,0,0,level 0
+76383,Peru,1,13.25,3,limited,40.44,493.15,-1.21,0,2,level 2
+73324,Peru,1,14.33,1,minimalist,44.48,408.25,-0.92,NA,1,level 1
+72204,Peru,1,14,2,complex,38.07,548.79,0.71,0,2,level 2
+75586,Peru,0,12.67,1,minimalist,44.48,571.39,-0.89,0,3,level 3
+74911,Peru,1,13.42,1,minimalist,52.52,307.58,-1.31,0,0,level 0
+76886,Peru,0,13.92,1,minimalist,44.7,524.38,0.44,0,2,level 2
+74094,Peru,0,13.25,1,minimalist,56.63,366.19,-0.73,0,0,level 0
+76795,Peru,0,15.58,3,limited,47.94,439.84,-0.83,0,1,level 1
+75703,Peru,1,14.42,1,minimalist,49.54,278.82,-0.52,0,0,level 0
+72151,Peru,0,13.83,3,limited,63.24,268.61,-1.3,0,0,level 0
+72657,Peru,0,13.5,1,minimalist,47.94,443.83,1.56,1,1,level 1
+76518,Peru,0,13.42,1,minimalist,51.06,493.32,-1.32,0,2,level 2
+75719,Peru,1,13.17,1,minimalist,52.52,507.11,1.4,1,2,level 2
+76188,Peru,0,13.83,1,minimalist,53.93,460.69,-0.14,0,1,level 1
+75558,Peru,0,12.83,1,minimalist,63.24,274.94,-0.29,0,0,level 0
+76930,Peru,0,13.92,1,minimalist,53.93,455.67,-0.94,0,1,level 1
+75734,Peru,0,13.5,3,limited,49.54,450.17,-0.67,0,1,level 1
+76029,Peru,0,13.25,2,complex,42.55,601.04,1.2,1,3,level 3
+75473,Peru,1,13.92,3,limited,53.93,288.94,-1.34,0,0,level 0
+75550,Peru,0,13.5,1,minimalist,68.06,284.18,-0.76,0,0,level 0
+75426,Peru,0,13.75,1,minimalist,56.63,413.33,-1.87,0,1,level 1
+75871,Peru,1,13.33,1,minimalist,52.52,495.24,1.64,1,2,level 2
+76053,Peru,1,14.58,1,minimalist,59.24,384.52,-1.04,0,0,level 0
+74045,Peru,1,15.33,1,minimalist,55.3,304.19,0.44,0,0,level 0
+75293,Peru,1,13.58,1,minimalist,52.52,389.4,-0.23,0,0,level 0
+76227,Peru,0,14.17,3,limited,52.52,429.49,-0.36,0,1,level 1
+73132,Peru,0,14.92,1,minimalist,49.54,514,0.7,1,2,level 2
+74153,Peru,0,13.17,1,minimalist,53.93,423.55,0,0,1,level 1
+77244,Peru,0,13.42,1,minimalist,47.94,415.97,-0.56,0,1,level 1
+75472,Peru,0,13.5,1,minimalist,51.06,530.79,-0.51,0,2,level 2
+76226,Peru,0,14.58,3,limited,17.67,528.04,1.39,1,2,level 2
+76420,Peru,0,13.67,1,minimalist,42.55,499.69,1.69,1,2,level 2
+77087,Peru,1,13.33,3,limited,56.63,398.24,2.4,NA,1,level 1
+72539,Peru,1,13.75,1,minimalist,46.26,382.26,0.88,1,0,level 0
+74526,Peru,0,13.67,1,minimalist,52.52,550.81,-0.72,0,2,level 2
+73401,Peru,1,14.25,1,minimalist,51.06,466.03,-0.23,0,1,level 1
+73261,Peru,1,15.5,1,minimalist,49.54,381.08,-1.44,0,0,level 0
+74824,Peru,1,13.42,1,minimalist,56.63,478.32,-0.86,0,1,level 1
+74146,Peru,0,13.25,1,minimalist,47.94,511.51,0.57,1,2,level 2
+76876,Peru,0,14,1,minimalist,72.89,273.94,-1.87,0,0,level 0
+72985,Peru,0,14.67,1,minimalist,47.94,480.22,0.19,0,2,level 2
+74880,Peru,1,13.75,1,minimalist,47.94,420.89,1.13,1,1,level 1
+73831,Peru,1,13.83,1,minimalist,47.94,483.06,1.01,1,2,level 2
+72965,Peru,1,14.42,1,minimalist,55.3,356.95,-0.94,0,0,level 0
+77185,Peru,0,13.25,1,minimalist,51.06,444.53,0.4,0,1,level 1
+74819,Peru,1,13.75,1,minimalist,47.94,479.12,1.06,0,2,level 2
+73139,Peru,1,13.25,1,minimalist,40.44,500.3,0.79,0,2,level 2
+75733,Peru,1,13.83,3,limited,60.54,437.26,0.67,0,1,level 1
+72646,Peru,1,13.83,1,minimalist,52.52,509.32,-0.6,0,2,level 2
+72460,Peru,0,13.67,1,minimalist,56.63,460.66,-0.99,0,1,level 1
+74822,Peru,0,13.92,1,minimalist,51.06,557.34,0.77,1,2,level 2
+74802,Peru,0,13.17,1,minimalist,60.54,337.03,-0.31,0,0,level 0
+72465,Peru,0,13.75,2,complex,44.48,507.05,1.17,1,2,level 2
+72859,Peru,0,13.67,3,limited,52.52,484.42,1.27,1,2,level 2
+72808,Peru,1,14.67,1,minimalist,51.06,433.45,-1.31,0,1,level 1
+72807,Peru,0,14,1,minimalist,52.52,502.97,-0.42,0,2,level 2
+74441,Peru,0,13.25,1,minimalist,49.54,518.08,0.84,1,2,level 2
+75501,Peru,1,14.08,1,minimalist,57.94,324.71,-1.46,0,0,level 0
+74026,Peru,0,13.67,1,minimalist,63.24,396.24,-0.42,0,1,level 1
+75763,Peru,0,18.17,1,minimalist,55.3,348.87,-1.11,0,0,level 0
+76755,Peru,1,13.92,1,minimalist,51.06,473.39,0.36,0,1,level 1
+72587,Peru,1,13.83,1,minimalist,56.63,526.4,1.43,1,2,level 2
+73412,Peru,1,14.92,1,minimalist,51.06,498.08,0.34,0,2,level 2
+74260,Peru,0,13.92,3,limited,47.45,284.25,-1.46,0,0,level 0
+72754,Peru,1,13.75,1,minimalist,60.54,423.82,0.01,1,1,level 1
+75492,Peru,0,13.42,1,minimalist,49.54,415.45,-0.92,0,1,level 1
+76600,Peru,0,14.5,1,minimalist,49.54,299.86,-0.85,0,0,level 0
+75504,Peru,0,14.33,3,limited,57.94,322.88,-0.57,0,0,level 0
+74247,Peru,1,14,2,complex,55.3,348.4,0.17,1,0,level 0
+76560,Peru,1,13.83,1,minimalist,59.24,338.58,-0.31,0,0,level 0
+77200,Peru,1,13.67,1,minimalist,55.3,331.27,2.06,1,0,level 0
+76686,Peru,1,13.42,1,minimalist,56.63,382.77,-0.76,0,0,level 0
+76378,Peru,0,13.33,3,limited,61.87,408.01,-1.2,0,1,level 1
+72470,Peru,1,13.58,1,minimalist,46.26,523.72,0.89,0,2,level 2
+74072,Peru,1,13,1,minimalist,49.54,426.06,-1.44,0,1,level 1
+75862,Peru,1,13.33,3,limited,38.07,451.64,-0.42,0,1,level 1
+73673,Peru,0,14.42,1,minimalist,63.24,443.87,0.69,1,1,level 1
+76375,Peru,1,14.67,3,limited,57.94,361.69,0.63,0,0,level 0
+75680,Peru,0,13.42,1,minimalist,46.26,448.8,0.44,0,1,level 1
+72250,Peru,0,14.17,1,minimalist,47.94,546.1,0.78,1,2,level 2
+76916,Peru,0,13.92,1,minimalist,38.07,528.28,1.32,1,2,level 2
+72358,Peru,0,13.25,1,minimalist,60.54,460.12,-0.52,0,1,level 1
+76840,Peru,1,13.5,1,minimalist,53.93,461.71,-1.08,0,1,level 1
+75998,Peru,1,13.67,1,minimalist,64.69,254.95,0.14,1,0,level 0
+73000,Peru,1,14.42,1,minimalist,46.26,434.05,-1.31,0,1,level 1
+74085,Peru,1,13.33,1,minimalist,47.94,260.41,-0.23,0,0,level 0
+74711,Peru,1,13.83,1,minimalist,55.3,449.51,-0.4,0,1,level 1
+75287,Peru,1,13,3,limited,53.93,378.45,2.06,1,0,level 0
+73235,Peru,0,13.5,2,complex,47.94,532.72,-0.15,0,2,level 2
+73790,Peru,1,13.25,1,minimalist,52.52,398.18,1.43,1,1,level 1
+75174,Peru,0,13.25,3,limited,51.06,536.61,0.06,0,2,level 2
+76115,Peru,1,13.92,1,minimalist,42.55,462.51,-0.52,0,1,level 1
+73881,Peru,1,12.42,1,minimalist,46.26,409.55,-0.17,0,1,level 1
+73181,Peru,0,13.92,1,minimalist,49.54,520.21,1.31,1,2,level 2
+75835,Peru,1,13.5,2,complex,51.06,362.66,-1.04,NA,0,level 0
+72991,Peru,1,14.58,1,minimalist,47.94,465.1,-0.51,0,1,level 1
+73747,Peru,0,12.92,1,minimalist,47.94,535.43,1.3,1,2,level 2
+72383,Peru,1,13.5,1,minimalist,51.06,561.48,-0.89,0,2,level 2
+72770,Peru,0,13.33,3,limited,68.06,310.03,0.29,0,0,level 0
+75187,Peru,0,14.08,3,limited,46.26,449.17,-0.6,0,1,level 1
+77083,Peru,1,13.67,1,minimalist,27.06,573.28,0.66,0,3,level 3
+72710,Peru,1,12.83,1,minimalist,44.48,475.53,-0.94,0,1,level 1
+75751,Peru,0,17.75,1,minimalist,NA,310.11,-0.39,0,0,level 0
+72442,Peru,0,13.42,1,minimalist,56.63,448.06,-0.01,0,1,level 1
+75440,Peru,0,13.67,1,minimalist,44.48,432.27,-0.93,0,1,level 1
+74172,Peru,1,14.75,1,minimalist,49.54,410.43,-0.54,0,1,level 1
+74412,Peru,0,13.83,1,minimalist,49.54,537.78,-0.37,0,2,level 2
+72690,Peru,0,14.08,1,minimalist,38.07,565.92,1.07,1,3,level 3
+76967,Peru,0,15.17,1,minimalist,63.24,225.51,-0.87,0,0,level 0
+75990,Peru,1,13.58,1,minimalist,52.52,327.9,-1.5,0,0,level 0
+72413,Peru,1,13.75,2,complex,47.94,453.13,-0.88,0,1,level 1
+74912,Peru,0,15.17,3,limited,61.87,405.81,-1.34,0,1,level 1
+77176,Peru,0,13.17,1,minimalist,70.18,242.69,-0.84,0,0,level 0
+74622,Peru,0,14,1,minimalist,46.26,443.5,-1.5,0,1,level 1
+72291,Peru,0,13.58,3,limited,52.52,461.67,0.06,0,1,level 1
+76811,Peru,1,14.75,1,minimalist,46.26,393.49,-0.56,0,0,level 0
+74906,Peru,1,13.25,1,minimalist,51.06,412.48,-0.73,0,1,level 1
+74662,Peru,1,17.67,1,minimalist,56.63,286.39,-1.06,0,0,level 0
+76311,Peru,1,15.17,1,minimalist,47.94,452.5,-1.26,0,1,level 1
+76093,Peru,0,13.92,1,minimalist,35.3,405.37,2.06,1,1,level 1
+77114,Peru,1,14,1,minimalist,46.26,542,0.25,0,2,level 2
+76995,Peru,1,13.75,1,minimalist,49.54,510.41,-0.29,0,2,level 2
+74916,Peru,0,13.33,3,limited,44.48,494.12,0.78,0,2,level 2
+72798,Peru,1,13.92,1,minimalist,42.55,415.96,-0.35,0,1,level 1
+76408,Peru,0,13.83,3,limited,51.06,401.71,-0.56,0,1,level 1
+75329,Peru,1,15.83,1,minimalist,56.63,325.92,-1.29,0,0,level 0
+74351,Peru,1,13,1,minimalist,53.93,431.07,2.27,1,1,level 1
+75310,Peru,1,13.33,1,minimalist,47.94,488.37,-0.98,0,2,level 2
+77205,Peru,0,13.67,1,minimalist,49.54,333.3,-0.93,0,0,level 0
+72388,Peru,1,15.17,1,minimalist,53.93,418.61,-1.3,0,1,level 1
+77037,Peru,1,12.58,1,minimalist,59.24,284.54,-0.27,0,0,level 0
+73007,Peru,0,14.25,1,minimalist,17.67,494.81,1.43,1,2,level 2
+76644,Peru,0,13.25,1,minimalist,68.06,445.42,2.15,1,1,level 1
+72842,Peru,0,13.67,1,minimalist,17.67,603.01,0.95,1,3,level 3
+77215,Peru,0,13.58,1,minimalist,64.69,385.22,-0.42,0,0,level 0
+72598,Peru,0,14.42,1,minimalist,47.94,569.1,-0.92,0,3,level 3
+74508,Peru,1,13.58,2,complex,42.55,554.4,2.06,1,2,level 2
+72801,Peru,0,13.92,1,minimalist,60.54,440.7,-0.62,0,1,level 1
+74624,Peru,1,13.75,1,minimalist,64.6,332.01,-0.19,0,0,level 0
+75191,Peru,1,13.5,1,minimalist,51.06,542.61,0.38,0,2,level 2
+76515,Peru,1,13.42,1,minimalist,52.52,403.49,-0.56,0,1,level 1
+73279,Peru,0,13.33,1,minimalist,47.94,476.33,-1.16,0,1,level 1
+76674,Peru,0,14.67,1,minimalist,53.93,344.95,-1.46,0,0,level 0
+74510,Peru,0,13.75,1,minimalist,46.26,484.03,1.22,1,2,level 2
+74144,Peru,1,14,1,minimalist,51.06,439.24,1.06,1,1,level 1
+75482,Peru,0,14,1,minimalist,51.06,265.65,-1.3,0,0,level 0
+75182,Peru,1,13.25,1,minimalist,46.26,520.38,-0.55,0,2,level 2
+73133,Peru,1,13.58,1,minimalist,47.94,523.83,-0.42,0,2,level 2
+72931,Peru,1,13.83,1,minimalist,55.3,413.72,-0.49,0,1,level 1
+72926,Peru,1,14,1,minimalist,56.63,297.29,-0.98,0,0,level 0
+74814,Peru,1,13.25,1,minimalist,35.3,552.58,0.65,1,2,level 2
+77066,Peru,0,14.83,1,minimalist,47.94,401.06,1.22,1,1,level 1
+76934,Peru,1,14,1,minimalist,57.94,362.38,-1.39,0,0,level 0
+74189,Peru,1,13.17,1,minimalist,38.07,580.02,2.06,1,3,level 3
+77047,Peru,0,13.42,1,minimalist,46.26,430.77,-0.49,0,1,level 1
+72562,Peru,1,14.58,1,minimalist,68.06,327.08,-1.82,0,0,level 0
+76962,Peru,0,14.75,1,minimalist,60.54,262.56,-0.1,1,0,level 0
+72186,Peru,0,13.92,1,minimalist,59.24,421.48,-0.46,0,1,level 1
+73869,Peru,1,14.08,1,minimalist,31.87,554.51,0.27,0,2,level 2
+74313,Peru,1,15.83,1,minimalist,49.97,493.84,-0.17,0,2,level 2
+75057,Peru,1,13.5,1,minimalist,49.54,329.33,-0.77,0,0,level 0
+74342,Peru,1,14,3,limited,44.48,461.27,-0.74,0,1,level 1
+72655,Peru,0,13.58,1,minimalist,38.07,610.55,0.97,1,3,level 3
+74583,Peru,0,14.67,1,minimalist,55.3,428.96,0.14,1,1,level 1
+76263,Peru,0,16,1,minimalist,56.63,299.04,-0.9,0,0,level 0
+72276,Peru,1,13.42,1,minimalist,44.48,564.91,-0.26,0,3,level 3
+75997,Peru,0,15.75,1,minimalist,63.24,343.47,-1.46,0,0,level 0
+75233,Peru,1,13.5,1,minimalist,49.54,362.17,-1.87,0,0,level 0
+77084,Peru,0,13.75,2,complex,52.52,473.59,0.32,1,1,level 1
+77085,Peru,0,13.5,2,complex,52.52,424.67,-1.33,NA,1,level 1
+76297,Peru,0,13.33,1,minimalist,64.69,433.13,-0.19,0,1,level 1
+74492,Peru,0,13.5,1,minimalist,45.54,544.85,0.15,0,2,level 2
