@@ -281,17 +281,17 @@ data_model <- data_poly %>%
               mutate(ap1 = case_when(
                 m17_prop_alu_7a3_pri == 1 ~ 1,  # bajo
                 m17_prop_alu_7a3_pri == 2 ~ 0,  # medio
-                m17_prop_alu_7a3_pri == 3 ~ 0   # bajo
+                m17_prop_alu_7a3_pri == 3 ~ 0   # alto
                 )) %>%
               mutate(ap2 = case_when(
                 m17_prop_alu_7a3_pri == 1 ~ 0,  # bajo
                 m17_prop_alu_7a3_pri == 2 ~ 1,  # medio
-                m17_prop_alu_7a3_pri == 3 ~ 0   # bajo
+                m17_prop_alu_7a3_pri == 3 ~ 0   # alto
                 )) %>%
               mutate(ap3 = case_when(
                 m17_prop_alu_7a3_pri == 1 ~ 0,  # bajo
                 m17_prop_alu_7a3_pri == 2 ~ 0,  # medio
-                m17_prop_alu_7a3_pri == 3 ~ 1   # bajo
+                m17_prop_alu_7a3_pri == 3 ~ 1   # alto
                 )) %>%
               # poli vida
               mutate(exv = case_when(
@@ -309,6 +309,8 @@ mutate(aut_m = aut - c_mean(aut, id_k))    %>%  # centering to the grand mean
 # depression
 mutate(dep = PH_depresion) %>%
 dplyr::glimpse()
+
+
 
 # -----------------------------------------------
 # distribución variable de respuesta
@@ -329,6 +331,24 @@ corrgram(.,
   upper.panel = panel.conf, 
   diag.panel = panel.density
   )
+
+# -----------------------------------------------
+# taylor series linearization
+# -----------------------------------------------
+
+
+data_model %>%
+dplyr::select(dep, aut_m) %>%
+na.omit() %>%
+cor()
+
+
+data_model %>%
+dplyr::select(dep, aut_m) %>%
+dplyr::sample_n(500) %>%
+na.omit() %>%
+plot()
+
 
 
 # -----------------------------------------------
