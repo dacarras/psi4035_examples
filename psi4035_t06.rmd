@@ -183,7 +183,7 @@ anova(m04, m05)
 
 Para ilustrar una interacción, vamos a emplear datos de Abrevaya (2006). Estos son una serie de registros del peso al nacer de los hijos de diferentes madres. La motivación del estudio, es evaluar el efecto que posee el fumar en el peso de los nacidos. Este ejemplo se encuentra discutido con mayor profundidad en Rabe-Hesketh & Skrondal (2012), y consiste en un 10% de los datos originales (n = 3978 madres). 
 
-La interpretación de los coeno cambia tanto. En el caso de la regresión múltiple, nos sigue interesando los valores esperados de y_i, condicionales a los valores de x_i y otras covariables.
+En el caso de la regresión múltiple, nos sigue interesando los valores esperados de y_i, condicionales a los valores de x_i y otras covariables.
 
 Primero vamos a evaluar la interacción de dos variables dicotómicas.
 
@@ -272,6 +272,12 @@ data_first <- data_smoke %>%
               remove_labels() %>%
               as.data.frame()
 
+
+# -----------------------------------------------
+# histograma
+# -----------------------------------------------
+
+hist(data_first$kg)
 
 # -----------------------------------------------
 # mostrar datos de 20 casos
@@ -469,6 +475,18 @@ interactions::probe_interaction(
     pred = smoke, 
     modx = novisit
     )
+
+
+# -----------------------------------------------
+# simple slope
+# -----------------------------------------------
+
+interactions::probe_interaction(
+    interaction_model, 
+    pred = novisit, 
+    modx = smoke
+    )
+
 
 # -----------------------------------------------
 # johnson neyman plot
