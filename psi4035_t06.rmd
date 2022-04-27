@@ -1,0 +1,506 @@
+---
+title: "Interacciones en regresión"
+subtitle: "PSI4035 Taller 06"
+author: "dacarras"
+output:
+  html_document:
+    theme: paper
+    highlight: kate
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    fig_width: 10 
+    fig_height: 10 
+---
+
+<style>
+  .main-container {
+    max-width: 1600px !important;
+  }
+  .list-group-item.active, 
+  .list-group-item.active:focus, 
+  .list-group-item.active:hover {
+    background-color: #373334;
+  }
+</style>
+
+
+```{r setup, include=FALSE}
+#--------------------------------------
+# setup
+#--------------------------------------
+
+# knitr option
+knitr::opts_chunk$set(dev = 'png')
+options(knitr.kable.NA = '')
+options(digits = 7)
+options(scipen = 999999)
+
+# remove all previous objects
+rm(list = ls())
+
+# fonts
+Sys.setenv(LANG="en_US.UTF-8")
+
+
+```
+
+# Taller 6: interaccion entre variables
+
+## Cargar datos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# cargar datos
+#----------------------------------------------------------
+
+#--------------------------------------
+# cargar dplyr
+#--------------------------------------
+
+library(dplyr)
+
+#--------------------------------------
+# datos Vik (2014, p83)
+#--------------------------------------
+
+table_9_2 <- read.table(text = "
+person      y    x1   x2
+      1     2     8    1
+      2     3     9    2
+      3     3     9    2
+      4     4    10    3
+      5     7     6    8
+      6     5     7    9
+      7     5     4    9
+      8     7     5   10
+      9     8     3    5
+     10     9     1    6
+     11     9     2    7
+     12    10     2    7
+", header = TRUE, stringsAsFactors = FALSE)
+
+#--------------------------------------
+# funcion para crear medias por grupos
+#--------------------------------------
+
+c_mean <- function(x,j){
+ave(x,j,FUN=function(x) mean(x, na.rm=T))
+}
+
+
+#--------------------------------------
+# datos Vik (2014, p121)
+#--------------------------------------
+
+table_10_2 <- table_9_2 %>%
+              mutate(group = 1) %>%
+              mutate(x1_g = c_mean(x1, group)) %>%
+              mutate(x2_g = c_mean(x2, group)) %>%
+              mutate(x1_m = x1 - x1_g) %>%
+              mutate(x2_m = x2 - x2_g) %>%
+              mutate(x3   = x1_m * x2_m) %>%
+              mutate(int  = x1_m * x2_m) %>%
+              dplyr::glimpse()
+              
+
+#--------------------------------------
+# mostrar datos
+#--------------------------------------
+
+knitr::kable(table_10_2, digits = 3)
+
+```
+
+## Ajustar modelos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# cargar datos
+#----------------------------------------------------------
+
+data_model <- table_10_2
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(y ~ + 1)
+f02 <- as.formula(y ~ + 1 + x1_m)
+f03 <- as.formula(y ~ + 1 + x2_m)
+f04 <- as.formula(y ~ + 1 + x1_m + x2_m)
+f05 <- as.formula(y ~ + 1 + x1_m + x2_m + x3)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- lm(f01, data = data_model)
+m02 <- lm(f02, data = data_model)
+m03 <- lm(f03, data = data_model)
+m04 <- lm(f04, data = data_model)
+m05 <- lm(f05, data = data_model)
+
+#--------------------------------------
+# comparar modelos de forma sintética
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03, m04, m05),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+```
+
+## Comparar modelos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# comparar modelos
+#----------------------------------------------------------
+
+#--------------------------------------
+# anova: model building
+#--------------------------------------
+
+anova(m04, m05)
+
+```
+
+
+# Ejemplo 1: interaccion entre variables dicotómicas
+
+
+Para ilustrar una interacción, vamos a emplear datos de Abrevaya (2006). Estos son una serie de registros del peso al nacer de los hijos de diferentes madres. La motivación del estudio, es evaluar el efecto que posee el fumar en el peso de los nacidos. Este ejemplo se encuentra discutido con mayor profundidad en Rabe-Hesketh & Skrondal (2012), y consiste en un 10% de los datos originales (n = 3978 madres). 
+
+La interpretación de los coeno cambia tanto. En el caso de la regresión múltiple, nos sigue interesando los valores esperados de y_i, condicionales a los valores de x_i y otras covariables.
+
+Primero vamos a evaluar la interacción de dos variables dicotómicas.
+
+
+## Abrir datos
+
+```{r , echo=TRUE, warning=FALSE}
+
+
+#----------------------------------------------------------
+# abrir datos
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# abrir datos desde github
+# -----------------------------------------------
+
+data_smoke <- haven::read_dta(
+url('https://github.com/dacarras/psi4035_examples/raw/master/data/smoking.dta')
+)
+
+# Nota: el formato original de los datos, esta en STATA.
+#       empleamos haven::read_dta() para abrir datos en este formato.
+
+# -----------------------------------------------
+# inspeccionar datos
+# -----------------------------------------------
+
+data_smoke %>%
+labelled::look_for() %>%
+labelled::lookfor_to_long_format() %>%
+tibble::as_tibble() %>%
+knitr::kable()
+
+
+```
+
+## Preparar datos
+
+Seleccionamos los datos del primer hijo, de modo que tengamos datos independientes. En caso contrario, tendríamos datos de más de un nacido de una misma madres, y estaríamos violando el supuesto de independencia de las observaciones.
+
+Vamos a emplear solo tres medidas: el peso al nacer, si la madre fuma (0 = no fuma; 1 = si fuma), y si ha faltado a los controles pre natales (1 = sin visita, 0 = con visitas).
+
+El peso de los recién nacidos esta en gramos, así que lo convertiremos a kilos, de modo que sea más fácil de interpretar (i.e. leer los estimados en Kg.).
+
+Luego ajustamos los modelos de regresión en pasos. Primero solo la covariable de interés (smoke). Luego, el posible moderador (novisit), y finalmente un modelo con ambos predictores y su interacción.
+
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# preparar datos
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# variables de interes
+# -----------------------------------------------
+
+# momid   = indicador único de la madre
+# idx     = orden de los nacidos para cada madre
+# birwt   = peso al nacer en gramos
+# smoke   = madre es fumadora (sí = 1; no = 0)
+# novisit = no asiste al control prenatal (no = 1; sí = 0)
+
+
+# -----------------------------------------------
+# funcion para remover meta data
+# -----------------------------------------------
+
+remove_labels <- function (x) {
+    data <- dplyr::mutate(x, across(everything(), as.vector))
+    return(data)
+}
+
+# -----------------------------------------------
+# preparar datos
+# -----------------------------------------------
+
+data_first <- data_smoke %>%
+              # seleccionamos datos solo del primer hijo
+              dplyr::filter(idx == 1) %>%
+              # transformamos el peso a kilogramos
+              mutate(kg = birwt/1000) %>%
+              # seleccionamos solo los datos que vamos a emplear
+              dplyr::select(momid, idx, kg, smoke, novisit) %>%
+              remove_labels() %>%
+              as.data.frame()
+
+
+# -----------------------------------------------
+# mostrar datos de 20 casos
+# -----------------------------------------------
+
+data_first %>%
+dplyr::sample_n(20) %>%
+tibble::as_tibble() %>%
+knitr::kable()
+
+
+```
+
+
+## Ajustar models
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# model comparison
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# equation
+# -----------------------------------------------
+
+f00 <- as.formula('kg ~ 1')
+f01 <- as.formula('kg ~ 1 + smoke')
+f02 <- as.formula('kg ~ 1 + novisit')
+f03 <- as.formula('kg ~ 1 + smoke + novisit')
+f04 <- as.formula('kg ~ 1 + novisit*smoke')
+
+# -----------------------------------------------
+# regressions
+# -----------------------------------------------
+
+m00 <- lm(f00, data = data_first)
+m01 <- lm(f01, data = data_first)
+m02 <- lm(f02, data = data_first)
+m03 <- lm(f03, data = data_first)
+m04 <- lm(f04, data = data_first)
+
+#--------------------------------------
+# compare models
+#--------------------------------------
+
+texreg::screenreg(
+    list(m00, m01, m02, m03, m04),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+```
+
+Nuestra variable dependiente es el peso del primer nacido de cada mujer que participa en el estudio, en kilogramos.
+
+En promedio, los recién nacidos presentan 3.44 kg al nacer (ver Model 1).
+
+Entre los nacidos de madres fumadoras, se observa una diferencia de .29 kg, en contraste a los nacidos de madres no fumadoras (b = -0.29, SE = .02, p <.001), factor que explica hasta un 4% de la varianza del peso de los nacidos.
+
+Adicionalmente, en el modelo 3, se observa que los nacidos de madres que no asisten a control pre-natal (novisit), también presentan una diferencia negativa en peso al nacer de .23 kg, en contraste a los nacidos de madres que sí asisten a los controles prenatales (b = -0.23, SE = .09, p <.05), 
+
+Finalmente, en el modelo 4, observamos un efecto de interacción. Los hijos de madres fumadoras, que no asisten a los controles natales presentan mayores diferencias en peso, en contraste al resto hijo de madres fumadoras (b = -0.48, SE = .18, p <.01). Este último modelo, explica hasta un 4% de la varianza del peso de los recién nacidos (R2 = .04, F(3,3874) = 57.90, p <.001).
+
+
+## Interacciones
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# model comparison
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# ANOVA para comparar modelos
+# -----------------------------------------------
+
+anova(m03, m04)
+
+# -----------------------------------------------
+# ANOVA para interaccion, por termino
+# -----------------------------------------------
+
+survey::regTermTest(m04,c('smoke:novisit'))
+
+
+# -----------------------------------------------
+# ANOVA para interaccion, por termino otros ejemplos
+# -----------------------------------------------
+
+survey::regTermTest(m04,c('novisit','smoke'))
+
+survey::regTermTest(m04,c('novisit'))
+
+survey::regTermTest(m04,c('smoke'))
+
+survey::regTermTest(m04,c('smoke:novisit'))
+
+
+# -----------------------------------------------
+# summary traditional
+# -----------------------------------------------
+
+summary(m04)
+
+# -----------------------------------------------
+# summary with broom
+# -----------------------------------------------
+
+broom::glance(m03) %>%
+knitr::kable(., digits = 2)
+
+broom::glance(m04) %>%
+knitr::kable(., digits = 2)
+
+
+#----------------------------------------------------------
+# variantes del codigo
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# codigo 1: empleando a ":"
+# -----------------------------------------------
+
+
+interaction_model <- lm(kg ~ smoke + novisit + novisit:smoke, 
+    data = data_first)
+
+summary(interaction_model)
+
+# -----------------------------------------------
+# codigo 2: empleando a "*"
+# -----------------------------------------------
+
+interaction_model <- lm(kg ~ smoke + novisit + novisit*smoke, 
+    data = data_first)
+
+summary(interaction_model)
+
+# -----------------------------------------------
+# codigo 3: empleando el producto de ambas variables
+# -----------------------------------------------
+
+library(dplyr)
+data_first <- data_first %>%
+              mutate(int = smoke*novisit)
+              
+
+data_first %>%
+dplyr::select(smoke, novisit, int) %>%
+unique() %>%
+knitr::kable()
+
+
+interaction_model <- lm(kg ~ smoke + novisit + int, 
+    data = data_first)
+
+summary(interaction_model)
+
+```
+
+## Visualización
+
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# visualización
+#----------------------------------------------------------
+
+# -----------------------------------------------
+# fit model
+# -----------------------------------------------
+
+interaction_model <- lm(kg ~ smoke + novisit + novisit:smoke, 
+    data = data_first)
+
+# -----------------------------------------------
+# summary
+# -----------------------------------------------
+
+summary(interaction_model)
+
+# -----------------------------------------------
+# simple slope
+# -----------------------------------------------
+
+interactions::probe_interaction(
+    interaction_model, 
+    pred = smoke, 
+    modx = novisit
+    )
+
+# -----------------------------------------------
+# johnson neyman plot
+# -----------------------------------------------
+
+interactions::johnson_neyman(
+    interaction_model, 
+    pred = smoke, 
+    modx = novisit
+    )
+
+```
+
+## Datos Perdidos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# preparar datos
+#----------------------------------------------------------
+
+library(VIM)
+data_first %>%
+dplyr::select(smoke, novisit, kg) %>%
+VIM::aggr(., 
+  combine=TRUE, 
+  cex.lab=.8, 
+  cex.axis=.6,
+  col = c("white", "black"),
+  ylabs="Pattern of omissions"
+  )
+
+
+```
+
