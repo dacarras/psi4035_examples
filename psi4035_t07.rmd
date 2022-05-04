@@ -100,6 +100,15 @@ person  score   sex    diag
 
 knitr::kable(table_11_1, digits = 3)
 
+```
+
+## Descriptivos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# descriptivos
+#----------------------------------------------------------
 
 #--------------------------------------
 # casos por factor
@@ -148,33 +157,16 @@ summarize(
 knitr::kable(., digits = 2)
 
 
-#--------------------------------------
-# datos Vik (2014, p121)
-#--------------------------------------
+```
 
-table_10_2 <- table_9_2 %>%
-              mutate(group = 1) %>%
-              mutate(x1_g = c_mean(x1, group)) %>%
-              mutate(x2_g = c_mean(x2, group)) %>%
-              mutate(x1_m = x1 - x1_g) %>%
-              mutate(x2_m = x2 - x2_g) %>%
-              mutate(x3   = x1_m * x2_m) %>%
-              mutate(int  = x1_m * x2_m) %>%
-              dplyr::glimpse()
-              
+# ANOVA enfoque tradicional
 
-#--------------------------------------
-# mostrar datos
-#--------------------------------------
+```{r , echo=TRUE, warning=FALSE}
 
-knitr::kable(table_10_2, digits = 3)
+#----------------------------------------------------------
+# ANOVA
+#----------------------------------------------------------
 
-
-#--------------------------------------
-# anova two factors
-#--------------------------------------
-
-rstatix::anova_test(score ~ sex + diag + sex*diag, data = table_11_1)
 
 #--------------------------------------
 # anova two factors
@@ -192,7 +184,22 @@ anova()
 
 
 #--------------------------------------
-# boxplot
+# anova two factors
+#--------------------------------------
+
+rstatix::anova_test(score ~ sex + diag + sex*diag, data = table_11_1)
+
+#--------------------------------------
+# boxplot (score by diag)
+#--------------------------------------
+
+ggpubr::ggboxplot(
+  table_11_1, x = "diag", y = "score",
+  color = "sex", palette = "jco"
+  )
+
+#--------------------------------------
+# boxplot (score by sex)
 #--------------------------------------
 
 ggpubr::ggboxplot(
@@ -204,21 +211,13 @@ ggpubr::ggboxplot(
 ```
 
 
-## ANOVA via regresión
+# ANOVA via regresión
 
 ```{r , echo=TRUE, warning=FALSE}
 
 #----------------------------------------------------------
-# cargar datos
+# ANOVA via regresión
 #----------------------------------------------------------
-
-#--------------------------------------
-# funcion para crear medias por grupos
-#--------------------------------------
-
-c_mean <- function(x,j){
-ave(x,j,FUN=function(x) mean(x, na.rm=T))
-}
 
 #--------------------------------------
 # preparar datos
@@ -236,6 +235,10 @@ data_model <- table_11_1 %>%
               mutate(int = sex_dev*diag_dev) %>%
               dplyr::glimpse()
 
+#--------------------------------------
+# mostrar datos
+#--------------------------------------
+
 knitr::kable(data_model)
 
 #--------------------------------------
@@ -243,10 +246,9 @@ knitr::kable(data_model)
 #--------------------------------------
 
 f01 <- as.formula(score ~ + 1 + sex_dev + diag_dev + int)
-f02 <- as.formula(score ~ + 1 + diag_dev + int)
-f03 <- as.formula(y ~ + 1 + diag_dev)
-f04 <- as.formula(y ~ + 1 + x1_m + x2_m)
-f05 <- as.formula(y ~ + 1 + x1_m + x2_m + x3)
+f02 <- as.formula(score ~ + 1 + diag_dev + int)       # sin sexo
+f03 <- as.formula(score ~ + 1 + sex_dev + int)        # sin diagnostico
+f04 <- as.formula(score ~ + 1 + sex_dev + diag_dev)   # sin interaccion
 
 #--------------------------------------
 # ajustar modelos
@@ -256,14 +258,14 @@ m01 <- lm(f01, data = data_model)
 m02 <- lm(f02, data = data_model)
 m03 <- lm(f03, data = data_model)
 m04 <- lm(f04, data = data_model)
-m05 <- lm(f05, data = data_model)
+
 
 #--------------------------------------
-# comparar modelos de forma sintética
+# tabla de modelos
 #--------------------------------------
 
 texreg::screenreg(
-    list(m01, m02),
+    list(m01, m02, m03, m04),
     star.symbol = "*", 
     center = TRUE, 
     doctype = FALSE,
@@ -271,14 +273,6 @@ texreg::screenreg(
     booktabs = TRUE,
     single.row = FALSE
     )
-
-#--------------------------------------
-# test por termino
-#--------------------------------------
-
-summary(m01)
-
-anova(m01)
 
 #--------------------------------------
 # test por termino
@@ -286,24 +280,31 @@ anova(m01)
 
 survey::regTermTest(m01,c('sex_dev'))
 
-
 survey::regTermTest(m01,c('diag_dev'))
 
 survey::regTermTest(m01,c('int'))
 
 #--------------------------------------
-# tabla de modelos
+# output tradicional
 #--------------------------------------
 
-texreg::screenreg(
-    list(m01, m02, m03, m04, m05),
-    star.symbol = "*", 
-    center = TRUE, 
-    doctype = FALSE,
-    dcolumn = TRUE, 
-    booktabs = TRUE,
-    single.row = FALSE
-    )
+summary(m01)
+
+#--------------------------------------
+# output como anova
+#--------------------------------------
+
+anova(m01)
+
+#--------------------------------------
+# expected means
+#--------------------------------------
+
+emmeans::emmeans(m01, 
+    specs = pairwise ~ sex_dev:diag_dev, 
+    type = "response", 
+    adjust = "bonferroni")
+
 
 
 ```
@@ -317,10 +318,22 @@ texreg::screenreg(
 #----------------------------------------------------------
 
 #--------------------------------------
-# anova: model building
+# anova: model trimming (sexo)
 #--------------------------------------
 
-anova(m04, m05)
+anova(m01, m02)
+
+#--------------------------------------
+# anova: model trimming (diag)
+#--------------------------------------
+
+anova(m01, m03)
+
+#--------------------------------------
+# anova: model trimming (int)
+#--------------------------------------
+
+anova(m01, m04)
 
 ```
 
@@ -378,6 +391,8 @@ El peso de los recién nacidos esta en gramos, así que lo convertiremos a kilos
 
 Luego ajustamos los modelos de regresión en pasos. Primero solo la covariable de interés (smoke). Luego, el posible moderador (novisit), y finalmente un modelo con ambos predictores y su interacción.
 
+Cambiamos las variables dicotomicas, a variables de contratse:
+
 
 ```{r , echo=TRUE, warning=FALSE}
 
@@ -416,6 +431,15 @@ data_first <- data_smoke %>%
               mutate(kg = birwt/1000) %>%
               # seleccionamos solo los datos que vamos a emplear
               dplyr::select(momid, idx, kg, smoke, novisit) %>%
+              mutate(smoke_d = case_when(
+                smoke == 1 ~  1, # si fuma
+                smoke == 0 ~ -1  # no fuma 
+                )) %>%
+              mutate(visit_d = case_when(
+                novisit == 1 ~ -1, # no visita 
+                novisit == 0 ~  1  # visita
+                )) %>%
+              mutate(int = smoke_d*visit_d) %>%
               remove_labels() %>%
               as.data.frame()
 
@@ -452,27 +476,27 @@ knitr::kable()
 # -----------------------------------------------
 
 f00 <- as.formula('kg ~ 1')
-f01 <- as.formula('kg ~ 1 + smoke')
-f02 <- as.formula('kg ~ 1 + novisit')
-f03 <- as.formula('kg ~ 1 + smoke + novisit')
-f04 <- as.formula('kg ~ 1 + novisit*smoke')
+f01 <- as.formula('kg ~ 1 + smoke_d')
+f02 <- as.formula('kg ~ 1 + visit_d')
+f03 <- as.formula('kg ~ 1 + smoke_d + visit_d')
+f04 <- as.formula('kg ~ 1 + smoke_d*visit_d')
 
 # -----------------------------------------------
 # regressions
 # -----------------------------------------------
 
-m00 <- lm(f00, data = data_first)
-m01 <- lm(f01, data = data_first)
-m02 <- lm(f02, data = data_first)
-m03 <- lm(f03, data = data_first)
-m04 <- lm(f04, data = data_first)
+s00 <- lm(f00, data = data_first)
+s01 <- lm(f01, data = data_first)
+s02 <- lm(f02, data = data_first)
+s03 <- lm(f03, data = data_first)
+s04 <- lm(f04, data = data_first)
 
 #--------------------------------------
 # compare models
 #--------------------------------------
 
 texreg::screenreg(
-    list(m00, m01, m02, m03, m04),
+    list(s00, s01, s02, s03, s04),
     star.symbol = "*", 
     center = TRUE, 
     doctype = FALSE,
@@ -500,53 +524,6 @@ Finalmente, en el modelo 4, observamos un efecto de interacción. Los hijos de m
 ```{r , echo=TRUE, warning=FALSE}
 
 #----------------------------------------------------------
-# model comparison
-#----------------------------------------------------------
-
-# -----------------------------------------------
-# ANOVA para comparar modelos
-# -----------------------------------------------
-
-anova(m03, m04)
-
-# -----------------------------------------------
-# ANOVA para interaccion, por termino
-# -----------------------------------------------
-
-survey::regTermTest(m04,c('smoke:novisit'))
-
-
-# -----------------------------------------------
-# ANOVA para interaccion, por termino otros ejemplos
-# -----------------------------------------------
-
-survey::regTermTest(m04,c('novisit','smoke'))
-
-survey::regTermTest(m04,c('novisit'))
-
-survey::regTermTest(m04,c('smoke'))
-
-survey::regTermTest(m04,c('smoke:novisit'))
-
-
-# -----------------------------------------------
-# summary traditional
-# -----------------------------------------------
-
-summary(m04)
-
-# -----------------------------------------------
-# summary with broom
-# -----------------------------------------------
-
-broom::glance(m03) %>%
-knitr::kable(., digits = 2)
-
-broom::glance(m04) %>%
-knitr::kable(., digits = 2)
-
-
-#----------------------------------------------------------
 # variantes del codigo
 #----------------------------------------------------------
 
@@ -555,7 +532,7 @@ knitr::kable(., digits = 2)
 # -----------------------------------------------
 
 
-interaction_model <- lm(kg ~ smoke + novisit + novisit:smoke, 
+interaction_model <- lm(kg ~ smoke_d + visit_d + visit_d:smoke_d, 
     data = data_first)
 
 summary(interaction_model)
@@ -564,27 +541,15 @@ summary(interaction_model)
 # codigo 2: empleando a "*"
 # -----------------------------------------------
 
-interaction_model <- lm(kg ~ smoke + novisit + novisit*smoke, 
+interaction_model <- lm(kg ~ smoke_d + visit_d + visit_d*smoke_d, 
     data = data_first)
 
 summary(interaction_model)
-
 # -----------------------------------------------
 # codigo 3: empleando el producto de ambas variables
 # -----------------------------------------------
 
-library(dplyr)
-data_first <- data_first %>%
-              mutate(int = smoke*novisit)
-              
-
-data_first %>%
-dplyr::select(smoke, novisit, int) %>%
-unique() %>%
-knitr::kable()
-
-
-interaction_model <- lm(kg ~ smoke + novisit + int, 
+interaction_model <- lm(kg ~ smoke_d + visit_d + int, 
     data = data_first)
 
 summary(interaction_model)
@@ -592,7 +557,6 @@ summary(interaction_model)
 ```
 
 ## Visualización
-
 
 ```{r , echo=TRUE, warning=FALSE}
 
@@ -604,7 +568,7 @@ summary(interaction_model)
 # fit model
 # -----------------------------------------------
 
-interaction_model <- lm(kg ~ smoke + novisit + novisit:smoke, 
+interaction_model <- lm(kg ~ smoke_d + visit_d + visit_d*smoke_d, 
     data = data_first)
 
 # -----------------------------------------------
@@ -619,8 +583,8 @@ summary(interaction_model)
 
 interactions::probe_interaction(
     interaction_model, 
-    pred = smoke, 
-    modx = novisit
+    pred = smoke_d, 
+    modx = visit_d
     )
 
 
@@ -630,8 +594,8 @@ interactions::probe_interaction(
 
 interactions::probe_interaction(
     interaction_model, 
-    pred = novisit, 
-    modx = smoke
+    pred = visit_d, 
+    modx = smoke_d
     )
 
 
@@ -641,31 +605,9 @@ interactions::probe_interaction(
 
 interactions::johnson_neyman(
     interaction_model, 
-    pred = smoke, 
-    modx = novisit
+    pred = smoke_d, 
+    modx = visit_d
     )
-
-```
-
-## Datos Perdidos
-
-```{r , echo=TRUE, warning=FALSE}
-
-#----------------------------------------------------------
-# preparar datos
-#----------------------------------------------------------
-
-library(VIM)
-data_first %>%
-dplyr::select(smoke, novisit, kg) %>%
-VIM::aggr(., 
-  combine=TRUE, 
-  cex.lab=.8, 
-  cex.axis=.6,
-  col = c("white", "black"),
-  ylabs="Pattern of omissions"
-  )
-
 
 ```
 
