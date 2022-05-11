@@ -1,0 +1,223 @@
+---
+title: 'ANOVA'
+subtitle: 'simulations'
+author: 'dacarras'
+date: '`r format(Sys.time(), "%a %b %d, %Y")`'
+output:
+  html_document:
+    theme: paper
+    highlight: kate
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    fig_width: 10 
+    fig_height: 8 
+---
+
+<style>
+  .main-container {
+    max-width: 1600px !important;
+  }
+  .list-group-item.active, 
+  .list-group-item.active:focus, 
+  .list-group-item.active:hover {
+    background-color: #373334;
+  }
+</style>
+
+
+# Simulations
+
+## ANOVA null difference
+
+```{r, echo=TRUE}
+
+#------------------------------------------------------------------------------
+# comparing simulation
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# null separation
+#----------------------------------------------------------
+
+set.seed(321)
+library(dplyr)
+library(simglm)
+
+sim_arguments <- list(
+  formula = y ~ 1 + group,
+  fixed = list(
+               group = list(var_type = 'factor', levels = c('group_1', 'group_2','group_3'))),
+  error = list(variance = 10),
+  sample_size = 90,
+  reg_weights = c(50,.05,-.05)
+)
+
+data_005 <- simulate_fixed(data = NULL, sim_arguments) %>%
+simulate_error(sim_arguments) %>%
+generate_response(sim_arguments) %>%
+dplyr::select(y, group_1, group_2, group)
+
+library(tidyverse)
+library(ggplot2)
+library(ggridges)
+library(scales)
+
+ggplot(data_005, aes(x = y, y = group, fill = group, height = ..density..)) +
+  geom_density_ridges(rel_min_height = 0.005) +
+  scale_fill_manual(values = c("black", "grey30",'grey50'), guide = FALSE) + 
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank()
+    )
+
+aov(y ~ 1 + as.factor(group), data = data_005) %>%
+summary()
+
+lm(y ~ 1 + as.factor(group), data = data_005) %>%
+broom::glance()
+
+```
+
+## ANOVA separated by 5
+
+```{r, echo=TRUE}
+
+#------------------------------------------------------------------------------
+# comparing simulation
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# by 5
+#----------------------------------------------------------
+
+set.seed(321) 
+library(simglm)
+
+sim_arguments <- list(
+  formula = y ~ 1 + group,
+  fixed = list(
+               group = list(var_type = 'factor', levels = c('group_1', 'group_2','group_3'))),
+  error = list(variance = 10),
+  sample_size = 90,
+  reg_weights = c(50,5,-5)
+)
+
+data_010 <- simulate_fixed(data = NULL, sim_arguments) %>%
+simulate_error(sim_arguments) %>%
+generate_response(sim_arguments) %>%
+dplyr::select(y, group_1, group_2, group)
+
+library(tidyverse)
+library(ggridges)
+library(scales)
+
+ggplot(data_010, aes(x = y, y = group, fill = group, height = ..density..)) +
+  geom_density_ridges(rel_min_height = 0.005) +
+  scale_fill_manual(values = c("black", "grey30",'grey50'), guide = FALSE) + 
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+
+
+aov(y ~ 1 + as.factor(group), data = data_010) %>%
+summary()
+
+lm(y ~ 1 + as.factor(group), data = data_010) %>%
+broom::glance()
+
+
+
+```
+
+## ANOVA separated by 10
+
+```{r, echo=TRUE}
+
+#------------------------------------------------------------------------------
+# comparing simulation
+#------------------------------------------------------------------------------
+
+#----------------------------------------------------------
+# by 10
+#----------------------------------------------------------
+
+set.seed(321) 
+library(simglm)
+
+sim_arguments <- list(
+  formula = y ~ 1 + group,
+  fixed = list(
+               group = list(var_type = 'factor', levels = c('group_1', 'group_2','group_3'))),
+  error = list(variance = 10),
+  sample_size = 90,
+  reg_weights = c(50,10,-10)
+)
+
+data_100 <- simulate_fixed(data = NULL, sim_arguments) %>%
+simulate_error(sim_arguments) %>%
+generate_response(sim_arguments) %>%
+dplyr::select(y, group_1, group_2, group)
+
+library(tidyverse)
+library(ggridges)
+library(scales)
+
+ggplot(data_100, aes(x = y, y = group, fill = group, height = ..density..)) +
+  geom_density_ridges(rel_min_height = 0.005) +
+  scale_fill_manual(values = c("black", "grey30",'grey50'), guide = FALSE) + 
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+
+
+aov(y ~ 1 + as.factor(group), data = data_100) %>%
+summary()
+
+lm(y ~ 1 + as.factor(group), data = data_100) %>%
+broom::glance()
+
+
+```
+
+## ANOVA separated by 20
+
+```{r, echo=TRUE}
+
+#----------------------------------------------------------
+# by 20
+#----------------------------------------------------------
+
+set.seed(321) 
+library(simglm)
+
+sim_arguments <- list(
+  formula = y ~ 1 + group,
+  fixed = list(
+               group = list(var_type = 'factor', levels = c('group_3', 'group_1','group_2'))),
+  error = list(variance = 10),
+  sample_size = 90,
+  reg_weights = c(50,20,-20)
+)
+
+data_200 <- simulate_fixed(data = NULL, sim_arguments) %>%
+simulate_error(sim_arguments) %>%
+generate_response(sim_arguments) %>%
+dplyr::select(y, group_1, group_2, group)
+
+library(tidyverse)
+library(ggridges)
+library(scales)
+
+ggplot(data_200, aes(x = y, y = group, fill = group, height = ..density..)) +
+  geom_density_ridges(rel_min_height = 0.005) +
+  scale_fill_manual(values = c("black", "grey20",'grey60'), guide = FALSE) + 
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())
+
+aov(y ~ 1 + as.factor(group), data = data_200) %>%
+summary()
+
+lm(y ~ 1 + as.factor(group), data = data_200) %>%
+broom::glance()
+
+```

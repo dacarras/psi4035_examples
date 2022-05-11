@@ -613,4 +613,3 @@ interactions::johnson_neyman(
     )
 
 ```
-
