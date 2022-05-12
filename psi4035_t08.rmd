@@ -18,7 +18,7 @@ output:
   .main-container {
     max-width: 1600px !important;
   }
-  .list-group-item.active, 
+  .list-group-item.active,  
   .list-group-item.active:focus, 
   .list-group-item.active:hover {
     background-color: #373334;
@@ -127,6 +127,7 @@ dplyr::count(table_13_1, drug)
 # descriptivos por uso de drogas
 #--------------------------------------
 
+library(dplyr)
 table_13_1 %>%
 group_by(drug) %>%
 summarize(
@@ -333,5 +334,15 @@ broom::glance(m01)
 broom::glance(m02)
 broom::glance(m03)
 broom::glance(m04)
+
+#--------------------------------------
+# wald test
+#--------------------------------------
+
+broom::tidy(m01)
+broom::tidy(m02)
+broom::tidy(m03)
+broom::tidy(m04)
+
 
 ```
