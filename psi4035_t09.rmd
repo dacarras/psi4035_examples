@@ -1,0 +1,355 @@
+---
+title: "ANOVA 2x3 (dos por 3)"
+subtitle: "PSI4035 Taller 09"
+author: "dacarras"
+output:
+  html_document:
+    theme: paper
+    highlight: kate
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    fig_width: 10 
+    fig_height: 10 
+---
+
+<style>
+  .main-container {
+    max-width: 1600px !important;
+  }
+  .list-group-item.active,  
+  .list-group-item.active:focus, 
+  .list-group-item.active:hover {
+    background-color: #373334;
+  }
+</style>
+
+
+```{r setup, include=FALSE}
+#--------------------------------------
+# setup
+#--------------------------------------
+
+# knitr option
+knitr::opts_chunk$set(dev = 'png')
+options(knitr.kable.NA = '')
+options(digits = 7)
+options(scipen = 999999)
+
+# remove all previous objects
+rm(list = ls())
+
+# fonts
+Sys.setenv(LANG="en_US.UTF-8")
+
+
+```
+
+# Taller 9: ANOVA (two way, 2x3)
+
+## Cargar datos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# cargar datos
+#----------------------------------------------------------
+
+#--------------------------------------
+# cargar dplyr
+#--------------------------------------
+
+library(dplyr)
+
+#--------------------------------------
+# datos Vik (2014, p161)
+#--------------------------------------
+
+table_15_1 <- read.table(text = "
+person  score    sex       drug
+      1     3    male      none
+      2     5    male      none
+      3     6    male      none
+      4     8    male      none
+      5     9    male      alcohol
+      6    11    male      alcohol
+      7    19    male      alcohol
+      8    15    male      alcohol
+      9    16    male      poly_drug
+     10    16    male      poly_drug
+     11    19    male      poly_drug
+     12    17    male      poly_drug
+     13     3    female    none
+     14     5    female    none
+     15     4    female    none
+     16     6    female    none
+     17     8    female    alcohol
+     18    10    female    alcohol
+     19    24    female    alcohol
+     20    24    female    alcohol
+     21    22    female    poly_drug
+     22    23    female    poly_drug
+     23    19    female    poly_drug
+     24    20    female    poly_drug
+", header = TRUE, stringsAsFactors = FALSE)
+
+#--------------------------------------
+# mostrar datos
+#--------------------------------------
+
+knitr::kable(table_15_1, digits = 3)
+
+```
+
+## Descriptivos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# descriptivos
+#----------------------------------------------------------
+
+#--------------------------------------
+# casos por grupo
+#--------------------------------------
+
+xtabs(~ drug + sex, data = table_15_1)
+
+
+#--------------------------------------
+# descriptivos por uso de drogas
+#--------------------------------------
+
+library(dplyr)
+table_15_1 %>%
+group_by(drug, sex) %>%
+summarize(
+    mean = mean(score, na.rm = TRUE),
+    sd = sd(score, na.rm = TRUE),
+    n = n()
+    ) %>%
+knitr::kable(., digits = 2)
+
+
+#--------------------------------------
+# medias con intervalo de confianza
+#--------------------------------------
+
+library(dplyr)
+library(srvyr)
+data_15_srs <- table_15_1 %>% 
+                as_survey_design(ids = 1)
+
+
+data_15_srs %>%
+group_by(drug, sex) %>%
+summarize(
+  score = survey_mean(score, vartype = c('ci', 'se'))
+) %>%
+knitr::kable(., digits = 2)
+
+#--------------------------------------
+# medias con intervalo de confianza
+#--------------------------------------
+
+data_plot <- data_15_srs %>%
+group_by(drug, sex) %>%
+summarize(
+  score = survey_mean(score, vartype = c('ci', 'se'))
+)
+
+
+library(ggplot2)
+data_plot %>%
+arrange(desc(score)) %>%
+mutate(sex_drug = paste0(sex, '_', drug)) %>%
+mutate(sex_drug_label = forcats::as_factor(sex_drug)) %>%
+ggplot(., aes(sex_drug_label, score)) +
+geom_point(size = 3) +
+geom_linerange(aes(ymin = score_low, ymax = score_upp), size = 2) +
+ylab('') +
+xlab('') +
+scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+coord_flip() +
+theme_bw() +
+  theme(
+    panel.background = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_text(angle = 0, hjust = 1)
+    )
+
+
+
+```
+
+# ANOVA enfoque tradicional
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# ANOVA
+#----------------------------------------------------------
+
+#--------------------------------------
+# anova two factors
+#--------------------------------------
+
+table_15_1 %>%
+aov(score ~ sex + drug + sex*drug, data = .) %>%
+summary()
+
+
+#--------------------------------------
+# least statistical difference
+#--------------------------------------
+
+
+aov(score ~ sex + drug + sex*drug, data = table_15_1) %>%
+agricolae::LSD.test(., trt = c('drug')) %>%
+print()
+
+
+#--------------------------------------
+# expected means
+#--------------------------------------
+
+emmeans::emmeans(aov(score ~ sex + drug + sex*drug, data = table_15_1), 
+    specs = pairwise ~ sex*drug, 
+    type = "response", 
+    adjust = "bonferroni"
+    )
+
+# adjustment methods
+#
+# tukey
+# scheffe
+# bonferroni
+# holm
+
+
+```
+
+
+# ANOVA via regresión
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# ANOVA via regresión
+#----------------------------------------------------------
+
+#--------------------------------------
+# preparar datos
+#--------------------------------------
+
+data_model <- table_15_1 %>%
+              mutate(drug_1 = case_when(
+                drug == 'none'      ~  1,
+                drug == 'alcohol'   ~  0,
+                drug == 'poly_drug' ~  0
+                )) %>%
+              mutate(drug_2 = case_when(
+                drug == 'none'      ~  0,
+                drug == 'alcohol'   ~  1,
+                drug == 'poly_drug' ~  0
+                )) %>%
+              mutate(drug_3 = case_when(
+                drug == 'none'      ~  0,
+                drug == 'alcohol'   ~  0,
+                drug == 'poly_drug' ~  1
+                )) %>%
+              # male is reference
+              mutate(sex_d = case_when(
+                sex == 'female'      ~  1,
+                sex == 'male'        ~  0
+                )) %>%
+              # intercept is mean group
+              mutate(sex_c = case_when(
+                sex == 'female'      ~   1,
+                sex == 'male'        ~  -1
+                )) %>%
+              dplyr::glimpse()
+
+#--------------------------------------
+# mostrar datos
+#--------------------------------------
+
+knitr::kable(data_model)
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(score  ~ + 1)
+f02 <- as.formula(score  ~ + 1 + drug_2 + drug_3 + sex_d)
+f03 <- as.formula(score  ~ + 1 + drug_2 + drug_3 + sex_d + sex_d*drug_2 + sex_d*drug_3)
+f04 <- as.formula(score  ~ + 1 + drug_2 + drug_3 + sex_c)
+f05 <- as.formula(score  ~ + 1 + drug_2 + drug_3 + sex_c + sex_c*drug_2 + sex_c*drug_3)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- lm(f01, data = data_model)
+m02 <- lm(f02, data = data_model)
+m03 <- lm(f03, data = data_model)
+m04 <- lm(f04, data = data_model)
+m05 <- lm(f05, data = data_model)
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03, m04, m05),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+#--------------------------------------
+# sum of squares
+#--------------------------------------
+
+anova(m02, m03)
+anova(m04, m05)
+
+
+#--------------------------------------
+# medias con intervalo de confianza
+#--------------------------------------
+
+data_plot <- data_15_srs %>%
+group_by(drug, sex) %>%
+summarize(
+  score = survey_mean(score, vartype = c('ci', 'se'))
+)
+
+
+library(ggplot2)
+data_plot %>%
+arrange(desc(score)) %>%
+mutate(sex_drug = paste0(sex, '_', drug)) %>%
+mutate(sex_drug_label = forcats::as_factor(sex_drug)) %>%
+ggplot(., aes(sex_drug_label, score)) +
+geom_point(size = 3) +
+geom_linerange(aes(ymin = score_low, ymax = score_upp), size = 2) +
+ylab('') +
+xlab('') +
+scale_y_continuous(breaks = seq(0, 20, by = 2)) +
+coord_flip() +
+theme_bw() +
+  theme(
+    panel.background = element_blank(),
+    panel.border = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_text(angle = 0, hjust = 1)
+    )
+
+```
