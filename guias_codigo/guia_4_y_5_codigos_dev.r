@@ -11,6 +11,13 @@ data_salary <- read.csv('faculty.csv')
 dplyr::glimpse(data_salary)
 
 #----------------------------------------------------------
+# descriptives
+#----------------------------------------------------------
+
+r4sda::get_desc(data_salary) %>%
+knitr::kable(., digits = 2)
+
+#----------------------------------------------------------
 # preparar datos
 #----------------------------------------------------------
 
@@ -100,3 +107,26 @@ texreg::screenreg(
     single.row = FALSE
     )
 
+
+#----------------------------------------------------------
+# mostrar estimados
+#----------------------------------------------------------
+
+texreg::screenreg(
+    list(m08, m09),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+#----------------------------------------------------------
+# comparacion modelos
+#----------------------------------------------------------
+
+anova(m03, m04)
+anova(m06, m07)
+anova(m08, m09)
