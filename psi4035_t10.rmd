@@ -119,13 +119,15 @@ c_mean <- function (x, j) {
 }
 
 
+mean(table_17_2$age, na.rm = TRUE)
+
 #--------------------------------------
 # computes
 #--------------------------------------
 
 data_model <- table_17_2 %>%
               mutate(id_k = 1) %>%
-              mutate(age_m = age - c_mean(age, id_k)) %>%  # centering to the grand mean
+              mutate(age_m = age - c_mean(age, id_k)) %>%
               mutate(sex_f = as.factor(sex)) %>%
               mutate(male_d = case_when(
                 sex == 'm' ~   1,
@@ -143,8 +145,10 @@ data_model <- table_17_2 %>%
                 sex == 'm' ~  0,
                 sex == 'f' ~  1
               )) %>%
-              mutate(pseudo = score - -2.56*age_m) %>%
+              mutate(pseudo1 = score - -2.56*age_m) %>%
+              mutate(pseudo2 = score - -2.79*age_m) %>%
               dplyr::glimpse()
+
 
 ```
 
@@ -160,18 +164,35 @@ data_model <- table_17_2 %>%
 # ajustar modelos
 #--------------------------------------
 
-
+# modelo nulo, y los modelo de efecto principal
 f00 <- as.formula(score  ~ + 1)
-f01 <- as.formula(score  ~ + 1 + male_d)
+f01 <- as.formula(score  ~ + 1 + age_m)
+f02 <- as.formula(score  ~ + 1 + male_d)
+f03 <- as.formula(score  ~ + 1 + age_m + male_d)
+
+# modelo con los pseudo residuales
+f04a <- as.formula(pseudo1 ~ + 1 + male_d)
+f04b <- as.formula(pseudo2 ~ + 1 + male_d) # modelo correcto
+
+# modelos con todas las formas de dummy de sexo
 f02 <- as.formula(score  ~ + 1 + age_m)
 f03 <- as.formula(score  ~ + 1 + age_m + male_d)
-f04 <- as.formula(pseudo ~ + 1 + male_d)
 f05 <- as.formula(score  ~ + 1 + age_m)
 f06 <- as.formula(score  ~ + 1 + age_m + female_d)
 f07 <- as.formula(score  ~ + 1 + age_m)
 f08 <- as.formula(score  ~ + 1 + age_m + male)
 f09 <- as.formula(score  ~ + 1 + age_m)
 f10 <- as.formula(score  ~ + 1 + age_m + female)
+
+#--------------------------------------
+# idea detras del modelo de ANCOVA
+#--------------------------------------
+
+# Modelo de dos factores
+
+# y = alpha + beta*sexo + gamma+edad + epsilon
+
+# y - gamma+edad = alpha + beta*sexo + epsilon
 
 #--------------------------------------
 # ajustar modelos
@@ -181,7 +202,8 @@ m00 <- lm(f00, data = data_model)
 m01 <- lm(f01, data = data_model)
 m02 <- lm(f02, data = data_model)
 m03 <- lm(f03, data = data_model)
-m04 <- lm(f04, data = data_model)
+m04a <- lm(f04a, data = data_model)
+m04b <- lm(f04b, data = data_model)
 m05 <- lm(f05, data = data_model)
 m06 <- lm(f06, data = data_model)
 m07 <- lm(f07, data = data_model)
@@ -190,11 +212,11 @@ m09 <- lm(f09, data = data_model)
 m10 <- lm(f10, data = data_model)
 
 #--------------------------------------
-# tabla de modelos
+# modelos iniciales
 #--------------------------------------
 
 texreg::screenreg(
-    list(m01, m02, m03, m04, m05, m06, m07, m08, m09, m10),
+    list(m00, m01, m02, m03),
     star.symbol = "*", 
     center = TRUE, 
     doctype = FALSE,
@@ -202,6 +224,118 @@ texreg::screenreg(
     booktabs = TRUE,
     single.row = FALSE
     )
+
+# Nota: secuencia de modelos selecionada,
+#       para reproducir los resultados de Vik.
+
+
+#--------------------------------------
+# plot
+#--------------------------------------
+
+plot(
+  y = data_model$score,
+  x = data_model$age_m
+  )
+
+#--------------------------------------
+# modelos para ilustrar que hace ANCOVA
+#--------------------------------------
+
+texreg::screenreg(
+    list(
+      m03,  # modelo reportado por Vik
+      m04a, # modelo con pseudo residuales (m01)
+      m04b  # modelo con pseudo residuales (m03)
+      ),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+# Modelo de dos factores
+
+# modelo en objeto m02
+# y = alpha + beta*sexo + gamma+edad + epsilon
+
+# modelo en objeto m04b
+# y - gamma+edad = alpha + beta*sexo + epsilon
+
+#--------------------------------------
+# modelo donde beta es similar
+#--------------------------------------
+
+texreg::screenreg(
+    list(m03, m04b),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+# Nota: secuencia de modelos para ilustrar
+#       que hace ANCOVA, donde beta representa
+#       una interpretación similar
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m02, m03, m04a, m04b, m05, m06, m07, m08, m09, m10),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+# Nota: secuencia de modelos empleada para
+#       identificar qué modelo ocupo Vik.
+
+#--------------------------------------
+# tabla de modelos con todos los pasos
+#--------------------------------------
+
+texreg::screenreg(
+    list(
+m00, # modelo nulo
+m01, # edad
+m02, # sexo
+m03  # edad y sexo
+      ),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+#--------------------------------------
+# tabla de modelos con los modelos criticos
+#--------------------------------------
+
+texreg::screenreg(
+    list(
+m02, # edad
+m03  # edad y sexo
+      ),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
 
 
 ```
@@ -324,3 +458,42 @@ rstatix::emmeans_test(
 
 
 ```
+
+
+## Forma de argumento
+
+- Estrategia 1 (hipotesis por coeficiente adicional)
+
+```
+y = alpha + beta*var_1 + gamma+var_2 + epsilon
+
+y = alpha + beta*var_1 + epsilon  # hipotesis 1
+
+y = alpha + gamma*var_2 + epsilon # hipotesis 2
+
+y = alpha + beta*var_1 + gamma*var_2 + epsilon # hipotesis 3
+
+```
+
+- Estrategia 2 (hipotesis con covariable)
+
+```
+y = alpha + beta*var_1 + gamma+var_2 + epsilon
+
+y = alpha + beta*var_1 + epsilon  # covariable
+
+y = alpha + beta*var_1 + gamma*var_2 + epsilon # hipotesis 1
+
+
+
+```
+
+>Nota: el modelo con todos los factores (modelo saturado), es estructuramente similar (misma cantidad de estimados). Sin embargo, la forma de construir el argumento con los resultados difiere entre ambas estrategias
+
+
+
+
+
+
+
+
