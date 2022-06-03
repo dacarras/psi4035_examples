@@ -3801,39 +3801,65 @@ div.tocify {
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>code_3 <span class="ot">&lt;-</span> <span class="st">&#39;</span></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t1</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t2</span></span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t3</span></span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  0*t1</span></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  1*t2</span></span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  2*t3</span></span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 0*t1</span></span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 1*t2</span></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 4*t3</span></span>
-<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="st">s~~0*q</span></span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="st">s~~0*s</span></span>
-<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a><span class="st">q~~0*q</span></span>
-<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="st">t1~~(a)*t1</span></span>
-<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a><span class="st">t2~~(a)*t2</span></span>
-<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="st">t3~~(a)*t3</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="st"># baseline</span></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t1</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t2</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="st">i =~ 1*t3</span></span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="st"># time slope linear</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  0*t1</span></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  1*t2</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="st">s =~  2*t3</span></span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="st"># time slope quadratic</span></span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 0*t1</span></span>
+<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 1*t2</span></span>
+<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a><span class="st">q =~ 4*t3</span></span>
+<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a><span class="st"># mean effects</span></span>
+<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a><span class="st">i~(b0)*1</span></span>
+<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a><span class="st">s~(b1)*1</span></span>
+<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a><span class="st">q~(b2)*1</span></span>
 <span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
-<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>model_3 <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">sem</span>(code_3, <span class="at">data =</span> data_wide, <span class="at">mimic=</span><span class="st">&quot;Mplus&quot;</span>, <span class="at">estimator =</span> <span class="st">&quot;MLR&quot;</span>)</span>
-<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_3)</span></code></pre></div>
-<pre><code>## lavaan 0.6-11 ended normally after 46 iterations
+<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a><span class="st"># mean structure</span></span>
+<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a><span class="st">t1~0*1</span></span>
+<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a><span class="st">t2~0*1</span></span>
+<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a><span class="st">t3~0*1</span></span>
+<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a><span class="st"># covariance structure</span></span>
+<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a><span class="st">s~~0*q</span></span>
+<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a><span class="st">s~~0*i</span></span>
+<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a><span class="st">q~~0*i</span></span>
+<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a><span class="st">s~~0*s</span></span>
+<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a><span class="st">q~~0*q</span></span>
+<span id="cb20-42"><a href="#cb20-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-43"><a href="#cb20-43" aria-hidden="true" tabindex="-1"></a><span class="st"># residual structure</span></span>
+<span id="cb20-44"><a href="#cb20-44" aria-hidden="true" tabindex="-1"></a><span class="st">t1~~(a)*t1</span></span>
+<span id="cb20-45"><a href="#cb20-45" aria-hidden="true" tabindex="-1"></a><span class="st">t2~~(a)*t2</span></span>
+<span id="cb20-46"><a href="#cb20-46" aria-hidden="true" tabindex="-1"></a><span class="st">t3~~(a)*t3</span></span>
+<span id="cb20-47"><a href="#cb20-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-48"><a href="#cb20-48" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;</span></span>
+<span id="cb20-49"><a href="#cb20-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-50"><a href="#cb20-50" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb20-51"><a href="#cb20-51" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
+<span id="cb20-52"><a href="#cb20-52" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb20-53"><a href="#cb20-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-54"><a href="#cb20-54" aria-hidden="true" tabindex="-1"></a>model_3 <span class="ot">&lt;-</span> lavaan<span class="sc">::</span><span class="fu">sem</span>(code_3, </span>
+<span id="cb20-55"><a href="#cb20-55" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> data_wide, </span>
+<span id="cb20-56"><a href="#cb20-56" aria-hidden="true" tabindex="-1"></a>            <span class="at">mimic=</span><span class="st">&quot;Mplus&quot;</span>, </span>
+<span id="cb20-57"><a href="#cb20-57" aria-hidden="true" tabindex="-1"></a>            <span class="at">meanstructure =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb20-58"><a href="#cb20-58" aria-hidden="true" tabindex="-1"></a>            <span class="at">estimator =</span> <span class="st">&quot;MLR&quot;</span>)</span>
+<span id="cb20-59"><a href="#cb20-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-60"><a href="#cb20-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-61"><a href="#cb20-61" aria-hidden="true" tabindex="-1"></a>lavaan<span class="sc">::</span><span class="fu">summary</span>(model_3, </span>
+<span id="cb20-62"><a href="#cb20-62" aria-hidden="true" tabindex="-1"></a>  <span class="at">fit.measures=</span><span class="cn">TRUE</span>, </span>
+<span id="cb20-63"><a href="#cb20-63" aria-hidden="true" tabindex="-1"></a>  <span class="at">rsquare=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## lavaan 0.6-11 ended normally after 36 iterations
 ## 
 ##   Estimator                                         ML
 ##   Optimization method                           NLMINB
-##   Number of model parameters                         9
+##   Number of model parameters                         7
 ##   Number of equality constraints                     2
 ##                                                       
 ##   Number of observations                            24
@@ -3841,11 +3867,54 @@ div.tocify {
 ##                                                       
 ## Model Test User Model:
 ##                                                Standard      Robust
-##   Test Statistic                                 47.792     162.220
-##   Degrees of freedom                                  2           2
+##   Test Statistic                                 51.717      90.712
+##   Degrees of freedom                                  4           4
 ##   P-value (Chi-square)                            0.000       0.000
-##   Scaling correction factor                                   0.295
+##   Scaling correction factor                                   0.570
 ##        Yuan-Bentler correction (Mplus variant)                     
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               103.409     133.903
+##   Degrees of freedom                                 3           3
+##   P-value                                        0.000       0.000
+##   Scaling correction factor                                  0.772
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    0.525       0.338
+##   Tucker-Lewis Index (TLI)                       0.644       0.503
+##                                                                   
+##   Robust Comparative Fit Index (CFI)                         0.511
+##   Robust Tucker-Lewis Index (TLI)                            0.633
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -201.946    -201.946
+##   Scaling correction factor                                  0.675
+##       for the MLR correction                                      
+##   Loglikelihood unrestricted model (H1)       -176.087    -176.087
+##   Scaling correction factor                                  0.779
+##       for the MLR correction                                      
+##                                                                   
+##   Akaike (AIC)                                 413.892     413.892
+##   Bayesian (BIC)                               419.782     419.782
+##   Sample-size adjusted Bayesian (BIC)          404.292     404.292
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.705       0.950
+##   90 Percent confidence interval - lower         0.541       0.736
+##   90 Percent confidence interval - upper         0.882       1.183
+##   P-value RMSEA &lt;= 0.05                          0.000       0.000
+##                                                                   
+##   Robust RMSEA                                               0.718
+##   90 Percent confidence interval - lower                     0.594
+##   90 Percent confidence interval - upper                     0.849
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.252       0.252
 ## 
 ## Parameter Estimates:
 ## 
@@ -3873,17 +3942,17 @@ div.tocify {
 ##   s ~~                                                
 ##     q                 0.000                           
 ##   i ~~                                                
-##     s               -20.945   18.638   -1.124    0.261
-##     q                10.605   10.969    0.967    0.334
+##     s                 0.000                           
+##     q                 0.000                           
 ## 
 ## Intercepts:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##    .t1               13.000    1.446    8.992    0.000
-##    .t2               10.000    1.037    9.639    0.000
-##    .t3               10.000    1.064    9.399    0.000
-##     i                 0.000                           
-##     s                 0.000                           
-##     q                 0.000                           
+##     i         (b0)   13.000    1.446    8.992    0.000
+##     s         (b1)   -4.500    1.323   -3.402    0.001
+##     q         (b2)    1.500    0.445    3.372    0.001
+##    .t1                0.000                           
+##    .t2                0.000                           
+##    .t3                0.000                           
 ## 
 ## Variances:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)
@@ -3892,7 +3961,61 @@ div.tocify {
 ##    .t1         (a)    6.750    1.491    4.528    0.000
 ##    .t2         (a)    6.750    1.491    4.528    0.000
 ##    .t3         (a)    6.750    1.491    4.528    0.000
-##     i                40.798   22.164    1.841    0.066</code></pre>
+##     i                27.639    6.679    4.138    0.000
+## 
+## R-Square:
+##                    Estimate
+##     t1                0.804
+##     t2                0.804
+##     t3                0.804</code></pre>
+</div>
+<div id="comparacion-de-estimados-mlm-sem" class="section level2">
+<h2>Comparacion de estimados (MLM &amp; SEM)</h2>
+<div id="efectos-aleatorios" class="section level3">
+<h3>Efectos aleatorios</h3>
+<pre><code>
+## Efectos aleatorios en MLM
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ subject  (Intercept) 27.64    5.257   
+ Residual              6.75    2.598   
+Number of obs: 72, groups:  subject, 24
+
+## Efectos aleatorios en Laten Growth
+
+Variances:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+    s                 0.000                           
+    q                 0.000                           
+   .t1         (a)    6.750    1.491    4.528    0.000
+   .t2         (a)    6.750    1.491    4.528    0.000
+   .t3         (a)    6.750    1.491    4.528    0.000
+    i                27.639    6.679    4.138    0.000
+</code></pre>
+</div>
+<div id="efectos-fijos" class="section level3">
+<h3>Efectos Fijos</h3>
+<pre><code>## Efectos fijos en MLM
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)  13.0000     1.1970  10.860
+time         -4.5000     1.3521  -3.328
+time_q        1.5000     0.6495   2.309
+
+## Efectos fijos en Latent growth
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(&gt;|z|)
+    i         (b0)   13.000    1.446    8.992    0.000
+    s         (b1)   -4.500    1.323   -3.402    0.001
+    q         (b2)    1.500    0.445    3.372    0.001
+
+
+
+</code></pre>
+</div>
 </div>
 </div>
 

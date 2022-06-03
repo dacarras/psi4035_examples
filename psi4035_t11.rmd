@@ -410,22 +410,40 @@ r4sda::caterpillar_plot(model_2)
 #--------------------------------------
 
 code_3 <- '
+# baseline
 i =~ 1*t1
 i =~ 1*t2
 i =~ 1*t3
 
+# time slope linear
 s =~  0*t1
 s =~  1*t2
 s =~  2*t3
 
+# time slope quadratic
 q =~ 0*t1
 q =~ 1*t2
 q =~ 4*t3
 
+# mean effects
+i~(b0)*1
+s~(b1)*1
+q~(b2)*1
+
+# mean structure
+t1~0*1
+t2~0*1
+t3~0*1
+
+# covariance structure
 s~~0*q
+s~~0*i
+q~~0*i
+
 s~~0*s
 q~~0*q
 
+# residual structure
 t1~~(a)*t1
 t2~~(a)*t2
 t3~~(a)*t3
@@ -436,10 +454,67 @@ t3~~(a)*t3
 # fit model
 #--------------------------------------
 
-model_3 <- lavaan::sem(code_3, data = data_wide, mimic="Mplus", estimator = "MLR")
-summary(model_3)
+model_3 <- lavaan::sem(code_3, 
+            data = data_wide, 
+            mimic="Mplus", 
+            meanstructure = TRUE,
+            estimator = "MLR")
 
+
+lavaan::summary(model_3, 
+  fit.measures=TRUE, 
+  rsquare=TRUE)
 
 ```
 
 
+## Comparacion de estimados (MLM & SEM)
+
+### Efectos aleatorios 
+
+```
+
+## Efectos aleatorios en MLM
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ subject  (Intercept) 27.64    5.257   
+ Residual              6.75    2.598   
+Number of obs: 72, groups:  subject, 24
+
+## Efectos aleatorios en Laten Growth
+
+Variances:
+                   Estimate  Std.Err  z-value  P(>|z|)
+    s                 0.000                           
+    q                 0.000                           
+   .t1         (a)    6.750    1.491    4.528    0.000
+   .t2         (a)    6.750    1.491    4.528    0.000
+   .t3         (a)    6.750    1.491    4.528    0.000
+    i                27.639    6.679    4.138    0.000
+
+```
+
+### Efectos Fijos 
+
+```
+## Efectos fijos en MLM
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept)  13.0000     1.1970  10.860
+time         -4.5000     1.3521  -3.328
+time_q        1.5000     0.6495   2.309
+
+## Efectos fijos en Latent growth
+
+Intercepts:
+                   Estimate  Std.Err  z-value  P(>|z|)
+    i         (b0)   13.000    1.446    8.992    0.000
+    s         (b1)   -4.500    1.323   -3.402    0.001
+    q         (b2)    1.500    0.445    3.372    0.001
+
+
+
+
+```
