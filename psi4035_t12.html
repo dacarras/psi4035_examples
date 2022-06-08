@@ -2838,23 +2838,31 @@ tiempo promedio</h2>
 <h1>Anexos</h1>
 <div id="ejemplos-con-data_salary" class="section level2">
 <h2>Ejemplos con data_salary</h2>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># multilevel model</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># specify model</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>data_salary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span>(<span class="st">&#39;https://raw.githubusercontent.com/dacarras/psi4035_examples/master/guias/salarios8081.csv&#39;</span>)</span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
-<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(data_salary)</span></code></pre></div>
+<p><strong>descripción de variables</strong></p>
+<pre class="text"><code>nr         — Identificador de sujeto
+lwage      — Logaritmo del ingreso por hora del trabajador
+year       — año en que se observo el salario
+ethnicity  — Etnia del trabajador (0 = blanco; 1 = negro; 2 = hispánico)
+union      — Membresía en un sindicato (0 = no, 1 = si)
+educ       — Numero de años de educación 
+</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># multilevel model</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------------------------</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="co"># specify model</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>data_salary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a><span class="fu">url</span>(<span class="st">&#39;https://raw.githubusercontent.com/dacarras/psi4035_examples/master/guias/salarios8081.csv&#39;</span>)</span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="co"># fit model</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(data_salary)</span></code></pre></div>
 <pre><code>## Rows: 1,090
 ## Columns: 6
 ## $ nr        [3m[38;5;246m&lt;int&gt;[39m[23m 13, 13, 17, 17, 18, 18, 45, 45, 110, 110, 120, 120, 126, 126…
@@ -2863,12 +2871,12 @@ tiempo promedio</h2>
 ## $ ethnicity [3m[38;5;246m&lt;int&gt;[39m[23m 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …
 ## $ union     [3m[38;5;246m&lt;int&gt;[39m[23m 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, …
 ## $ educ      [3m[38;5;246m&lt;int&gt;[39m[23m 14, 14, 13, 13, 12, 12, 12, 12, 12, 12, 10, 10, 13, 13, 12, …</code></pre>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># descriptivos</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(data_salary) <span class="sc">%&gt;%</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># descriptivos</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(data_salary) <span class="sc">%&gt;%</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code></pre></div>
 <table style="width:100%;">
 <colgroup>
 <col width="6%" />
@@ -2987,160 +2995,204 @@ tiempo promedio</h2>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># cómo filtrar datos</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>data_salary_1980 <span class="ot">&lt;-</span> data_salary <span class="sc">%&gt;%</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>                    dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1980</span>)</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>data_salary_1981 <span class="ot">&lt;-</span> data_salary <span class="sc">%&gt;%</span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>                    dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1981</span>)</span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="co"># anova factorial (datos 1981)</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> ethnicity <span class="sc">+</span> union <span class="sc">+</span> ethnicity<span class="sc">*</span>union, </span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
-<pre><code>##                  Df Sum Sq Mean Sq F value     Pr(&gt;F)    
-## ethnicity         1   0.29   0.289   1.068     0.3019    
-## union             1   5.52   5.516  20.362 0.00000787 ***
-## ethnicity:union   1   0.86   0.857   3.163     0.0759 .  
-## Residuals       541 146.56   0.271                       
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># descriptivos covariables</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">count</span>(data_salary, ethnicity, union)</span></code></pre></div>
+<pre><code>##   ethnicity union   n
+## 1         0     0 613
+## 2         0     1 181
+## 3         1     0  80
+## 4         1     1  46
+## 5         2     0 124
+## 6         2     1  46</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota:</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">#      ethnicity tiene tres valores</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">#      union     tiene dos  valores</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">count</span>(data_salary, educ)</span></code></pre></div>
+<pre><code>##    educ   n
+## 1     3   2
+## 2     5   4
+## 3     6  10
+## 4     7   4
+## 5     8  36
+## 6     9  34
+## 7    10  94
+## 8    11 184
+## 9    12 462
+## 10   13 108
+## 11   14  82
+## 12   15  62
+## 13   16   8</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nota:</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co">#      educ varía de 3 a 16 años</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># cómo filtrar datos</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>data_salary_1980 <span class="ot">&lt;-</span> data_salary <span class="sc">%&gt;%</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>                    dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1980</span>)</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>data_salary_1981 <span class="ot">&lt;-</span> data_salary <span class="sc">%&gt;%</span></span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>                    dplyr<span class="sc">::</span><span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1981</span>)</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="co"># anova factorial (datos 1981)</span></span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> <span class="fu">as.factor</span>(ethnicity) <span class="sc">*</span> union, </span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>##                             Df Sum Sq Mean Sq F value     Pr(&gt;F)    
+## as.factor(ethnicity)         2   0.31   0.156   0.576      0.563    
+## union                        1   5.63   5.630  20.767 0.00000642 ***
+## as.factor(ethnicity):union   2   1.15   0.573   2.113      0.122    
+## Residuals                  539 146.13   0.271                       
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># regresion (datos 1981)</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(lwage <span class="sc">~</span> ethnicity <span class="sc">+</span> union <span class="sc">+</span> ethnicity<span class="sc">*</span>union, </span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># regresion (datos 1981)</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(lwage <span class="sc">~</span> <span class="fu">as.factor</span>(ethnicity)<span class="sc">*</span>union, </span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
-## lm(formula = lwage ~ ethnicity + union + ethnicity * union, data = data_salary_1981)
+## lm(formula = lwage ~ as.factor(ethnicity) * union, data = data_salary_1981)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -2.87416 -0.24867  0.03952  0.33182  1.48037 
+## -2.87973 -0.24000  0.03596  0.32909  1.47479 
 ## 
 ## Coefficients:
-##                  Estimate Std. Error t value             Pr(&gt;|t|)    
-## (Intercept)      1.457089   0.029435  49.502 &lt; 0.0000000000000002 ***
-## ethnicity       -0.004444   0.034369  -0.129               0.8972    
-## union            0.288515   0.060381   4.778           0.00000228 ***
-## ethnicity:union -0.123868   0.069650  -1.778               0.0759 .  
+##                             Estimate Std. Error t value             Pr(&gt;|t|)
+## (Intercept)                  1.43494    0.03627  39.561 &lt; 0.0000000000000002
+## as.factor(ethnicity)1        0.02773    0.04016   0.691              0.49015
+## as.factor(ethnicity)2       -0.06709    0.05979  -1.122              0.26231
+## union                        0.18760    0.06675   2.811              0.00513
+## as.factor(ethnicity)1:union  0.08888    0.07566   1.175              0.24062
+## as.factor(ethnicity)2:union  0.11405    0.10317   1.105              0.26947
+##                                
+## (Intercept)                 ***
+## as.factor(ethnicity)1          
+## as.factor(ethnicity)2          
+## union                       ** 
+## as.factor(ethnicity)1:union    
+## as.factor(ethnicity)2:union    
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 0.5205 on 541 degrees of freedom
-## Multiple R-squared:  0.04348,    Adjusted R-squared:  0.03818 
-## F-statistic: 8.198 on 3 and 541 DF,  p-value: 0.00002412</code></pre>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ancova</span></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> ethnicity <span class="sc">+</span> union <span class="sc">+</span> ethnicity<span class="sc">*</span>union <span class="sc">+</span> educ, </span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
-<pre><code>##                  Df Sum Sq Mean Sq F value       Pr(&gt;F)    
-## ethnicity         1   0.29   0.289   1.128       0.2887    
-## union             1   5.52   5.516  21.504 0.0000044351 ***
-## educ              1   7.58   7.582  29.556 0.0000000824 ***
-## ethnicity:union   1   1.31   1.308   5.100       0.0243 *  
-## Residuals       540 138.52   0.257                         
+## Residual standard error: 0.5207 on 539 degrees of freedom
+## Multiple R-squared:  0.04626,    Adjusted R-squared:  0.03741 
+## F-statistic: 5.229 on 5 and 539 DF,  p-value: 0.0001066</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ancova</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> <span class="fu">as.factor</span>(ethnicity) <span class="sc">*</span> union <span class="sc">+</span> educ, </span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
+<pre><code>##                             Df Sum Sq Mean Sq F value       Pr(&gt;F)    
+## as.factor(ethnicity)         2   0.31   0.156   0.608       0.5447    
+## union                        1   5.63   5.630  21.936 0.0000035732 ***
+## educ                         1   7.63   7.626  29.713 0.0000000764 ***
+## as.factor(ethnicity):union   2   1.56   0.782   3.046       0.0483 *  
+## Residuals                  538 138.09   0.257                         
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co"># regresion (datos 1981)</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(lwage <span class="sc">~</span> ethnicity <span class="sc">+</span> union <span class="sc">+</span> ethnicity<span class="sc">*</span>union <span class="sc">+</span> educ, </span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># regresion (datos 1981)</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(lwage <span class="sc">~</span> <span class="fu">as.factor</span>(ethnicity) <span class="sc">*</span> union <span class="sc">+</span> educ, </span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary_1981) <span class="sc">%&gt;%</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Call:
-## lm(formula = lwage ~ ethnicity + union + ethnicity * union + 
-##     educ, data = data_salary_1981)
+## lm(formula = lwage ~ as.factor(ethnicity) * union + educ, data = data_salary_1981)
 ## 
 ## Residuals:
 ##      Min       1Q   Median       3Q      Max 
-## -2.80323 -0.23387  0.03681  0.32049  1.55130 
+## -2.80900 -0.23477  0.05045  0.32210  1.54553 
 ## 
 ## Coefficients:
-##                 Estimate Std. Error t value     Pr(&gt;|t|)    
-## (Intercept)      0.60098    0.15564   3.861     0.000126 ***
-## ethnicity        0.03813    0.03430   1.112     0.266815    
-## union            0.29415    0.05877   5.005 0.0000007554 ***
-## educ             0.07138    0.01276   5.596 0.0000000349 ***
-## ethnicity:union -0.15353    0.06798  -2.258     0.024322 *  
+##                             Estimate Std. Error t value     Pr(&gt;|t|)    
+## (Intercept)                  0.61995    0.14979   4.139 0.0000405299 ***
+## as.factor(ethnicity)1       -0.01384    0.03978  -0.348       0.7281    
+## as.factor(ethnicity)2       -0.07008    0.05818  -1.205       0.2289    
+## union                        0.16368    0.06509   2.515       0.0122 *  
+## educ                         0.07144    0.01276   5.598 0.0000000345 ***
+## as.factor(ethnicity)1:union  0.11901    0.07381   1.612       0.1075    
+## as.factor(ethnicity)2:union  0.11110    0.10038   1.107       0.2689    
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Residual standard error: 0.5065 on 540 degrees of freedom
-## Multiple R-squared:  0.09591,    Adjusted R-squared:  0.08922 
-## F-statistic: 14.32 on 4 and 540 DF,  p-value: 0.00000000004041</code></pre>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># anova intra e inter</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>data_salary <span class="sc">%&gt;%</span></span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> union <span class="sc">+</span> educ <span class="sc">+</span> year <span class="sc">+</span> <span class="fu">Error</span>(nr), </span>
-<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> .) <span class="sc">%&gt;%</span></span>
-<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
+## Residual standard error: 0.5066 on 538 degrees of freedom
+## Multiple R-squared:  0.09876,    Adjusted R-squared:  0.08871 
+## F-statistic: 9.826 on 6 and 538 DF,  p-value: 0.0000000002712</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># anova intra e inter</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>data_salary <span class="sc">%&gt;%</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="fu">aov</span>(lwage <span class="sc">~</span> union <span class="sc">+</span> educ <span class="sc">+</span> <span class="fu">as.factor</span>(year) <span class="sc">+</span> <span class="fu">Error</span>(nr), </span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> .) <span class="sc">%&gt;%</span></span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## 
 ## Error: nr
 ##       Df Sum Sq Mean Sq
 ## union  1   1.83    1.83
 ## 
 ## Error: Within
-##             Df Sum Sq Mean Sq F value          Pr(&gt;F)    
-## union        1  11.38  11.379   41.74 0.0000000001568 ***
-## educ         1  13.31  13.306   48.81 0.0000000000049 ***
-## year         1   3.91   3.913   14.35         0.00016 ***
-## Residuals 1085 295.76   0.273                            
+##                   Df Sum Sq Mean Sq F value          Pr(&gt;F)    
+## union              1  11.38  11.379   41.74 0.0000000001568 ***
+## educ               1  13.31  13.306   48.81 0.0000000000049 ***
+## as.factor(year)    1   3.91   3.913   14.35         0.00016 ***
+## Residuals       1085 295.76   0.273                            
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>lme4<span class="sc">::</span><span class="fu">lmer</span>(</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  lwage <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> union <span class="sc">+</span> ethnicity <span class="sc">+</span> year <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>nr),</span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary, <span class="at">REML=</span><span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mlm</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>lme4<span class="sc">::</span><span class="fu">lmer</span>(</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>  lwage <span class="sc">~</span> union <span class="sc">+</span> educ <span class="sc">+</span> <span class="fu">as.factor</span>(year) <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>nr),</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> data_salary, <span class="at">REML=</span><span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>()</span></code></pre></div>
 <pre><code>## Linear mixed model fit by maximum likelihood  [&#39;lmerMod&#39;]
-## Formula: lwage ~ 1 + union + ethnicity + year + (1 | nr)
+## Formula: lwage ~ union + educ + as.factor(year) + (1 | nr)
 ##    Data: data_salary
 ## 
 ##      AIC      BIC   logLik deviance df.resid 
-##   1623.0   1653.0   -805.5   1611.0     1084 
+##   1590.1   1620.1   -789.1   1578.1     1084 
 ## 
 ## Scaled residuals: 
 ##     Min      1Q  Median      3Q     Max 
-## -4.8016 -0.3125  0.0781  0.4399  3.0885 
+## -4.8320 -0.2950  0.0847  0.4418  3.0981 
 ## 
 ## Random effects:
 ##  Groups   Name        Variance Std.Dev.
-##  nr       (Intercept) 0.1225   0.3499  
-##  Residual             0.1619   0.4024  
+##  nr       (Intercept) 0.1105   0.3325  
+##  Residual             0.1620   0.4024  
 ## Number of obs: 1090, groups:  nr, 545
 ## 
 ## Fixed effects:
-##               Estimate Std. Error t value
-## (Intercept) -235.78552   48.28160  -4.884
-## union          0.20631    0.03863   5.341
-## ethnicity     -0.03531    0.02593  -1.362
-## year           0.11977    0.02438   4.913
+##                  Estimate Std. Error t value
+## (Intercept)       0.64496    0.12810   5.035
+## union             0.20710    0.03789   5.465
+## educ              0.06428    0.01074   5.987
+## as.factor(year)1 -0.05989    0.01219  -4.913
 ## 
 ## Correlation of Fixed Effects:
-##           (Intr) union  ethnct
-## union     -0.003              
-## ethnicity  0.000 -0.052       
-## year      -1.000  0.003  0.000</code></pre>
+##             (Intr) union  educ  
+## union       -0.078              
+## educ        -0.986  0.004       
+## as.fctr(y)1  0.000 -0.003  0.000</code></pre>
 </div>
 </div>
 

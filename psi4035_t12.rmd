@@ -442,6 +442,18 @@ texreg::screenreg(
 
 ## Ejemplos con data_salary
 
+**descripción de variables**
+
+```text
+nr         — Identificador de sujeto
+lwage      — Logaritmo del ingreso por hora del trabajador
+year       — año en que se observo el salario
+ethnicity  — Etnia del trabajador (0 = blanco; 1 = negro; 2 = hispánico)
+union      — Membresía en un sindicato (0 = no, 1 = si)
+educ       — Numero de años de educación 
+
+```
+
 ```{r , echo=TRUE, warning=FALSE}
 
 # -----------------------------------------------
@@ -470,6 +482,21 @@ skimr::skim(data_salary) %>%
 knitr::kable()
 
 #--------------------------------------
+# descriptivos covariables
+#--------------------------------------
+
+dplyr::count(data_salary, ethnicity, union)
+
+# Nota:
+#      ethnicity tiene tres valores
+#      union     tiene dos  valores
+
+dplyr::count(data_salary, educ)
+
+# Nota:
+#      educ varía de 3 a 16 años
+
+#--------------------------------------
 # cómo filtrar datos
 #--------------------------------------
 
@@ -484,7 +511,7 @@ data_salary_1981 <- data_salary %>%
 # anova factorial (datos 1981)
 #--------------------------------------
 
-aov(lwage ~ ethnicity + union + ethnicity*union, 
+aov(lwage ~ as.factor(ethnicity) * union, 
   data = data_salary_1981) %>%
 summary()
 
@@ -492,7 +519,7 @@ summary()
 # regresion (datos 1981)
 #--------------------------------------
 
-lm(lwage ~ ethnicity + union + ethnicity*union, 
+lm(lwage ~ as.factor(ethnicity)*union, 
   data = data_salary_1981) %>%
 summary()
 
@@ -500,7 +527,7 @@ summary()
 # ancova
 #--------------------------------------
 
-aov(lwage ~ ethnicity + union + ethnicity*union + educ, 
+aov(lwage ~ as.factor(ethnicity) * union + educ, 
   data = data_salary_1981) %>%
 summary()
 
@@ -508,7 +535,7 @@ summary()
 # regresion (datos 1981)
 #--------------------------------------
 
-lm(lwage ~ ethnicity + union + ethnicity*union + educ, 
+lm(lwage ~ as.factor(ethnicity) * union + educ, 
   data = data_salary_1981) %>%
 summary()
 
@@ -518,7 +545,7 @@ summary()
 #--------------------------------------
 
 data_salary %>%
-aov(lwage ~ union + educ + year + Error(nr), 
+aov(lwage ~ union + educ + as.factor(year) + Error(nr), 
   data = .) %>%
   summary()
 
@@ -527,7 +554,7 @@ aov(lwage ~ union + educ + year + Error(nr),
 #--------------------------------------
 
 lme4::lmer(
-  lwage ~ 1 + union + ethnicity + year + (1|nr),
+  lwage ~ union + educ + as.factor(year) + (1|nr),
   data = data_salary, REML=FALSE) %>%
 summary()
 
