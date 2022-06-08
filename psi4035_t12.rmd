@@ -91,6 +91,62 @@ knitr::kable(table_20_1, digits = 3)
 
 ```
 
+## Datos en formato long
+
+```{r , echo=TRUE, warning=FALSE}
+
+# -----------------------------------------------
+# preparar datos
+# -----------------------------------------------
+
+#--------------------------------------
+# data in wide
+#--------------------------------------
+
+person_level <- table_20_1
+
+#--------------------------------------
+# display data in wide
+#--------------------------------------
+
+knitr::kable(person_level, digits = 3)
+
+#--------------------------------------
+# data in long
+#--------------------------------------
+
+library(dplyr)
+library(tidyr)
+
+data_long <- person_level %>%
+             tidyr::pivot_longer(
+              data = ., 
+              cols = !c(subject, trt), 
+              names_to  = "wave", 
+              values_to = "score"
+              ) %>%
+             mutate(time = case_when(
+              wave == 't1' ~ -1,
+              wave == 't2' ~  1
+              )) %>%
+             mutate(tx = case_when(
+              trt == -1 ~ 0,
+              trt ==  1 ~ 1
+              )) %>%
+             mutate(t2 = case_when(
+              wave == 't1' ~  0,
+              wave == 't2' ~  1
+              ))
+
+
+#--------------------------------------
+# display data in wide
+#--------------------------------------
+
+knitr::kable(data_long, digits = 3)
+
+```
+
 # Modelos entre e intra
 
 ## Componente para realizar inferencias entre personas
@@ -215,21 +271,34 @@ A continuación, vamos a crear el component $W_{0}$".
 # preparar datos
 #----------------------------------------------------------
 
+
 #--------------------------------------
-# crear componente W_0
+# funcion cluster mean
 #--------------------------------------
 
-data_model <- table_20_1 %>%
-              mutate(lambda_1 =  1) %>%
-              mutate(lambda_2 =  1) %>%
-              mutate(w_0 = (lambda_1*t1+lambda_2*t2)/sqrt(lambda_1^2+lambda_2^2)) %>%
-              dplyr::glimpse()
+c_mean <- function (x, j)  {
+    ave(x, j, FUN = function(x) mean(x, na.rm = T))
+}
+
+
+#--------------------------------------
+# crear componente W_1
+#--------------------------------------
+
+data_within <- table_20_1 %>%
+               mutate(lambda_1 =   1) %>%
+               mutate(lambda_2 =  -1) %>%
+               mutate(delta = lambda_1*t1+lambda_2*t2) %>%
+               mutate(denom = sqrt(lambda_1^2+lambda_2^2)) %>%
+               mutate(w_1_test = delta/denom) %>%
+               mutate(w_1 = (lambda_1*t1+lambda_2*t2)/sqrt(lambda_1^2+lambda_2^2)) %>%
+               dplyr::glimpse()
 
 #--------------------------------------
 # mostrar datos
 #--------------------------------------
 
-knitr::kable(data_model, digits = 3)
+knitr::kable(data_within, digits = 3)
 
 
 ```
@@ -246,22 +315,71 @@ knitr::kable(data_model, digits = 3)
 # formulas
 #--------------------------------------
 
-f01 <- as.formula(w_0  ~ + 1)
-f02 <- as.formula(w_0  ~ + 1 + trt)
+f01 <- as.formula(w_1  ~ - 1)
+f02 <- as.formula(w_1  ~ + 1)
 
 #--------------------------------------
 # ajustar modelos
 #--------------------------------------
 
-m01 <- lm(f01, data = data_model)
-m02 <- lm(f02, data = data_model)
+m01 <- lm(f01, data = data_within)
+m02 <- lm(f02, data = data_within)
+
+#--------------------------------------
+# output del modelo de regresion
+#--------------------------------------
+
+summary(m01)
+summary(m02)
+
+#--------------------------------------
+# comparacion de modelos p260
+#--------------------------------------
+
+anova(m01)
+anova(m02)
+anova(m01, m02)
+
+
+```
+
+Vik (2014, p260-261) esta empleando el beta_0, el intercepto del modelo del componente "$W_{1}$", como evidencia de que hay cambio en el tiempo. Es decir, el cambio promedio de ambas medidas.
+
+
+# Enfoque de modelos mixtos
+
+
+
+## Empleando como intercepto al centro de tratados y no tratados, y al tiempo promedio
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# ajustar modelos
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(score  ~ + trt  + (1|subject))
+f02 <- as.formula(score  ~ + time + (1|subject))
+f03 <- as.formula(score  ~ + trt*time + (1|subject))
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- lme4::lmer(f01, data = data_long, REML=FALSE)
+m02 <- lme4::lmer(f02, data = data_long, REML=FALSE)
+m03 <- lme4::lmer(f03, data = data_long, REML=FALSE)
 
 #--------------------------------------
 # tabla de modelos
 #--------------------------------------
 
 texreg::screenreg(
-    list(m01, m02),
+    list(m01, m02, m03),
     star.symbol = "*", 
     center = TRUE, 
     doctype = FALSE,
@@ -270,16 +388,153 @@ texreg::screenreg(
     single.row = FALSE
     )
 
-#--------------------------------------
-# tabla f del modelo
-#--------------------------------------
-
-anova(m02)
-
-#--------------------------------------
-# output del modelo de regresion
-#--------------------------------------
-
-summary(m02)
 
 ```
+
+
+## Empleando como intercepto a los no tratados en el tiempo 1
+
+
+```{r , echo=TRUE, warning=FALSE}
+
+# -----------------------------------------------
+# multilevel model
+# -----------------------------------------------
+
+#----------------------------------------------------------
+# ajustar modelos
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(score  ~ + tx + (1|subject))
+f02 <- as.formula(score  ~ + t2 + (1|subject))
+f03 <- as.formula(score  ~ + tx*t2 + (1|subject))
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- lme4::lmer(f01, data = data_long, REML=FALSE)
+m02 <- lme4::lmer(f02, data = data_long, REML=FALSE)
+m03 <- lme4::lmer(f03, data = data_long, REML=FALSE)
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+```
+
+# Anexos
+
+## Ejemplos con data_salary
+
+```{r , echo=TRUE, warning=FALSE}
+
+# -----------------------------------------------
+# multilevel model
+# -----------------------------------------------
+
+#--------------------------------------
+# specify model
+#--------------------------------------
+
+data_salary <- read.csv(
+url('https://raw.githubusercontent.com/dacarras/psi4035_examples/master/guias/salarios8081.csv')
+)
+
+#--------------------------------------
+# fit model
+#--------------------------------------
+
+dplyr::glimpse(data_salary)
+
+#--------------------------------------
+# descriptivos
+#--------------------------------------
+
+skimr::skim(data_salary) %>%
+knitr::kable()
+
+#--------------------------------------
+# cómo filtrar datos
+#--------------------------------------
+
+data_salary_1980 <- data_salary %>%
+                    dplyr::filter(year == 1980)
+
+data_salary_1981 <- data_salary %>%
+                    dplyr::filter(year == 1981)
+
+
+#--------------------------------------
+# anova factorial (datos 1981)
+#--------------------------------------
+
+aov(lwage ~ ethnicity + union + ethnicity*union, 
+  data = data_salary_1981) %>%
+summary()
+
+#--------------------------------------
+# regresion (datos 1981)
+#--------------------------------------
+
+lm(lwage ~ ethnicity + union + ethnicity*union, 
+  data = data_salary_1981) %>%
+summary()
+
+#--------------------------------------
+# ancova
+#--------------------------------------
+
+aov(lwage ~ ethnicity + union + ethnicity*union + educ, 
+  data = data_salary_1981) %>%
+summary()
+
+#--------------------------------------
+# regresion (datos 1981)
+#--------------------------------------
+
+lm(lwage ~ ethnicity + union + ethnicity*union + educ, 
+  data = data_salary_1981) %>%
+summary()
+
+
+#--------------------------------------
+# anova intra e inter
+#--------------------------------------
+
+data_salary %>%
+aov(lwage ~ union + educ + year + Error(nr), 
+  data = .) %>%
+  summary()
+
+#--------------------------------------
+# mlm
+#--------------------------------------
+
+lme4::lmer(
+  lwage ~ 1 + union + ethnicity + year + (1|nr),
+  data = data_salary, REML=FALSE) %>%
+summary()
+
+
+
+
+```
+
+
+
