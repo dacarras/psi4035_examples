@@ -1,0 +1,417 @@
+---
+title: "Regresión Logística"
+subtitle: "PSI4035 Taller 13"
+author: "dacarras"
+output:
+  html_document:
+    theme: paper
+    highlight: kate
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
+    fig_width: 10 
+    fig_height: 10 
+---
+
+<style>
+  .main-container {
+    max-width: 1600px !important;
+  }
+  .list-group-item.active,  
+  .list-group-item.active:focus, 
+  .list-group-item.active:hover {
+    background-color: #373334;
+  }
+</style>
+
+
+```{r setup, include=FALSE}
+#--------------------------------------
+# setup
+#--------------------------------------
+
+# knitr option
+knitr::opts_chunk$set(dev = 'png')
+options(knitr.kable.NA = '')
+options(digits = 7)
+options(scipen = 999999)
+
+# remove all previous objects
+rm(list = ls())
+
+# fonts
+Sys.setenv(LANG="en_US.UTF-8")
+
+
+```
+
+# Taller 13: Regresión logística
+
+## Cargar datos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# datos
+#----------------------------------------------------------
+
+#--------------------------------------
+# abrir datos completos
+#--------------------------------------
+
+data_brazil <- read.csv(
+  url('https://raw.githubusercontent.com/dacarras/psi4035_examples/master/data/pisa_brazil.csv'
+    )
+  ) %>%
+na.omit()
+
+
+
+```
+
+>Nota: se borran los datos perdidos, solo con fines ilustrativos, para facilitar el proceso de comparación de modelos.
+
+## Contenido de los datos
+
+- Selección de Datos de PISA 2015, de Brazil.
+  + Muestra probabilistica, y representativa de estudiantes de 15 años
+
+
+```text
+
+var  type sample_values  description
+                                                                                     
+id_i dbl  7611939, 7600  unique student number
+id_j dbl  7600001, 7600  unique school number
+scie dbl  355.569, 261.  First plausible value for science scores
+sex  dbl  1, 0, 1, 0, 0  sex (male=1, female=0)
+rep  dbl  NA, 1, NA, 1,  rep (grade repetition = 1, no previous repetition = 0)
+age  dbl  16.00000, 15.  age in years (by 2014)
+grd  dbl  7, 9, 7, 10,   grade (in years of schooling)
+ses  dbl  NA, NA, -2.26  ses (socioeconomic status index, at the international level)
+dep  dbl  0, 0, 0, 0, 0  dep (school is private = 1, school is public = 0)
+ctry chr  "BRA", "BRA",  ctry is country sample
+
+
+```
+
+
+## Descriptivos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# descriptivos
+#----------------------------------------------------------
+
+#--------------------------------------
+# descritivos edad y nivel socioeconómico
+#--------------------------------------
+
+library(dplyr)
+
+data_brazil %>%
+dplyr::select(age, ses) %>%
+summarize(
+  mean_age = mean(age, na.rm = TRUE),
+  sd_age = sd(age, na.rm = TRUE),
+  n_valid_age = sum(!is.na(age)),
+  mean_ses = mean(ses, na.rm = TRUE),
+  sd_ses = sd(ses, na.rm = TRUE),
+  n_valid_ses = sum(!is.na(ses))
+) %>%
+knitr::kable(., digits = 2)
+
+#--------------------------------------
+# tabla de frecuencia de edad
+#--------------------------------------
+
+dplyr::count(data_brazil, age)
+
+
+```
+
+
+## Preparar datos
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# preparar datos
+#----------------------------------------------------------
+
+#--------------------------------------
+# centrado de variables
+#--------------------------------------
+
+data_model <- data_brazil %>%
+              # sexo via deviation coding (1 = male, -1 = female)
+              mutate(sex_d = case_when(
+                sex ==  1 ~  1,
+                sex ==  0 ~ -1
+                ))%>%
+              # centrar a la gran media (0 = media, 1 = un año)
+              mutate(age_c = as.numeric(
+                scale(age, center = TRUE, scale = FALSE)
+                )) %>%
+              # estandarizar (0 = media, 1 = sd)
+              mutate(ses_z = as.numeric(
+                scale(ses, center = TRUE, scale = TRUE)
+                )) %>%
+              dplyr::glimpse()
+
+```
+
+
+# Modelos
+
+## Especificación
+
+
+```text
+
+ln(Pr(y|x,...)) = b0 + b1*sex + b2*age_c + b3*ses_z + b4*dep b5*ses_z:dep
+
+Donde, 
+
+y         = rep (1=ha repetido, 0=no ha repetido)
+sex       = sex (male=1, female=0)
+age_c     = edad en años (centrado a la gran media de la muestra)
+ses_z     = indice socioeconómico (estandarizado a la muestra)
+dep       = dependencia de la escuela (public = 0, private = 1)
+ses_z:dep = interaction entre ses_z y dep
+
+```
+
+## Estimados en logit
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# ajustar modelos
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(rep ~ 1)
+f02 <- as.formula(rep ~ 1 + sex + age_c + ses_z + dep)
+f03 <- as.formula(rep ~ 1 + sex + age_c + ses_z + dep + ses_z:dep)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- glm(f01, data = data_model, family = binomial)
+m02 <- glm(f02, data = data_model, family = binomial)
+m03 <- glm(f03, data = data_model, family = binomial)
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+#--------------------------------------
+# model comparison
+#--------------------------------------
+
+# test global model
+lmtest::lrtest(m01, m02)
+
+# test interaction
+lmtest::lrtest(m02, m03)
+
+```
+
+>Nota: las comparaciones entre modelos solo serán posibles en caso de que se apliquen los modelos sobre la misma matriz de datos (i.e., que no hayan datos perdidos diferentes entre modelos).
+
+## Estimados en Odds Ratio
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# ajustar modelos
+#----------------------------------------------------------
+
+#--------------------------------------
+# estimates to odds
+#--------------------------------------
+
+model_logit_to_odds <- function(x){
+output <- texreg::extract(x)
+output@coef <- exp(output@coef)
+output@se   <- numeric()
+return(output)
+}
+
+#--------------------------------------
+# convertir estimados a odds ratio
+#--------------------------------------
+
+or_01 <- model_logit_to_odds(m01)
+or_02 <- model_logit_to_odds(m02)
+or_03 <- model_logit_to_odds(m03)
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(or_01, or_02, or_03),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+```
+
+# Visualización de Interacción
+
+## Interacción en logit
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# interacción
+#----------------------------------------------------------
+
+#--------------------------------------
+# interacción en logit
+#--------------------------------------
+
+visreg::visreg(m03, 
+  xvar="ses_z",
+  by = "dep", 
+  strip.names=c("Public", "Private"),
+  overlay=TRUE, 
+  xlab="SES", 
+  ylab="log(grade_repetition= 1 | x...)",
+  ylim=c(-7,7),
+  points=(list(col=c("#FF8E80", "#8FD1FD"),cex=.03)))
+
+
+```
+
+## Interacción en probabilidades esperadas
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# interacción
+#----------------------------------------------------------
+
+#--------------------------------------
+# interacción en proporciones esperadas
+#--------------------------------------
+
+visreg::visreg(m03, 
+  xvar="ses_z",
+  by = "dep", 
+  strip.names=c("Public", "Private"), 
+  scale="response", 
+  rug=2,
+  overlay=TRUE, 
+  xlab="SES", 
+  ylab="Pr(grade_repetition= 1 | x...)",
+  ylim=c(0,1))
+
+
+```
+
+# Anexo
+
+## Ajuste de modelo mixto
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# preparar datos
+#----------------------------------------------------------
+
+
+#--------------------------------------
+# cluster means
+#--------------------------------------
+
+c_mean <- function(x, j){
+    ave(x, j, FUN = function(x) mean(x, na.rm = T))
+}
+
+#--------------------------------------
+# centrado de variables
+#--------------------------------------
+
+data_mlm <- data_brazil %>%
+              # single vector for country
+              mutate(id_k = 1) %>%
+              # sexo via deviation coding (1 = male, -1 = female)
+              mutate(sex_d = case_when(
+                sex ==  1 ~  1,
+                sex ==  0 ~ -1
+                ))%>%
+              mutate(sex_c = c_mean(sex_d, id_j)) %>% # cluster means
+              mutate(sex_g = c_mean(sex_d, id_k)) %>% # grand mean
+              mutate(sex_w = sex_d - sex_c) %>% # centering within cluster
+              mutate(sex_b = sex_c - sex_g) %>% # cluster means, centered
+              mutate(sex_c = c_mean(sex_d, id_j)) %>% # cluster means
+              # socioeconomic status
+              mutate(ses_z = as.numeric(
+                scale(ses, center = TRUE, scale = TRUE)
+                )) %>%
+              mutate(ses_c = c_mean(ses_z, id_j)) %>% # cluster means
+              mutate(ses_g = c_mean(ses_z, id_k)) %>% # grand mean
+              mutate(ses_w = ses_z - ses_c) %>% # centering within cluster
+              mutate(ses_b = ses_c - ses_g) %>% # cluster means, centered
+              dplyr::glimpse()
+
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(rep ~ 1 + (1|id_j))
+f02 <- as.formula(rep ~ 1 + sex_w + sex_b + (1|id_j))
+f03 <- as.formula(rep ~ 1 + sex_w + sex_b + ses_w + ses_b + (1|id_j))
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- lme4::glmer(f01, data = data_mlm, family = binomial, nAGQ=20)
+m02 <- lme4::glmer(f02, data = data_mlm, family = binomial, nAGQ=20)
+m03 <- lme4::glmer(f03, data = data_mlm, family = binomial, nAGQ=20)
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+
+```
+
+
