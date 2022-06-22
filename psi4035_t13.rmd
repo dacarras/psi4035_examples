@@ -60,6 +60,7 @@ Sys.setenv(LANG="en_US.UTF-8")
 # abrir datos completos
 #--------------------------------------
 
+library(dplyr)
 data_brazil <- read.csv(
   url('https://raw.githubusercontent.com/dacarras/psi4035_examples/master/data/pisa_brazil.csv'
     )
@@ -161,6 +162,26 @@ data_model <- data_brazil %>%
                 )) %>%
               dplyr::glimpse()
 
+
+#--------------------------------------
+# descritivos edad y nivel socioeconómico
+#--------------------------------------
+
+library(dplyr)
+
+data_model %>%
+dplyr::select(age_c, ses_z) %>%
+summarize(
+  mean_age = mean(age_c, na.rm = TRUE),
+  sd_age = sd(age_c, na.rm = TRUE),
+  n_valid_age = sum(!is.na(age_c)),
+  mean_ses = mean(ses_z, na.rm = TRUE),
+  sd_ses = sd(ses_z, na.rm = TRUE),
+  n_valid_ses = sum(!is.na(ses_z))
+) %>%
+knitr::kable(., digits = 2)
+
+
 ```
 
 
@@ -237,6 +258,140 @@ lmtest::lrtest(m02, m03)
 
 >Nota: las comparaciones entre modelos solo serán posibles en caso de que se apliquen los modelos sobre la misma matriz de datos (i.e., que no hayan datos perdidos diferentes entre modelos).
 
+
+## Probabilidades condicionales
+
+```{r , echo=TRUE, warning=FALSE}
+
+#----------------------------------------------------------
+# probabilidades condicionales
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+logit_to_prob <- function(x){
+logit <- x
+conditional_probability <- exp(logit)/(1+exp(logit))
+return(conditional_probability)
+}
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+# beta_0 = -.58
+
+logit_to_prob(-.58) %>%
+knitr::kable(., digits = 2)
+
+#--------------------------------------
+# descriptivo
+#--------------------------------------
+
+dplyr::count(data_model, rep) %>%
+mutate(porcentaje = n/sum(n)) %>%
+knitr::kable(., digits = 2)
+
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+f01 <- as.formula(rep ~ 1)
+f02 <- as.formula(rep ~ 1 + sex)
+f03 <- as.formula(rep ~ 1 + sex  + ses_z)
+
+#--------------------------------------
+# ajustar modelos
+#--------------------------------------
+
+m01 <- glm(f01, data = data_model, family = binomial)
+m02 <- glm(f02, data = data_model, family = binomial)
+m03 <- glm(f03, data = data_model, family = binomial)
+
+
+#--------------------------------------
+# tabla de modelos
+#--------------------------------------
+
+texreg::screenreg(
+    list(m01, m02, m03),
+    star.symbol = "*", 
+    center = TRUE, 
+    doctype = FALSE,
+    dcolumn = TRUE, 
+    booktabs = TRUE,
+    single.row = FALSE
+    )
+
+
+# ejemplo de reporte de resultados: Los resultados observados del modelo 2, indican que las estudiantes presentan, presentan mayores chances de rezago escolar en su trayectoria educativa previa (b = .44, se = .03, p < .001, OR = 1.55).
+
+
+#----------------------------------------------------------
+# probabilidades condicionales para sexo
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+# codificacion de la covariable
+# sex       = sex (male=1, female=0)
+
+# beta_0 = tasa de prevalencia, de rezago escolar, de los estudiantes mujeres.
+# beta_0 + beta_1 = tasa de prevalencia, de rezago escolar, de los estudiantes hombres.
+
+beta_0 <- -.80
+beta_1 <-  .44
+
+rezago_m <- beta_0
+rezago_h <- beta_0 + beta_1
+
+data.frame(
+  sexo = c('hombres','mujeres'),
+  rezago = c(logit_to_prob(rezago_h), logit_to_prob(rezago_m))
+    ) %>%
+knitr::kable(., digits = 2)
+
+#--------------------------------------
+# descriptivo
+#--------------------------------------
+
+xtabs(~ rep + sex, data = data_model) %>%
+proportions(., 2)
+
+#----------------------------------------------------------
+# probabilidades condicionales para sexo, controlando por ses
+#----------------------------------------------------------
+
+#--------------------------------------
+# formulas
+#--------------------------------------
+
+# codificacion de la covariable
+# sex       = sex (male=1, female=0)
+
+# beta_0 = tasa de prevalencia, de rezago escolar, de los estudiantes mujeres.
+# beta_0 + beta_1 = tasa de prevalencia, de rezago escolar, de los estudiantes hombres.
+
+beta_0 <- -.84
+beta_1 <-  .50
+beta_2 <-  -.33
+
+rezago_m <- beta_0 + beta_1*0 + beta_2*0
+rezago_h <- beta_0 + beta_1*1 + beta_2*0
+
+data.frame(
+  sexo = c('hombres','mujeres'),
+  rezago = c(logit_to_prob(rezago_h), logit_to_prob(rezago_m))
+    ) %>%
+knitr::kable(., digits = 2)
+
+
+```
 ## Estimados en Odds Ratio
 
 ```{r , echo=TRUE, warning=FALSE}
