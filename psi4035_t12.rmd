@@ -550,6 +550,17 @@ aov(lwage ~ union + educ + as.factor(year) + Error(nr),
   summary()
 
 #--------------------------------------
+# anova intra e inter
+#--------------------------------------
+
+data_salary %>%
+aov(lwage ~ union + educ + as.factor(year) + Error(as.factor(nr)), 
+  data = .) %>%
+  summary()
+
+# Nota: fe de erratas (20220704), nr debe ser ingresado como factor.
+
+#--------------------------------------
 # mlm
 #--------------------------------------
 
@@ -559,6 +570,62 @@ lme4::lmer(
 summary()
 
 
+#--------------------------------------
+# mlm
+#--------------------------------------
+
+c_mean <- function (x, j) 
+{
+    ave(x, j, FUN = function(x) mean(x, na.rm = T))
+}
+
+#----------------------------------------------------------
+# preparar datos
+#----------------------------------------------------------
+
+data_model <- data_salary %>%
+              mutate(id_j = as.numeric(as.factor(nr))) %>%
+              mutate(id_k = 1) %>%
+              # centrado de variables
+              ## union (centrado intra sujeto)
+              mutate(union_c = c_mean(union, id_j)) %>%
+              mutate(union_g = c_mean(union, id_k)) %>%
+              mutate(union_w = union   - union_c) %>%
+              mutate(union_b = union_c - union_g) %>%
+              mutate(union_m = union   - union_g) %>%
+              ## union (centrado intra sujeto)
+              mutate(educ_g = c_mean(educ, id_k)) %>%
+              mutate(educ_b = educ - educ_g) %>%
+              ## year
+              mutate(time = case_when(
+                year == 1980 ~ 0,
+                year == 1981 ~ 1
+                )) %>%
+              dplyr::glimpse()
+
+
+#----------------------------------------------------------
+# mlm within-between
+#----------------------------------------------------------
+
+# Nota modelo desagregado (Rights et al., 2019)
+
+lme4::lmer(lwage ~ union_w + union_b + educ_b + time + (1|id_j), 
+    data = data_model, REML = TRUE) %>%
+anova()
+
+# Analysis of Variance Table
+#         npar Sum Sq Mean Sq F value
+# union_w    1 0.4027  0.4027  2.4933
+# union_b    1 5.3022  5.3022 32.8279
+# educ_b     1 5.7961  5.7961 35.8860
+# time       1 3.8955  3.8955 24.1189
+
+# Nota: se replican los valors F de ANOVA.
+
+# Nota: fe de erratas (20220704), efecto aleatorio,
+#       produce mismo F que modelo intra-inter,
+#       si se ajusta con REML.
 
 
 ```

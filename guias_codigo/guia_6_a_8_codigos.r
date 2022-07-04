@@ -282,3 +282,20 @@ summary()
 #  Residual             0.1620   0.4024  
 # Number of obs: 1090, groups:  id_j, 545
 
+library(nlme)
+
+nlme::lme(
+    lwage ~ union_w + union_b + educ_b + time,
+    random = ~1|id_j,
+    data = data_model
+    ) %>%
+anova()
+
+
+
+lmer(lwage ~ union_w + union_b + educ_b + time + (1|id_j), 
+    data = data_model) %>%
+anova()
+
+
+
